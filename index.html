@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3DGS Paper Tracker</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0f1117;color:#e2e8f0;min-height:100vh}
+
+/* Header */
+header{background:linear-gradient(135deg,#1a1f2e,#16213e);border-bottom:1px solid #2d3748;padding:18px 0;position:sticky;top:0;z-index:100}
+.header-inner{max-width:1400px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-icon{font-size:32px}
+.logo h1{font-size:20px;font-weight:700;color:#63b3ed}
+.logo p{font-size:12px;color:#718096;margin-top:2px}
+.stats-bar{display:flex;gap:20px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat span{display:block;font-size:20px;font-weight:700;color:#68d391}
+.stat label{font-size:11px;color:#718096;text-transform:uppercase;letter-spacing:.5px}
+
+/* Filters */
+.filter-bar{max-width:1400px;margin:20px auto 0;padding:0 24px;display:flex;align-items:flex-end;gap:10px;flex-wrap:wrap}
+.search-wrap{position:relative;flex:1;min-width:200px}
+.search-wrap input{width:100%;padding:9px 36px 9px 12px;background:#1a202c;border:1px solid #2d3748;border-radius:8px;color:#e2e8f0;font-size:14px;outline:none;transition:border .2s}
+.search-wrap input:focus{border-color:#63b3ed}
+.search-icon{position:absolute;right:10px;top:50%;transform:translateY(-50%);opacity:.5;pointer-events:none}
+.fg{display:flex;flex-direction:column;gap:3px}
+.fg label{font-size:11px;color:#718096;text-transform:uppercase;letter-spacing:.5px}
+.fg select,.fg input[type=date]{padding:8px 10px;background:#1a202c;border:1px solid #2d3748;border-radius:8px;color:#e2e8f0;font-size:13px;outline:none;cursor:pointer}
+.fg select:focus,.fg input[type=date]:focus{border-color:#63b3ed}
+.btn{padding:9px 16px;border:none;border-radius:8px;font-size:13px;cursor:pointer;transition:background .2s;white-space:nowrap}
+.btn-primary{background:#2b6cb0;color:#fff}.btn-primary:hover{background:#3182ce}
+.btn-primary.loading{opacity:.6;pointer-events:none}
+
+/* Tabs */
+.tabs{max-width:1400px;margin:20px auto 0;padding:0 24px;display:flex;gap:8px}
+.tab{padding:8px 18px;border-radius:20px;font-size:13px;cursor:pointer;border:1px solid #2d3748;background:#1a202c;color:#a0aec0;transition:all .2s}
+.tab.active{background:#2b6cb0;border-color:#2b6cb0;color:#fff}
+
+/* Result info */
+.result-info{max-width:1400px;margin:12px auto 0;padding:0 24px;font-size:13px;color:#718096;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.crawl-status{font-size:12px;color:#4a5568}
+.crawl-status.running{color:#f6ad55}
+
+/* Paper grid */
+.paper-list{max-width:1400px;margin:14px auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:14px}
+
+.paper-card{background:#1a202c;border:1px solid #2d3748;border-radius:12px;padding:18px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.paper-card:hover{border-color:#63b3ed;transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.4)}
+.paper-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#63b3ed,#68d391);opacity:0;transition:opacity .2s}
+.paper-card:hover::before{opacity:1}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px}
+.card-title{font-size:13px;font-weight:600;color:#e2e8f0;line-height:1.5;flex:1}
+.cite-badge{border-radius:20px;padding:3px 9px;font-size:12px;font-weight:700;white-space:nowrap;flex-shrink:0}
+.cite-high{background:#276749;color:#68d391}
+.cite-mid{background:#744210;color:#f6ad55}
+.cite-low{background:#2d3748;color:#a0aec0}
+.card-meta{font-size:11px;color:#718096;margin-bottom:6px}
+.card-authors{font-size:11px;color:#a0aec0;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-abstract{font-size:12px;color:#718096;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-tags{margin-top:10px;display:flex;gap:6px;flex-wrap:wrap}
+.tag{background:#2d3748;border-radius:4px;padding:2px 7px;font-size:11px;color:#a0aec0}
+.tag.new{background:#2c5282;color:#90cdf4}
+
+/* Pagination */
+.pagination{max-width:1400px;margin:8px auto 40px;padding:0 24px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
+.page-btn{padding:7px 13px;background:#1a202c;border:1px solid #2d3748;border-radius:6px;color:#a0aec0;cursor:pointer;font-size:13px;transition:all .2s}
+.page-btn:hover,.page-btn.active{background:#2b6cb0;border-color:#2b6cb0;color:#fff}
+
+/* Modal */
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:1000;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-box{background:#1a202c;border:1px solid #2d3748;border-radius:16px;max-width:700px;width:100%;max-height:85vh;overflow-y:auto;padding:28px;position:relative}
+.modal-close{position:absolute;top:14px;right:14px;background:#2d3748;border:none;border-radius:50%;width:30px;height:30px;color:#a0aec0;cursor:pointer;font-size:13px}
+.modal-close:hover{background:#4a5568;color:#fff}
+.modal-title{font-size:17px;font-weight:700;color:#e2e8f0;line-height:1.5;margin-bottom:14px;padding-right:30px}
+.modal-meta{font-size:13px;color:#718096;margin-bottom:6px}
+.cite-big{font-size:26px;font-weight:700;color:#68d391}
+.modal-abstract{font-size:13px;color:#a0aec0;line-height:1.8;margin-top:14px;border-top:1px solid #2d3748;padding-top:14px}
+.modal-link{display:inline-block;margin-top:16px;padding:9px 18px;background:#2b6cb0;border-radius:8px;color:#fff;text-decoration:none;font-size:13px}
+.modal-link:hover{background:#3182ce}
+
+/* Loading / empty */
+.center-msg{text-align:center;padding:60px;color:#718096;font-size:15px}
+
+/* Chart area */
+.chart-section{max-width:1400px;margin:0 auto;padding:0 24px 20px;display:none}
+.chart-section.visible{display:block}
+.chart-box{background:#1a202c;border:1px solid #2d3748;border-radius:12px;padding:20px}
+.chart-box h3{font-size:14px;color:#a0aec0;margin-bottom:14px}
+.bar-chart{display:flex;flex-direction:column;gap:6px}
+.bar-row{display:flex;align-items:center;gap:10px;font-size:12px}
+.bar-label{width:60px;color:#718096;text-align:right;flex-shrink:0}
+.bar-track{flex:1;background:#2d3748;border-radius:4px;height:18px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,#2b6cb0,#63b3ed);border-radius:4px;transition:width .6s ease;display:flex;align-items:center;padding-left:6px;font-size:11px;color:#fff;min-width:30px}
+
+@media(max-width:600px){
+  .paper-list{grid-template-columns:1fr}
+  .header-inner{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <span class="logo-icon">🔬</span>
+      <div>
+        <h1>3DGS Paper Tracker</h1>
+        <p>实时追踪 3D Gaussian Splatting 最新论文 · 数据来自 Semantic Scholar</p>
+      </div>
+    </div>
+    <div class="stats-bar">
+      <div class="stat"><span id="s-total">—</span><label>已收录</label></div>
+      <div class="stat"><span id="s-high">—</span><label>高引用(≥100)</label></div>
+      <div class="stat"><span id="s-new">—</span><label>近7天新增</label></div>
+      <div class="stat"><span id="s-update">—</span><label>数据更新</label></div>
+    </div>
+  </div>
+</header>
+
+<div class="filter-bar">
+  <div class="search-wrap">
+    <input type="text" id="q" placeholder="搜索标题、作者..." autocomplete="off">
+    <span class="search-icon">🔍</span>
+  </div>
+  <div class="fg">
+    <label>最低引用</label>
+    <select id="min-cite">
+      <option value="0">全部</option>
+      <option value="10">≥ 10</option>
+      <option value="50">≥ 50</option>
+      <option value="100" selected>≥ 100</option>
+      <option value="200">≥ 200</option>
+      <option value="500">≥ 500</option>
+    </select>
+  </div>
+  <div class="fg">
+    <label>发布年份</label>
+    <select id="year">
+      <option value="">全部</option>
+      <option value="2026">2026</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+    </select>
+  </div>
+  <div class="fg">
+    <label>排序</label>
+    <select id="sort">
+      <option value="citations">引用量</option>
+      <option value="published">发布日期</option>
+    </select>
+  </div>
+  <button class="btn btn-primary" id="btn-load" onclick="fetchPapers()">🔄 刷新数据</button>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('list',this)">📄 论文列表</div>
+  <div class="tab" onclick="switchTab('chart',this)">📊 引用分布</div>
+</div>
+
+<div class="result-info">
+  <span id="result-count">加载中...</span>
+  <span class="crawl-status" id="crawl-status"></span>
+</div>
+
+<div class="chart-section" id="chart-section">
+  <div class="chart-box">
+    <h3>📊 各年度论文数量分布</h3>
+    <div class="bar-chart" id="year-chart"></div>
+  </div>
+</div>
+
+<div id="paper-list" class="paper-list"></div>
+<div class="pagination" id="pagination"></div>
+
+<div id="modal" class="modal" onclick="closeModal(event)">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="modal-content"></div>
+  </div>
+</div>
+
+<script>
+// ── 配置 ──────────────────────────────────────────────
+const SS_API = "https://api.semanticscholar.org/graph/v1";
+const FIELDS = "title,authors,year,publicationDate,externalIds,citationCount,abstract";
+const QUERY  = "3D Gaussian Splatting";
+const PER_PAGE = 18;
+
+let allPapers = [];
+let filtered  = [];
+let currentPage = 1;
+let currentTab  = "list";
+let lastFetch   = null;
+
+// ── 工具函数 ──────────────────────────────────────────
+const esc = s => String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+function citeCls(n){
+  if(n>=100) return "cite-high";
+  if(n>=20)  return "cite-mid";
+  return "cite-low";
+}
+
+function isNew(dateStr){
+  if(!dateStr) return false;
+  const d = new Date(dateStr);
+  return (Date.now() - d.getTime()) < 7*86400*1000;
+}
+
+// ── 数据获取 ──────────────────────────────────────────
+async function fetchPapers(){
+  const btn = document.getElementById("btn-load");
+  btn.classList.add("loading");
+  btn.textContent = "⏳ 加载中...";
+  document.getElementById("crawl-status").className = "crawl-status running";
+  document.getElementById("crawl-status").textContent = "正在从 Semantic Scholar 拉取数据...";
+  document.getElementById("paper-list").innerHTML = '<div class="center-msg">⏳ 正在获取论文数据，请稍候...</div>';
+
+  try {
+    let papers = [];
+    let offset = 0;
+    const limit = 100;
+    // 最多拉 5 页 = 500 篇
+    for(let i=0; i<5; i++){
+      const url = `${SS_API}/paper/search?query=${encodeURIComponent(QUERY)}&fields=${FIELDS}&limit=${limit}&offset=${offset}`;
+      const res = await fetch(url);
+      if(!res.ok) break;
+      const data = await res.json();
+      if(!data.data || data.data.length===0) break;
+      papers = papers.concat(data.data);
+      offset += limit;
+      if(papers.length >= (data.total||0)) break;
+      await new Promise(r=>setTimeout(r,300));
+    }
+
+    // 整理数据
+    allPapers = papers.map(p => ({
+      id:        p.paperId,
+      title:     p.title || "",
+      authors:   (p.authors||[]).slice(0,5).map(a=>a.name).join("; ") + ((p.authors||[]).length>5?" et al.":""),
+      published: p.publicationDate || (p.year ? p.year+"-01-01" : ""),
+      year:      p.year || "",
+      citations: p.citationCount || 0,
+      abstract:  p.abstract || "",
+      arxiv_id:  (p.externalIds||{}).ArXiv || "",
+      arxiv_url: (p.externalIds||{}).ArXiv ? `https://arxiv.org/abs/${p.externalIds.ArXiv}` : `https://www.semanticscholar.org/paper/${p.paperId}`,
+    }));
+
+    lastFetch = new Date();
+    updateStats();
+    applyFilter();
+
+    document.getElementById("crawl-status").className = "crawl-status";
+    document.getElementById("crawl-status").textContent = `✅ 已加载 ${allPapers.length} 篇`;
+  } catch(e){
+    document.getElementById("paper-list").innerHTML = `<div class="center-msg">❌ 加载失败：${e.message}<br><br>可能是网络问题，请稍后重试</div>`;
+    document.getElementById("crawl-status").textContent = "加载失败";
+  }
+
+  btn.classList.remove("loading");
+  btn.textContent = "🔄 刷新数据";
+}
+
+// ── 统计 ──────────────────────────────────────────────
+function updateStats(){
+  const high = allPapers.filter(p=>p.citations>=100).length;
+  const newP  = allPapers.filter(p=>isNew(p.published)).length;
+  document.getElementById("s-total").textContent  = allPapers.length;
+  document.getElementById("s-high").textContent   = high;
+  document.getElementById("s-new").textContent    = newP;
+  document.getElementById("s-update").textContent = lastFetch ? lastFetch.toLocaleTimeString("zh-CN",{hour:"2-digit",minute:"2-digit"}) : "—";
+}
+
+// ── 筛选 ──────────────────────────────────────────────
+function applyFilter(){
+  const q        = document.getElementById("q").value.trim().toLowerCase();
+  const minCite  = parseInt(document.getElementById("min-cite").value)||0;
+  const year     = document.getElementById("year").value;
+  const sort     = document.getElementById("sort").value;
+
+  filtered = allPapers.filter(p=>{
+    if(minCite && p.citations < minCite) return false;
+    if(year && String(p.year) !== year) return false;
+    if(q && !p.title.toLowerCase().includes(q) && !p.authors.toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  filtered.sort((a,b)=> sort==="citations" ? b.citations-a.citations : (b.published>a.published?1:-1));
+
+  currentPage = 1;
+  document.getElementById("result-count").textContent = `共 ${filtered.length} 篇符合条件`;
+  renderList();
+  renderChart();
+}
+
+// ── 渲染列表 ──────────────────────────────────────────
+function renderList(){
+  const start = (currentPage-1)*PER_PAGE;
+  const page  = filtered.slice(start, start+PER_PAGE);
+  const el    = document.getElementById("paper-list");
+
+  if(!page.length){
+    el.innerHTML = '<div class="center-msg">😕 没有找到符合条件的论文</div>';
+    document.getElementById("pagination").innerHTML = "";
+    return;
+  }
+
+  el.innerHTML = page.map(p => {
+    const cls   = citeCls(p.citations);
+    const newTag = isNew(p.published) ? '<span class="tag new">🆕 近7天</span>' : "";
+    const abs   = p.abstract ? esc(p.abstract.slice(0,160))+"..." : "暂无摘要";
+    const data  = esc(JSON.stringify(p));
+    return `
+    <div class="paper-card" onclick='openModal(${JSON.stringify(p).replace(/'/g,"&#39;")})'>
+      <div class="card-top">
+        <div class="card-title">${esc(p.title)}</div>
+        <div class="cite-badge ${cls}">📖 ${p.citations}</div>
+      </div>
+      <div class="card-meta">📅 ${p.published||p.year||"未知"}</div>
+      <div class="card-authors">👤 ${esc(p.authors)}</div>
+      <div class="card-abstract">${abs}</div>
+      <div class="card-tags">
+        <span class="tag">3DGS</span>
+        ${p.arxiv_id ? `<span class="tag">${p.arxiv_id}</span>` : ""}
+        ${newTag}
+      </div>
+    </div>`;
+  }).join("");
+
+  renderPagination();
+}
+
+// ── 分页 ──────────────────────────────────────────────
+function renderPagination(){
+  const total = Math.ceil(filtered.length / PER_PAGE);
+  const el = document.getElementById("pagination");
+  if(total <= 1){ el.innerHTML=""; return; }
+  const s = Math.max(1, currentPage-3);
+  const e = Math.min(total, currentPage+3);
+  let html = "";
+  if(currentPage>1) html += `<button class="page-btn" onclick="goPage(${currentPage-1})">‹</button>`;
+  for(let i=s;i<=e;i++) html += `<button class="page-btn ${i===currentPage?"active":""}" onclick="goPage(${i})">${i}</button>`;
+  if(currentPage<total) html += `<button class="page-btn" onclick="goPage(${currentPage+1})">›</button>`;
+  el.innerHTML = html;
+}
+
+function goPage(p){
+  currentPage = p;
+  renderList();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+// ── 图表 ──────────────────────────────────────────────
+function renderChart(){
+  if(currentTab !== "chart") return;
+  const byYear = {};
+  filtered.forEach(p=>{ const y=String(p.year||"未知"); byYear[y]=(byYear[y]||0)+1; });
+  const years = Object.keys(byYear).sort().reverse();
+  const max   = Math.max(...Object.values(byYear), 1);
+  document.getElementById("year-chart").innerHTML = years.map(y=>`
+    <div class="bar-row">
+      <div class="bar-label">${y}</div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:${Math.round(byYear[y]/max*100)}%">${byYear[y]}</div>
+      </div>
+    </div>`).join("");
+}
+
+// ── Tab 切换 ──────────────────────────────────────────
+function switchTab(tab, el){
+  currentTab = tab;
+  document.querySelectorAll(".tab").forEach(t=>t.classList.remove("active"));
+  el.classList.add("active");
+  const chartSec = document.getElementById("chart-section");
+  const listEl   = document.getElementById("paper-list");
+  const pageEl   = document.getElementById("pagination");
+  if(tab==="chart"){
+    chartSec.classList.add("visible");
+    listEl.style.display = "none";
+    pageEl.style.display = "none";
+    renderChart();
+  } else {
+    chartSec.classList.remove("visible");
+    listEl.style.display = "";
+    pageEl.style.display = "";
+  }
+}
+
+// ── 弹窗 ──────────────────────────────────────────────
+function openModal(p){
+  document.getElementById("modal-content").innerHTML = `
+    <div class="modal-title">${esc(p.title)}</div>
+    <div class="modal-meta">📅 发布日期：${p.published||p.year||"未知"}</div>
+    <div class="modal-meta">👤 作者：${esc(p.authors)}</div>
+    ${p.arxiv_id ? `<div class="modal-meta">🆔 arXiv：${p.arxiv_id}</div>` : ""}
+    <div class="modal-meta">引用量：<span class="cite-big">${p.citations}</span></div>
+    <div class="modal-abstract">${esc(p.abstract||"暂无摘要")}</div>
+    <a class="modal-link" href="${p.arxiv_url}" target="_blank" rel="noopener">📄 查看原文 →</a>
+  `;
+  document.getElementById("modal").classList.add("open");
+}
+
+function closeModal(e){
+  if(!e || e.target===document.getElementById("modal") || e.currentTarget?.classList.contains("modal-close")){
+    document.getElementById("modal").classList.remove("open");
+  }
+}
+
+// ── 事件绑定 ──────────────────────────────────────────
+let searchTimer;
+document.getElementById("q").addEventListener("input", ()=>{
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(applyFilter, 350);
+});
+["min-cite","year","sort"].forEach(id=>{
+  document.getElementById(id).addEventListener("change", applyFilter);
+});
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeModal(e); });
+
+// ── 启动 ──────────────────────────────────────────────
+fetchPapers();
+</script>
+</body>
+</html>
+
