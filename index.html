@@ -63,7 +63,7 @@ footer{text-align:center;padding:2rem;color:#aaa;font-size:.8rem}
 </header>
 
 <div class="tabs">
-  <button class="tab active" onclick="showTab('high',this)">高引用 (≥100)</button>
+  <button class="tab active" onclick="showTab('high',this)">高引用 (≥10)</button>
   <button class="tab" onclick="showTab('latest',this)">最新论文</button>
   <button class="tab" onclick="showTab('authors',this)">Top Authors</button>
 </div>
@@ -143,7 +143,7 @@ function getFiltered(papers) {
 
 function applyFilter() {
   if (currentTab === 'authors') return;
-  const high = getFiltered(allPapers.filter(p => p.citations >= 100));
+  const high = getFiltered(allPapers.filter(p => p.citations >= 10));
   const latest = getFiltered([...allPapers].sort((a,b) => (b.published||'') > (a.published||'') ? 1 : -1));
   if (currentTab === 'high') renderCards('high', high, currentPage.high);
   if (currentTab === 'latest') renderCards('latest', latest, currentPage.latest);
