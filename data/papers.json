@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-03-20 05:42 UTC",
+  "updated_at": "2026-03-21 05:16 UTC",
   "total": 589,
   "papers": [
     {
@@ -101,6 +101,16 @@
       "abstract": "3D Gaussian Splatting (3DGS), a 3D representation method with photorealistic real-time rendering capabilities, is regarded as an effective tool for narrowing the sim-to-real gap. However, it lacks fine-grained semantics and physical executability for Visual-Language Navigation (VLN). To address this, we propose SAGE-3D (Semantically and Physically Aligned Gaussian Environments for 3D Navigation), a new paradigm that upgrades 3DGS into an executable, semantically and physically aligned environment. It comprises two components: (1) Object-Centric Semantic Grounding, which adds object-level fine-grained annotations to 3DGS; and (2) Physics-Aware Execution Jointing, which embeds collision objects into 3DGS and constructs rich physical interfaces. We release InteriorGS, containing 1K object-annotated 3DGS indoor scene data, and introduce SAGE-Bench, the first 3DGS-based VLN benchmark with 2M VLN data. Experiments show that 3DGS scene data is more difficult to converge, while exhibiting strong generalizability, improving baseline performance by 31% on the VLN-CE Unseen task. Our data and code are available at: https://sage-3d.github.io.",
       "arxiv_url": "https://arxiv.org/abs/2510.21307",
       "citations": 3
+    },
+    {
+      "arxiv_id": "2602.09999",
+      "title": "Faster-GS: Analyzing and Improving Gaussian Splatting Optimization",
+      "published": "2026-02-10",
+      "year": "2026",
+      "authors": "Florian Hahlbohm; Linus Franke; Martin Eisemann; Marcus Magnor",
+      "abstract": "Recent advances in 3D Gaussian Splatting (3DGS) have focused on accelerating optimization while preserving reconstruction quality. However, many proposed methods entangle implementation-level improvements with fundamental algorithmic modifications or trade performance for fidelity, leading to a fragmented research landscape that complicates fair comparison. In this work, we consolidate and evaluate the most effective and broadly applicable strategies from prior 3DGS research and augment them with several novel optimizations. We further investigate underexplored aspects of the framework, including numerical stability, Gaussian truncation, and gradient approximation. The resulting system, Faster-GS, provides a rigorously optimized algorithm that we evaluate across a comprehensive suite of benchmarks. Our experiments demonstrate that Faster-GS achieves up to 5$\\times$ faster training while maintaining visual quality, establishing a new cost-effective and resource efficient baseline for 3DGS optimization. Furthermore, we demonstrate that optimizations can be applied to 4D Gaussian reconstruction, leading to efficient non-rigid scene optimization.",
+      "arxiv_url": "https://arxiv.org/abs/2602.09999",
+      "citations": 2
     },
     {
       "arxiv_id": "2602.00618",
@@ -320,16 +330,6 @@
       "authors": "Hao Qin; Yukai Sun; Meng Wang; Ming Kong; Mengxu Lu et al.",
       "abstract": "Indirect editing methods for 3D Gaussian Splatting (3DGS) have recently witnessed significant advancements. These approaches operate by first applying edits in the rendered 2D space and subsequently projecting the modifications back into 3D. However, this paradigm inevitably introduces cross-view inconsistencies and constrains both the flexibility and efficiency of the editing process. To address these challenges, we present VF-Editor, which enables native editing of Gaussian primitives by predicting attribute variations in a feedforward manner. To accurately and efficiently estimate these variations, we design a novel variation predictor distilled from 2D editing knowledge. The predictor encodes the input to generate a variation field and employs two learnable, parallel decoding functions to iteratively infer attribute changes for each 3D Gaussian. Thanks to its unified design, VF-Editor can seamlessly distill editing knowledge from diverse 2D editors and strategies into a single predictor, allowing for flexible and effective knowledge transfer into the 3D domain. Extensive experiments on both public and private datasets reveal the inherent limitations of indirect editing pipelines and validate the effectiveness and flexibility of our approach.",
       "arxiv_url": "https://arxiv.org/abs/2602.11638",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2602.09999",
-      "title": "Faster-GS: Analyzing and Improving Gaussian Splatting Optimization",
-      "published": "2026-02-10",
-      "year": "2026",
-      "authors": "Florian Hahlbohm; Linus Franke; Martin Eisemann; Marcus Magnor",
-      "abstract": "Recent advances in 3D Gaussian Splatting (3DGS) have focused on accelerating optimization while preserving reconstruction quality. However, many proposed methods entangle implementation-level improvements with fundamental algorithmic modifications or trade performance for fidelity, leading to a fragmented research landscape that complicates fair comparison. In this work, we consolidate and evaluate the most effective and broadly applicable strategies from prior 3DGS research and augment them with several novel optimizations. We further investigate underexplored aspects of the framework, including numerical stability, Gaussian truncation, and gradient approximation. The resulting system, Faster-GS, provides a rigorously optimized algorithm that we evaluate across a comprehensive suite of benchmarks. Our experiments demonstrate that Faster-GS achieves up to 5$\\times$ faster training while maintaining visual quality, establishing a new cost-effective and resource efficient baseline for 3DGS optimization. Furthermore, we demonstrate that optimizations can be applied to 4D Gaussian reconstruction, leading to efficient non-rigid scene optimization.",
-      "arxiv_url": "https://arxiv.org/abs/2602.09999",
       "citations": 1
     },
     {
@@ -720,6 +720,26 @@
       "authors": "Seungjoo Shin; Jaesik Park; Sunghyun Cho",
       "abstract": "Compression techniques for 3D Gaussian Splatting (3DGS) have recently achieved considerable success in minimizing storage overhead for 3D Gaussians while preserving high rendering quality. Despite the impressive storage reduction, the lack of learned priors restricts further advances in the rate-distortion trade-off for 3DGS compression tasks. To address this, we introduce a novel 3DGS compression framework that leverages the powerful representational capacity of learned image priors to recover compression-induced quality degradation. Built upon initially compressed Gaussians, our restoration network effectively models the compression artifacts in the image space between degraded and original Gaussians. To enhance the rate-distortion performance, we provide coarse rendering residuals into the restoration network as side information. By leveraging the supervision of restored images, the compressed Gaussians are refined, resulting in a highly compact representation with enhanced rendering performance. Our framework is designed to be compatible with existing Gaussian compression methods, making it broadly applicable across different baselines. Extensive experiments validate the effectiveness of our framework, demonstrating superior rate-distortion performance and outperforming the rendering quality of state-of-the-art 3DGS compression methods while requiring substantially less storage.",
       "arxiv_url": "https://arxiv.org/abs/2510.14705",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2510.09997",
+      "title": "CLoD-GS: Continuous Level-of-Detail via 3D Gaussian Splatting",
+      "published": "2025-10-11",
+      "year": "2025",
+      "authors": "Zhigang Cheng; Mingchao Sun; Yu Liu; Zengye Ge; Luyang Tang et al.",
+      "abstract": "Level of Detail (LoD) is a fundamental technique in real-time computer graphics for managing the rendering costs of complex scenes while preserving visual fidelity. Traditionally, LoD is implemented using discrete levels (DLoD), where multiple, distinct versions of a model are swapped out at different distances. This long-standing paradigm, however, suffers from two major drawbacks: it requires significant storage for multiple model copies and causes jarring visual ``popping\" artifacts during transitions, degrading the user experience. We argue that the explicit, primitive-based nature of the emerging 3D Gaussian Splatting (3DGS) technique enables a more ideal paradigm: Continuous LoD (CLoD). A CLoD approach facilitates smooth, seamless quality scaling within a single, unified model, thereby circumventing the core problems of DLOD. To this end, we introduce CLoD-GS, a framework that integrates a continuous LoD mechanism directly into a 3DGS representation. Our method introduces a learnable, distance-dependent decay parameter for each Gaussian primitive, which dynamically adjusts its opacity based on viewpoint proximity. This allows for the progressive and smooth filtering of less significant primitives, effectively creating a continuous spectrum of detail within one model. To train this model to be robust across all distances, we introduce a virtual distance scaling mechanism and a novel coarse-to-fine training strategy with rendered point count regularization. Our approach not only eliminates the storage overhead and visual artifacts of discrete methods but also reduces the primitive count and memory footprint of the final model. Extensive experiments demonstrate that CLoD-GS achieves smooth, quality-scalable rendering from a single model, delivering high-fidelity results across a wide range of performance targets.",
+      "arxiv_url": "https://arxiv.org/abs/2510.09997",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2603.16481",
+      "title": "Optimal uncertainty bounds for multivariate kernel regression under bounded noise: A Gaussian process-based dual function",
+      "published": "2026-03-17",
+      "year": "2026",
+      "authors": "Amon Lahr; Anna Scampicchio; Johannes Köhler; Melanie N. Zeilinger",
+      "abstract": "Non-conservative uncertainty bounds are essential for making reliable predictions about latent functions from noisy data--and thus, a key enabler for safe learning-based control. In this domain, kernel methods such as Gaussian process regression are established techniques, thanks to their inherent uncertainty quantification mechanism. Still, existing bounds either pose strong assumptions on the underlying noise distribution, are conservative, do not scale well in the multi-output case, or are difficult to integrate into downstream tasks. This paper addresses these limitations by presenting a tight, distribution-free bound for multi-output kernel-based estimates. It is obtained through an unconstrained, duality-based formulation, which shares the same structure of classic Gaussian process confidence bounds and can thus be straightforwardly integrated into downstream optimization pipelines. We show that the proposed bound generalizes many existing results and illustrate its application using an example inspired by quadrotor dynamics learning.",
+      "arxiv_url": "https://arxiv.org/abs/2603.16481",
       "citations": 1
     },
     {
@@ -2973,16 +2993,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2510.09997",
-      "title": "CLoD-GS: Continuous Level-of-Detail via 3D Gaussian Splatting",
-      "published": "2025-10-11",
-      "year": "2025",
-      "authors": "Zhigang Cheng; Mingchao Sun; Yu Liu; Zengye Ge; Luyang Tang et al.",
-      "abstract": "Level of Detail (LoD) is a fundamental technique in real-time computer graphics for managing the rendering costs of complex scenes while preserving visual fidelity. Traditionally, LoD is implemented using discrete levels (DLoD), where multiple, distinct versions of a model are swapped out at different distances. This long-standing paradigm, however, suffers from two major drawbacks: it requires significant storage for multiple model copies and causes jarring visual ``popping\" artifacts during transitions, degrading the user experience. We argue that the explicit, primitive-based nature of the emerging 3D Gaussian Splatting (3DGS) technique enables a more ideal paradigm: Continuous LoD (CLoD). A CLoD approach facilitates smooth, seamless quality scaling within a single, unified model, thereby circumventing the core problems of DLOD. To this end, we introduce CLoD-GS, a framework that integrates a continuous LoD mechanism directly into a 3DGS representation. Our method introduces a learnable, distance-dependent decay parameter for each Gaussian primitive, which dynamically adjusts its opacity based on viewpoint proximity. This allows for the progressive and smooth filtering of less significant primitives, effectively creating a continuous spectrum of detail within one model. To train this model to be robust across all distances, we introduce a virtual distance scaling mechanism and a novel coarse-to-fine training strategy with rendered point count regularization. Our approach not only eliminates the storage overhead and visual artifacts of discrete methods but also reduces the primitive count and memory footprint of the final model. Extensive experiments demonstrate that CLoD-GS achieves smooth, quality-scalable rendering from a single model, delivering high-fidelity results across a wide range of performance targets.",
-      "arxiv_url": "https://arxiv.org/abs/2510.09997",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2510.09962",
       "title": "VG-Mapping: Variation-Aware 3D Gaussians for Online Semi-static Scene Mapping",
       "published": "2025-10-11",
@@ -5050,16 +5060,6 @@
       "authors": "Yicui Shi; Yuhan Chen; Xiangfei Huang; Zhenguo Wang; Wenxuan Yu et al.",
       "abstract": "Low-light image enhancement aims to restore the visibility of images captured by visual sensors in dim environments by addressing their inherent signal degradations, such as luminance attenuation and structural corruption. Although numerous algorithms attempt to improve image quality, existing methods often cause a severe loss of intrinsic signal priors. To overcome these challenges, we propose a Dual-Stream Transformer Network (DST-Net) based on illumination-agnostic signal prior guidance and multi-scale spatial convolutions. First, to address the loss of critical signal features under low-light conditions, we design a feature extraction module. This module integrates Difference of Gaussians (DoG), LAB color space transformations, and VGG-16 for texture extraction, utilizing decoupled illumination-agnostic features as signal priors to continuously guide the enhancement process. Second, we construct a dual-stream interaction architecture. By employing a cross-modal attention mechanism, the network leverages the extracted priors to dynamically rectify the deteriorated signal representation of the enhanced image, ultimately achieving iterative enhancement through differentiable curve estimation. Furthermore, to overcome the inability of existing methods to preserve fine structures and textures, we propose a Multi-Scale Spatial Fusion Block (MSFB) featuring pseudo-3D and 3D gradient operator convolutions. This module integrates explicit gradient operators to recover high-frequency edges while capturing inter-channel spatial correlations via multi-scale spatial convolutions. Extensive evaluations and ablation studies demonstrate that DST-Net achieves superior performance in subjective visual quality and objective metrics. Specifically, our method achieves a PSNR of 25.64 dB on the LOL dataset. Subsequent validation on the LSRW dataset further confirms its robust cross-scene generalization.",
       "arxiv_url": "https://arxiv.org/abs/2603.16482",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2603.16481",
-      "title": "Optimal uncertainty bounds for multivariate kernel regression under bounded noise: A Gaussian process-based dual function",
-      "published": "2026-03-17",
-      "year": "2026",
-      "authors": "Amon Lahr; Anna Scampicchio; Johannes Köhler; Melanie N. Zeilinger",
-      "abstract": "Non-conservative uncertainty bounds are essential for making reliable predictions about latent functions from noisy data--and thus, a key enabler for safe learning-based control. In this domain, kernel methods such as Gaussian process regression are established techniques, thanks to their inherent uncertainty quantification mechanism. Still, existing bounds either pose strong assumptions on the underlying noise distribution, are conservative, do not scale well in the multi-output case, or are difficult to integrate into downstream tasks. This paper addresses these limitations by presenting a tight, distribution-free bound for multi-output kernel-based estimates. It is obtained through an unconstrained, duality-based formulation, which shares the same structure of classic Gaussian process confidence bounds and can thus be straightforwardly integrated into downstream optimization pipelines. We show that the proposed bound generalizes many existing results and illustrate its application using an example inspired by quadrotor dynamics learning.",
-      "arxiv_url": "https://arxiv.org/abs/2603.16481",
       "citations": 0
     },
     {
