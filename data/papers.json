@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-24 05:06 UTC",
+  "updated_at": "2026-04-25 04:47 UTC",
   "total": 590,
   "papers": [
     {
@@ -10,7 +10,7 @@
       "authors": "Linfei Li; Lin Zhang; Zhong Wang; Ying Shen",
       "abstract": "Recently, the multi-modal fusion of RGB, depth, and semantics has shown great potential in dense Simultaneous Localization and Mapping (SLAM). However, a prerequisite for generating consistent semantic maps is the availability of dense, efficient, and scalable scene representations. Existing semantic SLAM systems based on explicit representations are often limited by resolution and an inability to predict unknown areas. Conversely, implicit representations typically rely on time-consuming ray tracing, failing to meet real-time requirements. Fortunately, 3D Gaussian Splatting (3DGS) has emerged as a promising representation that combines the efficiency of point-based methods with the continuity of geometric structures. To this end, we propose GS3LAM, a Gaussian Semantic Splatting SLAM framework that processes multimodal data to render consistent, dense semantic maps in real-time. GS3LAM models the scene as a Semantic Gaussian Field (SG-Field) and jointly optimizes camera poses and the field via multimodal error constraints. Furthermore, a Depth-adaptive Scale Regularization (DSR) scheme is introduced to resolve misalignments between scale-invariant Gaussians and geometric surfaces. To mitigate catastrophic forgetting, we propose a Random Sampling-based Keyframe Mapping (RSKM) strategy, which demonstrates superior performance over common local covisibility optimization methods. Extensive experiments on benchmark datasets show that GS3LAM achieves increased tracking robustness, superior rendering quality, and enhanced semantic precision compared to state-of-the-art methods. Source code is available at https://github.com/lif314/GS3LAM.",
       "arxiv_url": "https://arxiv.org/abs/2603.27781",
-      "citations": 31
+      "citations": 32
     },
     {
       "arxiv_id": "2602.18322",
@@ -50,7 +50,7 @@
       "authors": "Florian Hahlbohm; Linus Franke; Martin Eisemann; Marcus Magnor",
       "abstract": "Recent advances in 3D Gaussian Splatting (3DGS) have focused on accelerating optimization while preserving reconstruction quality. However, many proposed methods entangle implementation-level improvements with fundamental algorithmic modifications or trade performance for fidelity, leading to a fragmented research landscape that complicates fair comparison. In this work, we consolidate and evaluate the most effective and broadly applicable strategies from prior 3DGS research and augment them with several novel optimizations. We further investigate underexplored aspects of the framework, including numerical stability, Gaussian truncation, and gradient approximation. The resulting system, Faster-GS, provides a rigorously optimized algorithm that we evaluate across a comprehensive suite of benchmarks. Our experiments demonstrate that Faster-GS achieves up to 5$\\times$ faster training while maintaining visual quality, establishing a new cost-effective and resource efficient baseline for 3DGS optimization. Furthermore, we demonstrate that optimizations can be applied to 4D Gaussian reconstruction, leading to efficient non-rigid scene optimization.",
       "arxiv_url": "https://arxiv.org/abs/2602.09999",
-      "citations": 4
+      "citations": 5
     },
     {
       "arxiv_id": "2512.19678",
@@ -71,6 +71,26 @@
       "abstract": "Modern autonomous navigation systems predominantly rely on lidar and depth cameras. However, a fundamental question remains: Can flying robots navigate in clutter using solely monocular RGB images? Given the prohibitive costs of real-world data collection, learning policies in simulation offers a promising path. Yet, deploying such policies directly in the physical world is hindered by the significant sim-to-real perception gap. Thus, we propose a framework that couples the photorealism of 3D Gaussian Splatting (3DGS) environments with Adversarial Domain Adaptation. By training in high-fidelity simulation while explicitly minimizing feature discrepancy, our method ensures the policy relies on domain-invariant cues. Experimental results demonstrate that our policy achieves robust zero-shot transfer to the physical world, enabling safe and agile flight in unstructured environments with varying illumination.",
       "arxiv_url": "https://arxiv.org/abs/2512.17349",
       "citations": 4
+    },
+    {
+      "arxiv_id": "2604.21387",
+      "title": "EdgeFormer: local patch-based edge detection transformer on point clouds",
+      "published": "2026-04-23",
+      "year": "2026",
+      "authors": "Yifei Xie; Zhikun Tu; Tong Yang; Yuhe Zhang; Xinyu Zhou",
+      "abstract": "Edge points on 3D point clouds can clearly convey 3D geometry and surface characteristics, therefore, edge detection is widely used in many vision applications with high industrial and commercial demands. However, the fine-grained edge features are difficult to detect effectively as they are generally densely distributed or exhibit small-scale surface gradients. To address this issue, we present a learning-based edge detection network, named EdgeFormer, which mainly consists of two stages. Based on the observation that spatially neighboring points tend to exhibit high correlation, forming the local underlying surface, we convert the edge detection of the entire point cloud into a point classification based on local patches. Therefore, in the first stage, we construct local patch feature descriptors that describe the local neighborhood around each point. In the second stage, we classify each point by analyzing the local patch feature descriptors generated in the first stage. Due to the conversion of the point cloud into local patches, the proposed method can effectively extract the finer details. The experimental results show that our model demonstrates competitive performance compared to six baselines.",
+      "arxiv_url": "https://arxiv.org/abs/2604.21387",
+      "citations": 4
+    },
+    {
+      "arxiv_id": "2604.03039",
+      "title": "GenSmoke-GS: A Multi-Stage Method for Novel View Synthesis from Smoke-Degraded Images Using a Generative Model",
+      "published": "2026-04-03",
+      "year": "2026",
+      "authors": "Qida Cao; Xinyuan Hu; Changyue Shi; Jiajun Ding; Zhou Yu et al.",
+      "abstract": "This paper describes our method for Track 2 of the NTIRE 2026 3D Restoration and Reconstruction (3DRR) Challenge on smoke-degraded images. In this task, smoke reduces image visibility and weakens the cross-view consistency required by scene optimization and rendering. We address this problem with a multi-stage pipeline consisting of image restoration, dehazing, MLLM-based enhancement, 3DGS-MCMC optimization, and averaging over repeated runs. The main purpose of the pipeline is to improve visibility before rendering while limiting scene-content changes across input views. Experimental results on the challenge benchmark show improved quantitative performance and better visual quality than the provided baselines. The code is available at https://github.com/plbbl/GenSmoke-GS. Our method achieved a ranking of 1 out of 14 participants in Track 2 of the NTIRE 3DRR Challenge, as reported on the official competition website: https://www.codabench.org/competitions/13993/#/results-tab.",
+      "arxiv_url": "https://arxiv.org/abs/2604.03039",
+      "citations": 3
     },
     {
       "arxiv_id": "2604.02586",
@@ -103,33 +123,13 @@
       "citations": 3
     },
     {
-      "arxiv_id": "2604.13589",
-      "title": "Dehaze-then-Splat: Generative Dehazing with Physics-Informed 3D Gaussian Splatting for Smoke-Free Novel View Synthesis",
-      "published": "2026-04-15",
+      "arxiv_id": "2604.05301",
+      "title": "SmokeGS-R: Physics-Guided Pseudo-Clean 3DGS for Real-World Multi-View Smoke Restoration",
+      "published": "2026-04-07",
       "year": "2026",
-      "authors": "Boss Chen; Hanqing Wang",
-      "abstract": "We present Dehaze-then-Splat, a two-stage pipeline for multi-view smoke removal and novel view synthesis developed for Track~2 of the NTIRE 2026 3D Restoration and Reconstruction Challenge. In the first stage, we produce pseudo-clean training images via per-frame generative dehazing using Nano Banana Pro, followed by brightness normalization. In the second stage, we train 3D Gaussian Splatting (3DGS) with physics-informed auxiliary losses -- depth supervision via Pearson correlation with pseudo-depth, dark channel prior regularization, and dual-source gradient matching -- that compensate for cross-view inconsistencies inherent in frame-wise generative processing. We identify a fundamental tension in dehaze-then-reconstruct pipelines: per-image restoration quality does not guarantee multi-view consistency, and such inconsistency manifests as blurred renders and structural instability in downstream 3D reconstruction.Our analysis shows that MCMC-based densification with early stopping, combined with depth and haze-suppression priors, effectively mitigates these artifacts. On the Akikaze validation scene, our pipeline achieves 20.98\\,dB PSNR and 0.683 SSIM for novel view synthesis, a +1.50\\,dB improvement over the unregularized baseline.",
-      "arxiv_url": "https://arxiv.org/abs/2604.13589",
-      "citations": 2
-    },
-    {
-      "arxiv_id": "2604.11142",
-      "title": "Naka-GS: A Bionics-inspired Dual-Branch Naka Correction and Progressive Point Pruning for Low-Light 3DGS",
-      "published": "2026-04-13",
-      "year": "2026",
-      "authors": "Runyu Zhu; SiXun Dong; Zhiqiang Zhang; Qingxia Ye; Zhihua Xu",
-      "abstract": "Low-light conditions severely hinder 3D restoration and reconstruction by degrading image visibility, introducing color distortions, and contaminating geometric priors for downstream optimization. We present NAKA-GS, a bionics-inspired framework for low-light 3D Gaussian Splatting that jointly improves photometric restoration and geometric initialization. Our method starts with a Naka-guided chroma-correction network, which combines physics-prior low-light enhancement, dual-branch input modeling, frequency-decoupled correction, and mask-guided optimization to suppress bright-region chromatic artifacts and edge-structure errors. The enhanced images are then fed into a feed-forward multi-view reconstruction model to produce dense scene priors. To further improve Gaussian initialization, we introduce a lightweight Point Preprocessing Module (PPM) that performs coordinate alignment, voxel pooling, and distance-adaptive progressive pruning to remove noisy and redundant points while preserving representative structures. Without introducing heavy inference overhead, NAKA-GS improves restoration quality, training stability, and optimization efficiency for low-light 3D reconstruction. The proposed method was presented in the NTIRE 3D Restoration and Reconstruction (3DRR) Challenge, and outperformed the baseline methods by a large margin. The code is available at https://github.com/RunyuZhu/Naka-GS",
-      "arxiv_url": "https://arxiv.org/abs/2604.11142",
-      "citations": 2
-    },
-    {
-      "arxiv_id": "2604.03039",
-      "title": "GenSmoke-GS: A Multi-Stage Method for Novel View Synthesis from Smoke-Degraded Images Using a Generative Model",
-      "published": "2026-04-03",
-      "year": "2026",
-      "authors": "Qida Cao; Xinyuan Hu; Changyue Shi; Jiajun Ding; Zhou Yu et al.",
-      "abstract": "This paper describes our method for Track 2 of the NTIRE 2026 3D Restoration and Reconstruction (3DRR) Challenge on smoke-degraded images. In this task, smoke reduces image visibility and weakens the cross-view consistency required by scene optimization and rendering. We address this problem with a multi-stage pipeline consisting of image restoration, dehazing, MLLM-based enhancement, 3DGS-MCMC optimization, and averaging over repeated runs. The main purpose of the pipeline is to improve visibility before rendering while limiting scene-content changes across input views. Experimental results on the challenge benchmark show improved quantitative performance and better visual quality than the provided baselines. The code is available at https://github.com/plbbl/GenSmoke-GS. Our method achieved a ranking of 1 out of 14 participants in Track 2 of the NTIRE 3DRR Challenge, as reported on the official competition website: https://www.codabench.org/competitions/13993/#/results-tab.",
-      "arxiv_url": "https://arxiv.org/abs/2604.03039",
+      "authors": "Xueming Fu; Lixia Han",
+      "abstract": "Real-world smoke simultaneously attenuates scene radiance, adds airlight, and destabilizes multi-view appearance consistency, making robust 3D reconstruction particularly difficult. We present \\textbf{SmokeGS-R}, a practical pipeline developed for the NTIRE 2026 3D Restoration and Reconstruction Track 2 challenge. The key idea is to decouple geometry recovery from appearance correction: we generate physics-guided pseudo-clean supervision with a refined dark channel prior and guided filtering, train a sharp clean-only 3D Gaussian Splatting source model, and then harmonize its renderings with a donor ensemble using geometric-mean reference aggregation, LAB-space Reinhard transfer, and light Gaussian smoothing. On the official challenge testing leaderboard, the final submission achieved \\mbox{PSNR $=15.217$} and \\mbox{SSIM $=0.666$}. After the public release of RealX3D, we re-evaluated the same frozen result on the seven released challenge scenes without retraining and obtained \\mbox{PSNR $=15.209$}, \\mbox{SSIM $=0.644$}, and \\mbox{LPIPS $=0.551$}, outperforming the strongest official baseline average on the same scenes by $+3.68$ dB PSNR. These results suggest that a geometry-first reconstruction strategy combined with stable post-render appearance harmonization is an effective recipe for real-world multi-view smoke restoration. The code is available at https://github.com/windrise/3drr_Track2_SmokeGS-R.",
+      "arxiv_url": "https://arxiv.org/abs/2604.05301",
       "citations": 2
     },
     {
@@ -241,26 +241,6 @@
       "abstract": "3D human pose estimation is a classic and important research direction in the field of computer vision. In recent years, Transformer-based methods have made significant progress in lifting 2D to 3D human pose estimation. However, these methods primarily focus on modeling global temporal and spatial relationships, neglecting local skeletal relationships and the information interaction between different channels. Therefore, we have proposed a novel method,the Dual-stream Spatio-temporal GCN-Transformer Network (MixTGFormer). This method models the spatial and temporal relationships of human skeletons simultaneously through two parallel channels, achieving effective fusion of global and local features. The core of MixTGFormer is composed of stacked Mixformers. Specifically, the Mixformer includes the Mixformer Block and the Squeeze-and-Excitation Layer ( SE Layer). It first extracts and fuses various information of human skeletons through two parallel Mixformer Blocks with different modes. Then, it further supplements the fused information through the SE Layer. The Mixformer Block integrates Graph Convolutional Networks (GCN) into the Transformer, enhancing both local and global information utilization. Additionally, we further implement its temporal and spatial forms to extract both spatial and temporal relationships. We extensively evaluated our model on two benchmark datasets (Human3.6M and MPI-INF-3DHP). The experimental results showed that, compared to other methods, our MixTGFormer achieved state-of-the-art results, with P1 errors of 37.6mm and 15.7mm on these datasets, respectively.",
       "arxiv_url": "https://arxiv.org/abs/2604.17688",
       "citations": 2
-    },
-    {
-      "arxiv_id": "2604.15239",
-      "title": "TokenGS: Decoupling 3D Gaussian Prediction from Pixels with Learnable Tokens",
-      "published": "2026-04-16",
-      "year": "2026",
-      "authors": "Jiawei Ren; Michal Jan Tyszkiewicz; Jiahui Huang; Zan Gojcic",
-      "abstract": "In this work, we revisit several key design choices of modern Transformer-based approaches for feed-forward 3D Gaussian Splatting (3DGS) prediction. We argue that the common practice of regressing Gaussian means as depths along camera rays is suboptimal, and instead propose to directly regress 3D mean coordinates using only a self-supervised rendering loss. This formulation allows us to move from the standard encoder-only design to an encoder-decoder architecture with learnable Gaussian tokens, thereby unbinding the number of predicted primitives from input image resolution and number of views. Our resulting method, TokenGS, demonstrates improved robustness to pose noise and multiview inconsistencies, while naturally supporting efficient test-time optimization in token space without degrading learned priors. TokenGS achieves state-of-the-art feed-forward reconstruction performance on both static and dynamic scenes, producing more regularized geometry and more balanced 3DGS distribution, while seamlessly recovering emergent scene attributes such as static-dynamic decomposition and scene flow.",
-      "arxiv_url": "https://arxiv.org/abs/2604.15239",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2604.05301",
-      "title": "SmokeGS-R: Physics-Guided Pseudo-Clean 3DGS for Real-World Multi-View Smoke Restoration",
-      "published": "2026-04-07",
-      "year": "2026",
-      "authors": "Xueming Fu; Lixia Han",
-      "abstract": "Real-world smoke simultaneously attenuates scene radiance, adds airlight, and destabilizes multi-view appearance consistency, making robust 3D reconstruction particularly difficult. We present \\textbf{SmokeGS-R}, a practical pipeline developed for the NTIRE 2026 3D Restoration and Reconstruction Track 2 challenge. The key idea is to decouple geometry recovery from appearance correction: we generate physics-guided pseudo-clean supervision with a refined dark channel prior and guided filtering, train a sharp clean-only 3D Gaussian Splatting source model, and then harmonize its renderings with a donor ensemble using geometric-mean reference aggregation, LAB-space Reinhard transfer, and light Gaussian smoothing. On the official challenge testing leaderboard, the final submission achieved \\mbox{PSNR $=15.217$} and \\mbox{SSIM $=0.666$}. After the public release of RealX3D, we re-evaluated the same frozen result on the seven released challenge scenes without retraining and obtained \\mbox{PSNR $=15.209$}, \\mbox{SSIM $=0.644$}, and \\mbox{LPIPS $=0.551$}, outperforming the strongest official baseline average on the same scenes by $+3.68$ dB PSNR. These results suggest that a geometry-first reconstruction strategy combined with stable post-render appearance harmonization is an effective recipe for real-world multi-view smoke restoration. The code is available at https://github.com/windrise/3drr_Track2_SmokeGS-R.",
-      "arxiv_url": "https://arxiv.org/abs/2604.05301",
-      "citations": 1
     },
     {
       "arxiv_id": "2604.03069",
@@ -583,6 +563,36 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2512.07197",
+      "title": "SUCCESS-GS: Survey of Compactness and Compression for Efficient Static and Dynamic Gaussian Splatting",
+      "published": "2025-12-08",
+      "year": "2025",
+      "authors": "Seokhyun Youn; Soohyun Lee; Geonho Kim; Weeyoung Kwon; Sung-Ho Bae et al.",
+      "abstract": "3D Gaussian Splatting (3DGS) has emerged as a powerful explicit representation enabling real-time, high-fidelity 3D reconstruction and novel view synthesis. However, its practical use is hindered by the massive memory and computational demands required to store and render millions of Gaussians. These challenges become even more severe in 4D dynamic scenes. To address these issues, the field of Efficient Gaussian Splatting has rapidly evolved, proposing methods that reduce redundancy while preserving reconstruction quality. This survey provides the first unified overview of efficient 3D and 4D Gaussian Splatting techniques. For both 3D and 4D settings, we systematically categorize existing methods into two major directions, Parameter Compression and Restructuring Compression, and comprehensively summarize the core ideas and methodological trends within each category. We further cover widely used datasets, evaluation metrics, and representative benchmark comparisons. Finally, we discuss current limitations and outline promising research directions toward scalable, compact, and real-time Gaussian Splatting for both static and dynamic 3D scene representation.",
+      "arxiv_url": "https://arxiv.org/abs/2512.07197",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.21562",
+      "title": "Magnetic-flux tunable electronic transport through domain walls in a three-dimensional second-order topological insulator",
+      "published": "2026-04-23",
+      "year": "2026",
+      "authors": "Zhe Hou; Ai-Min Guo",
+      "abstract": "The three-dimensional (3D) topological insulators (TIs), hosting topologically protected helical surface states, can be promoted into second-order TIs when a diagonal Zeeman term, typical of magnetic doping, is introduced. The latter hosts exotic chiral one-dimensional (1D) topological hinge states (THSs). In this paper, we investigate the electronic transport of THSs through a magnetic domain wall (DW) in a 3D TI nanowire. Due to the sign reversal of the out-of-plane magnetization across the DW, four 1D topological boundary states, residing on the edge of the DW, arise and form an enclosed loop mediating the counterpropagating THSs. By applying a uniform magnetic field parallel to the nanowire, we obtain a perfect sinusoidal Aharonov-Bohm oscillation in the two-terminal conductance $G$, formulated by $G=\\frac{e^2}{2h} \\left[ 1- \\cos(πΦ/Φ_0) \\right]$, with $Φ$ the magnetic flux through the DW and $Φ_0 = h/2e$ the flux quantum. Applying a phenomenological scattering matrix approach, we explain this novel Aharonov-Bohm oscillation perfectly, and attribute the constructive (destructive) interference of transmission at $Φ= Φ_0$ (0) to the $π$-spin rotation of the THSs traveling through the DW. Extending our study to a double-DW junction, where the central region has antiparallel magnetization to the leads, we observe Fabry-P{é}rot oscillations, in which the conductance minima are tuned by the magnetic flux. Our findings open a new avenue for finely controlling the quantum transport of THSs in magnetic systems using magnetic flux, and provide a faithful way for detecting THSs in experiments.",
+      "arxiv_url": "https://arxiv.org/abs/2604.21562",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.21442",
+      "title": "2L-LSH: A Locality-Sensitive Hash Function-Based Method For Rapid Point Cloud Indexing",
+      "published": "2026-04-23",
+      "year": "2026",
+      "authors": "Shurui Wang; Yuhe Zhang; Ruizhe Guo; Yaning Zhang; Yifei Xie et al.",
+      "abstract": "The development of 3D scanning technology has enabled the acquisition of massive point cloud models with diverse structures and large scales, thereby presenting significant challenges in point cloud processing. Fast neighboring points search is one of the most common problems, which is frequently used in model reconstruction, classification, retrieval and feature visualization. Hash function is well known for its high-speed and accurate performance in searching high-dimensional data, which is also the core of the proposed 2L-LSH. Specifically, the 2L-LSH algorithm adopts a two-step hash function strategy, in which the popular step divides the bounding box of the point cloud model and the second step constructs a generalized table-based data structure. The proposed 2L-LSH offers a highly efficient and accurate solution for fast neighboring points search in large-scale 3D point cloud models, making it a promising technique for various applications in the field. The proposed algorithm is compared with the well-known methods including Kd-tree and Octree; the obtained results demonstrated that the proposed method outperforms Kd-tree and Octree in terms of speed, i.e. the time consumption of kNN search can be 51.111% and 94.159% lower than Kd-tree and Octree, respectively. And the RN search time can be 54.519% and 41.840% lower than Kd-tree and Octree, respectively.",
+      "arxiv_url": "https://arxiv.org/abs/2604.21442",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2604.20293",
       "title": "Synthetic Flight Data Generation Using Generative Models",
       "published": "2026-04-22",
@@ -620,6 +630,16 @@
       "authors": "Pradyumna YM; Yuxuan Xue; Yue Chen; Nikita Kister; István Sárándi et al.",
       "abstract": "Reconstructing physically plausible 3D human-scene interactions (HSI) from a single image currently presents a trade-off: optimization based methods offer accurate contact but are slow (~20s), while feed-forward approaches are fast yet lack explicit interaction reasoning, producing floating and interpenetration artifacts.   Our key insight is that geometry-based human--scene fitting can be amortized into fast feed-forward inference. We present GRAFT (Geometric Refinement And Fitting Transformer), a learned HSI prior that predicts Interaction Gradients: corrective parameter updates that iteratively refine human meshes by reasoning about their 3D relationship to the surrounding scene.   GRAFT encodes the interaction state into compact body-anchored tokens, each grounded in the scene geometry via Geometric Probes that capture spatial relationships with nearby surfaces.   A lightweight transformer recurrently updates human meshes and re-probes the scene, ensuring the final pose aligns with both learned priors and observed geometry.   GRAFT operates either as an end-to-end reconstructor using image features, or with geometry alone as a transferable plug-and-play HSI prior that improves feed-forward methods without retraining.   Experiments show GRAFT improves interaction quality by up to 113% over state-of-the-art feed-forward methods and matches optimization-based interaction quality at ${\\sim}50{\\times}$ lower runtime, while generalizing seamlessly to in-the-wild multi-person scenes and being preferred in 64.8% of three-way user study. Project page: https://pradyumnaym.github.io/graft .",
       "arxiv_url": "https://arxiv.org/abs/2604.19624",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.19127",
+      "title": "OT-UVGS: Revisiting UV Mapping for Gaussian Splatting as a Capacity Allocation Problem",
+      "published": "2026-04-21",
+      "year": "2026",
+      "authors": "Byunghyun Kim",
+      "abstract": "UV-parameterized Gaussian Splatting (UVGS) maps an unstructured set of 3D Gaussians to a regular UV tensor, enabling compact storage and explicit control of representation capacity. Existing UVGS, however, uses a deterministic spherical pro- jection to assign Gaussians to UV locations. Because this mapping ignores the global Gaussian distribution, it often leaves many UV slots empty while causing frequent collisions in dense regions. We reinterpret UV mapping as a capacity-allocation problem under a fixed UV budget and propose OT-UVGS, a lightweight, separable one-dimensional optimal-transport-inspired mapping that globally couples assignments while preserving the original UVGS representation. The method is implemented with rank-based sorting, has O(N log N) complexity for N Gaussians, and can be used as a drop-in replacement for spherical UVGS. Across 184 object-centric scenes and the Mip-NeRF dataset, OT-UVGS consistently improves peak signal-to-noise ratio (PSNR), structural similarity (SSIM), and Learned Perceptual Image Patch Similarity (LPIPS) under the same UV resolution and per-slot capacity (K=1). These gains are accompanied by substantially better UV utilization, including higher non-empty slot ratios, fewer collisions, and higher Gaussian retention. Our results show that revisiting the mapping alone can unlock a significant fraction of the latent capacity of UVGS.",
+      "arxiv_url": "https://arxiv.org/abs/2604.19127",
       "citations": 1
     },
     {
@@ -793,6 +813,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2604.15239",
+      "title": "TokenGS: Decoupling 3D Gaussian Prediction from Pixels with Learnable Tokens",
+      "published": "2026-04-16",
+      "year": "2026",
+      "authors": "Jiawei Ren; Michal Jan Tyszkiewicz; Jiahui Huang; Zan Gojcic",
+      "abstract": "In this work, we revisit several key design choices of modern Transformer-based approaches for feed-forward 3D Gaussian Splatting (3DGS) prediction. We argue that the common practice of regressing Gaussian means as depths along camera rays is suboptimal, and instead propose to directly regress 3D mean coordinates using only a self-supervised rendering loss. This formulation allows us to move from the standard encoder-only design to an encoder-decoder architecture with learnable Gaussian tokens, thereby unbinding the number of predicted primitives from input image resolution and number of views. Our resulting method, TokenGS, demonstrates improved robustness to pose noise and multiview inconsistencies, while naturally supporting efficient test-time optimization in token space without degrading learned priors. TokenGS achieves state-of-the-art feed-forward reconstruction performance on both static and dynamic scenes, producing more regularized geometry and more balanced 3DGS distribution, while seamlessly recovering emergent scene attributes such as static-dynamic decomposition and scene flow.",
+      "arxiv_url": "https://arxiv.org/abs/2604.15239",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2604.14782",
       "title": "One-shot Compositional 3D Head Avatars with Deformable Hair",
       "published": "2026-04-16",
@@ -820,6 +850,16 @@
       "authors": "Team HY-World; Chenjie Cao; Xuhui Zuo; Zhenwei Wang; Yisu Zhang et al.",
       "abstract": "We introduce HY-World 2.0, a multi-modal world model framework that advances our prior project HY-World 1.0. HY-World 2.0 accommodates diverse input modalities, including text prompts, single-view images, multi-view images, and videos, and produces 3D world representations. With text or single-view image inputs, the model performs world generation, synthesizing high-fidelity, navigable 3D Gaussian Splatting (3DGS) scenes. This is achieved through a four-stage method: a) Panorama Generation with HY-Pano 2.0, b) Trajectory Planning with WorldNav, c) World Expansion with WorldStereo 2.0, and d) World Composition with WorldMirror 2.0. Specifically, we introduce key innovations to enhance panorama fidelity, enable 3D scene understanding and planning, and upgrade WorldStereo, our keyframe-based view generation model with consistent memory. We also upgrade WorldMirror, a feed-forward model for universal 3D prediction, by refining model architecture and learning strategy, enabling world reconstruction from multi-view images or videos. Also, we introduce WorldLens, a high-performance 3DGS rendering platform featuring a flexible engine-agnostic architecture, automatic IBL lighting, efficient collision detection, and training-rendering co-design, enabling interactive exploration of 3D worlds with character support. Extensive experiments demonstrate that HY-World 2.0 achieves state-of-the-art performance on several benchmarks among open-source approaches, delivering results comparable to the closed-source model Marble. We release all model weights, code, and technical details to facilitate reproducibility and support further research on 3D world models.",
       "arxiv_url": "https://arxiv.org/abs/2604.14268",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2604.13589",
+      "title": "Dehaze-then-Splat: Generative Dehazing with Physics-Informed 3D Gaussian Splatting for Smoke-Free Novel View Synthesis",
+      "published": "2026-04-15",
+      "year": "2026",
+      "authors": "Boss Chen; Hanqing Wang",
+      "abstract": "We present Dehaze-then-Splat, a two-stage pipeline for multi-view smoke removal and novel view synthesis developed for Track~2 of the NTIRE 2026 3D Restoration and Reconstruction Challenge. In the first stage, we produce pseudo-clean training images via per-frame generative dehazing using Nano Banana Pro, followed by brightness normalization. In the second stage, we train 3D Gaussian Splatting (3DGS) with physics-informed auxiliary losses -- depth supervision via Pearson correlation with pseudo-depth, dark channel prior regularization, and dual-source gradient matching -- that compensate for cross-view inconsistencies inherent in frame-wise generative processing. We identify a fundamental tension in dehaze-then-reconstruct pipelines: per-image restoration quality does not guarantee multi-view consistency, and such inconsistency manifests as blurred renders and structural instability in downstream 3D reconstruction.Our analysis shows that MCMC-based densification with early stopping, combined with depth and haze-suppression priors, effectively mitigates these artifacts. On the Akikaze validation scene, our pipeline achieves 20.98\\,dB PSNR and 0.683 SSIM for novel view synthesis, a +1.50\\,dB improvement over the unregularized baseline.",
+      "arxiv_url": "https://arxiv.org/abs/2604.13589",
       "citations": 0
     },
     {
@@ -940,6 +980,16 @@
       "authors": "Qilin Zhang; Jinyu Zhu; Olaf Wysocki; Benjamin Busam; Boris Jutzi",
       "abstract": "Recent semantic 3D Gaussian Splatting (3DGS) methods primarily rely on 2D foundation models, often yielding ambiguous boundaries and limited support for structured urban semantics. While city models such as CityGML encode hierarchically organized semantics together with building geometry, these labels cannot be directly mapped to Gaussian primitives. We present GS4City, a hierarchical semantic Gaussian Splatting method that incorporates city-model priors for urban scene understanding. GS4City derives reliable image-aligned masks from Level of Detail (LoD) 3 CityGML models via two-pass raycasting, explicitly using parent-child relations to validate and recover fine-grained facade elements. It then fuses these geometry-grounded masks with foundation-model predictions to establish scene-consistent instance correspondences, and learns a compact identity encoding for each Gaussian under joint 2D identity supervision and 3D spatial regularization. Experiments on the TUM2TWIN and Gold Coast datasets show that GS4City effectively incorporates structured building semantics into Gaussian scene representations, outperforming existing 2D-driven semantic 3DGS baselines, including LangSplat and Gaga, by up to 15.8 IoU points in coarse building segmentation and 14.2 mIoU points in fine-grained semantic segmentation. By bridging structured city models and photorealistic Gaussian scene representations, GS4City enables semantically queryable and structure-aware urban reconstruction. Code is available at https://github.com/Jinyzzz/GS4City.",
       "arxiv_url": "https://arxiv.org/abs/2604.11401",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2604.11142",
+      "title": "Naka-GS: A Bionics-inspired Dual-Branch Naka Correction and Progressive Point Pruning for Low-Light 3DGS",
+      "published": "2026-04-13",
+      "year": "2026",
+      "authors": "Runyu Zhu; SiXun Dong; Zhiqiang Zhang; Qingxia Ye; Zhihua Xu",
+      "abstract": "Low-light conditions severely hinder 3D restoration and reconstruction by degrading image visibility, introducing color distortions, and contaminating geometric priors for downstream optimization. We present NAKA-GS, a bionics-inspired framework for low-light 3D Gaussian Splatting that jointly improves photometric restoration and geometric initialization. Our method starts with a Naka-guided chroma-correction network, which combines physics-prior low-light enhancement, dual-branch input modeling, frequency-decoupled correction, and mask-guided optimization to suppress bright-region chromatic artifacts and edge-structure errors. The enhanced images are then fed into a feed-forward multi-view reconstruction model to produce dense scene priors. To further improve Gaussian initialization, we introduce a lightweight Point Preprocessing Module (PPM) that performs coordinate alignment, voxel pooling, and distance-adaptive progressive pruning to remove noisy and redundant points while preserving representative structures. Without introducing heavy inference overhead, NAKA-GS improves restoration quality, training stability, and optimization efficiency for low-light 3D reconstruction. The proposed method was presented in the NTIRE 3D Restoration and Reconstruction (3DRR) Challenge, and outperformed the baseline methods by a large margin. The code is available at https://github.com/RunyuZhu/Naka-GS",
+      "arxiv_url": "https://arxiv.org/abs/2604.11142",
       "citations": 0
     },
     {
@@ -3033,16 +3083,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2512.07197",
-      "title": "SUCCESS-GS: Survey of Compactness and Compression for Efficient Static and Dynamic Gaussian Splatting",
-      "published": "2025-12-08",
-      "year": "2025",
-      "authors": "Seokhyun Youn; Soohyun Lee; Geonho Kim; Weeyoung Kwon; Sung-Ho Bae et al.",
-      "abstract": "3D Gaussian Splatting (3DGS) has emerged as a powerful explicit representation enabling real-time, high-fidelity 3D reconstruction and novel view synthesis. However, its practical use is hindered by the massive memory and computational demands required to store and render millions of Gaussians. These challenges become even more severe in 4D dynamic scenes. To address these issues, the field of Efficient Gaussian Splatting has rapidly evolved, proposing methods that reduce redundancy while preserving reconstruction quality. This survey provides the first unified overview of efficient 3D and 4D Gaussian Splatting techniques. For both 3D and 4D settings, we systematically categorize existing methods into two major directions, Parameter Compression and Restructuring Compression, and comprehensively summarize the core ideas and methodological trends within each category. We further cover widely used datasets, evaluation metrics, and representative benchmark comparisons. Finally, we discuss current limitations and outline promising research directions toward scalable, compact, and real-time Gaussian Splatting for both static and dynamic 3D scene representation.",
-      "arxiv_url": "https://arxiv.org/abs/2512.07197",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2512.07107",
       "title": "COREA: Coupled Relightable 3D Gaussians and SDFs for Efficient Normal Alignment",
       "published": "2025-12-08",
@@ -3303,16 +3343,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2604.21562",
-      "title": "Magnetic-flux tunable electronic transport through domain walls in a three-dimensional second-order topological insulator",
-      "published": "2026-04-23",
-      "year": "2026",
-      "authors": "Zhe Hou; Ai-Min Guo",
-      "abstract": "The three-dimensional (3D) topological insulators (TIs), hosting topologically protected helical surface states, can be promoted into second-order TIs when a diagonal Zeeman term, typical of magnetic doping, is introduced. The latter hosts exotic chiral one-dimensional (1D) topological hinge states (THSs). In this paper, we investigate the electronic transport of THSs through a magnetic domain wall (DW) in a 3D TI nanowire. Due to the sign reversal of the out-of-plane magnetization across the DW, four 1D topological boundary states, residing on the edge of the DW, arise and form an enclosed loop mediating the counterpropagating THSs. By applying a uniform magnetic field parallel to the nanowire, we obtain a perfect sinusoidal Aharonov-Bohm oscillation in the two-terminal conductance $G$, formulated by $G=\\frac{e^2}{2h} \\left[ 1- \\cos(πΦ/Φ_0) \\right]$, with $Φ$ the magnetic flux through the DW and $Φ_0 = h/2e$ the flux quantum. Applying a phenomenological scattering matrix approach, we explain this novel Aharonov-Bohm oscillation perfectly, and attribute the constructive (destructive) interference of transmission at $Φ= Φ_0$ (0) to the $π$-spin rotation of the THSs traveling through the DW. Extending our study to a double-DW junction, where the central region has antiparallel magnetization to the leads, we observe Fabry-P{é}rot oscillations, in which the conductance minima are tuned by the magnetic flux. Our findings open a new avenue for finely controlling the quantum transport of THSs in magnetic systems using magnetic flux, and provide a faithful way for detecting THSs in experiments.",
-      "arxiv_url": "https://arxiv.org/abs/2604.21562",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2604.21548",
       "title": "Nonparametric Point Identification of Treatment Effect Distributions via Rank Stickiness",
       "published": "2026-04-23",
@@ -3413,16 +3443,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2604.21442",
-      "title": "2L-LSH: A Locality-Sensitive Hash Function-Based Method For Rapid Point Cloud Indexing",
-      "published": "2026-04-23",
-      "year": "2026",
-      "authors": "Shurui Wang; Yuhe Zhang; Ruizhe Guo; Yaning Zhang; Yifei Xie et al.",
-      "abstract": "The development of 3D scanning technology has enabled the acquisition of massive point cloud models with diverse structures and large scales, thereby presenting significant challenges in point cloud processing. Fast neighboring points search is one of the most common problems, which is frequently used in model reconstruction, classification, retrieval and feature visualization. Hash function is well known for its high-speed and accurate performance in searching high-dimensional data, which is also the core of the proposed 2L-LSH. Specifically, the 2L-LSH algorithm adopts a two-step hash function strategy, in which the popular step divides the bounding box of the point cloud model and the second step constructs a generalized table-based data structure. The proposed 2L-LSH offers a highly efficient and accurate solution for fast neighboring points search in large-scale 3D point cloud models, making it a promising technique for various applications in the field. The proposed algorithm is compared with the well-known methods including Kd-tree and Octree; the obtained results demonstrated that the proposed method outperforms Kd-tree and Octree in terms of speed, i.e. the time consumption of kNN search can be 51.111% and 94.159% lower than Kd-tree and Octree, respectively. And the RN search time can be 54.519% and 41.840% lower than Kd-tree and Octree, respectively.",
-      "arxiv_url": "https://arxiv.org/abs/2604.21442",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2604.21424",
       "title": "Optical hopfions with arbitrary two winding numbers",
       "published": "2026-04-23",
@@ -3440,16 +3460,6 @@
       "authors": "Vishal Rajput",
       "abstract": "We prove that empirical risk minimisation (ERM) imposes a necessary geometric constraint on learned representations: any encoder that minimises supervised loss must retain non-zero Jacobian sensitivity in directions that are label-correlated in training data but nuisance at test time. This is not a contingent failure of current methods; it is a mathematical consequence of the supervised objective itself. We call this the geometric blind spot of supervised learning (Theorem 1), and show it holds across proper scoring rules, architectures, and dataset sizes.   This single theorem unifies four lines of prior empirical work that were previously treated separately: non-robust predictive features, texture bias, corruption fragility, and the robustness-accuracy tradeoff. In this framing, adversarial vulnerability is one consequence of a broader structural fact about supervised learning geometry.   We introduce Trajectory Deviation Index (TDI), a diagnostic that measures the theorem's bounded quantity directly, and show why common alternatives miss the key failure mode. PGD adversarial training reaches Jacobian Frobenius 2.91 yet has the worst clean-input geometry (TDI 1.336), while PMH achieves TDI 0.904. TDI is the only metric that detects this dissociation because it measures isotropic path-length distortion -- the exact quantity Theorem 1 bounds.   Across seven vision tasks, BERT/SST-2, and ImageNet ViT-B/16 backbones used by CLIP, DINO, and SAM, the blind spot is measurable and repairable. It is present at foundation-model scale, worsens monotonically across language-model sizes (blind-spot ratio 0.860 to 0.765 to 0.742 from 66M to 340M), and is amplified by task-specific ERM fine-tuning (+54%), while PMH repairs it by 11x with one additional training term whose Gaussian form Proposition 5 proves is the unique perturbation law that uniformly penalises the encoder Jacobian.",
       "arxiv_url": "https://arxiv.org/abs/2604.21395",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.21387",
-      "title": "EdgeFormer: local patch-based edge detection transformer on point clouds",
-      "published": "2026-04-23",
-      "year": "2026",
-      "authors": "Yifei Xie; Zhikun Tu; Tong Yang; Yuhe Zhang; Xinyu Zhou",
-      "abstract": "Edge points on 3D point clouds can clearly convey 3D geometry and surface characteristics, therefore, edge detection is widely used in many vision applications with high industrial and commercial demands. However, the fine-grained edge features are difficult to detect effectively as they are generally densely distributed or exhibit small-scale surface gradients. To address this issue, we present a learning-based edge detection network, named EdgeFormer, which mainly consists of two stages. Based on the observation that spatially neighboring points tend to exhibit high correlation, forming the local underlying surface, we convert the edge detection of the entire point cloud into a point classification based on local patches. Therefore, in the first stage, we construct local patch feature descriptors that describe the local neighborhood around each point. In the second stage, we classify each point by analyzing the local patch feature descriptors generated in the first stage. Due to the conversion of the point cloud into local patches, the proposed method can effectively extract the finer details. The experimental results show that our model demonstrates competitive performance compared to six baselines.",
-      "arxiv_url": "https://arxiv.org/abs/2604.21387",
       "citations": 0
     },
     {
@@ -4760,16 +4770,6 @@
       "authors": "Michele Grimaldi; David Nakath; Oscar Pizarro; Jonatan Scharff Willners; Ignacio Carlucho et al.",
       "abstract": "Robust 3D reconstruction across varying environmental conditions remains a critical challenge for robotic perception, particularly when transitioning between air and water. To address this, we introduce BALTIC, a controlled benchmark designed to systematically evaluate modern 3D reconstruction methods under variations in medium and lighting. The benchmark comprises 13 datasets spanning two media (air and water) and three lighting conditions (ambient, artificial, and mixed), with additional variations in motion type, scanning pattern, and initialization trajectory, resulting in a diverse set of sequences. Our experimental setup features a custom water tank equipped with a monocular camera and an HTC Vive tracker, enabling accurate ground-truth pose estimation. We further investigate cross-domain reconstruction by augmenting underwater image sequences with a small number of in-air views captured under similar lighting conditions. We evaluate Structure-from-Motion reconstruction using COLMAP in terms of both trajectory accuracy and scene geometry, and use these reconstructions as input to Neural Radiance Fields and 3D Gaussian Splatting methods. The resulting models are assessed against ground-truth trajectories and in-air references, while rendered outputs are compared using perceptual and photometric metrics. Additionally, we perform a color restoration analysis to evaluate radiometric consistency across domains. Our results show that under controlled, texture-consistent conditions, Gaussian Splatting with simple preprocessing (e.g., white balance correction) can achieve performance comparable to specialized underwater methods, although its robustness decreases in more complex and heterogeneous real-world environments",
       "arxiv_url": "https://arxiv.org/abs/2604.19133",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.19127",
-      "title": "OT-UVGS: Revisiting UV Mapping for Gaussian Splatting as a Capacity Allocation Problem",
-      "published": "2026-04-21",
-      "year": "2026",
-      "authors": "Byunghyun Kim",
-      "abstract": "UV-parameterized Gaussian Splatting (UVGS) maps an unstructured set of 3D Gaussians to a regular UV tensor, enabling compact storage and explicit control of representation capacity. Existing UVGS, however, uses a deterministic spherical pro- jection to assign Gaussians to UV locations. Because this mapping ignores the global Gaussian distribution, it often leaves many UV slots empty while causing frequent collisions in dense regions. We reinterpret UV mapping as a capacity-allocation problem under a fixed UV budget and propose OT-UVGS, a lightweight, separable one-dimensional optimal-transport-inspired mapping that globally couples assignments while preserving the original UVGS representation. The method is implemented with rank-based sorting, has O(N log N) complexity for N Gaussians, and can be used as a drop-in replacement for spherical UVGS. Across 184 object-centric scenes and the Mip-NeRF dataset, OT-UVGS consistently improves peak signal-to-noise ratio (PSNR), structural similarity (SSIM), and Learned Perceptual Image Patch Similarity (LPIPS) under the same UV resolution and per-slot capacity (K=1). These gains are accompanied by substantially better UV utilization, including higher non-empty slot ratios, fewer collisions, and higher Gaussian retention. Our results show that revisiting the mapping alone can unlock a significant fraction of the latent capacity of UVGS.",
-      "arxiv_url": "https://arxiv.org/abs/2604.19127",
       "citations": 0
     },
     {
