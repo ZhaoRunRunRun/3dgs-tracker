@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-04-25 04:47 UTC",
+  "updated_at": "2026-04-26 05:19 UTC",
   "total": 590,
   "papers": [
     {
@@ -83,6 +83,16 @@
       "citations": 4
     },
     {
+      "arxiv_id": "2604.11142",
+      "title": "Naka-GS: A Bionics-inspired Dual-Branch Naka Correction and Progressive Point Pruning for Low-Light 3DGS",
+      "published": "2026-04-13",
+      "year": "2026",
+      "authors": "Runyu Zhu; SiXun Dong; Zhiqiang Zhang; Qingxia Ye; Zhihua Xu",
+      "abstract": "Low-light conditions severely hinder 3D restoration and reconstruction by degrading image visibility, introducing color distortions, and contaminating geometric priors for downstream optimization. We present NAKA-GS, a bionics-inspired framework for low-light 3D Gaussian Splatting that jointly improves photometric restoration and geometric initialization. Our method starts with a Naka-guided chroma-correction network, which combines physics-prior low-light enhancement, dual-branch input modeling, frequency-decoupled correction, and mask-guided optimization to suppress bright-region chromatic artifacts and edge-structure errors. The enhanced images are then fed into a feed-forward multi-view reconstruction model to produce dense scene priors. To further improve Gaussian initialization, we introduce a lightweight Point Preprocessing Module (PPM) that performs coordinate alignment, voxel pooling, and distance-adaptive progressive pruning to remove noisy and redundant points while preserving representative structures. Without introducing heavy inference overhead, NAKA-GS improves restoration quality, training stability, and optimization efficiency for low-light 3D reconstruction. The proposed method was presented in the NTIRE 3D Restoration and Reconstruction (3DRR) Challenge, and outperformed the baseline methods by a large margin. The code is available at https://github.com/RunyuZhu/Naka-GS",
+      "arxiv_url": "https://arxiv.org/abs/2604.11142",
+      "citations": 3
+    },
+    {
       "arxiv_id": "2604.03039",
       "title": "GenSmoke-GS: A Multi-Stage Method for Novel View Synthesis from Smoke-Degraded Images Using a Generative Model",
       "published": "2026-04-03",
@@ -121,6 +131,16 @@
       "abstract": "Modeling relightable and animatable human avatars from monocular video is a long-standing and challenging task. Recently, Neural Radiance Field (NeRF) and 3D Gaussian Splatting (3DGS) methods have been employed to reconstruct the avatars. However, they often produce unsatisfactory photo-realistic results because of insufficient geometrical details related to body motion, such as clothing wrinkles. In this paper, we propose a 3DGS-based human avatar modeling framework, termed as Relightable and Dynamic Gaussian Avatar (RnD-Avatar), that presents accurate pose-variant deformation for high-fidelity geometrical details. To achieve this, we introduce dynamic skinning weights that define the human avatar's articulation based on pose while also learning additional deformations induced by body motion. We also introduce a novel regularization to capture fine geometric details under sparse visual cues. Furthermore, we present a new multi-view dataset with varied lighting conditions to evaluate relight. Our framework enables realistic rendering of novel poses and views while supporting photo-realistic lighting effects under arbitrary lighting conditions. Our method achieves state-of-the-art performance in novel view synthesis, novel pose rendering, and relighting.",
       "arxiv_url": "https://arxiv.org/abs/2512.09335",
       "citations": 3
+    },
+    {
+      "arxiv_id": "2604.13589",
+      "title": "Dehaze-then-Splat: Generative Dehazing with Physics-Informed 3D Gaussian Splatting for Smoke-Free Novel View Synthesis",
+      "published": "2026-04-15",
+      "year": "2026",
+      "authors": "Boss Chen; Hanqing Wang",
+      "abstract": "We present Dehaze-then-Splat, a two-stage pipeline for multi-view smoke removal and novel view synthesis developed for Track~2 of the NTIRE 2026 3D Restoration and Reconstruction Challenge. In the first stage, we produce pseudo-clean training images via per-frame generative dehazing using Nano Banana Pro, followed by brightness normalization. In the second stage, we train 3D Gaussian Splatting (3DGS) with physics-informed auxiliary losses -- depth supervision via Pearson correlation with pseudo-depth, dark channel prior regularization, and dual-source gradient matching -- that compensate for cross-view inconsistencies inherent in frame-wise generative processing. We identify a fundamental tension in dehaze-then-reconstruct pipelines: per-image restoration quality does not guarantee multi-view consistency, and such inconsistency manifests as blurred renders and structural instability in downstream 3D reconstruction.Our analysis shows that MCMC-based densification with early stopping, combined with depth and haze-suppression priors, effectively mitigates these artifacts. On the Akikaze validation scene, our pipeline achieves 20.98\\,dB PSNR and 0.683 SSIM for novel view synthesis, a +1.50\\,dB improvement over the unregularized baseline.",
+      "arxiv_url": "https://arxiv.org/abs/2604.13589",
+      "citations": 2
     },
     {
       "arxiv_id": "2604.05301",
@@ -243,6 +263,16 @@
       "citations": 2
     },
     {
+      "arxiv_id": "2604.15239",
+      "title": "TokenGS: Decoupling 3D Gaussian Prediction from Pixels with Learnable Tokens",
+      "published": "2026-04-16",
+      "year": "2026",
+      "authors": "Jiawei Ren; Michal Jan Tyszkiewicz; Jiahui Huang; Zan Gojcic",
+      "abstract": "In this work, we revisit several key design choices of modern Transformer-based approaches for feed-forward 3D Gaussian Splatting (3DGS) prediction. We argue that the common practice of regressing Gaussian means as depths along camera rays is suboptimal, and instead propose to directly regress 3D mean coordinates using only a self-supervised rendering loss. This formulation allows us to move from the standard encoder-only design to an encoder-decoder architecture with learnable Gaussian tokens, thereby unbinding the number of predicted primitives from input image resolution and number of views. Our resulting method, TokenGS, demonstrates improved robustness to pose noise and multiview inconsistencies, while naturally supporting efficient test-time optimization in token space without degrading learned priors. TokenGS achieves state-of-the-art feed-forward reconstruction performance on both static and dynamic scenes, producing more regularized geometry and more balanced 3DGS distribution, while seamlessly recovering emergent scene attributes such as static-dynamic decomposition and scene flow.",
+      "arxiv_url": "https://arxiv.org/abs/2604.15239",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2604.03069",
       "title": "SparseSplat: Towards Applicable Feed-Forward 3D Gaussian Splatting with Pixel-Unaligned Prediction",
       "published": "2026-04-03",
@@ -300,26 +330,6 @@
       "authors": "Xiang Feng; Xiangbo Wang; Tieshi Zhong; Chengkai Wang; Yiting Zhao et al.",
       "abstract": "3D super-resolution (3DSR) aims to reconstruct high-resolution (HR) 3D scenes from low-resolution (LR) multi-view images. Existing methods rely on dense LR inputs and per-scene optimization, which restricts the high-frequency priors for constructing HR 3D Gaussian Splatting (3DGS) to those inherited from pretrained 2D super-resolution (2DSR) models. This severely limits reconstruction fidelity, cross-scene generalization, and real-time usability. We propose to reformulate 3DSR as a direct feed-forward mapping from sparse LR views to HR 3DGS representations, enabling the model to autonomously learn 3D-specific high-frequency geometry and appearance from large-scale, multi-scene data. This fundamentally changes how 3DSR acquires high-frequency knowledge and enables robust generalization to unseen scenes. Specifically, we introduce SR3R, a feed-forward framework that directly predicts HR 3DGS representations from sparse LR views via the learned mapping network. To further enhance reconstruction fidelity, we introduce Gaussian offset learning and feature refinement, which stabilize reconstruction and sharpen high-frequency details. SR3R is plug-and-play and can be paired with any feed-forward 3DGS reconstruction backbone: the backbone provides an LR 3DGS scaffold, and SR3R upscales it to an HR 3DGS. Extensive experiments across three 3D benchmarks demonstrate that SR3R surpasses state-of-the-art (SOTA) 3DSR methods and achieves strong zero-shot generalization, even outperforming SOTA per-scene optimization methods on unseen scenes.",
       "arxiv_url": "https://arxiv.org/abs/2602.24020",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2602.20342",
-      "title": "Large-scale Photorealistic Outdoor 3D Scene Reconstruction from UAV Imagery Using Gaussian Splatting Techniques",
-      "published": "2026-02-23",
-      "year": "2026",
-      "authors": "Christos Maikos; Georgios Angelidis; Georgios Th. Papadopoulos",
-      "abstract": "In this study, we present an end-to-end pipeline capable of converting drone-captured video streams into high-fidelity 3D reconstructions with minimal latency. Unmanned aerial vehicles (UAVs) are extensively used in aerial real-time perception applications. Moreover, recent advances in 3D Gaussian Splatting (3DGS) have demonstrated significant potential for real-time neural rendering. However, their integration into end-to-end UAV-based reconstruction and visualization systems remains underexplored. Our goal is to propose an efficient architecture that combines live video acquisition via RTMP streaming, synchronized sensor fusion, camera pose estimation, and 3DGS optimization, achieving continuous model updates and low-latency deployment within interactive visualization environments that supports immersive augmented and virtual reality (AR/VR) applications. Experimental results demonstrate that the proposed method achieves competitive visual fidelity, while delivering significantly higher rendering performance and substantially reduced end-to-end latency, compared to NeRF-based approaches. Reconstruction quality remains within 4-7\\% of high-fidelity offline references, confirming the suitability of the proposed system for real-time, scalable augmented perception from aerial platforms.",
-      "arxiv_url": "https://arxiv.org/abs/2602.20342",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2602.19753",
-      "title": "RAP: Fast Feedforward Rendering-Free Attribute-Guided Primitive Importance Score Prediction for Efficient 3D Gaussian Splatting Processing",
-      "published": "2026-02-23",
-      "year": "2026",
-      "authors": "Kaifa Yang; Qi Yang; Yiling Xu; Zhu Li",
-      "abstract": "3D Gaussian Splatting (3DGS) has emerged as a leading technology for high-quality 3D scene reconstruction. However, the iterative refinement and densification process leads to the generation of a large number of primitives, each contributing to the reconstruction to a substantially different extent. Estimating primitive importance is thus crucial, both for removing redundancy during reconstruction and for enabling efficient compression and transmission. Existing methods typically rely on rendering-based analyses, where each primitive is evaluated through its contribution across multiple camera viewpoints. However, such methods are sensitive to the number and selection of views, rely on specialized differentiable rasterizers, and have long calculation times that grow linearly with view count, making them difficult to integrate as plug-and-play modules and limiting scalability and generalization. To address these issues, we propose RAP, a fast feedforward rendering-free attribute-guided method for efficient importance score prediction in 3DGS. RAP infers primitive significance directly from intrinsic Gaussian attributes and local neighborhood statistics, avoiding rendering-based or visibility-dependent computations. A compact MLP predicts per-primitive importance scores using rendering loss, pruning-aware loss, and significance distribution regularization. After training on a small set of scenes, RAP generalizes effectively to unseen data and can be seamlessly integrated into reconstruction, compression, and transmission pipelines. Our code is publicly available at https://github.com/yyyykf/RAP.",
-      "arxiv_url": "https://arxiv.org/abs/2602.19753",
       "citations": 1
     },
     {
@@ -603,6 +613,16 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2604.20094",
+      "title": "Persistence and local extinction for superprocesses in random environments",
+      "published": "2026-04-22",
+      "year": "2026",
+      "authors": "Zhen-Qing Chen; Yan-Xia Ren; Guohuan Zhao",
+      "abstract": "We consider a super-Brownian motion $\\{X_t, t\\geq 0\\}$ in a random environment described by a centered Gaussian field $\\{W(t,x),t\\geq 0, x\\in\\mathbb{R}^d\\}$ whose correlation function is given by $\\mathcal{C} (x,y)(t \\wedge s)$. The process takes values in $\\mathcal{M}(\\mathbb{R}^d)$, the space of Radon measures on $\\mathbb{R}^d$. It can be characterized through a conditional Laplace transform by a parabolic stochastic partial differential equation driven by $W(t, x)$. Suppose that $\\mathcal{C} (x, y)\\leq g(x-y)$ for some bounded positive function $g$ on $\\mathbb{R}^d$ and the initial distribution of process $X$ is the Lebesgue measure $m$ on $\\mathbb{R}^d$. We prove that for dimension $d\\geq 3$, whenever $$   \\sup_{x\\in \\mathbb{R}^d} \\int_{\\mathbb{R}^d} |x-y|^{2-d} g(y)dy< \\frac{8 (d-2) π^{d/2}}{d 2^d Γ\\left(d/2-1\\right)}, $$ the distribution of $X_t$ converges weakly as $t \\to \\infty$ to a non-trivial invariant probability distribution $π^m$ on $\\mathcal{M}(\\mathbb{R}^d)$ with mean measure $m$. This result in particular gives an affirmative answer to Conjecture 1.4 of Mytnik and Xiong (Electron. J. Probab. 12: 1349-1378 (2007)). We further show that given $ Θ\\in C^β(\\mathbb{R}^d)$ $(β>1)$, when $\\mathcal{C}(x,y)= a Θ(x-y)$ with $a$ being large enough, the superprocess $X$ suffers local extinction.",
+      "arxiv_url": "https://arxiv.org/abs/2604.20094",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2604.19861",
       "title": "Excitability in quantum field theory",
       "published": "2026-04-21",
@@ -813,16 +833,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2604.15239",
-      "title": "TokenGS: Decoupling 3D Gaussian Prediction from Pixels with Learnable Tokens",
-      "published": "2026-04-16",
-      "year": "2026",
-      "authors": "Jiawei Ren; Michal Jan Tyszkiewicz; Jiahui Huang; Zan Gojcic",
-      "abstract": "In this work, we revisit several key design choices of modern Transformer-based approaches for feed-forward 3D Gaussian Splatting (3DGS) prediction. We argue that the common practice of regressing Gaussian means as depths along camera rays is suboptimal, and instead propose to directly regress 3D mean coordinates using only a self-supervised rendering loss. This formulation allows us to move from the standard encoder-only design to an encoder-decoder architecture with learnable Gaussian tokens, thereby unbinding the number of predicted primitives from input image resolution and number of views. Our resulting method, TokenGS, demonstrates improved robustness to pose noise and multiview inconsistencies, while naturally supporting efficient test-time optimization in token space without degrading learned priors. TokenGS achieves state-of-the-art feed-forward reconstruction performance on both static and dynamic scenes, producing more regularized geometry and more balanced 3DGS distribution, while seamlessly recovering emergent scene attributes such as static-dynamic decomposition and scene flow.",
-      "arxiv_url": "https://arxiv.org/abs/2604.15239",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2604.14782",
       "title": "One-shot Compositional 3D Head Avatars with Deformable Hair",
       "published": "2026-04-16",
@@ -850,16 +860,6 @@
       "authors": "Team HY-World; Chenjie Cao; Xuhui Zuo; Zhenwei Wang; Yisu Zhang et al.",
       "abstract": "We introduce HY-World 2.0, a multi-modal world model framework that advances our prior project HY-World 1.0. HY-World 2.0 accommodates diverse input modalities, including text prompts, single-view images, multi-view images, and videos, and produces 3D world representations. With text or single-view image inputs, the model performs world generation, synthesizing high-fidelity, navigable 3D Gaussian Splatting (3DGS) scenes. This is achieved through a four-stage method: a) Panorama Generation with HY-Pano 2.0, b) Trajectory Planning with WorldNav, c) World Expansion with WorldStereo 2.0, and d) World Composition with WorldMirror 2.0. Specifically, we introduce key innovations to enhance panorama fidelity, enable 3D scene understanding and planning, and upgrade WorldStereo, our keyframe-based view generation model with consistent memory. We also upgrade WorldMirror, a feed-forward model for universal 3D prediction, by refining model architecture and learning strategy, enabling world reconstruction from multi-view images or videos. Also, we introduce WorldLens, a high-performance 3DGS rendering platform featuring a flexible engine-agnostic architecture, automatic IBL lighting, efficient collision detection, and training-rendering co-design, enabling interactive exploration of 3D worlds with character support. Extensive experiments demonstrate that HY-World 2.0 achieves state-of-the-art performance on several benchmarks among open-source approaches, delivering results comparable to the closed-source model Marble. We release all model weights, code, and technical details to facilitate reproducibility and support further research on 3D world models.",
       "arxiv_url": "https://arxiv.org/abs/2604.14268",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.13589",
-      "title": "Dehaze-then-Splat: Generative Dehazing with Physics-Informed 3D Gaussian Splatting for Smoke-Free Novel View Synthesis",
-      "published": "2026-04-15",
-      "year": "2026",
-      "authors": "Boss Chen; Hanqing Wang",
-      "abstract": "We present Dehaze-then-Splat, a two-stage pipeline for multi-view smoke removal and novel view synthesis developed for Track~2 of the NTIRE 2026 3D Restoration and Reconstruction Challenge. In the first stage, we produce pseudo-clean training images via per-frame generative dehazing using Nano Banana Pro, followed by brightness normalization. In the second stage, we train 3D Gaussian Splatting (3DGS) with physics-informed auxiliary losses -- depth supervision via Pearson correlation with pseudo-depth, dark channel prior regularization, and dual-source gradient matching -- that compensate for cross-view inconsistencies inherent in frame-wise generative processing. We identify a fundamental tension in dehaze-then-reconstruct pipelines: per-image restoration quality does not guarantee multi-view consistency, and such inconsistency manifests as blurred renders and structural instability in downstream 3D reconstruction.Our analysis shows that MCMC-based densification with early stopping, combined with depth and haze-suppression priors, effectively mitigates these artifacts. On the Akikaze validation scene, our pipeline achieves 20.98\\,dB PSNR and 0.683 SSIM for novel view synthesis, a +1.50\\,dB improvement over the unregularized baseline.",
-      "arxiv_url": "https://arxiv.org/abs/2604.13589",
       "citations": 0
     },
     {
@@ -980,16 +980,6 @@
       "authors": "Qilin Zhang; Jinyu Zhu; Olaf Wysocki; Benjamin Busam; Boris Jutzi",
       "abstract": "Recent semantic 3D Gaussian Splatting (3DGS) methods primarily rely on 2D foundation models, often yielding ambiguous boundaries and limited support for structured urban semantics. While city models such as CityGML encode hierarchically organized semantics together with building geometry, these labels cannot be directly mapped to Gaussian primitives. We present GS4City, a hierarchical semantic Gaussian Splatting method that incorporates city-model priors for urban scene understanding. GS4City derives reliable image-aligned masks from Level of Detail (LoD) 3 CityGML models via two-pass raycasting, explicitly using parent-child relations to validate and recover fine-grained facade elements. It then fuses these geometry-grounded masks with foundation-model predictions to establish scene-consistent instance correspondences, and learns a compact identity encoding for each Gaussian under joint 2D identity supervision and 3D spatial regularization. Experiments on the TUM2TWIN and Gold Coast datasets show that GS4City effectively incorporates structured building semantics into Gaussian scene representations, outperforming existing 2D-driven semantic 3DGS baselines, including LangSplat and Gaga, by up to 15.8 IoU points in coarse building segmentation and 14.2 mIoU points in fine-grained semantic segmentation. By bridging structured city models and photorealistic Gaussian scene representations, GS4City enables semantically queryable and structure-aware urban reconstruction. Code is available at https://github.com/Jinyzzz/GS4City.",
       "arxiv_url": "https://arxiv.org/abs/2604.11401",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.11142",
-      "title": "Naka-GS: A Bionics-inspired Dual-Branch Naka Correction and Progressive Point Pruning for Low-Light 3DGS",
-      "published": "2026-04-13",
-      "year": "2026",
-      "authors": "Runyu Zhu; SiXun Dong; Zhiqiang Zhang; Qingxia Ye; Zhihua Xu",
-      "abstract": "Low-light conditions severely hinder 3D restoration and reconstruction by degrading image visibility, introducing color distortions, and contaminating geometric priors for downstream optimization. We present NAKA-GS, a bionics-inspired framework for low-light 3D Gaussian Splatting that jointly improves photometric restoration and geometric initialization. Our method starts with a Naka-guided chroma-correction network, which combines physics-prior low-light enhancement, dual-branch input modeling, frequency-decoupled correction, and mask-guided optimization to suppress bright-region chromatic artifacts and edge-structure errors. The enhanced images are then fed into a feed-forward multi-view reconstruction model to produce dense scene priors. To further improve Gaussian initialization, we introduce a lightweight Point Preprocessing Module (PPM) that performs coordinate alignment, voxel pooling, and distance-adaptive progressive pruning to remove noisy and redundant points while preserving representative structures. Without introducing heavy inference overhead, NAKA-GS improves restoration quality, training stability, and optimization efficiency for low-light 3D reconstruction. The proposed method was presented in the NTIRE 3D Restoration and Reconstruction (3DRR) Challenge, and outperformed the baseline methods by a large margin. The code is available at https://github.com/RunyuZhu/Naka-GS",
-      "arxiv_url": "https://arxiv.org/abs/2604.11142",
       "citations": 0
     },
     {
@@ -2273,6 +2263,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2602.20342",
+      "title": "Large-scale Photorealistic Outdoor 3D Scene Reconstruction from UAV Imagery Using Gaussian Splatting Techniques",
+      "published": "2026-02-23",
+      "year": "2026",
+      "authors": "Christos Maikos; Georgios Angelidis; Georgios Th. Papadopoulos",
+      "abstract": "In this study, we present an end-to-end pipeline capable of converting drone-captured video streams into high-fidelity 3D reconstructions with minimal latency. Unmanned aerial vehicles (UAVs) are extensively used in aerial real-time perception applications. Moreover, recent advances in 3D Gaussian Splatting (3DGS) have demonstrated significant potential for real-time neural rendering. However, their integration into end-to-end UAV-based reconstruction and visualization systems remains underexplored. Our goal is to propose an efficient architecture that combines live video acquisition via RTMP streaming, synchronized sensor fusion, camera pose estimation, and 3DGS optimization, achieving continuous model updates and low-latency deployment within interactive visualization environments that supports immersive augmented and virtual reality (AR/VR) applications. Experimental results demonstrate that the proposed method achieves competitive visual fidelity, while delivering significantly higher rendering performance and substantially reduced end-to-end latency, compared to NeRF-based approaches. Reconstruction quality remains within 4-7\\% of high-fidelity offline references, confirming the suitability of the proposed system for real-time, scalable augmented perception from aerial platforms.",
+      "arxiv_url": "https://arxiv.org/abs/2602.20342",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2602.19916",
       "title": "Augmented Radiance Field: A General Framework for Enhanced Gaussian Splatting",
       "published": "2026-02-23",
@@ -2280,6 +2280,16 @@
       "authors": "Yixin Yang; Bojian Wu; Yang Zhou; Hui Huang",
       "abstract": "Due to the real-time rendering performance, 3D Gaussian Splatting (3DGS) has emerged as the leading method for radiance field reconstruction. However, its reliance on spherical harmonics for color encoding inherently limits its ability to separate diffuse and specular components, making it challenging to accurately represent complex reflections. To address this, we propose a novel enhanced Gaussian kernel that explicitly models specular effects through view-dependent opacity. Meanwhile, we introduce an error-driven compensation strategy to improve rendering quality in existing 3DGS scenes. Our method begins with 2D Gaussian initialization and then adaptively inserts and optimizes enhanced Gaussian kernels, ultimately producing an augmented radiance field. Experiments demonstrate that our method not only surpasses state-of-the-art NeRF methods in rendering performance but also achieves greater parameter efficiency. Project page at: https://xiaoxinyyx.github.io/augs.",
       "arxiv_url": "https://arxiv.org/abs/2602.19916",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2602.19753",
+      "title": "RAP: Fast Feedforward Rendering-Free Attribute-Guided Primitive Importance Score Prediction for Efficient 3D Gaussian Splatting Processing",
+      "published": "2026-02-23",
+      "year": "2026",
+      "authors": "Kaifa Yang; Qi Yang; Yiling Xu; Zhu Li",
+      "abstract": "3D Gaussian Splatting (3DGS) has emerged as a leading technology for high-quality 3D scene reconstruction. However, the iterative refinement and densification process leads to the generation of a large number of primitives, each contributing to the reconstruction to a substantially different extent. Estimating primitive importance is thus crucial, both for removing redundancy during reconstruction and for enabling efficient compression and transmission. Existing methods typically rely on rendering-based analyses, where each primitive is evaluated through its contribution across multiple camera viewpoints. However, such methods are sensitive to the number and selection of views, rely on specialized differentiable rasterizers, and have long calculation times that grow linearly with view count, making them difficult to integrate as plug-and-play modules and limiting scalability and generalization. To address these issues, we propose RAP, a fast feedforward rendering-free attribute-guided method for efficient importance score prediction in 3DGS. RAP infers primitive significance directly from intrinsic Gaussian attributes and local neighborhood statistics, avoiding rendering-based or visibility-dependent computations. A compact MLP predicts per-primitive importance scores using rendering loss, pruning-aware loss, and significance distribution regularization. After training on a small set of scenes, RAP generalizes effectively to unseen data and can be seamlessly integrated into reconstruction, compression, and transmission pipelines. Our code is publicly available at https://github.com/yyyykf/RAP.",
+      "arxiv_url": "https://arxiv.org/abs/2602.19753",
       "citations": 0
     },
     {
@@ -4160,16 +4170,6 @@
       "authors": "Vicente Salinas; Héctor Alarcón; Eduardo Rojas; Pablo Gutiérrez; Gustavo Castillo",
       "abstract": "In this work, we investigate the unjamming transition in a three-dimensional granular system composed of frictional spheres, in which the packing fraction is systematically reduced by random particle extractions. Using Discrete Element Method (DEM) simulations, we analyze the evolution of key micro-mechanical quantities, such as the interparticle forces, the coordination number and the overall packing density as a function of the interparticle friction coefficient. Our results reveal friction-dependent relationships on structural as well as mechanical observables, and exhibit trends that are qualitatively consistent with observations reported in dense granular systems. These trends persist despite the very different driving mechanism considered here.   This paper is part of the thematic issue \\emph{``Sand, silos and asteroids: clustering challenges in granular materials research''}.",
       "arxiv_url": "https://arxiv.org/abs/2604.20102",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.20094",
-      "title": "Persistence and local extinction for superprocesses in random environments",
-      "published": "2026-04-22",
-      "year": "2026",
-      "authors": "Zhen-Qing Chen; Yan-Xia Ren; Guohuan Zhao",
-      "abstract": "We consider a super-Brownian motion $\\{X_t, t\\geq 0\\}$ in a random environment described by a centered Gaussian field $\\{W(t,x),t\\geq 0, x\\in\\mathbb{R}^d\\}$ whose correlation function is given by $\\mathcal{C} (x,y)(t \\wedge s)$. The process takes values in $\\mathcal{M}(\\mathbb{R}^d)$, the space of Radon measures on $\\mathbb{R}^d$. It can be characterized through a conditional Laplace transform by a parabolic stochastic partial differential equation driven by $W(t, x)$. Suppose that $\\mathcal{C} (x, y)\\leq g(x-y)$ for some bounded positive function $g$ on $\\mathbb{R}^d$ and the initial distribution of process $X$ is the Lebesgue measure $m$ on $\\mathbb{R}^d$. We prove that for dimension $d\\geq 3$, whenever $$   \\sup_{x\\in \\mathbb{R}^d} \\int_{\\mathbb{R}^d} |x-y|^{2-d} g(y)dy< \\frac{8 (d-2) π^{d/2}}{d 2^d Γ\\left(d/2-1\\right)}, $$ the distribution of $X_t$ converges weakly as $t \\to \\infty$ to a non-trivial invariant probability distribution $π^m$ on $\\mathcal{M}(\\mathbb{R}^d)$ with mean measure $m$. This result in particular gives an affirmative answer to Conjecture 1.4 of Mytnik and Xiong (Electron. J. Probab. 12: 1349-1378 (2007)). We further show that given $ Θ\\in C^β(\\mathbb{R}^d)$ $(β>1)$, when $\\mathcal{C}(x,y)= a Θ(x-y)$ with $a$ being large enough, the superprocess $X$ suffers local extinction.",
-      "arxiv_url": "https://arxiv.org/abs/2604.20094",
       "citations": 0
     },
     {
