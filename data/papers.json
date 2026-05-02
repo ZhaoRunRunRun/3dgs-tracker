@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-05-01 05:46 UTC",
+  "updated_at": "2026-05-02 04:57 UTC",
   "total": 593,
   "papers": [
+    {
+      "arxiv_id": "2604.27563",
+      "title": "Bayesian policy gradient and actor-critic algorithms",
+      "published": "2026-04-30",
+      "year": "2026",
+      "authors": "Mohammad Ghavamzadeh; Yaakov Engel; Michal Valko",
+      "abstract": "Policy gradient methods are reinforcement learning algorithms that adapt a parameterized policy by following a performance gradient estimate. Conventional policy gradient methods use Monte-Carlo techniques to estimate the gradient, which tend to have high variance, requiring many samples and resulting in slow convergence. We first propose a Bayesian framework for policy gradient, based on modeling the policy gradient as a Gaussian process. This reduces the number of samples needed to obtain accurate gradient estimates. Moreover, estimates of the natural gradient and a measure of the uncertainty in the gradient estimates, namely, the gradient covariance, are provided at little extra cost. Since the proposed framework considers system trajectories as its basic observable unit, it does not require the dynamics within trajectories to be of any particular form, and can be extended to partially observable problems. On the downside, it cannot exploit the Markov property when the system is Markovian. To address this, we supplement our Bayesian policy gradient framework with a new actor-critic learning model in which a Bayesian class of non-parametric critics, based on Gaussian process temporal difference learning, is used. Such critics model the action-value function as a Gaussian process, allowing Bayes rule to be used to compute the posterior distribution over action-value functions, conditioned on the observed data. Appropriate choices of the policy parameterization and of the prior covariance (kernel) between action-values yield closed-form expressions for the posterior of the gradient of the expected return with respect to the policy parameters. We perform detailed experimental comparisons of the proposed Bayesian policy gradient and actor-critic algorithms with classic Monte-Carlo based policy gradient methods, on a number of reinforcement learning problems.",
+      "arxiv_url": "https://arxiv.org/abs/2604.27563",
+      "citations": 39
+    },
     {
       "arxiv_id": "2603.27781",
       "title": "GS3LAM: Gaussian Semantic Splatting SLAM",
@@ -570,6 +580,36 @@
       "authors": "Ryan Meegan; Adam D'Souza; Bryan Bo Cao; Shubham Jain; Kristin Dana",
       "abstract": "Visual navigation has emerged as a practical alternative to traditional robotic navigation pipelines that rely on detailed mapping and path planning. However, constructing and maintaining 3D maps is often computationally expensive and memory-intensive. We address the problem of visual navigation when exploration videos of a large environment are available. The videos serve as a visual reference, allowing a robot to retrace the explored trajectories without relying on metric maps. Our proposed method, YOPO-Nav (You Only Pass Once), encodes an environment into a compact spatial representation composed of interconnected local 3D Gaussian Splatting (3DGS) models. During navigation, the framework aligns the robot's current visual observation with this representation and predicts actions that guide it back toward the demonstrated trajectory. YOPO-Nav employs a hierarchical design: a visual place recognition (VPR) module provides coarse localization, while the local 3DGS models refine the goal and intermediate poses to generate control actions. To evaluate our approach, we introduce the YOPO-Campus dataset, comprising 4 hours of egocentric video and robot controller inputs from over 6 km of human-teleoperated robot trajectories. We benchmark recent visual navigation methods on trajectories from YOPO-Campus using a Clearpath Jackal robot. Experimental results show YOPO-Nav provides excellent performance in image-goal navigation for real-world scenes on a physical robot. The dataset and code will be made publicly available for visual navigation and scene representation research.",
       "arxiv_url": "https://arxiv.org/abs/2512.09903",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.28040",
+      "title": "LiDAR-based Dynamic Blockage Prediction: A Data-driven Approach for Learning Interactive Bayesian Models",
+      "published": "2026-04-30",
+      "year": "2026",
+      "authors": "Saleemullah Memon; Ali Krayani; Pamela Zontone; Lucio Marcenaro; David Martin Gomez et al.",
+      "abstract": "Vehicular sensing-based intelligence has made substantial progress in transportation systems, leading to higher levels of safety and sustainability for smart cities and autonomous systems. This paper proposes a new approach to learn an interactive generalized dynamic Bayesian network (I-GDBN) model aiming to predict future LiDAR sensor blockages from time-sequence-based 3D point cloud perception. During learning, separate GDBN models are trained for various vehicles in normal and blockage situations. To perform the interaction between multiple vehicles, a high-level vocabulary is formed. Initially, during testing, the best generative model for either normal or blockage situations is selected. An interactive Markov jump particle filter (I-MJPF) is then proposed to leverage the probabilistic information provided by the I-GDBN to infer the blockages and detect the abnormalities at the high abstraction level. The proposed interactive model allows better self-aware and explainable capabilities that can adapt to blockage scenarios, which is also helpful when sensors fail to provide observations.",
+      "arxiv_url": "https://arxiv.org/abs/2604.28040",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.27992",
+      "title": "Discontinuous BBP transitions",
+      "published": "2026-04-30",
+      "year": "2026",
+      "authors": "Dario Bocchi; Giulio Biroli; Chiara Cammarota; Federico Ricci-Tersenghi",
+      "abstract": "The Baik-Ben Arous-Peche (BBP) transition sets fundamental limits for detecting low-rank structure in noisy high-dimensional data and underlies a wide range of spectral methods in many fields from physics to statistics and data sciences. In standard settings, this transition is continuous, implying that signal recovery emerges gradually above a sharp threshold. We show that BBP transitions can instead be discontinuous in very general settings and provide a full theory of this phenomenon. When the eigenvalue density vanishes faster than linearly at the spectral edge, the overlap between the leading eigenvector and the signal jumps discontinuously at the critical point. We study this mechanism in deformed Gaussian and reweighted Wishart ensembles. We analyze in detail the finite-size effects, which play a central and qualitatively new role in the discontinuous BBP transition. Unlike the continuous BBP transition, we establish the existence of an extended pre-critical region where informative eigenvectors emerge well before the asymptotic threshold. The main consequence-and difference from the continuous BBP transition-is that signal recovery can occur at significantly lower signal-to-noise ratio and it is accompanied by strong sample-to-sample variability. Our results show the relevance and the novelty of the discontinuous BBP transition, and highlight the practical implications for signal detection.",
+      "arxiv_url": "https://arxiv.org/abs/2604.27992",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.26787",
+      "title": "Hankel and Toeplitz Rank-1 Decomposition of Arbitrary Matrices with Applications to Signal Direction-of-Arrival Estimation",
+      "published": "2026-04-29",
+      "year": "2026",
+      "authors": "Georgios I. Orfanidis; Dimitris A. Pados; George Sklivanitis; Elizabeth Serena Bentley",
+      "abstract": "We consider the problems of computing the optimal rank-$1$ Hankel and Toeplitz-structured approximation of arbitrary matrices under $L_2$ and $L_1$-norm error. Such problems arise naturally in engineered systems, including the basic few-shot signal Direction-of-Arrival (DoA) estimation problem that is of importance to modern autonomous systems applications. We develop accurate and computationally efficient structured matrix decomposition algorithms for both formulations and then derive analytically grounded small-sample-support DoA estimators for practical sensing system deployments. The resulting estimators under the $L_2$ and $L_1$ norms are formally shown to be maximum-likelihood optimal under white Gaussian and Laplace noise, respectively. The estimators are further validated through extensive simulation studies and real-world data experiments in few-shot DoA inference.",
+      "arxiv_url": "https://arxiv.org/abs/2604.26787",
       "citations": 1
     },
     {
@@ -3193,16 +3233,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2604.28040",
-      "title": "LiDAR-based Dynamic Blockage Prediction: A Data-driven Approach for Learning Interactive Bayesian Models",
-      "published": "2026-04-30",
-      "year": "2026",
-      "authors": "Saleemullah Memon; Ali Krayani; Pamela Zontone; Lucio Marcenaro; David Martin Gomez et al.",
-      "abstract": "Vehicular sensing-based intelligence has made substantial progress in transportation systems, leading to higher levels of safety and sustainability for smart cities and autonomous systems. This paper proposes a new approach to learn an interactive generalized dynamic Bayesian network (I-GDBN) model aiming to predict future LiDAR sensor blockages from time-sequence-based 3D point cloud perception. During learning, separate GDBN models are trained for various vehicles in normal and blockage situations. To perform the interaction between multiple vehicles, a high-level vocabulary is formed. Initially, during testing, the best generative model for either normal or blockage situations is selected. An interactive Markov jump particle filter (I-MJPF) is then proposed to leverage the probabilistic information provided by the I-GDBN to infer the blockages and detect the abnormalities at the high abstraction level. The proposed interactive model allows better self-aware and explainable capabilities that can adapt to blockage scenarios, which is also helpful when sensors fail to provide observations.",
-      "arxiv_url": "https://arxiv.org/abs/2604.28040",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2604.28036",
       "title": "Exponential families from a single KL identity",
       "published": "2026-04-30",
@@ -3250,16 +3280,6 @@
       "authors": "Thierry Valet; Nicolas Vukadinovic",
       "abstract": "For three-dimensional (3D) magnetic objects with linear size $L$ exceeding a few exchange lengths, the micromagnetic state exhibits pronounced informational sparsity: low-dimensional, high-gradient regions (e.g., domain walls) coexist with near-uniformly magnetized volumetric domains. Because standard micromagnetic simulation methods discretize the magnetization on near-uniform 3D grids with linear cell size $a$, they cannot take advantage of this sparsity. The computational problem scales as $\\sim L^3$ and $\\sim (1/a)^3$. In this Letter, we establish that direct tensor-train (TT) representations overcome these poor scalings by exploiting the spatial sparsity optimally, while preserving accuracy in a controlled way. Focusing on representative flux-closure configurations in soft-magnetic rectangular prisms, in the near-micrometer regime, we demonstrate that the parameter count of TT-compressed micromagnetic data scales approximately as $L^{1.8}$ and $(1/a)^{1.2}$. Hence the relative advantage over dense discretizations rapidly grows with the problem size and refinement level. These first results provide a strong motivation for future developments of micromagnetic solvers in TT format which could transcend the limitations of traditional simulators, with far reaching potential impacts on fundamental research and technology development.",
       "arxiv_url": "https://arxiv.org/abs/2604.28008",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.27992",
-      "title": "Discontinuous BBP transitions",
-      "published": "2026-04-30",
-      "year": "2026",
-      "authors": "Dario Bocchi; Giulio Biroli; Chiara Cammarota; Federico Ricci-Tersenghi",
-      "abstract": "The Baik-Ben Arous-Peche (BBP) transition sets fundamental limits for detecting low-rank structure in noisy high-dimensional data and underlies a wide range of spectral methods in many fields from physics to statistics and data sciences. In standard settings, this transition is continuous, implying that signal recovery emerges gradually above a sharp threshold. We show that BBP transitions can instead be discontinuous in very general settings and provide a full theory of this phenomenon. When the eigenvalue density vanishes faster than linearly at the spectral edge, the overlap between the leading eigenvector and the signal jumps discontinuously at the critical point. We study this mechanism in deformed Gaussian and reweighted Wishart ensembles. We analyze in detail the finite-size effects, which play a central and qualitatively new role in the discontinuous BBP transition. Unlike the continuous BBP transition, we establish the existence of an extended pre-critical region where informative eigenvectors emerge well before the asymptotic threshold. The main consequence-and difference from the continuous BBP transition-is that signal recovery can occur at significantly lower signal-to-noise ratio and it is accompanied by strong sample-to-sample variability. Our results show the relevance and the novelty of the discontinuous BBP transition, and highlight the practical implications for signal detection.",
-      "arxiv_url": "https://arxiv.org/abs/2604.27992",
       "citations": 0
     },
     {
@@ -3520,16 +3540,6 @@
       "authors": "Ze-Shan He; Yukuan Zhao; Hao-Shu Tian; Kai Sun; Xiao-Ye Xu et al.",
       "abstract": "Quantum universal invariants of a Gaussian state's covariance matrix, which can be derived from intensity correlation moments, have been adopted to characterize the entanglement properties of Gaussian states via the positive partial transpose criterion, also known as the Peres-Horodecki separability criterion. Such intensity correlation moments enable the extraction of information about the covariance matrix without the need for a coherent local oscillator. Here, we experimentally detect the entanglement properties of multimode Gaussian states using high-order\\,(up to sixth-order) intensity correlation moments. These multimode Gaussian states are prepared via spontaneous and cascaded parametric down-conversion pumped by a high-peak-energy pulsed laser. Their intensity correlation moments are measured using a pseudo-photon-number-resolving detector constructed through spatial multiplexing of 32 threshold superconducting nanowire single photon detectors. This method is successfully demonstrated for two-mode and three-mode Gaussian states and can be extended to $N$-mode Gaussian states with $N>3$.",
       "arxiv_url": "https://arxiv.org/abs/2604.27567",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.27563",
-      "title": "Bayesian policy gradient and actor-critic algorithms",
-      "published": "2026-04-30",
-      "year": "2026",
-      "authors": "Mohammad Ghavamzadeh; Yaakov Engel; Michal Valko",
-      "abstract": "Policy gradient methods are reinforcement learning algorithms that adapt a parameterized policy by following a performance gradient estimate. Conventional policy gradient methods use Monte-Carlo techniques to estimate the gradient, which tend to have high variance, requiring many samples and resulting in slow convergence. We first propose a Bayesian framework for policy gradient, based on modeling the policy gradient as a Gaussian process. This reduces the number of samples needed to obtain accurate gradient estimates. Moreover, estimates of the natural gradient and a measure of the uncertainty in the gradient estimates, namely, the gradient covariance, are provided at little extra cost. Since the proposed framework considers system trajectories as its basic observable unit, it does not require the dynamics within trajectories to be of any particular form, and can be extended to partially observable problems. On the downside, it cannot exploit the Markov property when the system is Markovian. To address this, we supplement our Bayesian policy gradient framework with a new actor-critic learning model in which a Bayesian class of non-parametric critics, based on Gaussian process temporal difference learning, is used. Such critics model the action-value function as a Gaussian process, allowing Bayes rule to be used to compute the posterior distribution over action-value functions, conditioned on the observed data. Appropriate choices of the policy parameterization and of the prior covariance (kernel) between action-values yield closed-form expressions for the posterior of the gradient of the expected return with respect to the policy parameters. We perform detailed experimental comparisons of the proposed Bayesian policy gradient and actor-critic algorithms with classic Monte-Carlo based policy gradient methods, on a number of reinforcement learning problems.",
-      "arxiv_url": "https://arxiv.org/abs/2604.27563",
       "citations": 0
     },
     {
@@ -4010,16 +4020,6 @@
       "authors": "Georgios I. Orfanidis; Dimitris A. Pados; George Sklivanitis; Elizabeth Serena Bentley",
       "abstract": "Motivated by sensing modalities in modern autonomous systems that involve hardware-constrained spatial sampling over large arrays with limited coherence time, we develop a novel framework for rapid super-resolution multi-signal direction-of-arrival (DoA) estimation based on Hankel-structured sensing and data matrix decomposition of arbitrary rank, under both the $L_2$ and $L_1$-norm formulation. The resulting $L_2$-norm estimator is shown to be maximum-likelihood optimal in white Gaussian noise. The $L_1$-norm estimator is shown to be maximum-likelihood optimal in independent, identically distributed (i.i.d.) isotropic Laplace noise, offering broad robustness to impulsive interference and corrupted measurements commonly encountered in practice. Extensive simulations demonstrate that the proposed methods exhibit powerful super-resolution capabilities, requiring significantly lower SNR and achieving substantially higher resolution probability than recent competing approaches.",
       "arxiv_url": "https://arxiv.org/abs/2604.26793",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.26787",
-      "title": "Hankel and Toeplitz Rank-1 Decomposition of Arbitrary Matrices with Applications to Signal Direction-of-Arrival Estimation",
-      "published": "2026-04-29",
-      "year": "2026",
-      "authors": "Georgios I. Orfanidis; Dimitris A. Pados; George Sklivanitis; Elizabeth Serena Bentley",
-      "abstract": "We consider the problems of computing the optimal rank-$1$ Hankel and Toeplitz-structured approximation of arbitrary matrices under $L_2$ and $L_1$-norm error. Such problems arise naturally in engineered systems, including the basic few-shot signal Direction-of-Arrival (DoA) estimation problem that is of importance to modern autonomous systems applications. We develop accurate and computationally efficient structured matrix decomposition algorithms for both formulations and then derive analytically grounded small-sample-support DoA estimators for practical sensing system deployments. The resulting estimators under the $L_2$ and $L_1$ norms are formally shown to be maximum-likelihood optimal under white Gaussian and Laplace noise, respectively. The estimators are further validated through extensive simulation studies and real-world data experiments in few-shot DoA inference.",
-      "arxiv_url": "https://arxiv.org/abs/2604.26787",
       "citations": 0
     },
     {
