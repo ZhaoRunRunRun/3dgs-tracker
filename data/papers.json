@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-02 04:57 UTC",
+  "updated_at": "2026-05-03 05:33 UTC",
   "total": 593,
   "papers": [
     {
@@ -20,7 +20,7 @@
       "authors": "Linfei Li; Lin Zhang; Zhong Wang; Ying Shen",
       "abstract": "Recently, the multi-modal fusion of RGB, depth, and semantics has shown great potential in dense Simultaneous Localization and Mapping (SLAM). However, a prerequisite for generating consistent semantic maps is the availability of dense, efficient, and scalable scene representations. Existing semantic SLAM systems based on explicit representations are often limited by resolution and an inability to predict unknown areas. Conversely, implicit representations typically rely on time-consuming ray tracing, failing to meet real-time requirements. Fortunately, 3D Gaussian Splatting (3DGS) has emerged as a promising representation that combines the efficiency of point-based methods with the continuity of geometric structures. To this end, we propose GS3LAM, a Gaussian Semantic Splatting SLAM framework that processes multimodal data to render consistent, dense semantic maps in real-time. GS3LAM models the scene as a Semantic Gaussian Field (SG-Field) and jointly optimizes camera poses and the field via multimodal error constraints. Furthermore, a Depth-adaptive Scale Regularization (DSR) scheme is introduced to resolve misalignments between scale-invariant Gaussians and geometric surfaces. To mitigate catastrophic forgetting, we propose a Random Sampling-based Keyframe Mapping (RSKM) strategy, which demonstrates superior performance over common local covisibility optimization methods. Extensive experiments on benchmark datasets show that GS3LAM achieves increased tracking robustness, superior rendering quality, and enhanced semantic precision compared to state-of-the-art methods. Source code is available at https://github.com/lif314/GS3LAM.",
       "arxiv_url": "https://arxiv.org/abs/2603.27781",
-      "citations": 32
+      "citations": 33
     },
     {
       "arxiv_id": "2604.11142",
@@ -223,6 +223,16 @@
       "citations": 2
     },
     {
+      "arxiv_id": "2601.01386",
+      "title": "ParkGaussian: Surround-view 3D Gaussian Splatting for Autonomous Parking",
+      "published": "2026-01-04",
+      "year": "2026",
+      "authors": "Xiaobao Wei; Zhangjie Ye; Yuxiang Gu; Zunjie Zhu; Yunfei Guo et al.",
+      "abstract": "Parking is a critical task for autonomous driving systems (ADS), with unique challenges in crowded parking slots and GPS-denied environments. However, existing works focus on 2D parking slot perception, mapping, and localization, 3D reconstruction remains underexplored, which is crucial for capturing complex spatial geometry in parking scenarios. Naively improving the visual quality of reconstructed parking scenes does not directly benefit autonomous parking, as the key entry point for parking is the slots perception module. To address these limitations, we curate the first benchmark named ParkRecon3D, specifically designed for parking scene reconstruction. It includes sensor data from four surround-view fisheye cameras with calibrated extrinsics and dense parking slot annotations. We then propose ParkGaussian, the first framework that integrates 3D Gaussian Splatting (3DGS) for parking scene reconstruction. To further improve the alignment between reconstruction and downstream parking slot detection, we introduce a slot-aware reconstruction strategy that leverages existing parking perception methods to enhance the synthesis quality of slot regions. Experiments on ParkRecon3D demonstrate that ParkGaussian achieves state-of-the-art reconstruction quality and better preserves perception consistency for downstream tasks. The code and dataset will be released at: https://github.com/wm-research/ParkGaussian",
+      "arxiv_url": "https://arxiv.org/abs/2601.01386",
+      "citations": 2
+    },
+    {
       "arxiv_id": "2512.19390",
       "title": "TwinAligner: Visual-Dynamic Alignment Empowers Physics-aware Real2Sim2Real for Robotic Manipulation",
       "published": "2025-12-22",
@@ -413,6 +423,16 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2602.01674",
+      "title": "VRGaussianAvatar: Integrating 3D Gaussian Avatars into VR",
+      "published": "2026-02-02",
+      "year": "2026",
+      "authors": "Hail Song; Boram Yoon; Seokhwan Yang; Seoyoung Kang; Hyunjeong Kim et al.",
+      "abstract": "We present VRGaussianAvatar, an integrated system that enables real-time full-body 3D Gaussian Splatting (3DGS) avatars in virtual reality using only head-mounted display (HMD) tracking signals. The system adopts a parallel pipeline with a VR Frontend and a GA Backend. The VR Frontend uses inverse kinematics to estimate full-body pose and streams the resulting pose along with stereo camera parameters to the backend. The GA Backend stereoscopically renders a 3DGS avatar reconstructed from a single image. To improve stereo rendering efficiency, we introduce Binocular Batching, which jointly processes left and right eye views in a single batched pass to reduce redundant computation and support high-resolution VR displays. We evaluate VRGaussianAvatar with quantitative performance tests and a within-subject user study against image- and video-based mesh avatar baselines. Results show that VRGaussianAvatar sustains interactive VR performance and yields higher perceived appearance similarity, embodiment, and plausibility. Project page and source code are available at https://vrgaussianavatar.github.io.",
+      "arxiv_url": "https://arxiv.org/abs/2602.01674",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2601.19717",
       "title": "DiffStyle3D: Consistent 3D Gaussian Stylization via Attention Optimization",
       "published": "2026-01-27",
@@ -513,16 +533,6 @@
       "citations": 1
     },
     {
-      "arxiv_id": "2601.01386",
-      "title": "ParkGaussian: Surround-view 3D Gaussian Splatting for Autonomous Parking",
-      "published": "2026-01-04",
-      "year": "2026",
-      "authors": "Xiaobao Wei; Zhangjie Ye; Yuxiang Gu; Zunjie Zhu; Yunfei Guo et al.",
-      "abstract": "Parking is a critical task for autonomous driving systems (ADS), with unique challenges in crowded parking slots and GPS-denied environments. However, existing works focus on 2D parking slot perception, mapping, and localization, 3D reconstruction remains underexplored, which is crucial for capturing complex spatial geometry in parking scenarios. Naively improving the visual quality of reconstructed parking scenes does not directly benefit autonomous parking, as the key entry point for parking is the slots perception module. To address these limitations, we curate the first benchmark named ParkRecon3D, specifically designed for parking scene reconstruction. It includes sensor data from four surround-view fisheye cameras with calibrated extrinsics and dense parking slot annotations. We then propose ParkGaussian, the first framework that integrates 3D Gaussian Splatting (3DGS) for parking scene reconstruction. To further improve the alignment between reconstruction and downstream parking slot detection, we introduce a slot-aware reconstruction strategy that leverages existing parking perception methods to enhance the synthesis quality of slot regions. Experiments on ParkRecon3D demonstrate that ParkGaussian achieves state-of-the-art reconstruction quality and better preserves perception consistency for downstream tasks. The code and dataset will be released at: https://github.com/wm-research/ParkGaussian",
-      "arxiv_url": "https://arxiv.org/abs/2601.01386",
-      "citations": 1
-    },
-    {
       "arxiv_id": "2601.00913",
       "title": "Clean-GS: Semantic Mask-Guided Pruning for 3D Gaussian Splatting",
       "published": "2026-01-01",
@@ -603,6 +613,26 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2604.27372",
+      "title": "Continuous-time q-learning for mean-field control with common noise, part-I: Theoretical foundations",
+      "published": "2026-04-30",
+      "year": "2026",
+      "authors": "Zhenjie Ren; Xiaoli Wei; Xiang Yu; Xun Yu Zhou",
+      "abstract": "This paper investigates the continuous-time counterpart of the Q-function for entropy-regularized mean-field control (MFC) with controlled common noise, coined as q-function by Jia and Zhou (2023) in the single agent's model. We first show that, under discretely sampled actions, the value function in the exploratory formulation converges to the one in the relaxed control formulation as the time grid refines. Leveraging the relaxed control formulation, we derive the exploratory Hamilton-Jacobi-Bellman (HJB) equation, in which the controlled common noise gives rise to an additional nonlinear functional of policy, rendering the policy iteration intricate. Under certain concavity condition, we establish the existence and uniqueness of the optimal one-step policy iteration via a first-order condition using the partial linear functional derivative with respect to policy. The policy improvement at each iteration is verified by relating to an entropy-regularized optimization problem over the space of policies. In the mean-field setting, we introduce the integrated q-function (Iq-function) defined on the state distribution and the policy, and it is shown that an optimal policy is identified as a two-layer fixed point to the argmax operator of the Iq-function. Finally, we provide the explicit characterization of an optimal policy as a Gaussian distribution in the general linear-quadratic (LQ) setting.",
+      "arxiv_url": "https://arxiv.org/abs/2604.27372",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.27055",
+      "title": "Nonlocal nonstabilizerness in free fermion models",
+      "published": "2026-04-29",
+      "year": "2026",
+      "authors": "Mario Collura; Benjamin Béri; Emanuele Tirrito",
+      "abstract": "Nonlocal magic quantifies the irreducible nonstabilizerness of a bipartite quantum state after optimizing over local basis changes. We study nonlocal magic for pure fermionic Gaussian states, and derive a simple closed-form entanglement spectrum bound in terms of the singular values of the subsystem-restricted covariance matrix. We benchmark our result against simulated annealing over local Gaussian unitary transformations, which supports optimality along the full local Gaussian orbit. For states drawn from the Gaussian Haar ensemble, we show that the average nonlocal magic is extensive and determine its thermodynamic limit using random matrix theory for the appropriate circular unitary ensemble. We also study Gaussian ground states, focusing on the Kitaev chain, and find that nonlocal magic is suppressed deep in both trivial and topological phases and peaks near the critical points. Finally, we investigate Gaussian evolution via random circuits and in quenches with the XY chain. For random circuits, we find that nonlocal magic grows diffusively, while in the XY chain the XX limit reveals a striking separation between nonlocal magic and entanglement.",
+      "arxiv_url": "https://arxiv.org/abs/2604.27055",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2604.26787",
       "title": "Hankel and Toeplitz Rank-1 Decomposition of Arbitrary Matrices with Applications to Signal Direction-of-Arrival Estimation",
       "published": "2026-04-29",
@@ -610,6 +640,16 @@
       "authors": "Georgios I. Orfanidis; Dimitris A. Pados; George Sklivanitis; Elizabeth Serena Bentley",
       "abstract": "We consider the problems of computing the optimal rank-$1$ Hankel and Toeplitz-structured approximation of arbitrary matrices under $L_2$ and $L_1$-norm error. Such problems arise naturally in engineered systems, including the basic few-shot signal Direction-of-Arrival (DoA) estimation problem that is of importance to modern autonomous systems applications. We develop accurate and computationally efficient structured matrix decomposition algorithms for both formulations and then derive analytically grounded small-sample-support DoA estimators for practical sensing system deployments. The resulting estimators under the $L_2$ and $L_1$ norms are formally shown to be maximum-likelihood optimal under white Gaussian and Laplace noise, respectively. The estimators are further validated through extensive simulation studies and real-world data experiments in few-shot DoA inference.",
       "arxiv_url": "https://arxiv.org/abs/2604.26787",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.26034",
+      "title": "Non-thermal electron cyclotron emission during runaway plateau in tokamak disruptions from an analytic hot plasma dispersion tensor",
+      "published": "2026-04-28",
+      "year": "2026",
+      "authors": "Yeongsun Lee; Kikyung Park; Tchanou Park; Gunsu Yun; Yong-Su Na et al.",
+      "abstract": "We derive an analytic hot plasma dispersion tensor for particle distribution functions characterized by Gaussian pitch-angle distributions. The formalism provides direct analytic expressions for non-thermal electron cyclotron emission coefficients and kinetic instability drive rate. We show the verification of the solutions using the KIAT and SYNO codes. The results offer possible mechanisms that could generate non-thermal electron cyclotron emission during tokamak disruption experiments, even when kinetic instability onset is forbidden.",
+      "arxiv_url": "https://arxiv.org/abs/2604.26034",
       "citations": 1
     },
     {
@@ -2553,16 +2593,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2602.01674",
-      "title": "VRGaussianAvatar: Integrating 3D Gaussian Avatars into VR",
-      "published": "2026-02-02",
-      "year": "2026",
-      "authors": "Hail Song; Boram Yoon; Seokhwan Yang; Seoyoung Kang; Hyunjeong Kim et al.",
-      "abstract": "We present VRGaussianAvatar, an integrated system that enables real-time full-body 3D Gaussian Splatting (3DGS) avatars in virtual reality using only head-mounted display (HMD) tracking signals. The system adopts a parallel pipeline with a VR Frontend and a GA Backend. The VR Frontend uses inverse kinematics to estimate full-body pose and streams the resulting pose along with stereo camera parameters to the backend. The GA Backend stereoscopically renders a 3DGS avatar reconstructed from a single image. To improve stereo rendering efficiency, we introduce Binocular Batching, which jointly processes left and right eye views in a single batched pass to reduce redundant computation and support high-resolution VR displays. We evaluate VRGaussianAvatar with quantitative performance tests and a within-subject user study against image- and video-based mesh avatar baselines. Results show that VRGaussianAvatar sustains interactive VR performance and yields higher perceived appearance similarity, embodiment, and plausibility. Project page and source code are available at https://vrgaussianavatar.github.io.",
-      "arxiv_url": "https://arxiv.org/abs/2602.01674",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2602.02602",
       "title": "Position: 3D Gaussian Splatting Watermarking Should Be Scenario-Driven and Threat-Model Explicit",
       "published": "2026-02-01",
@@ -3653,16 +3683,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2604.27372",
-      "title": "Continuous-time q-learning for mean-field control with common noise, part-I: Theoretical foundations",
-      "published": "2026-04-30",
-      "year": "2026",
-      "authors": "Zhenjie Ren; Xiaoli Wei; Xiang Yu; Xun Yu Zhou",
-      "abstract": "This paper investigates the continuous-time counterpart of the Q-function for entropy-regularized mean-field control (MFC) with controlled common noise, coined as q-function by Jia and Zhou (2023) in the single agent's model. We first show that, under discretely sampled actions, the value function in the exploratory formulation converges to the one in the relaxed control formulation as the time grid refines. Leveraging the relaxed control formulation, we derive the exploratory Hamilton-Jacobi-Bellman (HJB) equation, in which the controlled common noise gives rise to an additional nonlinear functional of policy, rendering the policy iteration intricate. Under certain concavity condition, we establish the existence and uniqueness of the optimal one-step policy iteration via a first-order condition using the partial linear functional derivative with respect to policy. The policy improvement at each iteration is verified by relating to an entropy-regularized optimization problem over the space of policies. In the mean-field setting, we introduce the integrated q-function (Iq-function) defined on the state distribution and the policy, and it is shown that an optimal policy is identified as a two-layer fixed point to the argmax operator of the Iq-function. Finally, we provide the explicit characterization of an optimal policy as a Gaussian distribution in the general linear-quadratic (LQ) setting.",
-      "arxiv_url": "https://arxiv.org/abs/2604.27372",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2604.27361",
       "title": "CasLayout: Cascaded 3D Layout Diffusion for Indoor Scene Synthesis with Implicit Relation Modeling",
       "published": "2026-04-30",
@@ -3830,16 +3850,6 @@
       "authors": "Arash Arabi Ardehali; Daniel J. Resnick",
       "abstract": "We find the perturbative potential on the 3d $\\mathcal{N}\\!=\\!2$ Coulomb branch arising from a chiral 4d $\\mathcal{N}\\!=\\!1$ gauge theory on $\\mathbb{R}^3 \\times S^1$, zeta-regularizing the D-term couplings generated by the Kaluza-Klein modes. This fills a significant gap in the literature on circle-compactified SUSY gauge theories. Unlike earlier indirect approaches to the circle reduction of chiral theories, our formula provides a global view of the Coulomb branch, necessary for capturing holonomy saddles and for systematic implementation. The zero locus of the potential identifies perturbative SUSY vacua, and we show how data-analysis techniques (such as RANSAC hyperplane detection) numerically extract the structure of the moduli space when this locus is extended. Our formula yields new results even in abelian theories, and offers a new perspective on several earlier observations in the context of the Cardy limit of the superconformal index. In particular, circle reductions (of interest in the SCFT/VOA correspondence) found earlier from limits of the index can now be reproduced on $\\mathbb{R}^3 \\times S^1$. An appendix shows how our 3d $\\mathcal{N}\\!=\\!2$ potential is related to a function arising in the Cardy limit of the index analogously to how the 4d $\\mathcal{N}\\!=\\!2$ prepotential arises in a limit of the Nekrasov partition function.",
       "arxiv_url": "https://arxiv.org/abs/2604.27066",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.27055",
-      "title": "Nonlocal nonstabilizerness in free fermion models",
-      "published": "2026-04-29",
-      "year": "2026",
-      "authors": "Mario Collura; Benjamin Béri; Emanuele Tirrito",
-      "abstract": "Nonlocal magic quantifies the irreducible nonstabilizerness of a bipartite quantum state after optimizing over local basis changes. We study nonlocal magic for pure fermionic Gaussian states, and derive a simple closed-form entanglement spectrum bound in terms of the singular values of the subsystem-restricted covariance matrix. We benchmark our result against simulated annealing over local Gaussian unitary transformations, which supports optimality along the full local Gaussian orbit. For states drawn from the Gaussian Haar ensemble, we show that the average nonlocal magic is extensive and determine its thermodynamic limit using random matrix theory for the appropriate circular unitary ensemble. We also study Gaussian ground states, focusing on the Kitaev chain, and find that nonlocal magic is suppressed deep in both trivial and topological phases and peaks near the critical points. Finally, we investigate Gaussian evolution via random circuits and in quenches with the XY chain. For random circuits, we find that nonlocal magic grows diffusively, while in the XY chain the XX limit reveals a striking separation between nonlocal magic and entanglement.",
-      "arxiv_url": "https://arxiv.org/abs/2604.27055",
       "citations": 0
     },
     {
@@ -4620,16 +4630,6 @@
       "authors": "Lorenz Eberhardt",
       "abstract": "The super Virasoro minimal string is defined by coupling spacelike and timelike super Liouville theories on the worldsheet. There are four different theories 0A$^\\pm$ and 0B$^\\pm$ depending on discrete choices on the worldsheet. We show that these theories arise naturally from quantization of 3d supergravity, and the amplitudes compute the dimension ($+$) or superdimension ($-$) of the space of $\\mathcal{N}=1$ superconformal blocks modulo crossing symmetry. Both 0A$^+$ and 0B$^+$ are perturbatively dual to the same matrix integral as the bosonic Virasoro minimal string, while 0B$^-$ is dual to a matrix integral with an inverse square root singularity. We show that all non-trivial perturbative amplitudes of the 0A$^-$ theory vanish.",
       "arxiv_url": "https://arxiv.org/abs/2604.26038",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.26034",
-      "title": "Non-thermal electron cyclotron emission during runaway plateau in tokamak disruptions from an analytic hot plasma dispersion tensor",
-      "published": "2026-04-28",
-      "year": "2026",
-      "authors": "Yeongsun Lee; Kikyung Park; Tchanou Park; Gunsu Yun; Yong-Su Na et al.",
-      "abstract": "We derive an analytic hot plasma dispersion tensor for particle distribution functions characterized by Gaussian pitch-angle distributions. The formalism provides direct analytic expressions for non-thermal electron cyclotron emission coefficients and kinetic instability drive rate. We show the verification of the solutions using the KIAT and SYNO codes. The results offer possible mechanisms that could generate non-thermal electron cyclotron emission during tokamak disruption experiments, even when kinetic instability onset is forbidden.",
-      "arxiv_url": "https://arxiv.org/abs/2604.26034",
       "citations": 0
     },
     {
