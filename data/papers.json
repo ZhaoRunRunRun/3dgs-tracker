@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-30 05:48 UTC",
+  "updated_at": "2026-05-31 06:44 UTC",
   "total": 590,
   "papers": [
     {
@@ -21,16 +21,6 @@
       "abstract": "Recently, the multi-modal fusion of RGB, depth, and semantics has shown great potential in dense Simultaneous Localization and Mapping (SLAM). However, a prerequisite for generating consistent semantic maps is the availability of dense, efficient, and scalable scene representations. Existing semantic SLAM systems based on explicit representations are often limited by resolution and an inability to predict unknown areas. Conversely, implicit representations typically rely on time-consuming ray tracing, failing to meet real-time requirements. Fortunately, 3D Gaussian Splatting (3DGS) has emerged as a promising representation that combines the efficiency of point-based methods with the continuity of geometric structures. To this end, we propose GS3LAM, a Gaussian Semantic Splatting SLAM framework that processes multimodal data to render consistent, dense semantic maps in real-time. GS3LAM models the scene as a Semantic Gaussian Field (SG-Field) and jointly optimizes camera poses and the field via multimodal error constraints. Furthermore, a Depth-adaptive Scale Regularization (DSR) scheme is introduced to resolve misalignments between scale-invariant Gaussians and geometric surfaces. To mitigate catastrophic forgetting, we propose a Random Sampling-based Keyframe Mapping (RSKM) strategy, which demonstrates superior performance over common local covisibility optimization methods. Extensive experiments on benchmark datasets show that GS3LAM achieves increased tracking robustness, superior rendering quality, and enhanced semantic precision compared to state-of-the-art methods. Source code is available at https://github.com/lif314/GS3LAM.",
       "arxiv_url": "https://arxiv.org/abs/2603.27781",
       "citations": 34
-    },
-    {
-      "arxiv_id": "2604.03039",
-      "title": "GenSmoke-GS: A Multi-Stage Method for Novel View Synthesis from Smoke-Degraded Images Using a Generative Model",
-      "published": "2026-04-03",
-      "year": "2026",
-      "authors": "Qida Cao; Xinyuan Hu; Changyue Shi; Jiajun Ding; Zhou Yu et al.",
-      "abstract": "This paper describes our method for Track 2 of the NTIRE 2026 3D Restoration and Reconstruction (3DRR) Challenge on smoke-degraded images. In this task, smoke reduces image visibility and weakens the cross-view consistency required by scene optimization and rendering. We address this problem with a multi-stage pipeline consisting of image restoration, dehazing, MLLM-based enhancement, 3DGS-MCMC optimization, and averaging over repeated runs. The main purpose of the pipeline is to improve visibility before rendering while limiting scene-content changes across input views. Experimental results on the challenge benchmark show improved quantitative performance and better visual quality than the provided baselines. The code is available at https://github.com/plbbl/GenSmoke-GS. Our method achieved a ranking of 1 out of 14 participants in Track 2 of the NTIRE 3DRR Challenge, as reported on the official competition website: https://www.codabench.org/competitions/13993/#/results-tab.",
-      "arxiv_url": "https://arxiv.org/abs/2604.03039",
-      "citations": 10
     },
     {
       "arxiv_id": "2605.26500",
@@ -113,16 +103,6 @@
       "citations": 3
     },
     {
-      "arxiv_id": "2605.30115",
-      "title": "Large Depth Completion Model from Sparse Observations",
-      "published": "2026-05-28",
-      "year": "2026",
-      "authors": "Zhu Yu; Zhengyi Zhao; Runmin Zhang; Lingteng Qiu; Kejie Qiu et al.",
-      "abstract": "This work presents the Large Depth Completion Model (LDCM), a simple, effective, and robust framework for single-view metric depth estimation with sparse observations. Without relying on complex architectural designs, LDCM generates metric-accurate dense depth maps using a transformer. It outperforms existing approaches across diverse datasets and sparse observations. We achieve this from two key perspectives: (1) leveraging existing monocular foundation models to improve the quality of sparse depth inputs, and (2) reformulating training objectives to better capture geometric structure and metric consistency. Specifically, a Poisson-based depth initialization strategy is first introduced to generate a uniform coarse dense depth map from diverse sparse observations, providing a strong structural prior for the network. Regarding the training objective, we replace the conventional depth head with a point map head that regresses per-pixel 3D coordinates in camera space, enabling the model to directly learn the underlying 3D scene structure instead of performing pixel-wise depth map restoration. Moreover, this design eliminates the need for camera intrinsic parameters, allowing LDCM to naturally produce metric-scaled 3D point maps. Extensive experiments demonstrate that LDCM consistently outperforms state-of-the-art methods across multiple benchmarks and varying sparsity levels in both depth completion and point map estimation, showcasing its effectiveness and strong generalization to unseen data distributions.",
-      "arxiv_url": "https://arxiv.org/abs/2605.30115",
-      "citations": 3
-    },
-    {
       "arxiv_id": "2605.29097",
       "title": "GeRaF: Neural Geometry Reconstruction from Radio Frequency Signals",
       "published": "2026-05-27",
@@ -170,16 +150,6 @@
       "authors": "Jiawei Ren; Michal Jan Tyszkiewicz; Jiahui Huang; Zan Gojcic",
       "abstract": "In this work, we revisit several key design choices of modern Transformer-based approaches for feed-forward 3D Gaussian Splatting (3DGS) prediction. We argue that the common practice of regressing Gaussian means as depths along camera rays is suboptimal, and instead propose to directly regress 3D mean coordinates using only a self-supervised rendering loss. This formulation allows us to move from the standard encoder-only design to an encoder-decoder architecture with learnable Gaussian tokens, thereby unbinding the number of predicted primitives from input image resolution and number of views. Our resulting method, TokenGS, demonstrates improved robustness to pose noise and multiview inconsistencies, while naturally supporting efficient test-time optimization in token space without degrading learned priors. TokenGS achieves state-of-the-art feed-forward reconstruction performance on both static and dynamic scenes, producing more regularized geometry and more balanced 3DGS distribution, while seamlessly recovering emergent scene attributes such as static-dynamic decomposition and scene flow.",
       "arxiv_url": "https://arxiv.org/abs/2604.15239",
-      "citations": 2
-    },
-    {
-      "arxiv_id": "2604.03069",
-      "title": "SparseSplat: Towards Applicable Feed-Forward 3D Gaussian Splatting with Pixel-Unaligned Prediction",
-      "published": "2026-04-03",
-      "year": "2026",
-      "authors": "Zicheng Zhang; Xiangting Meng; Ke Wu; Wenchao Ding",
-      "abstract": "Recent progress in feed-forward 3D Gaussian Splatting (3DGS) has notably improved rendering quality. However, the spatially uniform and highly redundant 3DGS map generated by previous feed-forward 3DGS methods limits their integration into downstream reconstruction tasks. We propose SparseSplat, the first feed-forward 3DGS model that adaptively adjusts Gaussian density according to scene structure and information richness of local regions, yielding highly compact 3DGS maps. To achieve this, we propose entropy-based probabilistic sampling, generating large, sparse Gaussians in textureless areas and assigning small, dense Gaussians to regions with rich information. Additionally, we designed a specialized point cloud network that efficiently encodes local context and decodes it into 3DGS attributes, addressing the receptive field mismatch between the general 3DGS optimization pipeline and feed-forward models. Extensive experimental results demonstrate that SparseSplat can achieve state-of-the-art rendering quality with only 22% of the Gaussians and maintain reasonable rendering quality with only 1.5% of the Gaussians. Project page: https://victkk.github.io/SparseSplat-page/.",
-      "arxiv_url": "https://arxiv.org/abs/2604.03069",
       "citations": 2
     },
     {
@@ -343,16 +313,6 @@
       "citations": 1
     },
     {
-      "arxiv_id": "2604.04693",
-      "title": "3D Gaussian Splatting for Annular Dark Field Scanning Transmission Electron Microscopy Tomography Reconstruction",
-      "published": "2026-04-06",
-      "year": "2026",
-      "authors": "Beiyuan Zhang; Hesong Li; Ruiwen Shao; Ying Fu",
-      "abstract": "Analytical Dark Field Scanning Transmission Electron Microscopy (ADF-STEM) tomography reconstructs nanoscale materials in 3D by integrating multi-view tilt-series images, enabling precise analysis of their structural and compositional features. Although integrating more tilt views improves 3D reconstruction, it requires extended electron exposure that risks damaging dose-sensitive materials and introduces drift and misalignment, making it difficult to balance reconstruction fidelity with sample preservation. In practice, sparse-view acquisition is frequently required, yet conventional ADF-STEM methods degrade under limited views, exhibiting artifacts and reduced structural fidelity. To resolve these issues, in this paper, we adapt 3D GS to this domain with three key components. We first model the local scattering strength as a learnable scalar field, denza, to address the mismatch between 3DGS and ADF-STEM imaging physics. Then we introduce a coefficient $γ$ to stabilize scattering across tilt angles, ensuring consistent denza via scattering view normalization. Finally, We incorporate a loss function that includes a 2D Fourier amplitude term to suppress missing wedge artifacts in sparse-view reconstruction. Experiments on 45-view and 15-view tilt series show that DenZa-Gaussian produces high-fidelity reconstructions and 2D projections that align more closely with original tilts, demonstrating superior robustness under sparse-view conditions.",
-      "arxiv_url": "https://arxiv.org/abs/2604.04693",
-      "citations": 1
-    },
-    {
       "arxiv_id": "2604.01207",
       "title": "TRACE: High-Fidelity 3D Scene Editing via Tangible Reconstruction and Geometry-Aligned Contextual Video Masking",
       "published": "2026-04-01",
@@ -430,6 +390,16 @@
       "authors": "Takeshi Noda; Yu-Shen Liu; Zhizhong Han",
       "abstract": "Rendering 3D surfaces has been revolutionized within the modeling of radiance fields through either 3DGS or NeRF. Although 3DGS has shown advantages over NeRF in terms of rendering quality or speed, there is still room for improvement in recovering high fidelity surfaces through 3DGS. To resolve this issue, we propose a self-constrained prior to constrain the learning of 3D Gaussians, aiming for more accurate depth rendering. Our self-constrained prior is derived from a TSDF grid that is obtained by fusing the depth maps rendered with current 3D Gaussians. The prior measures a distance field around the estimated surface, offering a band centered at the surface for imposing more specific constraints on 3D Gaussians, such as removing Gaussians outside the band, moving Gaussians closer to the surface, and encouraging larger or smaller opacity in a geometry-aware manner. More importantly, our prior can be regularly updated by the most recent depth images which are usually more accurate and complete. In addition, the prior can also progressively narrow the band to tighten the imposed constraints. We justify our idea and report our superiority over the state-of-the-art methods in evaluations on widely used benchmarks.",
       "arxiv_url": "https://arxiv.org/abs/2603.19682",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2603.19234",
+      "title": "Matryoshka Gaussian Splatting",
+      "published": "2026-03-19",
+      "year": "2026",
+      "authors": "Zhilin Guo; Boqiao Zhang; Hakan Aktas; Kyle Fogarty; Jeffrey Hu et al.",
+      "abstract": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
+      "arxiv_url": "https://arxiv.org/abs/2603.19234",
       "citations": 1
     },
     {
@@ -2083,6 +2053,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2604.04693",
+      "title": "3D Gaussian Splatting for Annular Dark Field Scanning Transmission Electron Microscopy Tomography Reconstruction",
+      "published": "2026-04-06",
+      "year": "2026",
+      "authors": "Beiyuan Zhang; Hesong Li; Ruiwen Shao; Ying Fu",
+      "abstract": "Analytical Dark Field Scanning Transmission Electron Microscopy (ADF-STEM) tomography reconstructs nanoscale materials in 3D by integrating multi-view tilt-series images, enabling precise analysis of their structural and compositional features. Although integrating more tilt views improves 3D reconstruction, it requires extended electron exposure that risks damaging dose-sensitive materials and introduces drift and misalignment, making it difficult to balance reconstruction fidelity with sample preservation. In practice, sparse-view acquisition is frequently required, yet conventional ADF-STEM methods degrade under limited views, exhibiting artifacts and reduced structural fidelity. To resolve these issues, in this paper, we adapt 3D GS to this domain with three key components. We first model the local scattering strength as a learnable scalar field, denza, to address the mismatch between 3DGS and ADF-STEM imaging physics. Then we introduce a coefficient $γ$ to stabilize scattering across tilt angles, ensuring consistent denza via scattering view normalization. Finally, We incorporate a loss function that includes a 2D Fourier amplitude term to suppress missing wedge artifacts in sparse-view reconstruction. Experiments on 45-view and 15-view tilt series show that DenZa-Gaussian produces high-fidelity reconstructions and 2D projections that align more closely with original tilts, demonstrating superior robustness under sparse-view conditions.",
+      "arxiv_url": "https://arxiv.org/abs/2604.04693",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2604.04576",
       "title": "PR-IQA: Partial-Reference Image Quality Assessment for Diffusion-Based Novel View Synthesis",
       "published": "2026-04-06",
@@ -2110,6 +2090,26 @@
       "authors": "Haimin Luo; Srinjay Sarkar; Albert Mosella-Montoro; Francisco Vicente Carrasco; Fernando De la Torre",
       "abstract": "We present a compact pipeline for high-fidelity hair reconstruction from multi-view images. While recent 3D Gaussian Splatting (3DGS) methods achieve realistic results, they often require millions of primitives, leading to high storage and rendering costs. Observing that hair exhibits structural and visual similarities across a hairstyle, we cluster strands into representative hair cards and group these into shared texture codebooks. Our approach integrates this structure with 3DGS rendering, significantly reducing reconstruction time and storage while maintaining comparable visual quality. In addition, we propose a generative prior accelerated method to reconstruct the initial strand geometry from a set of images. Our experiments demonstrate a 4-fold reduction in strand reconstruction time and achieve comparable rendering performance with over 200x lower memory footprint.",
       "arxiv_url": "https://arxiv.org/abs/2604.03716",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2604.03069",
+      "title": "SparseSplat: Towards Applicable Feed-Forward 3D Gaussian Splatting with Pixel-Unaligned Prediction",
+      "published": "2026-04-03",
+      "year": "2026",
+      "authors": "Zicheng Zhang; Xiangting Meng; Ke Wu; Wenchao Ding",
+      "abstract": "Recent progress in feed-forward 3D Gaussian Splatting (3DGS) has notably improved rendering quality. However, the spatially uniform and highly redundant 3DGS map generated by previous feed-forward 3DGS methods limits their integration into downstream reconstruction tasks. We propose SparseSplat, the first feed-forward 3DGS model that adaptively adjusts Gaussian density according to scene structure and information richness of local regions, yielding highly compact 3DGS maps. To achieve this, we propose entropy-based probabilistic sampling, generating large, sparse Gaussians in textureless areas and assigning small, dense Gaussians to regions with rich information. Additionally, we designed a specialized point cloud network that efficiently encodes local context and decodes it into 3DGS attributes, addressing the receptive field mismatch between the general 3DGS optimization pipeline and feed-forward models. Extensive experimental results demonstrate that SparseSplat can achieve state-of-the-art rendering quality with only 22% of the Gaussians and maintain reasonable rendering quality with only 1.5% of the Gaussians. Project page: https://victkk.github.io/SparseSplat-page/.",
+      "arxiv_url": "https://arxiv.org/abs/2604.03069",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2604.03039",
+      "title": "GenSmoke-GS: A Multi-Stage Method for Novel View Synthesis from Smoke-Degraded Images Using a Generative Model",
+      "published": "2026-04-03",
+      "year": "2026",
+      "authors": "Qida Cao; Xinyuan Hu; Changyue Shi; Jiajun Ding; Zhou Yu et al.",
+      "abstract": "This paper describes our method for Track 2 of the NTIRE 2026 3D Restoration and Reconstruction (3DRR) Challenge on smoke-degraded images. In this task, smoke reduces image visibility and weakens the cross-view consistency required by scene optimization and rendering. We address this problem with a multi-stage pipeline consisting of image restoration, dehazing, MLLM-based enhancement, 3DGS-MCMC optimization, and averaging over repeated runs. The main purpose of the pipeline is to improve visibility before rendering while limiting scene-content changes across input views. Experimental results on the challenge benchmark show improved quantitative performance and better visual quality than the provided baselines. The code is available at https://github.com/plbbl/GenSmoke-GS. Our method achieved a ranking of 1 out of 14 participants in Track 2 of the NTIRE 3DRR Challenge, as reported on the official competition website: https://www.codabench.org/competitions/13993/#/results-tab.",
+      "arxiv_url": "https://arxiv.org/abs/2604.03039",
       "citations": 0
     },
     {
@@ -2500,16 +2500,6 @@
       "authors": "Jingyu Guo; Ziye Chen; Ziwen Li; Zhengqing Gao; Jiaxin Huang et al.",
       "abstract": "Existing UAV vision-language navigation (VLN) benchmarks have enabled language-guided flight, but they largely focus on long, step-wise route descriptions with goal-centric evaluation, making them less diagnostic for real operations where brief, high-level commands must be grounded into safe multi-stage behaviors. We present HUGE-Bench, a benchmark for High-Level UAV Vision-Language-Action (HL-VLA) tasks that tests whether an agent can interpret concise language and execute complex, process-oriented trajectories with safety awareness. HUGE-Bench comprises 4 real-world digital twin scenes, 8 high-level tasks, and 2.56M meters of trajectories, and is built on an aligned 3D Gaussian Splatting (3DGS)-Mesh representation that combines photorealistic rendering with collision-capable geometry for scalable generation and collision-aware evaluation. We introduce process-oriented and collision-aware metrics to assess process fidelity, terminal accuracy, and safety. Experiments on representative state-of-the-art VLA models reveal significant gaps in high-level semantic completion and safe execution, highlighting HUGE-Bench as a diagnostic testbed for high-level UAV autonomy.",
       "arxiv_url": "https://arxiv.org/abs/2603.19822",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2603.19234",
-      "title": "Matryoshka Gaussian Splatting",
-      "published": "2026-03-19",
-      "year": "2026",
-      "authors": "Zhilin Guo; Boqiao Zhang; Hakan Aktas; Kyle Fogarty; Jeffrey Hu et al.",
-      "abstract": "The ability to render scenes at adjustable fidelity from a single model, known as level of detail (LoD), is crucial for practical deployment of 3D Gaussian Splatting (3DGS). Existing discrete LoD methods expose only a limited set of operating points, while concurrent continuous LoD approaches enable smoother scaling but often suffer noticeable quality degradation at full capacity, making LoD a costly design decision. We introduce Matryoshka Gaussian Splatting (MGS), a training framework that enables continuous LoD for standard 3DGS pipelines without sacrificing full-capacity rendering quality. MGS learns a single ordered set of Gaussians such that rendering any prefix, the first k splats, produces a coherent reconstruction whose fidelity improves smoothly with increasing budget. Our key idea is stochastic budget training: each iteration samples a random splat budget and optimises both the corresponding prefix and the full set. This strategy requires only two forward passes and introduces no architectural modifications. Experiments across four benchmarks and six baselines show that MGS matches the full-capacity performance of its backbone while enabling a continuous speed-quality trade-off from a single model. Extensive ablations on ordering strategies, training objectives, and model capacity further validate the designs.",
-      "arxiv_url": "https://arxiv.org/abs/2603.19234",
       "citations": 0
     },
     {
@@ -3403,6 +3393,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2605.30115",
+      "title": "Large Depth Completion Model from Sparse Observations",
+      "published": "2026-05-28",
+      "year": "2026",
+      "authors": "Zhu Yu; Zhengyi Zhao; Runmin Zhang; Lingteng Qiu; Kejie Qiu et al.",
+      "abstract": "This work presents the Large Depth Completion Model (LDCM), a simple, effective, and robust framework for single-view metric depth estimation with sparse observations. Without relying on complex architectural designs, LDCM generates metric-accurate dense depth maps using a transformer. It outperforms existing approaches across diverse datasets and sparse observations. We achieve this from two key perspectives: (1) leveraging existing monocular foundation models to improve the quality of sparse depth inputs, and (2) reformulating training objectives to better capture geometric structure and metric consistency. Specifically, a Poisson-based depth initialization strategy is first introduced to generate a uniform coarse dense depth map from diverse sparse observations, providing a strong structural prior for the network. Regarding the training objective, we replace the conventional depth head with a point map head that regresses per-pixel 3D coordinates in camera space, enabling the model to directly learn the underlying 3D scene structure instead of performing pixel-wise depth map restoration. Moreover, this design eliminates the need for camera intrinsic parameters, allowing LDCM to naturally produce metric-scaled 3D point maps. Extensive experiments demonstrate that LDCM consistently outperforms state-of-the-art methods across multiple benchmarks and varying sparsity levels in both depth completion and point map estimation, showcasing its effectiveness and strong generalization to unseen data distributions.",
+      "arxiv_url": "https://arxiv.org/abs/2605.30115",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2605.30111",
       "title": "xModel-KD: Cross-modal Knowledge Distillation for 3D Scene Perception using LiDAR",
       "published": "2026-05-28",
@@ -4063,16 +4063,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2605.28817",
-      "title": "Fewer simulations, sharper covariances: Reducing mock covariance noise with Zeldovich approximation control variates",
-      "published": "2026-05-27",
-      "year": "2026",
-      "authors": "Boryana Hadzhiyska; Martin White",
-      "abstract": "We present a control-variate method for reducing the variance of power spectrum covariance matrix estimates from simulations of large-scale structure. The key idea is to pair each mock simulation with a cheap Zeldovich-approximation realization sharing the same initial conditions, and to use the known statistical properties of the Zeldovich field to remove correlated sample variance from the covariance estimator. Under a Gaussian disconnected approximation, we derive fully analytic expressions for both the optimal control-variate coefficient, $β(k,\\ell;k',\\ell')$, and the corresponding correlation, $ρ(k,\\ell;k',\\ell')$, in terms of the auto- and cross-power spectra of the target and control fields. In the monopole case, the correlation takes the particularly simple form $ρ(k,k') = r^2(k),r^2(k')$, where $r(k)$ is the standard cross-correlation coefficient between the target and Zeldovich fields, implying that covariance estimation remains highly efficient whenever the two fields are strongly correlated. For masked redshift-space lognormal mocks, resembling Luminous Red Galaxies from the Dark Energy Spectroscopic Instrument (DESI), we find that the control-variate estimator reduces the variance of the covariance matrix by approximately an order of magnitude on large scales, $k \\lesssim 0.05\\,h\\,{\\rm Mpc}^{-1}$, precisely where accurate covariance estimation is most challenging. The gains are smaller for higher $k$ but typically accelerate convergence by a factor of 2-3, substantially lowering the computational cost of covariance estimation for current and upcoming large-scale structure surveys. Due to its simplicity, this method is readily implementable in current imaging and spectroscopic surveys (e.g., DESI, Euclid, LSST, PFS, SPHEREx).",
-      "arxiv_url": "https://arxiv.org/abs/2605.28817",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2605.28816",
       "title": "Gamma-World: Generative Multi-Agent World Modeling Beyond Two Players",
       "published": "2026-05-27",
@@ -4080,6 +4070,16 @@
       "authors": "Fangfu Liu; Kai He; Tianchang Shen; Tianshi Cao; Sanja Fidler et al.",
       "abstract": "World models for interactive video generation have largely focused on single-agent settings, where future observations are generated from a single control signal. However, many generated environments require multi-agent interaction: multiple players, robots, or embodied agents act simultaneously within a shared space. Scaling world models to such settings requires a principled multi-agent design: agents should remain independently controllable, permutation-symmetric, and support efficient inference while maintaining consistency across time and perspectives. In this paper, we present our generative multi-agent world model for interactive simulation. It introduces Simplex Rotary Agent Encoding, a parameter-free extension of 3D RoPE that represents agents as vertices of a regular simplex in rotary angle space. This gives each agent a distinct phase while making all agents permutation-equivalent, enabling scalable agent identity without learned per-slot identities or a fixed agent ordering. To avoid dense all-to-all attention across agents, we further propose Sparse Hub Attention, where learnable hub tokens mediate token interaction across agents, reducing cross-agent attention cost from quadratic to linear in the number of agents. For real-time rollout, we distill a full-context diffusion teacher into a causal student that generates temporal blocks sequentially with KV caching, enabling action-responsive generation at 24 FPS. Experiments in multiplayer virtual environments show that our model improves video fidelity, action controllability, and inter-agent consistency over slot-based and dense-attention baselines, while generalizing from two to four players without additional training.",
       "arxiv_url": "https://arxiv.org/abs/2605.28816",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2605.28817",
+      "title": "Fewer simulations, sharper covariances: Reducing mock covariance noise with Zeldovich approximation control variates",
+      "published": "2026-05-27",
+      "year": "2026",
+      "authors": "Boryana Hadzhiyska; Martin White",
+      "abstract": "We present a control-variate method for reducing the variance of power spectrum covariance matrix estimates from simulations of large-scale structure. The key idea is to pair each mock simulation with a cheap Zeldovich-approximation realization sharing the same initial conditions, and to use the known statistical properties of the Zeldovich field to remove correlated sample variance from the covariance estimator. Under a Gaussian disconnected approximation, we derive fully analytic expressions for both the optimal control-variate coefficient, $β(k,\\ell;k',\\ell')$, and the corresponding correlation, $ρ(k,\\ell;k',\\ell')$, in terms of the auto- and cross-power spectra of the target and control fields. In the monopole case, the correlation takes the particularly simple form $ρ(k,k') = r^2(k),r^2(k')$, where $r(k)$ is the standard cross-correlation coefficient between the target and Zeldovich fields, implying that covariance estimation remains highly efficient whenever the two fields are strongly correlated. For masked redshift-space lognormal mocks, resembling Luminous Red Galaxies from the Dark Energy Spectroscopic Instrument (DESI), we find that the control-variate estimator reduces the variance of the covariance matrix by approximately an order of magnitude on large scales, $k \\lesssim 0.05\\,h\\,{\\rm Mpc}^{-1}$, precisely where accurate covariance estimation is most challenging. The gains are smaller for higher $k$ but typically accelerate convergence by a factor of 2-3, substantially lowering the computational cost of covariance estimation for current and upcoming large-scale structure surveys. Due to its simplicity, this method is readily implementable in current imaging and spectroscopic surveys (e.g., DESI, Euclid, LSST, PFS, SPHEREx).",
+      "arxiv_url": "https://arxiv.org/abs/2605.28817",
       "citations": 0
     },
     {
