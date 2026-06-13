@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-12 06:46 UTC",
+  "updated_at": "2026-06-13 06:48 UTC",
   "total": 593,
   "papers": [
     {
@@ -53,6 +53,16 @@
       "citations": 8
     },
     {
+      "arxiv_id": "2604.14268",
+      "title": "HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds",
+      "published": "2026-04-15",
+      "year": "2026",
+      "authors": "Team HY-World; Chenjie Cao; Xuhui Zuo; Zhenwei Wang; Yisu Zhang et al.",
+      "abstract": "We introduce HY-World 2.0, a multi-modal world model framework that advances our prior project HY-World 1.0. HY-World 2.0 accommodates diverse input modalities, including text prompts, single-view images, multi-view images, and videos, and produces 3D world representations. With text or single-view image inputs, the model performs world generation, synthesizing high-fidelity, navigable 3D Gaussian Splatting (3DGS) scenes. This is achieved through a four-stage method: a) Panorama Generation with HY-Pano 2.0, b) Trajectory Planning with WorldNav, c) World Expansion with WorldStereo 2.0, and d) World Composition with WorldMirror 2.0. Specifically, we introduce key innovations to enhance panorama fidelity, enable 3D scene understanding and planning, and upgrade WorldStereo, our keyframe-based view generation model with consistent memory. We also upgrade WorldMirror, a feed-forward model for universal 3D prediction, by refining model architecture and learning strategy, enabling world reconstruction from multi-view images or videos. Also, we introduce WorldLens, a high-performance 3DGS rendering platform featuring a flexible engine-agnostic architecture, automatic IBL lighting, efficient collision detection, and training-rendering co-design, enabling interactive exploration of 3D worlds with character support. Extensive experiments demonstrate that HY-World 2.0 achieves state-of-the-art performance on several benchmarks among open-source approaches, delivering results comparable to the closed-source model Marble. We release all model weights, code, and technical details to facilitate reproducibility and support further research on 3D world models.",
+      "arxiv_url": "https://arxiv.org/abs/2604.14268",
+      "citations": 6
+    },
+    {
       "arxiv_id": "2604.02586",
       "title": "TrackerSplat: Exploiting Point Tracking for Fast and Robust Dynamic 3D Gaussians Reconstruction",
       "published": "2026-04-02",
@@ -61,16 +71,6 @@
       "abstract": "Recent advancements in 3D Gaussian Splatting (3DGS) have demonstrated its potential for efficient and photorealistic 3D reconstructions, which is crucial for diverse applications such as robotics and immersive media. However, current Gaussian-based methods for dynamic scene reconstruction struggle with large inter-frame displacements, leading to artifacts and temporal inconsistencies under fast object motions. To address this, we introduce \\textit{TrackerSplat}, a novel method that integrates advanced point tracking methods to enhance the robustness and scalability of 3DGS for dynamic scene reconstruction. TrackerSplat utilizes off-the-shelf point tracking models to extract pixel trajectories and triangulate per-view pixel trajectories onto 3D Gaussians to guide the relocation, rotation, and scaling of Gaussians before training. This strategy effectively handles large displacements between frames, dramatically reducing the fading and recoloring artifacts prevalent in prior methods. By accurately positioning Gaussians prior to gradient-based optimization, TrackerSplat overcomes the quality degradation associated with large frame gaps when processing multiple adjacent frames in parallel across multiple devices, thereby boosting reconstruction throughput while preserving rendering quality. Experiments on real-world datasets confirm the robustness of TrackerSplat in challenging scenarios with significant displacements, achieving superior throughput under parallel settings and maintaining visual quality compared to baselines. The code is available at https://github.com/yindaheng98/TrackerSplat.",
       "arxiv_url": "https://arxiv.org/abs/2604.02586",
       "citations": 6
-    },
-    {
-      "arxiv_id": "2604.14268",
-      "title": "HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds",
-      "published": "2026-04-15",
-      "year": "2026",
-      "authors": "Team HY-World; Chenjie Cao; Xuhui Zuo; Zhenwei Wang; Yisu Zhang et al.",
-      "abstract": "We introduce HY-World 2.0, a multi-modal world model framework that advances our prior project HY-World 1.0. HY-World 2.0 accommodates diverse input modalities, including text prompts, single-view images, multi-view images, and videos, and produces 3D world representations. With text or single-view image inputs, the model performs world generation, synthesizing high-fidelity, navigable 3D Gaussian Splatting (3DGS) scenes. This is achieved through a four-stage method: a) Panorama Generation with HY-Pano 2.0, b) Trajectory Planning with WorldNav, c) World Expansion with WorldStereo 2.0, and d) World Composition with WorldMirror 2.0. Specifically, we introduce key innovations to enhance panorama fidelity, enable 3D scene understanding and planning, and upgrade WorldStereo, our keyframe-based view generation model with consistent memory. We also upgrade WorldMirror, a feed-forward model for universal 3D prediction, by refining model architecture and learning strategy, enabling world reconstruction from multi-view images or videos. Also, we introduce WorldLens, a high-performance 3DGS rendering platform featuring a flexible engine-agnostic architecture, automatic IBL lighting, efficient collision detection, and training-rendering co-design, enabling interactive exploration of 3D worlds with character support. Extensive experiments demonstrate that HY-World 2.0 achieves state-of-the-art performance on several benchmarks among open-source approaches, delivering results comparable to the closed-source model Marble. We release all model weights, code, and technical details to facilitate reproducibility and support further research on 3D world models.",
-      "arxiv_url": "https://arxiv.org/abs/2604.14268",
-      "citations": 5
     },
     {
       "arxiv_id": "2604.25459",
@@ -253,6 +253,16 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2604.12626",
+      "title": "Habitat-GS: A High-Fidelity Navigation Simulator with Dynamic Gaussian Splatting",
+      "published": "2026-04-14",
+      "year": "2026",
+      "authors": "Ziyuan Xia; Jingyi Xu; Chong Cui; Yuanhong Yu; Jiazhao Zhang et al.",
+      "abstract": "Training embodied AI agents depends critically on the visual fidelity of simulation environments and the ability to model dynamic humans. Current simulators rely on mesh-based rasterization with limited visual realism, and their support for dynamic human avatars, where available, is constrained to mesh representations, hindering agent generalization to human-populated real-world scenarios. We present Habitat-GS, a navigation-centric embodied AI simulator extended from Habitat-Sim that integrates 3D Gaussian Splatting scene rendering and drivable gaussian avatars while maintaining full compatibility with the Habitat ecosystem. Our system implements a 3DGS renderer for real-time photorealistic rendering and supports scalable 3DGS asset import from diverse sources. For dynamic human modeling, we introduce a gaussian avatar module that enables each avatar to simultaneously serve as a photorealistic visual entity and an effective navigation obstacle, allowing agents to learn human-aware behaviors in realistic settings. Experiments on point-goal navigation demonstrate that agents trained on 3DGS scenes achieve stronger cross-domain generalization, with mixed-domain training being the most effective strategy. Evaluations on avatar-aware navigation further confirm that gaussian avatars enable effective human-aware navigation. Finally, performance benchmarks validate the system's scalability across varying scene complexity and avatar counts.",
+      "arxiv_url": "https://arxiv.org/abs/2604.12626",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2604.12251",
       "title": "ArtifactWorld: Scaling 3D Gaussian Splatting Artifact Restoration via Video Generation Models",
       "published": "2026-04-14",
@@ -280,6 +290,26 @@
       "authors": "Chensheng Dai; Shengjun Zhang; Min Chen; Yueqi Duan",
       "abstract": "3D Gaussian Splatting (3DGS) has demonstrated impressive performance in 3D scene reconstruction. Beyond novel view synthesis, it shows great potential for multi-view surface reconstruction. Existing methods employ optimization-based reconstruction pipelines that achieve precise and complete surface extractions. However, these approaches typically require dense input views and high time consumption for per-scene optimization. To address these limitations, we propose SurfelSplat, a feed-forward framework that generates efficient and generalizable pixel-aligned Gaussian surfel representations from sparse-view images. We observe that conventional feed-forward structures struggle to recover accurate geometric attributes of Gaussian surfels because the spatial frequency of pixel-aligned primitives exceeds Nyquist sampling rates. Therefore, we propose a cross-view feature aggregation module based on the Nyquist sampling theorem. Specifically, we first adapt the geometric forms of Gaussian surfels with spatial sampling rate-guided low-pass filters. We then project the filtered surfels across all input views to obtain cross-view feature correlations. By processing these correlations through a specially designed feature fusion network, we can finally regress Gaussian surfels with precise geometry. Extensive experiments on DTU reconstruction benchmarks demonstrate that our model achieves comparable results with state-of-the-art methods, and predict Gaussian surfels within 1 second, offering a 100x speedup without costly per-scene training.",
       "arxiv_url": "https://arxiv.org/abs/2604.08370",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.07337",
+      "title": "From Blobs to Spokes: High-Fidelity Surface Reconstruction via Oriented Gaussians",
+      "published": "2026-04-08",
+      "year": "2026",
+      "authors": "Diego Gomez; Antoine Guédon; Nissim Maruani; Bingchen Gong; Maks Ovsjanikov",
+      "abstract": "3D Gaussian Splatting (3DGS) has revolutionized fast novel view synthesis, yet its opacity-based formulation makes surface extraction fundamentally difficult. Unlike implicit methods built on Signed Distance Fields or occupancy, 3DGS lacks a global geometric field, forcing existing approaches to resort to heuristics such as TSDF fusion of blended depth maps.   Inspired by the Objects as Volumes framework, we derive a principled occupancy field for Gaussian Splatting and show how it can be used to extract highly accurate watertight meshes of complex scenes. Our key contribution is to introduce a learnable oriented normal at each Gaussian element and to define an adapted attenuation formulation, which leads to closed-form expressions for both the normal and occupancy fields at arbitrary locations in space. We further introduce a novel consistency loss and a dedicated densification strategy to enforce Gaussians to wrap the entire surface by closing geometric holes, ensuring a complete shell of oriented primitives. We modify the differentiable rasterizer to output depth as an isosurface of our continuous model, and introduce Primal Adaptive Meshing for Region-of-Interest meshing at arbitrary resolution.   We additionally expose fundamental biases in standard surface evaluation protocols and propose two more rigorous alternatives. Overall, our method Gaussian Wrapping sets a new state-of-the-art on DTU and Tanks and Temples, producing complete, watertight meshes at a fraction of the size of concurrent work-recovering thin structures such as the notoriously elusive bicycle spokes.",
+      "arxiv_url": "https://arxiv.org/abs/2604.07337",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.07053",
+      "title": "AnchorSplat: Feed-Forward 3D Gaussian Splatting with 3D Geometric Priors",
+      "published": "2026-04-08",
+      "year": "2026",
+      "authors": "Xiaoxue Zhang; Xiaoxu Zheng; Yixuan Yin; Tiao Zhao; Kaihua Tang et al.",
+      "abstract": "Recent feed-forward Gaussian reconstruction models adopt a pixel-aligned formulation that maps each 2D pixel to a 3D Gaussian, entangling Gaussian representations tightly with the input images. In this paper, we propose AnchorSplat, a novel feed-forward 3DGS framework for scene-level reconstruction that represents the scene directly in 3D space. AnchorSplat introduces an anchor-aligned Gaussian representation guided by 3D geometric priors (e.g., sparse point clouds, voxels, or RGB-D point clouds), enabling a more geometry-aware renderable 3D Gaussians that is independent of image resolution and number of views. This design substantially reduces the number of required Gaussians, improving computational efficiency while enhancing reconstruction fidelity. Beyond the anchor-aligned design, we utilize a Gaussian Refiner to adjust the intermediate Gaussiansy via merely a few forward passes. Experiments on the ScanNet++ v2 NVS benchmark demonstrate the SOTA performance, outperforming previous methods with more view-consistent and substantially fewer Gaussian primitives.",
+      "arxiv_url": "https://arxiv.org/abs/2604.07053",
       "citations": 1
     },
     {
@@ -433,26 +463,6 @@
       "citations": 1
     },
     {
-      "arxiv_id": "2603.10893",
-      "title": "S2D: Sparse to Dense Lifting for 3D Reconstruction with Minimal Inputs",
-      "published": "2026-03-11",
-      "year": "2026",
-      "authors": "Yuzhou Ji; Qijian Tian; He Zhu; Xiaoqi Jiang; Guangzhi Cao et al.",
-      "abstract": "Explicit 3D representations have already become an essential medium for 3D simulation and understanding. However, the most commonly used point cloud and 3D Gaussian Splatting (3DGS) each suffer from non-photorealistic rendering and significant degradation under sparse inputs. In this paper, we introduce Sparse to Dense lifting (S2D), a novel pipeline that bridges the two representations and achieves high-quality 3DGS reconstruction with minimal inputs. Specifically, the S2D lifting is two-fold. We first present an efficient one-step diffusion model that lifts sparse point cloud for high-fidelity image artifact fixing. Meanwhile, to reconstruct 3D consistent scenes, we also design a corresponding reconstruction strategy with random sample drop and weighted gradient for robust model fitting from sparse input views to dense novel views. Extensive experiments show that S2D achieves the best consistency in generating novel view guidance and first-tier sparse view reconstruction quality under different input sparsity. By reconstructing stable scenes with the least possible captures among existing methods, S2D enables minimal input requirements for 3DGS applications.",
-      "arxiv_url": "https://arxiv.org/abs/2603.10893",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2603.09277",
-      "title": "Speeding Up the Learning of 3D Gaussians with Much Shorter Gaussian Lists",
-      "published": "2026-03-10",
-      "year": "2026",
-      "authors": "Jiaqi Liu; Zhizhong Han",
-      "abstract": "3D Gaussian splatting (3DGS) has become a vital tool for learning a radiance field from multiple posed images. Although 3DGS shows great advantages over NeRF in terms of rendering quality and efficiency, it remains a research challenge to further improve the efficiency of learning 3D Gaussians. To overcome this challenge, we propose novel training strategies and losses to shorten each Gaussian list used to render a pixel, which speeds up the splatting by involving fewer Gaussians along a ray. Specifically, we shrink the size of each Gaussian by resetting their scales regularly, encouraging smaller Gaussians to cover fewer nearby pixels, which shortens the Gaussian lists of pixels. Additionally, we introduce an entropy constraint on the alpha blending procedure to sharpen the weight distribution of Gaussians along each ray, which drives dominant weights larger while making minor weights smaller. As a result, each Gaussian becomes more focused on the pixels where it is dominant, which reduces its impact on nearby pixels, leading to even shorter Gaussian lists. Eventually, we integrate our method into a rendering resolution scheduler which further improves efficiency through progressive resolution increase. We evaluate our method by comparing it with state-of-the-art methods on widely used benchmarks. Our results show significant advantages over others in efficiency without sacrificing rendering quality.",
-      "arxiv_url": "https://arxiv.org/abs/2603.09277",
-      "citations": 1
-    },
-    {
       "arxiv_id": "2603.02986",
       "title": "VIRGi: View-dependent Instant Recoloring of 3D Gaussians Splats",
       "published": "2026-03-03",
@@ -460,6 +470,16 @@
       "authors": "Alessio Mazzucchelli; Ivan Ojeda-Martin; Fernando Rivas-Manzaneque; Elena Garces; Adrian Penate-Sanchez et al.",
       "abstract": "3D Gaussian Splatting (3DGS) has recently transformed the fields of novel view synthesis and 3D reconstruction due to its ability to accurately model complex 3D scenes and its unprecedented rendering performance. However, a significant challenge persists: the absence of an efficient and photorealistic method for editing the appearance of the scene's content. In this paper we introduce VIRGi, a novel approach for rapidly editing the color of scenes modeled by 3DGS while preserving view-dependent effects such as specular highlights. Key to our method are a novel architecture that separates color into diffuse and view-dependent components, and a multi-view training strategy that integrates image patches from multiple viewpoints. Improving over the conventional single-view batch training, our 3DGS representation provides more accurate reconstruction and serves as a solid representation for the recoloring task. For 3DGS recoloring, we then introduce a rapid scheme requiring only one manually edited image of the scene from the end-user. By fine-tuning the weights of a single MLP, alongside a module for single-shot segmentation of the editable area, the color edits are seamlessly propagated to the entire scene in just two seconds, facilitating real-time interaction and providing control over the strength of the view-dependent effects. An exhaustive validation on diverse datasets demonstrates significant quantitative and qualitative advancements over competitors based on Neural Radiance Fields representations.",
       "arxiv_url": "https://arxiv.org/abs/2603.02986",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2606.13511",
+      "title": "Spectrum Sharing Across Terrestrial and Non-Terrestrial Services in the FR3 Upper Midband",
+      "published": "2026-06-11",
+      "year": "2026",
+      "authors": "Paolo Testolina; Ergest Beshaj; Michele Polese; Tommaso Melodia",
+      "abstract": "The frequency bands between 7 and 24 GHz, also known as upper midband or Frequency Range (FR) 3, are being considered as an enabler of 6th Generation (6G) mobile networks. This portion of the spectrum exhibits different propagation characteristics compared to frequencies above 24 GHz, while also offering the potential to provide larger bandwidth allocations for mobile systems than those available in the sub-6 GHz range. 6G technology and spectrum policy, however, will need to guarantee coexistence with the incumbents that already use these frequency bands, which include a variety of services, from radiolocation to satellite-based communications, remote sensing, and radioastronomy. In this paper, we consider the challenge of coexistence between 6G terrestrial systems and satellite incumbents in different portions of the FR3 bands. Using a large-scale 3D model of a terrestrial deployment in the city of Boston and an open-source ray tracing solution, we evaluate the level of Radio Frequency Interference (RFI) that tens of terrestrial Next Generation Node Bs (gNBs) generate toward satellites at different elevation angles. Our model, based on realistic obstruction, clutter, diffraction, and reflections, shows that sidelobes and Non-Line-of-Sight (NLoS) paths can significantly contribute to RFI. Besides directionality, the spatial distribution of gNBs also plays a key role in defining the RFI levels, suggesting that a careful design and operation of terrestrial deployments can create coexistence opportunities.",
+      "arxiv_url": "https://arxiv.org/abs/2606.13511",
       "citations": 1
     },
     {
@@ -480,6 +500,16 @@
       "authors": "Naoki Nonaka; Jun Seita",
       "abstract": "Deep Neural Networks (DNNs) typically require extensive datasets for effective training. In the medical domain, acquiring large-scale data is often challenging due to privacy concerns and the rarity of certain diseases. To address this data scarcity, we investigate the efficacy of training DNN models using synthetic data, generated based on domain-specific medical knowledge. Specifically, we develop a knowledge-driven Gaussian-composition synthesis algorithm for single-lead II ECGs, in which each heartbeat is represented by Gaussian-shaped P, Q, R, S, and T wave components. Using this simulator, we generate synthetic data for four abnormal electrocardiogram (ECG) classes: atrial fibrillation (AF), atrial flutter (AFLT), premature ventricular complex (PVC), and Wolff-Parkinson-White Syndrome (WPW). We evaluate the utility of this synthetic data by conducting abnormal ECG classification using ten different DNN architectures. Our results demonstrate that synthetic-to-real training improves classification performance for three of the four target abnormalities, with the largest architecture-averaged gain of $33.2\\%$ observed for AFLT. Further analysis reveals that the performance enhancement from synthetic data is more pronounced with smaller real-world datasets. These findings suggest that domain-knowledge-based synthetic ECGs can serve as a useful pre-training resource, particularly in scenarios where real-world data are limited or difficult to obtain.",
       "arxiv_url": "https://arxiv.org/abs/2606.10802",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2606.10042",
+      "title": "Quantum Non-Gaussian State Preparation of Levitated Particles via Time-Dependent Control of Weakly Nonharmonic Hybrid Potentials",
+      "published": "2026-06-08",
+      "year": "2026",
+      "authors": "Piotr T. Grochowski; Oriol Romero-Isart",
+      "abstract": "Levitated high-mass quantum systems provide access to unprecedented regimes in both fundamental science and technological applications. However, deterministic generation and manipulation of quantum non-Gaussian states, which are central to many continuous-variable quantum advantages, remain elusive in such platforms. In this work, we propose a theoretical protocol for preparing a continuous-variable degree of freedom of a levitated massive object in a variety of quantum states, including Fock and Schrödinger cat states, without coupling to auxiliary two-level systems. Our approach enhances otherwise weak nonharmonic effects by transient wave-function delocalization and combines this with optimal control of the potential. Specifically, time-dependent modulation of the linear component of the potential, in the presence of a static cubic nonharmonicity, provides a route to universal control of the mode. We analyze quantum state preparation under such control and estimate the required nonharmonicity, motional delocalization, and maximum tolerable decoherence for generating target non-Gaussian states. The proposed optimal-control scheme can also be readily extended beyond single-particle state preparation, for example, to unitary transformations and nonlinear measurements. As a concrete example, we demonstrate mechanical Bell-state preparation for two interacting particles using only local modulation of weakly nonharmonic potentials, while the interparticle interaction remains effectively linear. We emphasize that the protocols presented here apply to different mechanical degrees of freedom, such as center-of-mass motion and libration, and can also be implemented in other weakly nonharmonic systems with a leading cubic nonharmonicity.",
+      "arxiv_url": "https://arxiv.org/abs/2606.10042",
       "citations": 1
     },
     {
@@ -2013,16 +2043,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2604.12626",
-      "title": "Habitat-GS: A High-Fidelity Navigation Simulator with Dynamic Gaussian Splatting",
-      "published": "2026-04-14",
-      "year": "2026",
-      "authors": "Ziyuan Xia; Jingyi Xu; Chong Cui; Yuanhong Yu; Jiazhao Zhang et al.",
-      "abstract": "Training embodied AI agents depends critically on the visual fidelity of simulation environments and the ability to model dynamic humans. Current simulators rely on mesh-based rasterization with limited visual realism, and their support for dynamic human avatars, where available, is constrained to mesh representations, hindering agent generalization to human-populated real-world scenarios. We present Habitat-GS, a navigation-centric embodied AI simulator extended from Habitat-Sim that integrates 3D Gaussian Splatting scene rendering and drivable gaussian avatars while maintaining full compatibility with the Habitat ecosystem. Our system implements a 3DGS renderer for real-time photorealistic rendering and supports scalable 3DGS asset import from diverse sources. For dynamic human modeling, we introduce a gaussian avatar module that enables each avatar to simultaneously serve as a photorealistic visual entity and an effective navigation obstacle, allowing agents to learn human-aware behaviors in realistic settings. Experiments on point-goal navigation demonstrate that agents trained on 3DGS scenes achieve stronger cross-domain generalization, with mixed-domain training being the most effective strategy. Evaluations on avatar-aware navigation further confirm that gaussian avatars enable effective human-aware navigation. Finally, performance benchmarks validate the system's scalability across varying scene complexity and avatar counts.",
-      "arxiv_url": "https://arxiv.org/abs/2604.12626",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2604.12580",
       "title": "PDF-GS: Progressive Distractor Filtering for Robust 3D Gaussian Splatting",
       "published": "2026-04-14",
@@ -2173,16 +2193,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2604.07337",
-      "title": "From Blobs to Spokes: High-Fidelity Surface Reconstruction via Oriented Gaussians",
-      "published": "2026-04-08",
-      "year": "2026",
-      "authors": "Diego Gomez; Antoine Guédon; Nissim Maruani; Bingchen Gong; Maks Ovsjanikov",
-      "abstract": "3D Gaussian Splatting (3DGS) has revolutionized fast novel view synthesis, yet its opacity-based formulation makes surface extraction fundamentally difficult. Unlike implicit methods built on Signed Distance Fields or occupancy, 3DGS lacks a global geometric field, forcing existing approaches to resort to heuristics such as TSDF fusion of blended depth maps.   Inspired by the Objects as Volumes framework, we derive a principled occupancy field for Gaussian Splatting and show how it can be used to extract highly accurate watertight meshes of complex scenes. Our key contribution is to introduce a learnable oriented normal at each Gaussian element and to define an adapted attenuation formulation, which leads to closed-form expressions for both the normal and occupancy fields at arbitrary locations in space. We further introduce a novel consistency loss and a dedicated densification strategy to enforce Gaussians to wrap the entire surface by closing geometric holes, ensuring a complete shell of oriented primitives. We modify the differentiable rasterizer to output depth as an isosurface of our continuous model, and introduce Primal Adaptive Meshing for Region-of-Interest meshing at arbitrary resolution.   We additionally expose fundamental biases in standard surface evaluation protocols and propose two more rigorous alternatives. Overall, our method Gaussian Wrapping sets a new state-of-the-art on DTU and Tanks and Temples, producing complete, watertight meshes at a fraction of the size of concurrent work-recovering thin structures such as the notoriously elusive bicycle spokes.",
-      "arxiv_url": "https://arxiv.org/abs/2604.07337",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2604.07177",
       "title": "Splats under Pressure: Exploring Performance-Energy Trade-offs in Real-Time 3D Gaussian Splatting under Constrained GPU Budgets",
       "published": "2026-04-08",
@@ -2190,16 +2200,6 @@
       "authors": "Muhammad Fahim Tajwar; Arthur Wuhrlin; Bhojan Anand",
       "abstract": "We investigate the feasibility of real-time 3D Gaussian Splatting (3DGS) rasterisation on edge clients with varying Gaussian splat counts and GPU computational budgets. Instead of evaluating multiple physical devices, we adopt an emulation-based approach that approximates different GPU capability tiers on a single high-end GPU. By systematically under-clocking the GPU core frequency and applying power caps, we emulate a controlled range of floating-point performance levels that approximate different GPU capability tiers. At each point in this range, we measure frame rate, runtime behaviour, and power consumption across scenes of varying complexity, pipelines, and optimisations, enabling analysis of power-performance relationships such as FPS-power curves, energy per frame, and performance per watt. This method allows us to approximate the performance envelope of a diverse class of GPUs, from embedded and mobile-class devices to high-end consumer-grade systems.   Our objective is to explore the practical lower bounds of client-side 3DGS rasterisation and assess its potential for deployment in energy-constrained environments, including standalone headsets and thin clients. Through this analysis, we provide early insights into the performance-energy trade-offs that govern the viability of edge-deployed 3DGS systems.",
       "arxiv_url": "https://arxiv.org/abs/2604.07177",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.07053",
-      "title": "AnchorSplat: Feed-Forward 3D Gaussian Splatting with 3D Geometric Priors",
-      "published": "2026-04-08",
-      "year": "2026",
-      "authors": "Xiaoxue Zhang; Xiaoxu Zheng; Yixuan Yin; Tiao Zhao; Kaihua Tang et al.",
-      "abstract": "Recent feed-forward Gaussian reconstruction models adopt a pixel-aligned formulation that maps each 2D pixel to a 3D Gaussian, entangling Gaussian representations tightly with the input images. In this paper, we propose AnchorSplat, a novel feed-forward 3DGS framework for scene-level reconstruction that represents the scene directly in 3D space. AnchorSplat introduces an anchor-aligned Gaussian representation guided by 3D geometric priors (e.g., sparse point clouds, voxels, or RGB-D point clouds), enabling a more geometry-aware renderable 3D Gaussians that is independent of image resolution and number of views. This design substantially reduces the number of required Gaussians, improving computational efficiency while enhancing reconstruction fidelity. Beyond the anchor-aligned design, we utilize a Gaussian Refiner to adjust the intermediate Gaussiansy via merely a few forward passes. Experiments on the ScanNet++ v2 NVS benchmark demonstrate the SOTA performance, outperforming previous methods with more view-consistent and substantially fewer Gaussian primitives.",
-      "arxiv_url": "https://arxiv.org/abs/2604.07053",
       "citations": 0
     },
     {
@@ -2803,6 +2803,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2603.10893",
+      "title": "S2D: Sparse to Dense Lifting for 3D Reconstruction with Minimal Inputs",
+      "published": "2026-03-11",
+      "year": "2026",
+      "authors": "Yuzhou Ji; Qijian Tian; He Zhu; Xiaoqi Jiang; Guangzhi Cao et al.",
+      "abstract": "Explicit 3D representations have already become an essential medium for 3D simulation and understanding. However, the most commonly used point cloud and 3D Gaussian Splatting (3DGS) each suffer from non-photorealistic rendering and significant degradation under sparse inputs. In this paper, we introduce Sparse to Dense lifting (S2D), a novel pipeline that bridges the two representations and achieves high-quality 3DGS reconstruction with minimal inputs. Specifically, the S2D lifting is two-fold. We first present an efficient one-step diffusion model that lifts sparse point cloud for high-fidelity image artifact fixing. Meanwhile, to reconstruct 3D consistent scenes, we also design a corresponding reconstruction strategy with random sample drop and weighted gradient for robust model fitting from sparse input views to dense novel views. Extensive experiments show that S2D achieves the best consistency in generating novel view guidance and first-tier sparse view reconstruction quality under different input sparsity. By reconstructing stable scenes with the least possible captures among existing methods, S2D enables minimal input requirements for 3DGS applications.",
+      "arxiv_url": "https://arxiv.org/abs/2603.10893",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2603.10801",
       "title": "PolGS++: Physically-Guided Polarimetric Gaussian Splatting for Fast Reflective Surface Reconstruction",
       "published": "2026-03-11",
@@ -2860,6 +2870,16 @@
       "authors": "Yueen Ma; Zenglin Xu; Irwin King",
       "abstract": "3D Gaussian Splatting (3DGS) has emerged as a powerful technique for novel view synthesis, subsequently extending into numerous spatial AI applications. However, most existing 3DGS methods operate in isolation, focusing on specific domains. In this paper, we introduce X-GS, an extensible framework consisting of two major components. The X-GS-Perceiver unifies a broad range of 3DGS techniques to enable real-time online SLAM with semantic distillation. The X-GS-Thinker accommodates multimodal models, enabling them to seamlessly interface with the Perceiver to complete downstream tasks. In our implementation of X-GS, the Perceiver leverages the latest vision foundation models to improve online SLAM performance and employs three key mechanisms to accelerate semantic distillation. The Thinker can be built upon both contrastive and generative vision-language models and utilizes the Perceiver's semantic Gaussian splats to unlock capabilities such as 3D visual grounding and scene captioning. Experimental results on diverse benchmarks demonstrate the efficiency and newly unlocked multimodal capabilities of the X-GS framework.",
       "arxiv_url": "https://arxiv.org/abs/2603.09632",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2603.09277",
+      "title": "Speeding Up the Learning of 3D Gaussians with Much Shorter Gaussian Lists",
+      "published": "2026-03-10",
+      "year": "2026",
+      "authors": "Jiaqi Liu; Zhizhong Han",
+      "abstract": "3D Gaussian splatting (3DGS) has become a vital tool for learning a radiance field from multiple posed images. Although 3DGS shows great advantages over NeRF in terms of rendering quality and efficiency, it remains a research challenge to further improve the efficiency of learning 3D Gaussians. To overcome this challenge, we propose novel training strategies and losses to shorten each Gaussian list used to render a pixel, which speeds up the splatting by involving fewer Gaussians along a ray. Specifically, we shrink the size of each Gaussian by resetting their scales regularly, encouraging smaller Gaussians to cover fewer nearby pixels, which shortens the Gaussian lists of pixels. Additionally, we introduce an entropy constraint on the alpha blending procedure to sharpen the weight distribution of Gaussians along each ray, which drives dominant weights larger while making minor weights smaller. As a result, each Gaussian becomes more focused on the pixels where it is dominant, which reduces its impact on nearby pixels, leading to even shorter Gaussian lists. Eventually, we integrate our method into a rendering resolution scheduler which further improves efficiency through progressive resolution increase. We evaluate our method by comparing it with state-of-the-art methods on widely used benchmarks. Our results show significant advantages over others in efficiency without sacrificing rendering quality.",
+      "arxiv_url": "https://arxiv.org/abs/2603.09277",
       "citations": 0
     },
     {
@@ -3163,16 +3183,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2606.13511",
-      "title": "Spectrum Sharing Across Terrestrial and Non-Terrestrial Services in the FR3 Upper Midband",
-      "published": "2026-06-11",
-      "year": "2026",
-      "authors": "Paolo Testolina; Ergest Beshaj; Michele Polese; Tommaso Melodia",
-      "abstract": "The frequency bands between 7 and 24 GHz, also known as upper midband or Frequency Range (FR) 3, are being considered as an enabler of 6th Generation (6G) mobile networks. This portion of the spectrum exhibits different propagation characteristics compared to frequencies above 24 GHz, while also offering the potential to provide larger bandwidth allocations for mobile systems than those available in the sub-6 GHz range. 6G technology and spectrum policy, however, will need to guarantee coexistence with the incumbents that already use these frequency bands, which include a variety of services, from radiolocation to satellite-based communications, remote sensing, and radioastronomy. In this paper, we consider the challenge of coexistence between 6G terrestrial systems and satellite incumbents in different portions of the FR3 bands. Using a large-scale 3D model of a terrestrial deployment in the city of Boston and an open-source ray tracing solution, we evaluate the level of Radio Frequency Interference (RFI) that tens of terrestrial Next Generation Node Bs (gNBs) generate toward satellites at different elevation angles. Our model, based on realistic obstruction, clutter, diffraction, and reflections, shows that sidelobes and Non-Line-of-Sight (NLoS) paths can significantly contribute to RFI. Besides directionality, the spatial distribution of gNBs also plays a key role in defining the RFI levels, suggesting that a careful design and operation of terrestrial deployments can create coexistence opportunities.",
-      "arxiv_url": "https://arxiv.org/abs/2606.13511",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2606.13505",
       "title": "Ultimate regime in Rayleigh-Darcy Convection",
       "published": "2026-06-11",
@@ -3367,7 +3377,7 @@
       "title": "Automatic detection of Flare Ribbon Fine Structures as Proxies for Plasmoid Dynamics in Flare Reconnection",
       "published": "2026-06-11",
       "year": "2026",
-      "authors": "Georgios Chouliaras; Peter F. Wyper; Joel T. Dahlin",
+      "authors": "Georgios Chouliaras; Peter F. Wyper; Joel T. Dahlin; Lyndsay Fletcher",
       "abstract": "Flare ribbons often display fine structures along their fronts that are commonly interpreted as signatures of intermittent reconnection dynamics including plasmoid formation in the flare current sheet. We introduce an automated method that detects and tracks the spiral- and wave-like imprints of these structures and as a proof of concept apply it to maps of magnetic field-line length from a high-resolution 3D eruptive-flare simulation. The workflow applies the correlation-dimension method, density-based clustering, and a minimum-area ellipse fit to summarise each feature. We show that across the simulated flare, the detected spirals remain locked to the ribbon's outward motion while drifting coherently along the ribbon. The two ribbons show opposite along-ribbon drift and motion away from their hooks in accordance with theoretical expectations, with instantaneous speeds of 10-800 km s^1, all well below the local surface Alfven speed. Occurrence, lifetimes, and mean magnetic flux of the features peak during the impulsive phase. The distribution of per-spiral mean unsigned flux shows a scale-free tail above roughly 6x10^18 Mx with a power-law exponent near 3.4. Together, these results show that bursty, plasmoid-mediated flare reconnection leaves a clear, measurable signature on the flare ribbons. The method provides a practical surface diagnostic of ribbon fine structure that can potentially be used to inform our understanding of three-dimensional magnetic reconnection in the flare current sheet.",
       "arxiv_url": "https://arxiv.org/abs/2606.13291",
       "citations": 0
@@ -5370,16 +5380,6 @@
       "authors": "Daniel Levin; Alexander Zuevsky",
       "abstract": "Let $(X,d,μ)$ be a complete separable metric measure space satisfying a doubling condition and a $(1,1)$-Poincaré inequality. We develop a rigorous framework unifying two lines of analysis: the isoperimetric-profile approach of Coulhon-Grigor'yan-Levin \\cite{CGL2003} and the grand/small Lebesgue-Sobolev scale introduced by Fiorenza-Formica-Gogatishvili \\cite{FFG2018}. An explicit profile-to-scale transform $\\PhiX$, defined via an inverse integral of $\\IX$, converts geometric data into grand Lebesgue parameters. Sharp, up to universal constants, embeddings $W^{1,1}(X) \\hookrightarrow \\mathcal{G}_X$ with explicit constants (Theorem \\ref{thmmain}). A converse: controlled grand embeddings imply explicit lower bounds on $\\IX$ (Theorem \\ref{thmconverse}). Concrete examples in genuinely non-Euclidean settings: the Heisenberg group $\\mathbb{H}^1$, a model manifold with logarithmic volume growth, and Gaussian measure on $\\R^n$ treated as a locally doubling space. All arguments are carried out on general metric measure spaces without reference to charts or a smooth structure; the gradient is the upper gradient in the sense of Heinonen-Koskela, and perimeter is the outer Minkowski content.",
       "arxiv_url": "https://arxiv.org/abs/2606.10073",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2606.10042",
-      "title": "Quantum Non-Gaussian State Preparation of Levitated Particles via Time-Dependent Control of Weakly Nonharmonic Hybrid Potentials",
-      "published": "2026-06-08",
-      "year": "2026",
-      "authors": "Piotr T. Grochowski; Oriol Romero-Isart",
-      "abstract": "Levitated high-mass quantum systems provide access to unprecedented regimes in both fundamental science and technological applications. However, deterministic generation and manipulation of quantum non-Gaussian states, which are central to many continuous-variable quantum advantages, remain elusive in such platforms. In this work, we propose a theoretical protocol for preparing a continuous-variable degree of freedom of a levitated massive object in a variety of quantum states, including Fock and Schrödinger cat states, without coupling to auxiliary two-level systems. Our approach enhances otherwise weak nonharmonic effects by transient wave-function delocalization and combines this with optimal control of the potential. Specifically, time-dependent modulation of the linear component of the potential, in the presence of a static cubic nonharmonicity, provides a route to universal control of the mode. We analyze quantum state preparation under such control and estimate the required nonharmonicity, motional delocalization, and maximum tolerable decoherence for generating target non-Gaussian states. The proposed optimal-control scheme can also be readily extended beyond single-particle state preparation, for example, to unitary transformations and nonlinear measurements. As a concrete example, we demonstrate mechanical Bell-state preparation for two interacting particles using only local modulation of weakly nonharmonic potentials, while the interparticle interaction remains effectively linear. We emphasize that the protocols presented here apply to different mechanical degrees of freedom, such as center-of-mass motion and libration, and can also be implemented in other weakly nonharmonic systems with a leading cubic nonharmonicity.",
-      "arxiv_url": "https://arxiv.org/abs/2606.10042",
       "citations": 0
     },
     {
