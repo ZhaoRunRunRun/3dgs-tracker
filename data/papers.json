@@ -1,17 +1,7 @@
 {
-  "updated_at": "2026-06-26 06:42 UTC",
+  "updated_at": "2026-06-27 07:08 UTC",
   "total": 588,
   "papers": [
-    {
-      "arxiv_id": "2603.27781",
-      "title": "GS3LAM: Gaussian Semantic Splatting SLAM",
-      "published": "2026-03-29",
-      "year": "2026",
-      "authors": "Linfei Li; Lin Zhang; Zhong Wang; Ying Shen",
-      "abstract": "Recently, the multi-modal fusion of RGB, depth, and semantics has shown great potential in dense Simultaneous Localization and Mapping (SLAM). However, a prerequisite for generating consistent semantic maps is the availability of dense, efficient, and scalable scene representations. Existing semantic SLAM systems based on explicit representations are often limited by resolution and an inability to predict unknown areas. Conversely, implicit representations typically rely on time-consuming ray tracing, failing to meet real-time requirements. Fortunately, 3D Gaussian Splatting (3DGS) has emerged as a promising representation that combines the efficiency of point-based methods with the continuity of geometric structures. To this end, we propose GS3LAM, a Gaussian Semantic Splatting SLAM framework that processes multimodal data to render consistent, dense semantic maps in real-time. GS3LAM models the scene as a Semantic Gaussian Field (SG-Field) and jointly optimizes camera poses and the field via multimodal error constraints. Furthermore, a Depth-adaptive Scale Regularization (DSR) scheme is introduced to resolve misalignments between scale-invariant Gaussians and geometric surfaces. To mitigate catastrophic forgetting, we propose a Random Sampling-based Keyframe Mapping (RSKM) strategy, which demonstrates superior performance over common local covisibility optimization methods. Extensive experiments on benchmark datasets show that GS3LAM achieves increased tracking robustness, superior rendering quality, and enhanced semantic precision compared to state-of-the-art methods. Source code is available at https://github.com/lif314/GS3LAM.",
-      "arxiv_url": "https://arxiv.org/abs/2603.27781",
-      "citations": 35
-    },
     {
       "arxiv_id": "2604.03039",
       "title": "GenSmoke-GS: A Multi-Stage Method for Novel View Synthesis from Smoke-Degraded Images Using a Generative Model",
@@ -151,36 +141,6 @@
       "abstract": "Rendering 3D surfaces has been revolutionized within the modeling of radiance fields through either 3DGS or NeRF. Although 3DGS has shown advantages over NeRF in terms of rendering quality or speed, there is still room for improvement in recovering high fidelity surfaces through 3DGS. To resolve this issue, we propose a self-constrained prior to constrain the learning of 3D Gaussians, aiming for more accurate depth rendering. Our self-constrained prior is derived from a TSDF grid that is obtained by fusing the depth maps rendered with current 3D Gaussians. The prior measures a distance field around the estimated surface, offering a band centered at the surface for imposing more specific constraints on 3D Gaussians, such as removing Gaussians outside the band, moving Gaussians closer to the surface, and encouraging larger or smaller opacity in a geometry-aware manner. More importantly, our prior can be regularly updated by the most recent depth images which are usually more accurate and complete. In addition, the prior can also progressively narrow the band to tighten the imposed constraints. We justify our idea and report our superiority over the state-of-the-art methods in evaluations on widely used benchmarks.",
       "arxiv_url": "https://arxiv.org/abs/2603.19682",
       "citations": 2
-    },
-    {
-      "arxiv_id": "2606.03682",
-      "title": "GN0: Toward a Unified Paradigm for Generation, Evaluation, and Policy Learning in Visual-Language Navigation",
-      "published": "2026-06-02",
-      "year": "2026",
-      "authors": "Xinhai Li; Xiaotao Zhang; Yuehao Huang; Jiankun Dong; Tianhang Wang et al.",
-      "abstract": "Embodied navigation connects intelligent agents with the physical world and is fundamental for general robotic intelligence. Limited availability and quality of navigation data have constrained Vision-and-Language Navigation (VLN) systems' generalization and long-horizon capabilities. To address this, we curate diverse 3D scenes and develop an automated pipeline for large-scale navigation data, resulting in the GN-Matrix dataset. Building on a 3D Gaussian Splatting (3DGS) engine, we introduce a high-fidelity simulation platform supporting interactive roaming and collision-aware navigation. We further propose GN-Bench, the first BEV-based benchmark incorporating dynamic 3DGS avatars for human-robot interaction evaluation. To leverage the simulator, we develop an RL-driven navigation foundation model, Break and Establish (BAE). After supervised learning, DAgger exposes the model to rollout-induced states, breaking narrow expert-centric distributions and enabling downstream RL exploration. This unified VLN paradigm integrates map-based and map-free tasks, including instruction following, human following, and goal navigation. GN-BAE formalizes high-fidelity 3DGS-rendered Bird's Eye View representations as compact memory, unlocking latent spatial reasoning in VLMs. Extensive evaluations on GN-Bench and VLN-CE show that GN0 outperforms state-of-the-art VLN methods. Overall, GN-Matrix offers a unified framework spanning data, simulation, and learning, advancing embodied navigation in research and industrial applications.",
-      "arxiv_url": "https://arxiv.org/abs/2606.03682",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2605.21935",
-      "title": "Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments",
-      "published": "2026-05-21",
-      "year": "2026",
-      "authors": "Peifeng Jiang; Hong Liu; Jin Jin; Wenshuai Wang; Xia Li",
-      "abstract": "Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing semantic mapping and scene-graph systems are difficult to deploy directly in this setting because they often assume stable camera trajectories, static environments, or coarse object geometry. We introduce the Multi-modal Interactive Field (MIF), a humanoid-oriented system that integrates confidence-aware semantic 3D Gaussian Splatting, discrepancy-triggered spatial memory updates, and task-driven geometric reconstruction within a closed-loop perception-adaptation pipeline. MIF couples three fields: an uncertainty-aware 3DGS Appearance Field that suppresses gait-induced blur, a Spatial Field that maintains topological memory, and a Geometry Field that supports Interaction Pose Safety (IPS) before manipulation. A discrepancy detection score is introduced to separate locomotion-induced false-positive changes from persistent changes and updates only locally inconsistent regions. On a Unitree-G1 humanoid in a real dynamic office, MIF improves relocation success in non-static environments from 12% to 94% compared with static scene-graph memory, while reducing semantic memory footprint by 91.4% through feature distillation for practical online operation. Project page and code: https://ziya-jiang.github.io/MIF-homepage/",
-      "arxiv_url": "https://arxiv.org/abs/2605.21935",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2605.20566",
-      "title": "Conflict-Aware Active Perception and Control in 3D Gaussian Splatting Fields via Control Barrier Functions",
-      "published": "2026-05-19",
-      "year": "2026",
-      "authors": "Amirhossein Mollaei Khass; Athanasios Cosse; Vivek Pandey; Nader Motee",
-      "abstract": "Active perception in uncertain environments requires robots to navigate safely while acquiring informative observations to reduce map uncertainty. These objectives inherently conflict, as informative viewpoints often lie near uncertain regions with higher collision risk. To address this challenge, we develop a conflict-aware active perception and control framework for robotic systems operating in environments represented by 3D Gaussian Splatting (3DGS). Safety is enforced using a Control Barrier Function (CBF) derived from an Average Value-at-Risk AV@R collision-risk metric that accounts for geometric uncertainty and guarantees forward invariance of a safe set. To improve perception, we propose a risk-aware Expected Information Gain (EIG) formulation for selecting the next-best-view and introduce perception barrier functions that align the camera orientation with the local information-ascent direction. To obtain a tractable formulation for these conflicting safety and perception objectives, we propose a unified safety-critical, perception-aware quadratic program that enforces safety as a hard constraint while relaxing perception constraints through slack variables. Simulation results demonstrate that the proposed method improves both safety and information acquisition compared to existing 3DGS-based approaches.",
-      "arxiv_url": "https://arxiv.org/abs/2605.20566",
-      "citations": 1
     },
     {
       "arxiv_id": "2605.10760",
@@ -330,26 +290,6 @@
       "authors": "Tianyu Huang; Zhenyang Ren; Zhenchen Wan; Jiyang Zheng; Wenjie Wang et al.",
       "abstract": "3D Gaussian Splatting (3DGS) enables high-fidelity reconstruction of scene geometry and appearance. Building on this capability, inserting external mesh objects into reconstructed 3DGS scenes enables interactive editing and content augmentation for immersive applications such as AR/VR, virtual staging, and digital content creation. However, achieving physically consistent lighting and shadows for mesh insertion remains challenging, as it requires accurate scene illumination estimation and multi-view consistent rendering. To address this challenge, we present LightHarmony3D, a novel framework for illumination-consistent mesh insertion in 3DGS scenes. Central to our approach is our proposed generative module that predicts a full 360° HDR environment map at the insertion location via a single forward pass. By leveraging generative priors instead of iterative optimization, our method efficiently captures dominant scene illumination and enables physically grounded shading and shadows for inserted meshes while maintaining multi-view coherence. Furthermore, we introduce the first dedicated benchmark for mesh insertion in 3DGS, providing a standardized evaluation framework for assessing lighting consistency and photorealism. Extensive experiments across multiple real-world reconstruction datasets demonstrate that LightHarmony3D achieves state-of-the-art realism and multi-view consistency.",
       "arxiv_url": "https://arxiv.org/abs/2603.29209",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2603.28126",
-      "title": "SVGS: Single-View to 3D Object Editing via Gaussian Splatting",
-      "published": "2026-03-30",
-      "year": "2026",
-      "authors": "Pengcheng Xue; Yan Tian; Qiutao Song; Ziyi Wang; Linyang He et al.",
-      "abstract": "Text-driven 3D scene editing has attracted considerable interest due to its convenience and user-friendliness. However, methods that rely on implicit 3D representations, such as Neural Radiance Fields (NeRF), while effective in rendering complex scenes, are hindered by slow processing speeds and limited control over specific regions of the scene. Moreover, existing approaches, including Instruct-NeRF2NeRF and GaussianEditor, which utilize multi-view editing strategies, frequently produce inconsistent results across different views when executing text instructions. This inconsistency can adversely affect the overall performance of the model, complicating the task of balancing the consistency of editing results with editing efficiency. To address these challenges, we propose a novel method termed Single-View to 3D Object Editing via Gaussian Splatting (SVGS), which is a single-view text-driven editing technique based on 3D Gaussian Splatting (3DGS). Specifically, in response to text instructions, we introduce a single-view editing strategy grounded in multi-view diffusion models, which reconstructs 3D scenes by leveraging only those views that yield consistent editing results. Additionally, we employ sparse 3D Gaussian Splatting as the 3D representation, which significantly enhances editing efficiency. We conducted a comparative analysis of SVGS against existing baseline methods across various scene settings, and the results indicate that SVGS outperforms its counterparts in both editing capability and processing speed, representing a significant advancement in 3D editing technology. For further details, please visit our project page at: https://amateurc.github.io/svgs.github.io.",
-      "arxiv_url": "https://arxiv.org/abs/2603.28126",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2603.25053",
-      "title": "GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed Video Generator",
-      "published": "2026-03-26",
-      "year": "2026",
-      "authors": "Liyuan Zhu; Manjunath Narayana; Michal Stary; Will Hutchcroft; Gordon Wetzstein et al.",
-      "abstract": "We present GaussFusion, a novel approach for improving 3D Gaussian splatting (3DGS) reconstructions in the wild through geometry-informed video generation. GaussFusion mitigates common 3DGS artifacts, including floaters, flickering, and blur caused by camera pose errors, incomplete coverage, and noisy geometry initialization. Unlike prior RGB-based approaches limited to a single reconstruction pipeline, our method introduces a geometry-informed video-to-video generator that refines 3DGS renderings across both optimization-based and feed-forward methods. Given an existing reconstruction, we render a Gaussian primitive video buffer encoding depth, normals, opacity, and covariance, which the generator refines to produce temporally coherent, artifact-free frames. We further introduce an artifact synthesis pipeline that simulates diverse degradation patterns, ensuring robustness and generalization. GaussFusion achieves state-of-the-art performance on novel-view synthesis benchmarks, and an efficient variant runs in real time at 15 FPS while maintaining similar performance, enabling interactive 3D applications.",
-      "arxiv_url": "https://arxiv.org/abs/2603.25053",
       "citations": 1
     },
     {
@@ -913,6 +853,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2606.03682",
+      "title": "GN0: Toward a Unified Paradigm for Generation, Evaluation, and Policy Learning in Visual-Language Navigation",
+      "published": "2026-06-02",
+      "year": "2026",
+      "authors": "Xinhai Li; Xiaotao Zhang; Yuehao Huang; Jiankun Dong; Tianhang Wang et al.",
+      "abstract": "Embodied navigation connects intelligent agents with the physical world and is fundamental for general robotic intelligence. Limited availability and quality of navigation data have constrained Vision-and-Language Navigation (VLN) systems' generalization and long-horizon capabilities. To address this, we curate diverse 3D scenes and develop an automated pipeline for large-scale navigation data, resulting in the GN-Matrix dataset. Building on a 3D Gaussian Splatting (3DGS) engine, we introduce a high-fidelity simulation platform supporting interactive roaming and collision-aware navigation. We further propose GN-Bench, the first BEV-based benchmark incorporating dynamic 3DGS avatars for human-robot interaction evaluation. To leverage the simulator, we develop an RL-driven navigation foundation model, Break and Establish (BAE). After supervised learning, DAgger exposes the model to rollout-induced states, breaking narrow expert-centric distributions and enabling downstream RL exploration. This unified VLN paradigm integrates map-based and map-free tasks, including instruction following, human following, and goal navigation. GN-BAE formalizes high-fidelity 3DGS-rendered Bird's Eye View representations as compact memory, unlocking latent spatial reasoning in VLMs. Extensive evaluations on GN-Bench and VLN-CE show that GN0 outperforms state-of-the-art VLN methods. Overall, GN-Matrix offers a unified framework spanning data, simulation, and learning, advancing embodied navigation in research and industrial applications.",
+      "arxiv_url": "https://arxiv.org/abs/2606.03682",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2606.03499",
       "title": "Characterizing Detectability in 3DGS Poisoning: A Stage-wise Benchmark",
       "published": "2026-06-02",
@@ -1313,6 +1263,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2605.21935",
+      "title": "Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments",
+      "published": "2026-05-21",
+      "year": "2026",
+      "authors": "Peifeng Jiang; Hong Liu; Jin Jin; Wenshuai Wang; Xia Li",
+      "abstract": "Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing semantic mapping and scene-graph systems are difficult to deploy directly in this setting because they often assume stable camera trajectories, static environments, or coarse object geometry. We introduce the Multi-modal Interactive Field (MIF), a humanoid-oriented system that integrates confidence-aware semantic 3D Gaussian Splatting, discrepancy-triggered spatial memory updates, and task-driven geometric reconstruction within a closed-loop perception-adaptation pipeline. MIF couples three fields: an uncertainty-aware 3DGS Appearance Field that suppresses gait-induced blur, a Spatial Field that maintains topological memory, and a Geometry Field that supports Interaction Pose Safety (IPS) before manipulation. A discrepancy detection score is introduced to separate locomotion-induced false-positive changes from persistent changes and updates only locally inconsistent regions. On a Unitree-G1 humanoid in a real dynamic office, MIF improves relocation success in non-static environments from 12% to 94% compared with static scene-graph memory, while reducing semantic memory footprint by 91.4% through feature distillation for practical online operation. Project page and code: https://ziya-jiang.github.io/MIF-homepage/",
+      "arxiv_url": "https://arxiv.org/abs/2605.21935",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2605.21258",
       "title": "Learning Structural Latent Points for Efficient Visual Representations in Robotic Manipulation",
       "published": "2026-05-20",
@@ -1360,6 +1320,16 @@
       "authors": "SeungJeh Chung; Geonho Park; Misong Kim; HyeongYeop Kang",
       "abstract": "Adaptive densification is the engine of 3D Gaussian Splatting (3DGS). However, when transposed to the optimization-based Generative Distillation paradigm, this reconstruction-native mechanism reveals fundamental limitations, resulting in inefficient representations cluttered with redundant primitives. We diagnose this failure as a Densification Dilemma stemming from the stochastic nature of generative guidance: the standard magnitude-based accumulation indiscriminately aggregates transient noise alongside geometric signals, making it difficult to strike a balance between over-densification and under-fitting. To resolve this, we introduce Context-Adaptive Moment Estimation (CAdam), a novel framework that reinterprets densification as a statistically grounded signal verification problem. CAdam leverages the first moment of gradients to exploit the interference principle, where stochastic fluctuations cancel out via destructive interference while consistent geometric drifts accumulate via constructive interference, effectively disentangling the underlying signal from the generative noise floor. This is further augmented by a quantile-based context awareness and an intrinsic Signal-to-Noise Ratio (SNR) gating mechanism, which ensure robust adaptation across optimization stages and enable the soft termination of densification. Extensive experiments across diverse objectives (SDS, ISM, VFDS) and strong generative 3DGS backbones show that CAdam reduces Gaussian count by 85%-97% relative to standard densification while preserving overall comparable perceptual quality. These results highlight signal-aware density control as a practical way to improve memory efficiency in optimization-based generative distillation.",
       "arxiv_url": "https://arxiv.org/abs/2605.20872",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2605.20566",
+      "title": "Conflict-Aware Active Perception and Control in 3D Gaussian Splatting Fields via Control Barrier Functions",
+      "published": "2026-05-19",
+      "year": "2026",
+      "authors": "Amirhossein Mollaei Khass; Athanasios Cosse; Vivek Pandey; Nader Motee",
+      "abstract": "Active perception in uncertain environments requires robots to navigate safely while acquiring informative observations to reduce map uncertainty. These objectives inherently conflict, as informative viewpoints often lie near uncertain regions with higher collision risk. To address this challenge, we develop a conflict-aware active perception and control framework for robotic systems operating in environments represented by 3D Gaussian Splatting (3DGS). Safety is enforced using a Control Barrier Function (CBF) derived from an Average Value-at-Risk AV@R collision-risk metric that accounts for geometric uncertainty and guarantees forward invariance of a safe set. To improve perception, we propose a risk-aware Expected Information Gain (EIG) formulation for selecting the next-best-view and introduce perception barrier functions that align the camera orientation with the local information-ascent direction. To obtain a tractable formulation for these conflicting safety and perception objectives, we propose a unified safety-critical, perception-aware quadratic program that enforces safety as a hard constraint while relaxing perception constraints through slack variables. Simulation results demonstrate that the proposed method improves both safety and information acquisition compared to existing 3DGS-based approaches.",
+      "arxiv_url": "https://arxiv.org/abs/2605.20566",
       "citations": 0
     },
     {
@@ -2643,6 +2613,26 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2603.28126",
+      "title": "SVGS: Single-View to 3D Object Editing via Gaussian Splatting",
+      "published": "2026-03-30",
+      "year": "2026",
+      "authors": "Pengcheng Xue; Yan Tian; Qiutao Song; Ziyi Wang; Linyang He et al.",
+      "abstract": "Text-driven 3D scene editing has attracted considerable interest due to its convenience and user-friendliness. However, methods that rely on implicit 3D representations, such as Neural Radiance Fields (NeRF), while effective in rendering complex scenes, are hindered by slow processing speeds and limited control over specific regions of the scene. Moreover, existing approaches, including Instruct-NeRF2NeRF and GaussianEditor, which utilize multi-view editing strategies, frequently produce inconsistent results across different views when executing text instructions. This inconsistency can adversely affect the overall performance of the model, complicating the task of balancing the consistency of editing results with editing efficiency. To address these challenges, we propose a novel method termed Single-View to 3D Object Editing via Gaussian Splatting (SVGS), which is a single-view text-driven editing technique based on 3D Gaussian Splatting (3DGS). Specifically, in response to text instructions, we introduce a single-view editing strategy grounded in multi-view diffusion models, which reconstructs 3D scenes by leveraging only those views that yield consistent editing results. Additionally, we employ sparse 3D Gaussian Splatting as the 3D representation, which significantly enhances editing efficiency. We conducted a comparative analysis of SVGS against existing baseline methods across various scene settings, and the results indicate that SVGS outperforms its counterparts in both editing capability and processing speed, representing a significant advancement in 3D editing technology. For further details, please visit our project page at: https://amateurc.github.io/svgs.github.io.",
+      "arxiv_url": "https://arxiv.org/abs/2603.28126",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2603.27781",
+      "title": "GS3LAM: Gaussian Semantic Splatting SLAM",
+      "published": "2026-03-29",
+      "year": "2026",
+      "authors": "Linfei Li; Lin Zhang; Zhong Wang; Ying Shen",
+      "abstract": "Recently, the multi-modal fusion of RGB, depth, and semantics has shown great potential in dense Simultaneous Localization and Mapping (SLAM). However, a prerequisite for generating consistent semantic maps is the availability of dense, efficient, and scalable scene representations. Existing semantic SLAM systems based on explicit representations are often limited by resolution and an inability to predict unknown areas. Conversely, implicit representations typically rely on time-consuming ray tracing, failing to meet real-time requirements. Fortunately, 3D Gaussian Splatting (3DGS) has emerged as a promising representation that combines the efficiency of point-based methods with the continuity of geometric structures. To this end, we propose GS3LAM, a Gaussian Semantic Splatting SLAM framework that processes multimodal data to render consistent, dense semantic maps in real-time. GS3LAM models the scene as a Semantic Gaussian Field (SG-Field) and jointly optimizes camera poses and the field via multimodal error constraints. Furthermore, a Depth-adaptive Scale Regularization (DSR) scheme is introduced to resolve misalignments between scale-invariant Gaussians and geometric surfaces. To mitigate catastrophic forgetting, we propose a Random Sampling-based Keyframe Mapping (RSKM) strategy, which demonstrates superior performance over common local covisibility optimization methods. Extensive experiments on benchmark datasets show that GS3LAM achieves increased tracking robustness, superior rendering quality, and enhanced semantic precision compared to state-of-the-art methods. Source code is available at https://github.com/lif314/GS3LAM.",
+      "arxiv_url": "https://arxiv.org/abs/2603.27781",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2603.27516",
       "title": "SGS-Intrinsic: Semantic-Invariant Gaussian Splatting for Sparse-View Indoor Inverse Rendering",
       "published": "2026-03-29",
@@ -2680,6 +2670,16 @@
       "authors": "Qi Zhang; Denis Rozumny; Francesco Girlanda; Sezer Karaoglu; Marc Pollefeys et al.",
       "abstract": "We propose Unblur-SLAM, a novel RGB SLAM pipeline for sharp 3D reconstruction from blurred image inputs. In contrast to previous work, our approach is able to handle different types of blur and demonstrates state-of-the-art performance in the presence of both motion blur and defocus blur. Moreover, we adjust the computation effort with the amount of blur in the input image. As a first stage, our method uses a feed-forward image deblurring model for which we propose a suitable training scheme that can improve both tracking and mapping modules. Frames that are successfully deblurred by the feed-forward network obtain refined poses and depth through local-global multi-view optimization and loop closure. Frames that fail the first stage deblurring are directly modeled through the global 3DGS representation and an additional blur network to model multiple blurred sub-frames and simulate the blur formation process in 3D space, thereby learning sharp details and refined sub-frame poses. Experiments on several real-world datasets demonstrate consistent improvements in both pose estimation and sharp reconstruction results of geometry and texture.",
       "arxiv_url": "https://arxiv.org/abs/2603.26810",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2603.25053",
+      "title": "GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed Video Generator",
+      "published": "2026-03-26",
+      "year": "2026",
+      "authors": "Liyuan Zhu; Manjunath Narayana; Michal Stary; Will Hutchcroft; Gordon Wetzstein et al.",
+      "abstract": "We present GaussFusion, a novel approach for improving 3D Gaussian splatting (3DGS) reconstructions in the wild through geometry-informed video generation. GaussFusion mitigates common 3DGS artifacts, including floaters, flickering, and blur caused by camera pose errors, incomplete coverage, and noisy geometry initialization. Unlike prior RGB-based approaches limited to a single reconstruction pipeline, our method introduces a geometry-informed video-to-video generator that refines 3DGS renderings across both optimization-based and feed-forward methods. Given an existing reconstruction, we render a Gaussian primitive video buffer encoding depth, normals, opacity, and covariance, which the generator refines to produce temporally coherent, artifact-free frames. We further introduce an artifact synthesis pipeline that simulates diverse degradation patterns, ensuring robustness and generalization. GaussFusion achieves state-of-the-art performance on novel-view synthesis benchmarks, and an efficient variant runs in real time at 15 FPS while maintaining similar performance, enabling interactive 3D applications.",
+      "arxiv_url": "https://arxiv.org/abs/2603.25053",
       "citations": 0
     },
     {
@@ -3308,7 +3308,7 @@
       "published": "2026-06-25",
       "year": "2026",
       "authors": "Burak Çakmak; Hao Yan; Alexander Fengler; Giuseppe Caire; Lei Liu",
-      "abstract": "We solve the open problem of constructing a Bayes-optimal iterative signal recovery algorithm for linear-Gaussian \\emph{multiuser} communication systems with random precoding at the transmitters.Specifically, we consider the received signal model $\\mathbf{y} = \\sum_{u} \\mathbf{H}_u \\mathbfΞ_u \\mathbf{s}_u + \\mathbf{n}$, where $\\mathbf{n}$ is white Gaussian noise, $\\{\\mathbf{H}_u \\in \\mathbb{C}^{L \\times L}\\}$ are discrete-time channel matrices -- modeling a wide class of generally time-varying and dispersive linear channels with possibly multiple antennas -- and the precoding matrices $\\{\\boldsymbolΞ_u \\in \\mathbb{C}^{L \\times N_u}\\}$ are drawn independently from a right-unitarily invariant random matrix ensemble. We consider generic \\emph{non-separable} (coded) systems where the users' signals $\\{\\mathbf{s}_u\\}$ follow general (non-factorizing) distributions. For this model, we introduce a novel orthogonal/vector approximate message passing (OAMP/VAMP)-type framework, including an algorithm and its high-dimensional (but finite-sample) analysis. From an algorithmic standpoint, the proposed method can be interpreted as an \\emph{interpolation} between Minka's expectation propagation (EP)--a widely used method in machine learning--and OAMP. Our main theoretical contribution is the explicit finite-sample analysis of the proposed algorithm. Furthermore, we analyze the associated inference problem via a replica-symmetric (RS) ansatz by using a novel disorder-averaging technique. Both the (rigorous) high-dimensional analysis of the algorithm and the RS ansatz reveal the same decoupling principle, establishing that the proposed algorithm is asymptotically Bayes-optimal under the validity of the RS ansatz.",
+      "abstract": "We solve the open problem of constructing a Bayes-optimal iterative signal recovery algorithm for linear-Gaussian \\emph{multiuser} communication systems with random precoding at the transmitters. Specifically, we consider the received signal model $\\mathbf{y} = \\sum_{u} \\mathbf{H}_u \\mathbfΞ_u \\mathbf{s}_u + \\mathbf{n}$, where $\\mathbf{n}$ is white Gaussian noise, $\\{\\mathbf{H}_u \\in \\mathbb{C}^{L \\times L}\\}$ are discrete-time channel matrices -- modeling a wide class of generally time-varying and dispersive linear channels with possibly multiple antennas -- and the precoding matrices $\\{\\boldsymbolΞ_u \\in \\mathbb{C}^{L \\times N_u}\\}$ are drawn independently from a right-unitarily invariant random matrix ensemble. We consider generic \\emph{non-separable} (coded) systems where the users' signals $\\{\\mathbf{s}_u\\}$ follow general (non-factorizing) distributions. For this model, we introduce a novel orthogonal/vector approximate message passing (OAMP/VAMP)-type framework, including an algorithm and its high-dimensional (but finite-sample) analysis. From an algorithmic standpoint, the proposed method can be interpreted as an \\emph{interpolation} between Minka's expectation propagation (EP)--a widely used method in machine learning--and OAMP. Our main theoretical contribution is the explicit finite-sample analysis of the proposed algorithm. Furthermore, we analyze the associated inference problem via a replica-symmetric (RS) ansatz by using a novel disorder-averaging technique. Both the (rigorous) high-dimensional analysis of the algorithm and the RS ansatz reveal the same decoupling principle, establishing that the proposed algorithm is asymptotically Bayes-optimal under the validity of the RS ansatz.",
       "arxiv_url": "https://arxiv.org/abs/2606.26777",
       "citations": 0
     },
