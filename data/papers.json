@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-07-05 06:36 UTC",
+  "updated_at": "2026-07-06 06:33 UTC",
   "total": 589,
   "papers": [
+    {
+      "arxiv_id": "2603.27781",
+      "title": "GS3LAM: Gaussian Semantic Splatting SLAM",
+      "published": "2026-03-29",
+      "year": "2026",
+      "authors": "Linfei Li; Lin Zhang; Zhong Wang; Ying Shen",
+      "abstract": "Recently, the multi-modal fusion of RGB, depth, and semantics has shown great potential in dense Simultaneous Localization and Mapping (SLAM). However, a prerequisite for generating consistent semantic maps is the availability of dense, efficient, and scalable scene representations. Existing semantic SLAM systems based on explicit representations are often limited by resolution and an inability to predict unknown areas. Conversely, implicit representations typically rely on time-consuming ray tracing, failing to meet real-time requirements. Fortunately, 3D Gaussian Splatting (3DGS) has emerged as a promising representation that combines the efficiency of point-based methods with the continuity of geometric structures. To this end, we propose GS3LAM, a Gaussian Semantic Splatting SLAM framework that processes multimodal data to render consistent, dense semantic maps in real-time. GS3LAM models the scene as a Semantic Gaussian Field (SG-Field) and jointly optimizes camera poses and the field via multimodal error constraints. Furthermore, a Depth-adaptive Scale Regularization (DSR) scheme is introduced to resolve misalignments between scale-invariant Gaussians and geometric surfaces. To mitigate catastrophic forgetting, we propose a Random Sampling-based Keyframe Mapping (RSKM) strategy, which demonstrates superior performance over common local covisibility optimization methods. Extensive experiments on benchmark datasets show that GS3LAM achieves increased tracking robustness, superior rendering quality, and enhanced semantic precision compared to state-of-the-art methods. Source code is available at https://github.com/lif314/GS3LAM.",
+      "arxiv_url": "https://arxiv.org/abs/2603.27781",
+      "citations": 38
+    },
     {
       "arxiv_id": "2606.31948",
       "title": "RRT-Rope: A deterministic shortening approach for fast near-optimal path planning in large-scale uncluttered 3D environments",
@@ -103,6 +113,16 @@
       "citations": 3
     },
     {
+      "arxiv_id": "2603.25053",
+      "title": "GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed Video Generator",
+      "published": "2026-03-26",
+      "year": "2026",
+      "authors": "Liyuan Zhu; Manjunath Narayana; Michal Stary; Will Hutchcroft; Gordon Wetzstein et al.",
+      "abstract": "We present GaussFusion, a novel approach for improving 3D Gaussian splatting (3DGS) reconstructions in the wild through geometry-informed video generation. GaussFusion mitigates common 3DGS artifacts, including floaters, flickering, and blur caused by camera pose errors, incomplete coverage, and noisy geometry initialization. Unlike prior RGB-based approaches limited to a single reconstruction pipeline, our method introduces a geometry-informed video-to-video generator that refines 3DGS renderings across both optimization-based and feed-forward methods. Given an existing reconstruction, we render a Gaussian primitive video buffer encoding depth, normals, opacity, and covariance, which the generator refines to produce temporally coherent, artifact-free frames. We further introduce an artifact synthesis pipeline that simulates diverse degradation patterns, ensuring robustness and generalization. GaussFusion achieves state-of-the-art performance on novel-view synthesis benchmarks, and an efficient variant runs in real time at 15 FPS while maintaining similar performance, enabling interactive 3D applications.",
+      "arxiv_url": "https://arxiv.org/abs/2603.25053",
+      "citations": 3
+    },
+    {
       "arxiv_id": "2606.19874",
       "title": "MMD-SLAM: Structure-Enhanced Multi-Meta Gaussian Distribution-Guided Visual SLAM",
       "published": "2026-06-18",
@@ -110,6 +130,16 @@
       "authors": "Fan Zhu; Ziyu Chen; Peichen Liu; Yifan Zhao; Zhisong Xu et al.",
       "abstract": "3D Gaussian Splatting (3DGS) has significantly boosted novel view synthesis and high-fidelity scene reconstruction, expanding the potential of 3DGS-based Visual Simultaneous Localization and Mapping (SLAM) methods. However, most existing systems fail to fully exploit the underlying structural information, which limits rendering quality and often leads to inconsistent maps. To address these limitations, we propose MMD-SLAM, a structure-enhanced Visual SLAM framework that leverages the Atlanta World (AW) assumption to guide a Multi-Meta Gaussian representation for photorealistic mapping. First, we introduce a point-line fusion strategy for pose optimization, where 3D line segments are incorporated to improve tracking robustness and provide additional constraints for mapping. Second, we design a Multi-Meta Gaussian representation with dominant directions, explicitly encoding structural priors from the AW hypothesis. Finally, we propose a Gaussian evolution strategy that adapts to scene geometry and incorporates structural cues into global optimization. Extensive experiments demonstrate that these innovations enable MMD-SLAM to achieve state-of-the-art performance in both tracking accuracy and mapping quality. e.g., our method achieves a 48.56% reduction in ATE RMSE on ScanNet and a 5.71% improvement in PSNR on Replica, compared with MonoGS.",
       "arxiv_url": "https://arxiv.org/abs/2606.19874",
+      "citations": 2
+    },
+    {
+      "arxiv_id": "2605.08713",
+      "title": "REAP: Reinforcement-Learning End-to-End Autonomous Parking with Gaussian Splatting Simulator for Real2Sim2Real Transfer",
+      "published": "2026-05-09",
+      "year": "2026",
+      "authors": "Changze Li; Zhe Chen; Shaoyu Chen; Lisen Mu; Yijian Li et al.",
+      "abstract": "In recent years, autonomous parking has made significant advances, yet parking tasks still face challenges in extreme scenarios such as mechanical and dead-end parking slots, often resulting in failures. This is mainly due to traditional parking methods adopting a multistage approach, lacking the ability to optimize the parking problem as a whole. End-to-end methods enable joint optimization across perception and planning modules to eliminate the accumulation of errors, enhancing algorithm performance in extreme scenarios. Although several end-to-end parking methods use imitation or reinforcement learning, the former is limited by data cost and distribution coverage, while the latter suffers from inefficient exploration. To address these challenges, we propose a Reinforcement learning End-to-end Autonomous Parking method (REAP). REAP employs Soft Actor-Critic (SAC) within an asymmetric reinforcement learning framework to improve training efficiency and inference performance. To accelerate model convergence, we distill the capabilities of a rule-based planner into the end-to-end network through behavior cloning. We further introduce a soft predictive collision penalty mechanism to reduce collision rates by penalizing obstacle-approaching actions. To ensure that the trained reinforcement learning network can directly transfer to real-world scenarios, we have established a Real2Sim2Real simulator. In the Real2Sim step, we use 3D Gaussian Splatting (3DGS) to transform real-world scenes into digital scenes. In the Sim2Real step, we deploy the end-to-end model onto the vehicle to bridge the Sim2Real gap. Trained in the 3DGS simulator and deployed on physical vehicles, REAP successfully parks in various types of parking spaces, especially demonstrating the feasibility of end-to-end RL parking in extremely narrow mechanical slots.",
+      "arxiv_url": "https://arxiv.org/abs/2605.08713",
       "citations": 2
     },
     {
@@ -160,6 +190,16 @@
       "authors": "Zicheng Zhang; Xiangting Meng; Ke Wu; Wenchao Ding",
       "abstract": "Recent progress in feed-forward 3D Gaussian Splatting (3DGS) has notably improved rendering quality. However, the spatially uniform and highly redundant 3DGS map generated by previous feed-forward 3DGS methods limits their integration into downstream reconstruction tasks. We propose SparseSplat, the first feed-forward 3DGS model that adaptively adjusts Gaussian density according to scene structure and information richness of local regions, yielding highly compact 3DGS maps. To achieve this, we propose entropy-based probabilistic sampling, generating large, sparse Gaussians in textureless areas and assigning small, dense Gaussians to regions with rich information. Additionally, we designed a specialized point cloud network that efficiently encodes local context and decodes it into 3DGS attributes, addressing the receptive field mismatch between the general 3DGS optimization pipeline and feed-forward models. Extensive experimental results demonstrate that SparseSplat can achieve state-of-the-art rendering quality with only 22% of the Gaussians and maintain reasonable rendering quality with only 1.5% of the Gaussians. Project page: https://victkk.github.io/SparseSplat-page/.",
       "arxiv_url": "https://arxiv.org/abs/2604.03069",
+      "citations": 2
+    },
+    {
+      "arxiv_id": "2607.02242",
+      "title": "Computable measures of fermionic non-Gaussianity from the covariance matrix",
+      "published": "2026-07-02",
+      "year": "2026",
+      "authors": "Poetri Sonya Tarabunga; Bernhard Jobst; Raúl Morral-Yepes; Marc Langer; Barbara Kraus et al.",
+      "abstract": "Fermionic non-Gaussianity, or fermionic magic, is a key resource underlying the computational complexity of fermionic quantum systems, yet tractable and operationally meaningful ways to quantify it remain limited. We address this challenge by developing a convex resource theory of fermionic non-Gaussianity and introducing two families of computable measures for pure fermionic states, both derived from the Williamson normal form of the covariance matrix. The first family, occupation number entropies, is defined as the Tsallis-$α$ entropy of the occupation numbers. We prove that one member of this family is monotonic under Gaussian protocols, establishing it as a computable convex resource monotone. It consequently lower bounds the number of non-Gaussian gates needed for state preparation. The second family, natural-orbital participation entropies, is given by the Rényi-$α$ entropy of the squared amplitudes of the state in the natural-orbital basis, defined by the eigenvectors of the covariance matrix. These measures quantify state compressibility in this basis and thus upper bound the classical simulation cost in an orthonormal Gaussian basis. We analyze both families for stabilizer and translation-invariant states, where they simplify and reveal additional structure. We further study representative examples, including random SWAP-doped matchgate circuits and the bond-modulated XXZ model, highlighting the role of non-Gaussianity in many-body phenomena. Our work establishes a resource-theoretic framework for computable fermionic non-Gaussianity that unifies notions arising across quantum information, condensed-matter physics, and quantum chemistry, opening new directions for studying the complexity of quantum many-body systems and providing practical tools to assess the classical simulability of fermionic states relevant for quantum advantage.",
+      "arxiv_url": "https://arxiv.org/abs/2607.02242",
       "citations": 2
     },
     {
@@ -330,6 +370,16 @@
       "authors": "Zhenyu Liang; Jack C. P. Cheng",
       "abstract": "Landslide monitoring and simulation play an important role in urban safety assessment and disaster prevention. Existing landslide simulation pipelines typically rely on digital elevation model and mesh-based representations, which are suitable for geometric analysis, but often lack visual realism. This limitation reduces their effectiveness in interactive applications, hazard communication, and public education. In this paper, we propose a UAV-based scan-to-simulation framework that bridges photorealistic scene capture and physics-based landslide simulation through 3DGS. Specifically, our pipeline includes four stages: (1) UAV-based acquisition of slope imagery, (2) reconstruction of a low-anisotropy 3DGS scene representation, (3) volumetric conversion of the target simulation region by filling the interior of the surface-based model, and (4) integration with the Material Point Method (MPM) for landslide simulation. We validate the proposed framework on a real landslide site in Hong Kong that experienced a severe landslide event. The results show that our method supports both realistic visual reconstruction and effective simulation.",
       "arxiv_url": "https://arxiv.org/abs/2605.10715",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2605.04730",
+      "title": "ULF-Loc: Unbiased Landmark Feature for Robust Visual Localization with 3D Gaussian Splatting",
+      "published": "2026-05-06",
+      "year": "2026",
+      "authors": "Yingdong Gu; Shaocheng Yan; Zhenjun Zhao; Yuan Kou; Jianxin Luo et al.",
+      "abstract": "Visual localization is a core technology for augmented reality and autonomous navigation. Recent methods combine the efficient rendering of 3D Gaussian Splatting (3DGS) with feature-based localization. These methods rely on direct matching between 2D query features and the 3D Gaussian feature field, but this often results in mismatches due to an inherent bias in the learned Gaussian feature. We theoretically analyze the feature learning process in 3DGS, revealing that the widely adopted $α$-blending optimization inherently introduces bias into 3D point features. This bias stems from the entanglement between individual Gaussians and their neighboring Gaussians, making the learned features unsuitable for precise matching tasks. Motivated by these findings, we propose ULF-Loc, an unbiased landmark feature framework that replaces biased feature optimization with geometry-weighted feature fusion. We further introduce keypoint-consensus landmark sampling to select reliable Gaussians and local geometric consistency verification to reject mismatches caused by rendering artifacts. On the Cambridge Landmarks dataset, ULF-Loc reduces the mean median translation error by 17\\% compared to the state-of-the-art, while achieving superior efficiency with only 1/10 the training time and 1/6 the GPU memory of STDLoc.",
+      "arxiv_url": "https://arxiv.org/abs/2605.04730",
       "citations": 1
     },
     {
@@ -510,6 +560,26 @@
       "authors": "Tianyu Huang; Zhenyang Ren; Zhenchen Wan; Jiyang Zheng; Wenjie Wang et al.",
       "abstract": "3D Gaussian Splatting (3DGS) enables high-fidelity reconstruction of scene geometry and appearance. Building on this capability, inserting external mesh objects into reconstructed 3DGS scenes enables interactive editing and content augmentation for immersive applications such as AR/VR, virtual staging, and digital content creation. However, achieving physically consistent lighting and shadows for mesh insertion remains challenging, as it requires accurate scene illumination estimation and multi-view consistent rendering. To address this challenge, we present LightHarmony3D, a novel framework for illumination-consistent mesh insertion in 3DGS scenes. Central to our approach is our proposed generative module that predicts a full 360° HDR environment map at the insertion location via a single forward pass. By leveraging generative priors instead of iterative optimization, our method efficiently captures dominant scene illumination and enables physically grounded shading and shadows for inserted meshes while maintaining multi-view coherence. Furthermore, we introduce the first dedicated benchmark for mesh insertion in 3DGS, providing a standardized evaluation framework for assessing lighting consistency and photorealism. Extensive experiments across multiple real-world reconstruction datasets demonstrate that LightHarmony3D achieves state-of-the-art realism and multi-view consistency.",
       "arxiv_url": "https://arxiv.org/abs/2603.29209",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2603.28126",
+      "title": "SVGS: Single-View to 3D Object Editing via Gaussian Splatting",
+      "published": "2026-03-30",
+      "year": "2026",
+      "authors": "Pengcheng Xue; Yan Tian; Qiutao Song; Ziyi Wang; Linyang He et al.",
+      "abstract": "Text-driven 3D scene editing has attracted considerable interest due to its convenience and user-friendliness. However, methods that rely on implicit 3D representations, such as Neural Radiance Fields (NeRF), while effective in rendering complex scenes, are hindered by slow processing speeds and limited control over specific regions of the scene. Moreover, existing approaches, including Instruct-NeRF2NeRF and GaussianEditor, which utilize multi-view editing strategies, frequently produce inconsistent results across different views when executing text instructions. This inconsistency can adversely affect the overall performance of the model, complicating the task of balancing the consistency of editing results with editing efficiency. To address these challenges, we propose a novel method termed Single-View to 3D Object Editing via Gaussian Splatting (SVGS), which is a single-view text-driven editing technique based on 3D Gaussian Splatting (3DGS). Specifically, in response to text instructions, we introduce a single-view editing strategy grounded in multi-view diffusion models, which reconstructs 3D scenes by leveraging only those views that yield consistent editing results. Additionally, we employ sparse 3D Gaussian Splatting as the 3D representation, which significantly enhances editing efficiency. We conducted a comparative analysis of SVGS against existing baseline methods across various scene settings, and the results indicate that SVGS outperforms its counterparts in both editing capability and processing speed, representing a significant advancement in 3D editing technology. For further details, please visit our project page at: https://amateurc.github.io/svgs.github.io.",
+      "arxiv_url": "https://arxiv.org/abs/2603.28126",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2603.27516",
+      "title": "SGS-Intrinsic: Semantic-Invariant Gaussian Splatting for Sparse-View Indoor Inverse Rendering",
+      "published": "2026-03-29",
+      "year": "2026",
+      "authors": "Jiahao Niu; Rongjia Zheng; Wenju Xu; Wei-Shi Zheng; Qing Zhang",
+      "abstract": "We present SGS-Intrinsic, an indoor inverse rendering framework that works well for sparse-view images. Unlike existing 3D Gaussian Splatting (3DGS) based methods that focus on object-centric reconstruction and fail to work under sparse view settings, our method allows to achieve high-quality geometry reconstruction and accurate disentanglement of material and illumination. The core idea is to construct a dense and geometry-consistent Gaussian semantic field guided by semantic and geometric priors, providing a reliable foundation for subsequent inverse rendering. Building upon this, we perform material-illumination disentanglement by combining a hybrid illumination model and material prior to effectively capture illumination-material interactions. To mitigate the impact of cast shadows and enhance the robustness of material recovery, we introduce illumination-invariant material constraint together with a deshadowing model. Extensive experiments on benchmark datasets show that our method consistently improves both reconstruction fidelity and inverse rendering quality over existing 3DGS-based inverse rendering approaches. Our code is available at https://github.com/GrumpySloths/SGS_Intrinsic.github.io.",
+      "arxiv_url": "https://arxiv.org/abs/2603.27516",
       "citations": 1
     },
     {
@@ -2123,16 +2193,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2605.08713",
-      "title": "REAP: Reinforcement-Learning End-to-End Autonomous Parking with Gaussian Splatting Simulator for Real2Sim2Real Transfer",
-      "published": "2026-05-09",
-      "year": "2026",
-      "authors": "Changze Li; Zhe Chen; Shaoyu Chen; Lisen Mu; Yijian Li et al.",
-      "abstract": "In recent years, autonomous parking has made significant advances, yet parking tasks still face challenges in extreme scenarios such as mechanical and dead-end parking slots, often resulting in failures. This is mainly due to traditional parking methods adopting a multistage approach, lacking the ability to optimize the parking problem as a whole. End-to-end methods enable joint optimization across perception and planning modules to eliminate the accumulation of errors, enhancing algorithm performance in extreme scenarios. Although several end-to-end parking methods use imitation or reinforcement learning, the former is limited by data cost and distribution coverage, while the latter suffers from inefficient exploration. To address these challenges, we propose a Reinforcement learning End-to-end Autonomous Parking method (REAP). REAP employs Soft Actor-Critic (SAC) within an asymmetric reinforcement learning framework to improve training efficiency and inference performance. To accelerate model convergence, we distill the capabilities of a rule-based planner into the end-to-end network through behavior cloning. We further introduce a soft predictive collision penalty mechanism to reduce collision rates by penalizing obstacle-approaching actions. To ensure that the trained reinforcement learning network can directly transfer to real-world scenarios, we have established a Real2Sim2Real simulator. In the Real2Sim step, we use 3D Gaussian Splatting (3DGS) to transform real-world scenes into digital scenes. In the Sim2Real step, we deploy the end-to-end model onto the vehicle to bridge the Sim2Real gap. Trained in the 3DGS simulator and deployed on physical vehicles, REAP successfully parks in various types of parking spaces, especially demonstrating the feasibility of end-to-end RL parking in extremely narrow mechanical slots.",
-      "arxiv_url": "https://arxiv.org/abs/2605.08713",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2605.08699",
       "title": "Thin-Client Interactive Gaussian Adaptive Streaming over HTTP/3",
       "published": "2026-05-09",
@@ -2210,16 +2270,6 @@
       "authors": "Xinze Li; Bohan Yang; Pengxu Chen; Yiyuan Wang; Hongcheng Luo et al.",
       "abstract": "3D Gaussian Splatting (3DGS) has emerged as an advanced technique for real-time novel view synthesis by representing scene geometry and appearance using differentiable Gaussian primitives. However, efficiently computing precise Gaussian-tile intersections remains a critical task in the rasterization pipeline. To this end, we propose QuadBox, a method that leverages four axis-aligned bounding boxes to tightly encapsulate projected Gaussians in a discrete manner. First, we derive a geometry-aware stretching factor that enables the construction of a tile-aligned QuadBox, which covers the elliptical projection and largely excludes irrelevant tiles. Second, we introduce QPass, a single-pass tile traversal algorithm that exhaustively exploits the discrete nature of QuadBox, ensuring that the tile intersection check is performed with simple interval tests. Experiments on public datasets show that our method accelerates the rendering speed of 3DGS by 1.85$\\times$. Code is available at \\href{https://github.com/Powertony102/QuadBox}{https://github.com/Powertony102/QuadBox}.",
       "arxiv_url": "https://arxiv.org/abs/2605.04844",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2605.04730",
-      "title": "ULF-Loc: Unbiased Landmark Feature for Robust Visual Localization with 3D Gaussian Splatting",
-      "published": "2026-05-06",
-      "year": "2026",
-      "authors": "Yingdong Gu; Shaocheng Yan; Zhenjun Zhao; Yuan Kou; Jianxin Luo et al.",
-      "abstract": "Visual localization is a core technology for augmented reality and autonomous navigation. Recent methods combine the efficient rendering of 3D Gaussian Splatting (3DGS) with feature-based localization. These methods rely on direct matching between 2D query features and the 3D Gaussian feature field, but this often results in mismatches due to an inherent bias in the learned Gaussian feature. We theoretically analyze the feature learning process in 3DGS, revealing that the widely adopted $α$-blending optimization inherently introduces bias into 3D point features. This bias stems from the entanglement between individual Gaussians and their neighboring Gaussians, making the learned features unsuitable for precise matching tasks. Motivated by these findings, we propose ULF-Loc, an unbiased landmark feature framework that replaces biased feature optimization with geometry-weighted feature fusion. We further introduce keypoint-consensus landmark sampling to select reliable Gaussians and local geometric consistency verification to reject mismatches caused by rendering artifacts. On the Cambridge Landmarks dataset, ULF-Loc reduces the mean median translation error by 17\\% compared to the state-of-the-art, while achieving superior efficiency with only 1/10 the training time and 1/6 the GPU memory of STDLoc.",
-      "arxiv_url": "https://arxiv.org/abs/2605.04730",
       "citations": 0
     },
     {
@@ -2933,36 +2983,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2603.28126",
-      "title": "SVGS: Single-View to 3D Object Editing via Gaussian Splatting",
-      "published": "2026-03-30",
-      "year": "2026",
-      "authors": "Pengcheng Xue; Yan Tian; Qiutao Song; Ziyi Wang; Linyang He et al.",
-      "abstract": "Text-driven 3D scene editing has attracted considerable interest due to its convenience and user-friendliness. However, methods that rely on implicit 3D representations, such as Neural Radiance Fields (NeRF), while effective in rendering complex scenes, are hindered by slow processing speeds and limited control over specific regions of the scene. Moreover, existing approaches, including Instruct-NeRF2NeRF and GaussianEditor, which utilize multi-view editing strategies, frequently produce inconsistent results across different views when executing text instructions. This inconsistency can adversely affect the overall performance of the model, complicating the task of balancing the consistency of editing results with editing efficiency. To address these challenges, we propose a novel method termed Single-View to 3D Object Editing via Gaussian Splatting (SVGS), which is a single-view text-driven editing technique based on 3D Gaussian Splatting (3DGS). Specifically, in response to text instructions, we introduce a single-view editing strategy grounded in multi-view diffusion models, which reconstructs 3D scenes by leveraging only those views that yield consistent editing results. Additionally, we employ sparse 3D Gaussian Splatting as the 3D representation, which significantly enhances editing efficiency. We conducted a comparative analysis of SVGS against existing baseline methods across various scene settings, and the results indicate that SVGS outperforms its counterparts in both editing capability and processing speed, representing a significant advancement in 3D editing technology. For further details, please visit our project page at: https://amateurc.github.io/svgs.github.io.",
-      "arxiv_url": "https://arxiv.org/abs/2603.28126",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2603.27781",
-      "title": "GS3LAM: Gaussian Semantic Splatting SLAM",
-      "published": "2026-03-29",
-      "year": "2026",
-      "authors": "Linfei Li; Lin Zhang; Zhong Wang; Ying Shen",
-      "abstract": "Recently, the multi-modal fusion of RGB, depth, and semantics has shown great potential in dense Simultaneous Localization and Mapping (SLAM). However, a prerequisite for generating consistent semantic maps is the availability of dense, efficient, and scalable scene representations. Existing semantic SLAM systems based on explicit representations are often limited by resolution and an inability to predict unknown areas. Conversely, implicit representations typically rely on time-consuming ray tracing, failing to meet real-time requirements. Fortunately, 3D Gaussian Splatting (3DGS) has emerged as a promising representation that combines the efficiency of point-based methods with the continuity of geometric structures. To this end, we propose GS3LAM, a Gaussian Semantic Splatting SLAM framework that processes multimodal data to render consistent, dense semantic maps in real-time. GS3LAM models the scene as a Semantic Gaussian Field (SG-Field) and jointly optimizes camera poses and the field via multimodal error constraints. Furthermore, a Depth-adaptive Scale Regularization (DSR) scheme is introduced to resolve misalignments between scale-invariant Gaussians and geometric surfaces. To mitigate catastrophic forgetting, we propose a Random Sampling-based Keyframe Mapping (RSKM) strategy, which demonstrates superior performance over common local covisibility optimization methods. Extensive experiments on benchmark datasets show that GS3LAM achieves increased tracking robustness, superior rendering quality, and enhanced semantic precision compared to state-of-the-art methods. Source code is available at https://github.com/lif314/GS3LAM.",
-      "arxiv_url": "https://arxiv.org/abs/2603.27781",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2603.27516",
-      "title": "SGS-Intrinsic: Semantic-Invariant Gaussian Splatting for Sparse-View Indoor Inverse Rendering",
-      "published": "2026-03-29",
-      "year": "2026",
-      "authors": "Jiahao Niu; Rongjia Zheng; Wenju Xu; Wei-Shi Zheng; Qing Zhang",
-      "abstract": "We present SGS-Intrinsic, an indoor inverse rendering framework that works well for sparse-view images. Unlike existing 3D Gaussian Splatting (3DGS) based methods that focus on object-centric reconstruction and fail to work under sparse view settings, our method allows to achieve high-quality geometry reconstruction and accurate disentanglement of material and illumination. The core idea is to construct a dense and geometry-consistent Gaussian semantic field guided by semantic and geometric priors, providing a reliable foundation for subsequent inverse rendering. Building upon this, we perform material-illumination disentanglement by combining a hybrid illumination model and material prior to effectively capture illumination-material interactions. To mitigate the impact of cast shadows and enhance the robustness of material recovery, we introduce illumination-invariant material constraint together with a deshadowing model. Extensive experiments on benchmark datasets show that our method consistently improves both reconstruction fidelity and inverse rendering quality over existing 3DGS-based inverse rendering approaches. Our code is available at https://github.com/GrumpySloths/SGS_Intrinsic.github.io.",
-      "arxiv_url": "https://arxiv.org/abs/2603.27516",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2603.26067",
       "title": "R-PGA: Robust Physical Adversarial Camouflage Generation via Relightable 3D Gaussian Splatting",
       "published": "2026-03-27",
@@ -2990,16 +3010,6 @@
       "authors": "Qi Zhang; Denis Rozumny; Francesco Girlanda; Sezer Karaoglu; Marc Pollefeys et al.",
       "abstract": "We propose Unblur-SLAM, a novel RGB SLAM pipeline for sharp 3D reconstruction from blurred image inputs. In contrast to previous work, our approach is able to handle different types of blur and demonstrates state-of-the-art performance in the presence of both motion blur and defocus blur. Moreover, we adjust the computation effort with the amount of blur in the input image. As a first stage, our method uses a feed-forward image deblurring model for which we propose a suitable training scheme that can improve both tracking and mapping modules. Frames that are successfully deblurred by the feed-forward network obtain refined poses and depth through local-global multi-view optimization and loop closure. Frames that fail the first stage deblurring are directly modeled through the global 3DGS representation and an additional blur network to model multiple blurred sub-frames and simulate the blur formation process in 3D space, thereby learning sharp details and refined sub-frame poses. Experiments on several real-world datasets demonstrate consistent improvements in both pose estimation and sharp reconstruction results of geometry and texture.",
       "arxiv_url": "https://arxiv.org/abs/2603.26810",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2603.25053",
-      "title": "GaussFusion: Improving 3D Reconstruction in the Wild with A Geometry-Informed Video Generator",
-      "published": "2026-03-26",
-      "year": "2026",
-      "authors": "Liyuan Zhu; Manjunath Narayana; Michal Stary; Will Hutchcroft; Gordon Wetzstein et al.",
-      "abstract": "We present GaussFusion, a novel approach for improving 3D Gaussian splatting (3DGS) reconstructions in the wild through geometry-informed video generation. GaussFusion mitigates common 3DGS artifacts, including floaters, flickering, and blur caused by camera pose errors, incomplete coverage, and noisy geometry initialization. Unlike prior RGB-based approaches limited to a single reconstruction pipeline, our method introduces a geometry-informed video-to-video generator that refines 3DGS renderings across both optimization-based and feed-forward methods. Given an existing reconstruction, we render a Gaussian primitive video buffer encoding depth, normals, opacity, and covariance, which the generator refines to produce temporally coherent, artifact-free frames. We further introduce an artifact synthesis pipeline that simulates diverse degradation patterns, ensuring robustness and generalization. GaussFusion achieves state-of-the-art performance on novel-view synthesis benchmarks, and an efficient variant runs in real time at 15 FPS while maintaining similar performance, enabling interactive 3D applications.",
-      "arxiv_url": "https://arxiv.org/abs/2603.25053",
       "citations": 0
     },
     {
@@ -3280,16 +3290,6 @@
       "authors": "Leheng Cai; Xu Guo; Qirui Hu",
       "abstract": "We propose a new procedure MATCH (Multiplier-Assisted Tests for Conditional Hypotheses) to test whether the non-Euclidean data match the target model, which is a general framework for significance and specification testing in Fréchet regression. MATCH covers global significance, partial significance, and the adequacy of global Fréchet regression, providing a unified way to compare unrestricted conditional Fréchet means with restricted alternatives. One of the key challenges is that the ordinary held-out loss difference is first-order degenerate under the null: the oracle losses coincide, and plug-in statistics is dominated by nuisance estimation error. MATCH uses sample splitting and independent random multipliers on held-out losses to create a nondegenerate Gaussian leading term without residuals or tangent-space coordinates. To improve data use and stability, we further develop cross-fitted tests and repeated cross-fitting with p-value merging. We establish asymptotic null validity, consistency under fixed alternatives, and local power guarantees. Simulations for distributional, symmetric positive-definite (SPD) matrix-valued, and spherical responses support the theoretical findings, and applications to county-level household income distributions and North Atlantic tropical-cyclone locations demonstrate the practical use of the proposed tests.",
       "arxiv_url": "https://arxiv.org/abs/2607.02295",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2607.02242",
-      "title": "Computable measures of fermionic non-Gaussianity from the covariance matrix",
-      "published": "2026-07-02",
-      "year": "2026",
-      "authors": "Poetri Sonya Tarabunga; Bernhard Jobst; Raúl Morral-Yepes; Marc Langer; Barbara Kraus et al.",
-      "abstract": "Fermionic non-Gaussianity, or fermionic magic, is a key resource underlying the computational complexity of fermionic quantum systems, yet tractable and operationally meaningful ways to quantify it remain limited. We address this challenge by developing a convex resource theory of fermionic non-Gaussianity and introducing two families of computable measures for pure fermionic states, both derived from the Williamson normal form of the covariance matrix. The first family, occupation number entropies, is defined as the Tsallis-$α$ entropy of the occupation numbers. We prove that one member of this family is monotonic under Gaussian protocols, establishing it as a computable convex resource monotone. It consequently lower bounds the number of non-Gaussian gates needed for state preparation. The second family, natural-orbital participation entropies, is given by the Rényi-$α$ entropy of the squared amplitudes of the state in the natural-orbital basis, defined by the eigenvectors of the covariance matrix. These measures quantify state compressibility in this basis and thus upper bound the classical simulation cost in an orthonormal Gaussian basis. We analyze both families for stabilizer and translation-invariant states, where they simplify and reveal additional structure. We further study representative examples, including random SWAP-doped matchgate circuits and the bond-modulated XXZ model, highlighting the role of non-Gaussianity in many-body phenomena. Our work establishes a resource-theoretic framework for computable fermionic non-Gaussianity that unifies notions arising across quantum information, condensed-matter physics, and quantum chemistry, opening new directions for studying the complexity of quantum many-body systems and providing practical tools to assess the classical simulability of fermionic states relevant for quantum advantage.",
-      "arxiv_url": "https://arxiv.org/abs/2607.02242",
       "citations": 0
     },
     {
