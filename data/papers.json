@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-10 06:08 UTC",
+  "updated_at": "2026-07-11 05:28 UTC",
   "total": 593,
   "papers": [
     {
@@ -580,6 +580,16 @@
       "authors": "Júlia Baligács; Václav Blažej; Jadwiga Czyżewska; Michał Pilipczuk; Evangelos Protopapas",
       "abstract": "We prove a coarse analogue of the classic fact that every graph can be decomposed along its cut-vertices into $2$-connected components. Precisely, we prove that for every graph $G$ and a positive integer $d$, $G$ admits a tree decomposition whose adhesion sets have weak diameter at most $3d+2$ so that no two vertices $u,v$ lying in the same bag can be separated by a set of weak diameter at most $d$ whose distance from $u$ and $v$ is more than $d$. By the Coarse Menger's Theorem for two paths, this condition admits also a dual formulation, phrased in terms of the existence of two paths that are far from each other and connect the vicinity of $u$ with the vicinity of $v$.",
       "arxiv_url": "https://arxiv.org/abs/2607.07111",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2607.06404",
+      "title": "Bosonic quantum error-correcting codes with finite stellar rank",
+      "published": "2026-07-07",
+      "year": "2026",
+      "authors": "Rui Wang; Adithi Udupa; Timo Hillmann; Ulysse Chabaud; Alessandro Ferraro et al.",
+      "abstract": "Bosonic quantum error correction (QEC) relies on non-Gaussian bosonic encodings whose preparation cost is a central practical constraint. In this work, we use stellar rank as a resource measure to design and benchmark bosonic codes under finite non-Gaussian resources. For fixed cat and Gottesman--Kitaev--Preskill (GKP) code families, we show that finite stellar rank creates a trade-off among state approximability, energy, and logical protection under photon loss and photon-number dephasing, evaluated with optimal recovery. This trade-off implies that codewords with better ideal error-correction properties need not be optimal once finite-rank preparation constraints are imposed. Going beyond fixed-target codewords, we directly optimize bosonic encodings at fixed stellar rank, revealing noise-adapted code structures and concrete resource thresholds. Grid-like encodings emerge under photon loss, whereas approximately rotation-symmetric encodings arise under dephasing. In the optimized search, stellar rank k=2 suffices to surpass break-even for all dephasing strengths considered, while under photon loss the required rank increases with the loss rate. These results establish stellar rank as an operationally meaningful resource measure for bosonic QEC under practical state-preparation constraints.",
+      "arxiv_url": "https://arxiv.org/abs/2607.06404",
       "citations": 1
     },
     {
@@ -4580,16 +4590,6 @@
       "authors": "Eli Zick; Dan Mendels",
       "abstract": "Free-energy surfaces govern the populations of metastable states and the barriers that control transitions between them, making their direct optimization a central challenge in molecular and materials design. In this work, we introduce Gradient-Based Free Energy Surface Optimization (GB-FESO), an inverse design framework that uses a trained conditional diffusion model as a differentiable surrogate for the ensemble distribution. After training, the diffusion model is frozen, and the conditioning variables defining the system are optimized so that the generated ensemble reproduces a prescribed target free-energy surface. The optimization is carried out by backpropagating a distribution-level loss, based on kernel density estimates of the Kullback-Leibler divergence, through a deterministic diffusion sampling trajectory. We first validate GB-FESO on one-dimensional Gaussian ensembles, demonstrating that both continuous and relaxed discrete conditioning variables can be optimized to recover target distributions, including those outside the training domain. We then apply the method to a four-particle Lennard-Jones toy peptide exhibiting multiple metastable conformational states. In this more physically motivated setting, GB-FESO successfully optimizes the interaction parameters to reproduce target free-energy landscapes in the majority of test cases, with optimization performed either in the full internal-coordinate space or in a reduced collective-variable representation. These results establish GB-FESO as a promising first step toward an ensemble-level inverse design framework for molecular systems with prescribed thermodynamic and kinetic behavior.",
       "arxiv_url": "https://arxiv.org/abs/2607.06421",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2607.06404",
-      "title": "Bosonic quantum error-correcting codes with finite stellar rank",
-      "published": "2026-07-07",
-      "year": "2026",
-      "authors": "Rui Wang; Adithi Udupa; Timo Hillmann; Ulysse Chabaud; Alessandro Ferraro et al.",
-      "abstract": "Bosonic quantum error correction (QEC) relies on non-Gaussian bosonic encodings whose preparation cost is a central practical constraint. In this work, we use stellar rank as a resource measure to design and benchmark bosonic codes under finite non-Gaussian resources. For fixed cat and Gottesman--Kitaev--Preskill (GKP) code families, we show that finite stellar rank creates a trade-off among state approximability, energy, and logical protection under photon loss and photon-number dephasing, evaluated with optimal recovery. This trade-off implies that codewords with better ideal error-correction properties need not be optimal once finite-rank preparation constraints are imposed. Going beyond fixed-target codewords, we directly optimize bosonic encodings at fixed stellar rank, revealing noise-adapted code structures and concrete resource thresholds. Grid-like encodings emerge under photon loss, whereas approximately rotation-symmetric encodings arise under dephasing. In the optimized search, stellar rank k=2 suffices to surpass break-even for all dephasing strengths considered, while under photon loss the required rank increases with the loss rate. These results establish stellar rank as an operationally meaningful resource measure for bosonic QEC under practical state-preparation constraints.",
-      "arxiv_url": "https://arxiv.org/abs/2607.06404",
       "citations": 0
     },
     {
