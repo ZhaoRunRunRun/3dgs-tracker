@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-18 05:13 UTC",
+  "updated_at": "2026-07-19 05:43 UTC",
   "total": 589,
   "papers": [
     {
@@ -203,6 +203,16 @@
       "citations": 2
     },
     {
+      "arxiv_id": "2604.08370",
+      "title": "SurfelSplat: Learning Efficient and Generalizable Gaussian Surfel Representations for Sparse-View Surface Reconstruction",
+      "published": "2026-04-09",
+      "year": "2026",
+      "authors": "Chensheng Dai; Shengjun Zhang; Min Chen; Yueqi Duan",
+      "abstract": "3D Gaussian Splatting (3DGS) has demonstrated impressive performance in 3D scene reconstruction. Beyond novel view synthesis, it shows great potential for multi-view surface reconstruction. Existing methods employ optimization-based reconstruction pipelines that achieve precise and complete surface extractions. However, these approaches typically require dense input views and high time consumption for per-scene optimization. To address these limitations, we propose SurfelSplat, a feed-forward framework that generates efficient and generalizable pixel-aligned Gaussian surfel representations from sparse-view images. We observe that conventional feed-forward structures struggle to recover accurate geometric attributes of Gaussian surfels because the spatial frequency of pixel-aligned primitives exceeds Nyquist sampling rates. Therefore, we propose a cross-view feature aggregation module based on the Nyquist sampling theorem. Specifically, we first adapt the geometric forms of Gaussian surfels with spatial sampling rate-guided low-pass filters. We then project the filtered surfels across all input views to obtain cross-view feature correlations. By processing these correlations through a specially designed feature fusion network, we can finally regress Gaussian surfels with precise geometry. Extensive experiments on DTU reconstruction benchmarks demonstrate that our model achieves comparable results with state-of-the-art methods, and predict Gaussian surfels within 1 second, offering a 100x speedup without costly per-scene training.",
+      "arxiv_url": "https://arxiv.org/abs/2604.08370",
+      "citations": 2
+    },
+    {
       "arxiv_id": "2604.03069",
       "title": "SparseSplat: Towards Applicable Feed-Forward 3D Gaussian Splatting with Pixel-Unaligned Prediction",
       "published": "2026-04-03",
@@ -383,6 +393,36 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2605.08713",
+      "title": "REAP: Reinforcement-Learning End-to-End Autonomous Parking with Gaussian Splatting Simulator for Real2Sim2Real Transfer",
+      "published": "2026-05-09",
+      "year": "2026",
+      "authors": "Changze Li; Zhe Chen; Shaoyu Chen; Lisen Mu; Yijian Li et al.",
+      "abstract": "In recent years, autonomous parking has made significant advances, yet parking tasks still face challenges in extreme scenarios such as mechanical and dead-end parking slots, often resulting in failures. This is mainly due to traditional parking methods adopting a multistage approach, lacking the ability to optimize the parking problem as a whole. End-to-end methods enable joint optimization across perception and planning modules to eliminate the accumulation of errors, enhancing algorithm performance in extreme scenarios. Although several end-to-end parking methods use imitation or reinforcement learning, the former is limited by data cost and distribution coverage, while the latter suffers from inefficient exploration. To address these challenges, we propose a Reinforcement learning End-to-end Autonomous Parking method (REAP). REAP employs Soft Actor-Critic (SAC) within an asymmetric reinforcement learning framework to improve training efficiency and inference performance. To accelerate model convergence, we distill the capabilities of a rule-based planner into the end-to-end network through behavior cloning. We further introduce a soft predictive collision penalty mechanism to reduce collision rates by penalizing obstacle-approaching actions. To ensure that the trained reinforcement learning network can directly transfer to real-world scenarios, we have established a Real2Sim2Real simulator. In the Real2Sim step, we use 3D Gaussian Splatting (3DGS) to transform real-world scenes into digital scenes. In the Sim2Real step, we deploy the end-to-end model onto the vehicle to bridge the Sim2Real gap. Trained in the 3DGS simulator and deployed on physical vehicles, REAP successfully parks in various types of parking spaces, especially demonstrating the feasibility of end-to-end RL parking in extremely narrow mechanical slots.",
+      "arxiv_url": "https://arxiv.org/abs/2605.08713",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2605.07192",
+      "title": "AsyncEvGS: Asynchronous Event-Assisted Gaussian Splatting for Handheld Motion-Blurred Scenes",
+      "published": "2026-05-08",
+      "year": "2026",
+      "authors": "Jun Dai; Renbiao Jin; Bo Xu; Yutian Chen; Linning Xu et al.",
+      "abstract": "3D reconstruction methods such as 3D Gaussian Splatting (3DGS) and Neural Radiance Fields (NeRF) achieve impressive photorealism but fail when input images suffer from severe motion blur. While event cameras provide high-temporal-resolution motion cues, existing event-assisted approaches rely on low-resolution sensors and strict synchronization, limiting their practicality for handheld 3D capture on common devices, such as smartphones. We introduce a flexible, high-resolution asynchronous RGB-Event dual-camera system and a corresponding reconstruction framework. Our approach first reconstructs sharp images from the event data and then employs a cross-domain pose estimation module based on the Visual Geometry Transformer (VGGT) to obtain robust initialization for 3DGS. During optimization, we employ a structure-driven event loss and view-specific consistency regularizers to mitigate the ill-posed behavior of traditional event losses and deblurring losses, ensuring both stable and high-fidelity reconstruction. We further contribute AsyncEv-Deblur, a new high-resolution RGB-Event dataset captured with our asynchronous system. Experiments demonstrate that our method achieves state-of-the-art performance on both our challenging dataset and existing benchmarks, substantially improving reconstruction robustness under severe motion blur. Project page: https://openimaginglab.github.io/AsyncEvGS/",
+      "arxiv_url": "https://arxiv.org/abs/2605.07192",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2605.04730",
+      "title": "ULF-Loc: Unbiased Landmark Feature for Robust Visual Localization with 3D Gaussian Splatting",
+      "published": "2026-05-06",
+      "year": "2026",
+      "authors": "Yingdong Gu; Shaocheng Yan; Zhenjun Zhao; Yuan Kou; Jianxin Luo et al.",
+      "abstract": "Visual localization is a core technology for augmented reality and autonomous navigation. Recent methods combine the efficient rendering of 3D Gaussian Splatting (3DGS) with feature-based localization. These methods rely on direct matching between 2D query features and the 3D Gaussian feature field, but this often results in mismatches due to an inherent bias in the learned Gaussian feature. We theoretically analyze the feature learning process in 3DGS, revealing that the widely adopted $α$-blending optimization inherently introduces bias into 3D point features. This bias stems from the entanglement between individual Gaussians and their neighboring Gaussians, making the learned features unsuitable for precise matching tasks. Motivated by these findings, we propose ULF-Loc, an unbiased landmark feature framework that replaces biased feature optimization with geometry-weighted feature fusion. We further introduce keypoint-consensus landmark sampling to select reliable Gaussians and local geometric consistency verification to reject mismatches caused by rendering artifacts. On the Cambridge Landmarks dataset, ULF-Loc reduces the mean median translation error by 17\\% compared to the state-of-the-art, while achieving superior efficiency with only 1/10 the training time and 1/6 the GPU memory of STDLoc.",
+      "arxiv_url": "https://arxiv.org/abs/2605.04730",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2605.00177",
       "title": "FieryGS: In-the-Wild Fire Synthesis with Physics-Integrated Gaussian Splatting",
       "published": "2026-04-30",
@@ -453,6 +493,36 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2604.09045",
+      "title": "Scene-Agnostic Object-Centric Representation Learning for 3D Gaussian Splatting",
+      "published": "2026-04-10",
+      "year": "2026",
+      "authors": "Tsuheng Hsu; Guiyu Liu; Juho Kannala; Janne Heikkilä",
+      "abstract": "Recent works on 3D scene understanding leverage 2D masks from visual foundation models (VFMs) to supervise radiance fields, enabling instance-level 3D segmentation. However, the supervision signals from foundation models are not fundamentally object-centric and often require additional mask pre/post-processing or specialized training and loss design to resolve mask identity conflicts across views. The learned identity of the 3D scene is scene-dependent, limiting generalizability across scenes. Therefore, we propose a dataset-level, object-centric supervision scheme to learn object representations in 3D Gaussian Splatting (3DGS). Building on a pre-trained slot attention-based Global Object Centric Learning (GOCL) module, we learn a scene-agnostic object codebook that provides consistent, identity-anchored representations across views and scenes. By coupling the codebook with the module's unsupervised object masks, we can directly supervise the identity features of 3D Gaussians without additional mask pre-/post-processing or explicit multi-view alignment. The learned scene-agnostic codebook enables object supervision and identification without per-scene fine-tuning or retraining. Our method thus introduces unsupervised object-centric learning (OCL) into 3DGS, yielding more structured representations and better generalization for downstream tasks such as robotic interaction, scene understanding, and cross-scene generalization.",
+      "arxiv_url": "https://arxiv.org/abs/2604.09045",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.07337",
+      "title": "From Blobs to Spokes: High-Fidelity Surface Reconstruction via Oriented Gaussians",
+      "published": "2026-04-08",
+      "year": "2026",
+      "authors": "Diego Gomez; Antoine Guédon; Nissim Maruani; Bingchen Gong; Maks Ovsjanikov",
+      "abstract": "3D Gaussian Splatting (3DGS) has revolutionized fast novel view synthesis, yet its opacity-based formulation makes surface extraction fundamentally difficult. Unlike implicit methods built on Signed Distance Fields or occupancy, 3DGS lacks a global geometric field, forcing existing approaches to resort to heuristics such as TSDF fusion of blended depth maps.   Inspired by the Objects as Volumes framework, we derive a principled occupancy field for Gaussian Splatting and show how it can be used to extract highly accurate watertight meshes of complex scenes. Our key contribution is to introduce a learnable oriented normal at each Gaussian element and to define an adapted attenuation formulation, which leads to closed-form expressions for both the normal and occupancy fields at arbitrary locations in space. We further introduce a novel consistency loss and a dedicated densification strategy to enforce Gaussians to wrap the entire surface by closing geometric holes, ensuring a complete shell of oriented primitives. We modify the differentiable rasterizer to output depth as an isosurface of our continuous model, and introduce Primal Adaptive Meshing for Region-of-Interest meshing at arbitrary resolution.   We additionally expose fundamental biases in standard surface evaluation protocols and propose two more rigorous alternatives. Overall, our method Gaussian Wrapping sets a new state-of-the-art on DTU and Tanks and Temples, producing complete, watertight meshes at a fraction of the size of concurrent work-recovering thin structures such as the notoriously elusive bicycle spokes.",
+      "arxiv_url": "https://arxiv.org/abs/2604.07337",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2604.07053",
+      "title": "AnchorSplat: Feed-Forward 3D Gaussian Splatting with 3D Geometric Priors",
+      "published": "2026-04-08",
+      "year": "2026",
+      "authors": "Xiaoxue Zhang; Xiaoxu Zheng; Yixuan Yin; Tiao Zhao; Kaihua Tang et al.",
+      "abstract": "Recent feed-forward Gaussian reconstruction models adopt a pixel-aligned formulation that maps each 2D pixel to a 3D Gaussian, entangling Gaussian representations tightly with the input images. In this paper, we propose AnchorSplat, a novel feed-forward 3DGS framework for scene-level reconstruction that represents the scene directly in 3D space. AnchorSplat introduces an anchor-aligned Gaussian representation guided by 3D geometric priors (e.g., sparse point clouds, voxels, or RGB-D point clouds), enabling a more geometry-aware renderable 3D Gaussians that is independent of image resolution and number of views. This design substantially reduces the number of required Gaussians, improving computational efficiency while enhancing reconstruction fidelity. Beyond the anchor-aligned design, we utilize a Gaussian Refiner to adjust the intermediate Gaussiansy via merely a few forward passes. Experiments on the ScanNet++ v2 NVS benchmark demonstrate the SOTA performance, outperforming previous methods with more view-consistent and substantially fewer Gaussian primitives.",
+      "arxiv_url": "https://arxiv.org/abs/2604.07053",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2604.06739",
       "title": "DOC-GS: Dual-Domain Observation and Calibration for Reliable Sparse-View Gaussian Splatting",
       "published": "2026-04-08",
@@ -490,16 +560,6 @@
       "authors": "Haomin Li; Bowen Zhu; Fangxin Liu; Zongwu Wang; Xinran Liang et al.",
       "abstract": "Neural Radiance Fields (NeRF) enables 3D scene reconstruction from several 2D images but incurs high rendering latency via its point-sampling design. 3D Gaussian Splatting (3DGS) improves on NeRF with explicit scene representation and an optimized pipeline yet still fails to meet practical real-time demands. Existing acceleration works overlook the evolving Tensor Cores of modern GPUs because 3DGS pipeline lacks General Matrix Multiplication (GEMM) operations. This paper proposes GEMM-GS, an acceleration approach utilizing tensor cores on GPUs via GEMM-friendly blending transformation. It equivalently reformulates the 3DGS blending process into a GEMM-compatible form to utilize Tensor Cores. A high-performance CUDA kernel is designed, integrating a three-stage double-buffered pipeline that overlaps computation and memory access. Extensive experiments show that GEMM-GS achieves $1.42\\times$ speedup over vanilla 3DGS and provides an additional $1.47\\times$ speedup on average when combining with existing acceleration approaches. Code is released at https://github.com/shieldforever/GEMM-GS.",
       "arxiv_url": "https://arxiv.org/abs/2604.02120",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2607.15211",
-      "title": "MAGiSt3R: Multi-Agent Feed-forward 3D Reconstruction from Monocular RGB Videos",
-      "published": "2026-07-16",
-      "year": "2026",
-      "authors": "Ziren Gong; Xiaohan Li; Fabio Tosi; Ninghui Xu; Stefano Mattoccia et al.",
-      "abstract": "This paper presents MAGiSt3R, a multi-agent 3D reconstruction framework performing reconstruction and camera tracking for monocular RGB videos at almost 10 FPS. MAGiSt3R relies on a feed-forward model from the 3R family to process RGB videos and regress local point maps, and on a merging model, MAGMA, that combines local maps at both intra-agent and inter-agent levels to obtain the final global point map. Furthermore, MAGiSt3R performs pose graph optimization to mitigate cumulative camera drift occurring along the feed-forward pipeline. We evaluate MAGiSt3R on both synthetic and real-world datasets, demonstrating its superior reconstruction and camera tracking accuracy compared to state-of-the-art approaches.",
-      "arxiv_url": "https://arxiv.org/abs/2607.15211",
       "citations": 1
     },
     {
@@ -2323,16 +2383,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2605.08713",
-      "title": "REAP: Reinforcement-Learning End-to-End Autonomous Parking with Gaussian Splatting Simulator for Real2Sim2Real Transfer",
-      "published": "2026-05-09",
-      "year": "2026",
-      "authors": "Changze Li; Zhe Chen; Shaoyu Chen; Lisen Mu; Yijian Li et al.",
-      "abstract": "In recent years, autonomous parking has made significant advances, yet parking tasks still face challenges in extreme scenarios such as mechanical and dead-end parking slots, often resulting in failures. This is mainly due to traditional parking methods adopting a multistage approach, lacking the ability to optimize the parking problem as a whole. End-to-end methods enable joint optimization across perception and planning modules to eliminate the accumulation of errors, enhancing algorithm performance in extreme scenarios. Although several end-to-end parking methods use imitation or reinforcement learning, the former is limited by data cost and distribution coverage, while the latter suffers from inefficient exploration. To address these challenges, we propose a Reinforcement learning End-to-end Autonomous Parking method (REAP). REAP employs Soft Actor-Critic (SAC) within an asymmetric reinforcement learning framework to improve training efficiency and inference performance. To accelerate model convergence, we distill the capabilities of a rule-based planner into the end-to-end network through behavior cloning. We further introduce a soft predictive collision penalty mechanism to reduce collision rates by penalizing obstacle-approaching actions. To ensure that the trained reinforcement learning network can directly transfer to real-world scenarios, we have established a Real2Sim2Real simulator. In the Real2Sim step, we use 3D Gaussian Splatting (3DGS) to transform real-world scenes into digital scenes. In the Sim2Real step, we deploy the end-to-end model onto the vehicle to bridge the Sim2Real gap. Trained in the 3DGS simulator and deployed on physical vehicles, REAP successfully parks in various types of parking spaces, especially demonstrating the feasibility of end-to-end RL parking in extremely narrow mechanical slots.",
-      "arxiv_url": "https://arxiv.org/abs/2605.08713",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2605.08699",
       "title": "Thin-Client Interactive Gaussian Adaptive Streaming over HTTP/3",
       "published": "2026-05-09",
@@ -2360,16 +2410,6 @@
       "authors": "Nandhana Sunil; Abhirami R Iyer; Avirup Mandal",
       "abstract": "Multi-view mesh reconstruction remains a core challenge in computer graphics and vision, especially for recovering high-frequency geometry from sparse observations. Recent methods such as 3D Gaussian Splatting (3DGS) and Neural Radiance Fields (NeRF) rely on post-processing for mesh extraction, thereby limiting joint optimization of geometry and appearance. Implicit Moving Least Squares (IMLS) instead enables direct conversion of point clouds into signed distance and texture fields, supporting end-to-end reconstruction and rendering. However, existing IMLS formulations use exponential kernels that struggle with high-frequency detail. We introduce a compact polynomial kernel with local support and greater flexibility, allowing better control over frequency content and improved geometric fidelity. To further enhance fine details, we incorporate stochastic regularization with Laplacian filtering. Together, these improve the preservation of high-frequency structure while maintaining stable optimization. Experiments show state-of-the-art performance in both surface reconstruction and rendering, yielding more accurate geometry and sharper visuals from multi-view data.",
       "arxiv_url": "https://arxiv.org/abs/2605.07254",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2605.07192",
-      "title": "AsyncEvGS: Asynchronous Event-Assisted Gaussian Splatting for Handheld Motion-Blurred Scenes",
-      "published": "2026-05-08",
-      "year": "2026",
-      "authors": "Jun Dai; Renbiao Jin; Bo Xu; Yutian Chen; Linning Xu et al.",
-      "abstract": "3D reconstruction methods such as 3D Gaussian Splatting (3DGS) and Neural Radiance Fields (NeRF) achieve impressive photorealism but fail when input images suffer from severe motion blur. While event cameras provide high-temporal-resolution motion cues, existing event-assisted approaches rely on low-resolution sensors and strict synchronization, limiting their practicality for handheld 3D capture on common devices, such as smartphones. We introduce a flexible, high-resolution asynchronous RGB-Event dual-camera system and a corresponding reconstruction framework. Our approach first reconstructs sharp images from the event data and then employs a cross-domain pose estimation module based on the Visual Geometry Transformer (VGGT) to obtain robust initialization for 3DGS. During optimization, we employ a structure-driven event loss and view-specific consistency regularizers to mitigate the ill-posed behavior of traditional event losses and deblurring losses, ensuring both stable and high-fidelity reconstruction. We further contribute AsyncEv-Deblur, a new high-resolution RGB-Event dataset captured with our asynchronous system. Experiments demonstrate that our method achieves state-of-the-art performance on both our challenging dataset and existing benchmarks, substantially improving reconstruction robustness under severe motion blur. Project page: https://openimaginglab.github.io/AsyncEvGS/",
-      "arxiv_url": "https://arxiv.org/abs/2605.07192",
       "citations": 0
     },
     {
@@ -2410,16 +2450,6 @@
       "authors": "Xinze Li; Bohan Yang; Pengxu Chen; Yiyuan Wang; Hongcheng Luo et al.",
       "abstract": "3D Gaussian Splatting (3DGS) has emerged as an advanced technique for real-time novel view synthesis by representing scene geometry and appearance using differentiable Gaussian primitives. However, efficiently computing precise Gaussian-tile intersections remains a critical task in the rasterization pipeline. To this end, we propose QuadBox, a method that leverages four axis-aligned bounding boxes to tightly encapsulate projected Gaussians in a discrete manner. First, we derive a geometry-aware stretching factor that enables the construction of a tile-aligned QuadBox, which covers the elliptical projection and largely excludes irrelevant tiles. Second, we introduce QPass, a single-pass tile traversal algorithm that exhaustively exploits the discrete nature of QuadBox, ensuring that the tile intersection check is performed with simple interval tests. Experiments on public datasets show that our method accelerates the rendering speed of 3DGS by 1.85$\\times$. Code is available at \\href{https://github.com/Powertony102/QuadBox}{https://github.com/Powertony102/QuadBox}.",
       "arxiv_url": "https://arxiv.org/abs/2605.04844",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2605.04730",
-      "title": "ULF-Loc: Unbiased Landmark Feature for Robust Visual Localization with 3D Gaussian Splatting",
-      "published": "2026-05-06",
-      "year": "2026",
-      "authors": "Yingdong Gu; Shaocheng Yan; Zhenjun Zhao; Yuan Kou; Jianxin Luo et al.",
-      "abstract": "Visual localization is a core technology for augmented reality and autonomous navigation. Recent methods combine the efficient rendering of 3D Gaussian Splatting (3DGS) with feature-based localization. These methods rely on direct matching between 2D query features and the 3D Gaussian feature field, but this often results in mismatches due to an inherent bias in the learned Gaussian feature. We theoretically analyze the feature learning process in 3DGS, revealing that the widely adopted $α$-blending optimization inherently introduces bias into 3D point features. This bias stems from the entanglement between individual Gaussians and their neighboring Gaussians, making the learned features unsuitable for precise matching tasks. Motivated by these findings, we propose ULF-Loc, an unbiased landmark feature framework that replaces biased feature optimization with geometry-weighted feature fusion. We further introduce keypoint-consensus landmark sampling to select reliable Gaussians and local geometric consistency verification to reject mismatches caused by rendering artifacts. On the Cambridge Landmarks dataset, ULF-Loc reduces the mean median translation error by 17\\% compared to the state-of-the-art, while achieving superior efficiency with only 1/10 the training time and 1/6 the GPU memory of STDLoc.",
-      "arxiv_url": "https://arxiv.org/abs/2605.04730",
       "citations": 0
     },
     {
@@ -2863,16 +2893,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2604.09045",
-      "title": "Scene-Agnostic Object-Centric Representation Learning for 3D Gaussian Splatting",
-      "published": "2026-04-10",
-      "year": "2026",
-      "authors": "Tsuheng Hsu; Guiyu Liu; Juho Kannala; Janne Heikkilä",
-      "abstract": "Recent works on 3D scene understanding leverage 2D masks from visual foundation models (VFMs) to supervise radiance fields, enabling instance-level 3D segmentation. However, the supervision signals from foundation models are not fundamentally object-centric and often require additional mask pre/post-processing or specialized training and loss design to resolve mask identity conflicts across views. The learned identity of the 3D scene is scene-dependent, limiting generalizability across scenes. Therefore, we propose a dataset-level, object-centric supervision scheme to learn object representations in 3D Gaussian Splatting (3DGS). Building on a pre-trained slot attention-based Global Object Centric Learning (GOCL) module, we learn a scene-agnostic object codebook that provides consistent, identity-anchored representations across views and scenes. By coupling the codebook with the module's unsupervised object masks, we can directly supervise the identity features of 3D Gaussians without additional mask pre-/post-processing or explicit multi-view alignment. The learned scene-agnostic codebook enables object supervision and identification without per-scene fine-tuning or retraining. Our method thus introduces unsupervised object-centric learning (OCL) into 3DGS, yielding more structured representations and better generalization for downstream tasks such as robotic interaction, scene understanding, and cross-scene generalization.",
-      "arxiv_url": "https://arxiv.org/abs/2604.09045",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2604.08967",
       "title": "AudioGS: Spectrogram-Based Audio Gaussian Splatting for Sound Field Reconstruction",
       "published": "2026-04-10",
@@ -2903,26 +2923,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2604.08370",
-      "title": "SurfelSplat: Learning Efficient and Generalizable Gaussian Surfel Representations for Sparse-View Surface Reconstruction",
-      "published": "2026-04-09",
-      "year": "2026",
-      "authors": "Chensheng Dai; Shengjun Zhang; Min Chen; Yueqi Duan",
-      "abstract": "3D Gaussian Splatting (3DGS) has demonstrated impressive performance in 3D scene reconstruction. Beyond novel view synthesis, it shows great potential for multi-view surface reconstruction. Existing methods employ optimization-based reconstruction pipelines that achieve precise and complete surface extractions. However, these approaches typically require dense input views and high time consumption for per-scene optimization. To address these limitations, we propose SurfelSplat, a feed-forward framework that generates efficient and generalizable pixel-aligned Gaussian surfel representations from sparse-view images. We observe that conventional feed-forward structures struggle to recover accurate geometric attributes of Gaussian surfels because the spatial frequency of pixel-aligned primitives exceeds Nyquist sampling rates. Therefore, we propose a cross-view feature aggregation module based on the Nyquist sampling theorem. Specifically, we first adapt the geometric forms of Gaussian surfels with spatial sampling rate-guided low-pass filters. We then project the filtered surfels across all input views to obtain cross-view feature correlations. By processing these correlations through a specially designed feature fusion network, we can finally regress Gaussian surfels with precise geometry. Extensive experiments on DTU reconstruction benchmarks demonstrate that our model achieves comparable results with state-of-the-art methods, and predict Gaussian surfels within 1 second, offering a 100x speedup without costly per-scene training.",
-      "arxiv_url": "https://arxiv.org/abs/2604.08370",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.07337",
-      "title": "From Blobs to Spokes: High-Fidelity Surface Reconstruction via Oriented Gaussians",
-      "published": "2026-04-08",
-      "year": "2026",
-      "authors": "Diego Gomez; Antoine Guédon; Nissim Maruani; Bingchen Gong; Maks Ovsjanikov",
-      "abstract": "3D Gaussian Splatting (3DGS) has revolutionized fast novel view synthesis, yet its opacity-based formulation makes surface extraction fundamentally difficult. Unlike implicit methods built on Signed Distance Fields or occupancy, 3DGS lacks a global geometric field, forcing existing approaches to resort to heuristics such as TSDF fusion of blended depth maps.   Inspired by the Objects as Volumes framework, we derive a principled occupancy field for Gaussian Splatting and show how it can be used to extract highly accurate watertight meshes of complex scenes. Our key contribution is to introduce a learnable oriented normal at each Gaussian element and to define an adapted attenuation formulation, which leads to closed-form expressions for both the normal and occupancy fields at arbitrary locations in space. We further introduce a novel consistency loss and a dedicated densification strategy to enforce Gaussians to wrap the entire surface by closing geometric holes, ensuring a complete shell of oriented primitives. We modify the differentiable rasterizer to output depth as an isosurface of our continuous model, and introduce Primal Adaptive Meshing for Region-of-Interest meshing at arbitrary resolution.   We additionally expose fundamental biases in standard surface evaluation protocols and propose two more rigorous alternatives. Overall, our method Gaussian Wrapping sets a new state-of-the-art on DTU and Tanks and Temples, producing complete, watertight meshes at a fraction of the size of concurrent work-recovering thin structures such as the notoriously elusive bicycle spokes.",
-      "arxiv_url": "https://arxiv.org/abs/2604.07337",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2604.07177",
       "title": "Splats under Pressure: Exploring Performance-Energy Trade-offs in Real-Time 3D Gaussian Splatting under Constrained GPU Budgets",
       "published": "2026-04-08",
@@ -2930,16 +2930,6 @@
       "authors": "Muhammad Fahim Tajwar; Arthur Wuhrlin; Bhojan Anand",
       "abstract": "We investigate the feasibility of real-time 3D Gaussian Splatting (3DGS) rasterisation on edge clients with varying Gaussian splat counts and GPU computational budgets. Instead of evaluating multiple physical devices, we adopt an emulation-based approach that approximates different GPU capability tiers on a single high-end GPU. By systematically under-clocking the GPU core frequency and applying power caps, we emulate a controlled range of floating-point performance levels that approximate different GPU capability tiers. At each point in this range, we measure frame rate, runtime behaviour, and power consumption across scenes of varying complexity, pipelines, and optimisations, enabling analysis of power-performance relationships such as FPS-power curves, energy per frame, and performance per watt. This method allows us to approximate the performance envelope of a diverse class of GPUs, from embedded and mobile-class devices to high-end consumer-grade systems.   Our objective is to explore the practical lower bounds of client-side 3DGS rasterisation and assess its potential for deployment in energy-constrained environments, including standalone headsets and thin clients. Through this analysis, we provide early insights into the performance-energy trade-offs that govern the viability of edge-deployed 3DGS systems.",
       "arxiv_url": "https://arxiv.org/abs/2604.07177",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2604.07053",
-      "title": "AnchorSplat: Feed-Forward 3D Gaussian Splatting with 3D Geometric Priors",
-      "published": "2026-04-08",
-      "year": "2026",
-      "authors": "Xiaoxue Zhang; Xiaoxu Zheng; Yixuan Yin; Tiao Zhao; Kaihua Tang et al.",
-      "abstract": "Recent feed-forward Gaussian reconstruction models adopt a pixel-aligned formulation that maps each 2D pixel to a 3D Gaussian, entangling Gaussian representations tightly with the input images. In this paper, we propose AnchorSplat, a novel feed-forward 3DGS framework for scene-level reconstruction that represents the scene directly in 3D space. AnchorSplat introduces an anchor-aligned Gaussian representation guided by 3D geometric priors (e.g., sparse point clouds, voxels, or RGB-D point clouds), enabling a more geometry-aware renderable 3D Gaussians that is independent of image resolution and number of views. This design substantially reduces the number of required Gaussians, improving computational efficiency while enhancing reconstruction fidelity. Beyond the anchor-aligned design, we utilize a Gaussian Refiner to adjust the intermediate Gaussiansy via merely a few forward passes. Experiments on the ScanNet++ v2 NVS benchmark demonstrate the SOTA performance, outperforming previous methods with more view-consistent and substantially fewer Gaussian primitives.",
-      "arxiv_url": "https://arxiv.org/abs/2604.07053",
       "citations": 0
     },
     {
@@ -3090,6 +3080,16 @@
       "authors": "Lucas Pinol",
       "abstract": "Using the effective field theory of multiple inflationary fluctuations, we present the first analytical calculation of the primordial bispectrum in which the quadratic mixing between curvature and isocurvature fluctuations is treated non-perturbatively. Building upon the operator representation of the exact linear solutions proposed in Ref.~\\cite{Huenupi:2026abj}, we derive a simpler integral representation for these mixed mode functions. We prove that all scale-invariant tree-level bispectra reduce to a single vertex diagram, which can be evaluated with a Schwinger-parameter integral over independent pre-computable leg kernels. We showcase the power of our approach by considering the cubic time-derivative interaction $\\dot{\\pic}^3$, which leads to a purely single-field, equilateral phenomenology at small mixing. On the contrary, at strong mixing the obtained bispectrum shapes decorrelate from the equilateral template and become genuinely multifield, with a large amplitude, motivating a dedicated data analysis. The squeezed limit is obtained analytically in a closed form at any dimensionless mixing strength $\\la$ for an isocurvature field of bare mass $m$ and features a cosmological collider signal set by $ν_{\\rm eff} = i \\muf=\\sqrt{9/4-m^2/H^2-\\la^2}$, with an effective mass dressed by $\\la$, as previously evidenced in numerical or semi-analytical calculations. Our results encompass the $\\la \\ll 1$ limit of usual perturbative calculations, where the amplitude of the signal is necessarily small, but they also surpass them, thus opening a new analytical window into large multifield primordial non-Gaussianities.",
       "arxiv_url": "https://arxiv.org/abs/2607.15251",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2607.15211",
+      "title": "MAGiSt3R: Multi-Agent Feed-forward 3D Reconstruction from Monocular RGB Videos",
+      "published": "2026-07-16",
+      "year": "2026",
+      "authors": "Ziren Gong; Xiaohan Li; Fabio Tosi; Ninghui Xu; Stefano Mattoccia et al.",
+      "abstract": "This paper presents MAGiSt3R, a multi-agent 3D reconstruction framework performing reconstruction and camera tracking for monocular RGB videos at almost 10 FPS. MAGiSt3R relies on a feed-forward model from the 3R family to process RGB videos and regress local point maps, and on a merging model, MAGMA, that combines local maps at both intra-agent and inter-agent levels to obtain the final global point map. Furthermore, MAGiSt3R performs pose graph optimization to mitigate cumulative camera drift occurring along the feed-forward pipeline. We evaluate MAGiSt3R on both synthetic and real-world datasets, demonstrating its superior reconstruction and camera tracking accuracy compared to state-of-the-art approaches.",
+      "arxiv_url": "https://arxiv.org/abs/2607.15211",
       "citations": 0
     },
     {
