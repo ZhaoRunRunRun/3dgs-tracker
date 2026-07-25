@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-24 05:24 UTC",
+  "updated_at": "2026-07-25 05:24 UTC",
   "total": 586,
   "papers": [
     {
@@ -93,6 +93,16 @@
       "citations": 4
     },
     {
+      "arxiv_id": "2607.19716",
+      "title": "A Unified Tokenization Framework for Pain Recognition using Heterogeneous 3D Modalities",
+      "published": "2026-07-22",
+      "year": "2026",
+      "authors": "Stefanos Gkikas; Christian Arzate Cruz; Valentina Becchetti; Muhammad Umar Khan; Alessandro Giuseppi et al.",
+      "abstract": "Pain is a complex and pervasive phenomenon affecting a large percentage of the population, and accurate assessment is essential for effective clinical management and intervention. Computational pain recognition systems enable continuous monitoring, support clinical decision-making, and help mitigate pain-related distress and functional decline. This study introduces a unified tokenization framework for heterogeneous 3D modalities in pain recognition that provides a single processing pipeline across behavioral and brain-activity 3D data, without requiring separate architectures for each modality or handcrafted inductive biases. The framework preserves spatial, temporal, and time--frequency structure while mapping diverse inputs into a shared token space. Extensive experiments show that the proposed approach effectively processes facial videos and fNIRS data in both raw-signal and spectrogram-based representations. On the AI4Pain benchmark dataset, the proposed framework achieves state-of-the-art performance while maintaining high computational efficiency and enabling real-time assessment on both GPU and CPU hardware.",
+      "arxiv_url": "https://arxiv.org/abs/2607.19716",
+      "citations": 4
+    },
+    {
       "arxiv_id": "2605.28237",
       "title": "POINav: Benchmarking and Enhancing Final-Meters Arrival in Real-World Vision-Language Navigation",
       "published": "2026-05-27",
@@ -120,6 +130,16 @@
       "authors": "Fan Zhu; Ziyu Chen; Peichen Liu; Yifan Zhao; Zhisong Xu et al.",
       "abstract": "3D Gaussian Splatting (3DGS) has significantly boosted novel view synthesis and high-fidelity scene reconstruction, expanding the potential of 3DGS-based Visual Simultaneous Localization and Mapping (SLAM) methods. However, most existing systems fail to fully exploit the underlying structural information, which limits rendering quality and often leads to inconsistent maps. To address these limitations, we propose MMD-SLAM, a structure-enhanced Visual SLAM framework that leverages the Atlanta World (AW) assumption to guide a Multi-Meta Gaussian representation for photorealistic mapping. First, we introduce a point-line fusion strategy for pose optimization, where 3D line segments are incorporated to improve tracking robustness and provide additional constraints for mapping. Second, we design a Multi-Meta Gaussian representation with dominant directions, explicitly encoding structural priors from the AW hypothesis. Finally, we propose a Gaussian evolution strategy that adapts to scene geometry and incorporates structural cues into global optimization. Extensive experiments demonstrate that these innovations enable MMD-SLAM to achieve state-of-the-art performance in both tracking accuracy and mapping quality. e.g., our method achieves a 48.56% reduction in ATE RMSE on ScanNet and a 5.71% improvement in PSNR on Replica, compared with MonoGS.",
       "arxiv_url": "https://arxiv.org/abs/2606.19874",
+      "citations": 2
+    },
+    {
+      "arxiv_id": "2605.21935",
+      "title": "Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments",
+      "published": "2026-05-21",
+      "year": "2026",
+      "authors": "Peifeng Jiang; Hong Liu; Jin Jin; Wenshuai Wang; Xia Li",
+      "abstract": "Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing semantic mapping and scene-graph systems are difficult to deploy directly in this setting because they often assume stable camera trajectories, static environments, or coarse object geometry. We introduce the Multi-modal Interactive Field (MIF), a humanoid-oriented system that integrates confidence-aware semantic 3D Gaussian Splatting, discrepancy-triggered spatial memory updates, and task-driven geometric reconstruction within a closed-loop perception-adaptation pipeline. MIF couples three fields: an uncertainty-aware 3DGS Appearance Field that suppresses gait-induced blur, a Spatial Field that maintains topological memory, and a Geometry Field that supports Interaction Pose Safety (IPS) before manipulation. A discrepancy detection score is introduced to separate locomotion-induced false-positive changes from persistent changes and updates only locally inconsistent regions. On a Unitree-G1 humanoid in a real dynamic office, MIF improves relocation success in non-static environments from 12% to 94% compared with static scene-graph memory, while reducing semantic memory footprint by 91.4% through feature distillation for practical online operation. Project page and code: https://ziya-jiang.github.io/MIF-homepage/",
+      "arxiv_url": "https://arxiv.org/abs/2605.21935",
       "citations": 2
     },
     {
@@ -200,16 +220,6 @@
       "authors": "C. Carilli; U. Iriso; B. Nikolic; N. Thyagarajan; L. Torino",
       "abstract": "We recently introduced a novel interferometric method inspired by radio astronomy, utilizing a Non-Redundant Aperture (NRA) mask with self-calibration to fully characterize the two-dimensional transverse shape of electron beams from a single-shot interferogram. This paper reports the latest advancements in this technique, including a new data analysis approach based on closure amplitudes, which removes the need for self-calibration. We also demonstrate the method's applicability to wavefront sensing, and we explore its potential for resolving beam halos superimposed on well-defined Gaussian beam core.",
       "arxiv_url": "https://arxiv.org/abs/2607.19991",
-      "citations": 2
-    },
-    {
-      "arxiv_id": "2607.19716",
-      "title": "A Unified Tokenization Framework for Pain Recognition using Heterogeneous 3D Modalities",
-      "published": "2026-07-22",
-      "year": "2026",
-      "authors": "Stefanos Gkikas; Christian Arzate Cruz; Valentina Becchetti; Muhammad Umar Khan; Alessandro Giuseppi et al.",
-      "abstract": "Pain is a complex and pervasive phenomenon affecting a large percentage of the population, and accurate assessment is essential for effective clinical management and intervention. Computational pain recognition systems enable continuous monitoring, support clinical decision-making, and help mitigate pain-related distress and functional decline. This study introduces a unified tokenization framework for heterogeneous 3D modalities in pain recognition that provides a single processing pipeline across behavioral and brain-activity 3D data, without requiring separate architectures for each modality or handcrafted inductive biases. The framework preserves spatial, temporal, and time--frequency structure while mapping diverse inputs into a shared token space. Extensive experiments show that the proposed approach effectively processes facial videos and fNIRS data in both raw-signal and spectrogram-based representations. On the AI4Pain benchmark dataset, the proposed framework achieves state-of-the-art performance while maintaining high computational efficiency and enabling real-time assessment on both GPU and CPU hardware.",
-      "arxiv_url": "https://arxiv.org/abs/2607.19716",
       "citations": 2
     },
     {
@@ -373,16 +383,6 @@
       "citations": 1
     },
     {
-      "arxiv_id": "2605.21935",
-      "title": "Learning to Evolve: Multi-modal Interactive Fields for Robust Humanoid Navigation in Dynamic Environments",
-      "published": "2026-05-21",
-      "year": "2026",
-      "authors": "Peifeng Jiang; Hong Liu; Jin Jin; Wenshuai Wang; Xia Li",
-      "abstract": "Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing semantic mapping and scene-graph systems are difficult to deploy directly in this setting because they often assume stable camera trajectories, static environments, or coarse object geometry. We introduce the Multi-modal Interactive Field (MIF), a humanoid-oriented system that integrates confidence-aware semantic 3D Gaussian Splatting, discrepancy-triggered spatial memory updates, and task-driven geometric reconstruction within a closed-loop perception-adaptation pipeline. MIF couples three fields: an uncertainty-aware 3DGS Appearance Field that suppresses gait-induced blur, a Spatial Field that maintains topological memory, and a Geometry Field that supports Interaction Pose Safety (IPS) before manipulation. A discrepancy detection score is introduced to separate locomotion-induced false-positive changes from persistent changes and updates only locally inconsistent regions. On a Unitree-G1 humanoid in a real dynamic office, MIF improves relocation success in non-static environments from 12% to 94% compared with static scene-graph memory, while reducing semantic memory footprint by 91.4% through feature distillation for practical online operation. Project page and code: https://ziya-jiang.github.io/MIF-homepage/",
-      "arxiv_url": "https://arxiv.org/abs/2605.21935",
-      "citations": 1
-    },
-    {
       "arxiv_id": "2605.20566",
       "title": "Conflict-Aware Active Perception and Control in 3D Gaussian Splatting Fields via Control Barrier Functions",
       "published": "2026-05-19",
@@ -460,6 +460,16 @@
       "authors": "Zhenyu Liang; Jack C. P. Cheng",
       "abstract": "Landslide monitoring and simulation play an important role in urban safety assessment and disaster prevention. Existing landslide simulation pipelines typically rely on digital elevation model and mesh-based representations, which are suitable for geometric analysis, but often lack visual realism. This limitation reduces their effectiveness in interactive applications, hazard communication, and public education. In this paper, we propose a UAV-based scan-to-simulation framework that bridges photorealistic scene capture and physics-based landslide simulation through 3DGS. Specifically, our pipeline includes four stages: (1) UAV-based acquisition of slope imagery, (2) reconstruction of a low-anisotropy 3DGS scene representation, (3) volumetric conversion of the target simulation region by filling the interior of the surface-based model, and (4) integration with the Material Point Method (MPM) for landslide simulation. We validate the proposed framework on a real landslide site in Hong Kong that experienced a severe landslide event. The results show that our method supports both realistic visual reconstruction and effective simulation.",
       "arxiv_url": "https://arxiv.org/abs/2605.10715",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2605.10360",
+      "title": "DySurface: Consistent 4D Surface Reconstruction via Bridging Explicit Gaussians and Implicit Functions",
+      "published": "2026-05-11",
+      "year": "2026",
+      "authors": "Minje Kim; Younghyun Noh; Jaesoon Kim; Tae-Kyun Kim",
+      "abstract": "While novel view synthesis (NVS) for dynamic scenes has seen significant progress, reconstructing temporally consistent geometric surfaces remains a challenge. Neural Radiance Fields (NeRF) and 3D Gaussian Splatting (3DGS) offer powerful dynamic scene rendering capabilities; however, relying solely on photometric optimization often leads to geometric ambiguities. This results in discontinuous surfaces, severe artifacts, and broken surfaces over time. To address these limitations, we present DySurface, a novel framework that bridges the effectiveness of explicit Gaussians with the geometric fidelity of implicit Signed Distance Functions (SDFs) in dynamic scenes. Our approach tackles the structural discrepancy between the forward deformation of 3DGS ($canonical \\rightarrow dynamic$) and the backward deformation required for volumetric SDF rendering ($dynamic \\rightarrow canonical$). Specifically, we propose the VoxGS-DSDF branch that leverages deformed Gaussians to construct a dynamic sparse voxel grid, providing explicit geometric guidance to the implicit SDF field. This explicit anchoring effectively regularizes the volumetric rendering process, significantly improving surface reconstruction quality, with watertight boundaries and detailed representations. Quantitative and qualitative experiments demonstrate that DySurface significantly outperforms state-of-the-art baselines in geometric accuracy metrics while maintaining competitive rendering performance.",
+      "arxiv_url": "https://arxiv.org/abs/2605.10360",
       "citations": 1
     },
     {
@@ -600,6 +610,26 @@
       "authors": "Hantang Li; Qiang Zhu; Xiandong Meng; Debin Zhao; Xiaopeng Fan",
       "abstract": "Sparse-view reconstruction with 3D Gaussian Splatting (3DGS) is fundamentally ill-posed due to insufficient geometric supervision, often leading to severe overfitting and the emergence of structural distortions and translucent haze-like artifacts. While existing approaches attempt to alleviate this issue via dropout-based regularization, they are largely heuristic and lack a unified understanding of artifact formation. In this paper, we revisit sparse-view 3DGS reconstruction from a new perspective and identify the core challenge as the unobservability of Gaussian primitive reliability. Unreliable Gaussians are insufficiently constrained during optimization and accumulate as haze-like degradations in rendered images. Motivated by this observation, we propose a unified Dual-domain Observation and Calibration (DOC-GS) framework that models and corrects Gaussian reliability through the synergy of optimization-domain inductive bias and observation-domain evidence. Specifically, in the optimization domain, we characterize Gaussian reliability by the degree to which each primitive is constrained during training, and instantiate this signal via a Continuous Depth-Guided Dropout (CDGD) strategy, where the dropout probability serves as an explicit proxy for primitive reliability. This imposes a smooth depth-aware inductive bias to suppress weakly constrained Gaussians and improve optimization stability. In the observation domain, we establish a connection between floater artifacts and atmospheric scattering, and leverage the Dark Channel Prior (DCP) as a structural consistency cue to identify and accumulate anomalous regions. Based on cross-view aggregated evidence, we further design a reliability-driven geometric pruning strategy to remove low-confidence Gaussians.",
       "arxiv_url": "https://arxiv.org/abs/2604.06739",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2607.21479",
+      "title": "3d-3d correspondence for knot complements with finite and large $N$",
+      "published": "2026-07-23",
+      "year": "2026",
+      "authors": "Hee-Joong Chung",
+      "abstract": "For $G=SU(N)$ at finite and large $N$, with a totally symmetric representation, we realize the homological block $F_K$ for a knot complement $S^3 \\backslash K$, given in the form of the inverted Habiro series, as a half-index of a 3d $\\mathcal{N}=2$ theory $T[M_3]$ by studying some examples, which we expect to extend to general knots. From the half-index expression, it is also possible to realize the colored HOMFLY-PT polynomial by taking a certain set of poles. Through the half-index realization, we describe a method for obtaining the $G=SU(N)$ homological block and its $a$-deformed version for $S^3 \\backslash K$ from a Habiro series expression for the colored HOMFLY-PT polynomial. We also discuss some properties of partition functions for arbitrary $N$.",
+      "arxiv_url": "https://arxiv.org/abs/2607.21479",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2607.18537",
+      "title": "State $k$-designs from Hamiltonian evolution",
+      "published": "2026-07-20",
+      "year": "2026",
+      "authors": "Shengxian Hou; Zong-Yue Hou; Zhi-Cheng Yang",
+      "abstract": "We study the generation of state $k$-designs from time evolution under a fixed Hamiltonian. Specifically, we consider the ensemble $\\mathcal{E}=\\left\\{e^{-iHt}|ψ_0\\rangle | \\ t\\sim \\mathrm{Unif}[0,T],\\, |ψ_0\\rangle\\sim \\mathcal{E}'\\right\\}$, where the initial states are sampled from an ensemble $\\mathcal{E}'$. For Hamiltonians drawn from the Gaussian unitary ensemble, we derive a simple relation between the frame potential of the evolved ensemble $\\mathcal{E}$ and that of the initial ensemble $\\mathcal{E}'$ in the large evolution time limit. This relation shows that $\\mathcal{E}$ forms an exact state $k$-design in the thermodynamic limit as long as $\\mathcal{E}'$ forms a state 1-design. Remarkably, we further show, both analytically and numerically, that time evolution under a simple nonintegrable mixed-field Ising Hamiltonian can generate approximate state $k$-designs with high precision, starting from product states in an appropriately chosen Pauli basis. We also analyze the finite-$T$ correction and find it scales as $O(1/T)$. To reduce the evolution time, we propose an $M$-step quench protocol that suppresses this correction to $O(1/T^M)$, which is also verified numerically. We then extend our analysis to unitary ensembles, deriving an analogous recursion relation for the unitary frame potential. Our results elucidate the mechanisms underlying recent proposals for generating unitary $k$-designs through sequential quantum quenches in a unified manner.",
+      "arxiv_url": "https://arxiv.org/abs/2607.18537",
       "citations": 1
     },
     {
@@ -2453,16 +2483,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2605.10360",
-      "title": "DySurface: Consistent 4D Surface Reconstruction via Bridging Explicit Gaussians and Implicit Functions",
-      "published": "2026-05-11",
-      "year": "2026",
-      "authors": "Minje Kim; Younghyun Noh; Jaesoon Kim; Tae-Kyun Kim",
-      "abstract": "While novel view synthesis (NVS) for dynamic scenes has seen significant progress, reconstructing temporally consistent geometric surfaces remains a challenge. Neural Radiance Fields (NeRF) and 3D Gaussian Splatting (3DGS) offer powerful dynamic scene rendering capabilities; however, relying solely on photometric optimization often leads to geometric ambiguities. This results in discontinuous surfaces, severe artifacts, and broken surfaces over time. To address these limitations, we present DySurface, a novel framework that bridges the effectiveness of explicit Gaussians with the geometric fidelity of implicit Signed Distance Functions (SDFs) in dynamic scenes. Our approach tackles the structural discrepancy between the forward deformation of 3DGS ($canonical \\rightarrow dynamic$) and the backward deformation required for volumetric SDF rendering ($dynamic \\rightarrow canonical$). Specifically, we propose the VoxGS-DSDF branch that leverages deformed Gaussians to construct a dynamic sparse voxel grid, providing explicit geometric guidance to the implicit SDF field. This explicit anchoring effectively regularizes the volumetric rendering process, significantly improving surface reconstruction quality, with watertight boundaries and detailed representations. Quantitative and qualitative experiments demonstrate that DySurface significantly outperforms state-of-the-art baselines in geometric accuracy metrics while maintaining competitive rendering performance.",
-      "arxiv_url": "https://arxiv.org/abs/2605.10360",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2605.10307",
       "title": "PaMoSplat: Part-Aware Motion-Guided Gaussian Splatting for Dynamic Scene Reconstruction",
       "published": "2026-05-11",
@@ -3160,16 +3180,6 @@
       "authors": "Hyunmin Cho; Jaejun Yoo; Kyong Hwan Jin",
       "abstract": "We study sinusoidal recurrence as an iterative mechanism for harmonic spectral enrichment in implicit neural representations (INRs). Our analysis reveals that sinusoidal activations induce a harmonic line spectrum, providing a spectral account of how recurrent unrolling enriches the effective spectral support. We realize this principle with a shared sinusoidal block that iteratively refines the latent representation. We empirically validate the resulting spectral behavior against feed-forward INRs, non-sinusoidal recurrent variants, and equilibrium-style sinusoidal models. Complementing this analysis, we evaluate the proposed architecture across image and 3D representation tasks. On RGB image benchmarks, our method achieves higher fidelity than feed-forward baselines with fewer parameters and fewer optimization steps, and it further transfers favorably to super-resolution, NeRF, and SDF tasks.",
       "arxiv_url": "https://arxiv.org/abs/2607.21485",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2607.21479",
-      "title": "3d-3d correspondence for knot complements with finite and large $N$",
-      "published": "2026-07-23",
-      "year": "2026",
-      "authors": "Hee-Joong Chung",
-      "abstract": "For $G=SU(N)$ at finite and large $N$, with a totally symmetric representation, we realize the homological block $F_K$ for a knot complement $S^3 \\backslash K$, given in the form of the inverted Habiro series, as a half-index of a 3d $\\mathcal{N}=2$ theory $T[M_3]$ by studying some examples, which we expect to extend to general knots. From the half-index expression, it is also possible to realize the colored HOMFLY-PT polynomial by taking a certain set of poles. Through the half-index realization, we describe a method for obtaining the $G=SU(N)$ homological block and its $a$-deformed version for $S^3 \\backslash K$ from a Habiro series expression for the colored HOMFLY-PT polynomial. We also discuss some properties of partition functions for arbitrary $N$.",
-      "arxiv_url": "https://arxiv.org/abs/2607.21479",
       "citations": 0
     },
     {
@@ -5000,16 +5010,6 @@
       "authors": "Vignesh Tirukkonda; Gautam Dasarathy",
       "abstract": "Gaussian graphical model selection is usually studied under independent sampling, but in many applications the data arise as a single trajectory of a dependent stochastic process. We study exact recovery of the graph from one trajectory of random-scan Gaussian Glauber dynamics. Existing techniques for this problem either inherit the mixing time of the chain, which can be super-polynomial in the dimension $p$ without strong assumptions, or are suboptimal in the minimum normalized edge strength $κ$. We propose two algorithms that are mixing-free and attain the $κ^{-2}$ dependence of the information-theoretic lower bounds. Both instantiate a shared dueling-neighborhood search meta-algorithm with a local statistic built directly from the update sequence. The first fits a least-squares regression at the updates of each node and recovers the graph from $\\widetilde O(pd^{2}/κ^{2})$ updates, where $d$ is the maximum degree. This algorithm's data requirement depends on a local conditioning quantity, but only logarithmically and is provably optimal even when the underlying chain mixes slowly. The second algorithm is based on counting occurences of a specific update pattern and requires $\\widetilde O(pd^{4}/κ^{2})$ updates, with no dependence on any condition number. The central technical challenge is that both statistics are built from dependent, non-stationary observations. Our analysis tackles this by demonstrating how to extract fresh Gaussian innovations from the update sequence, which yields mixing-free control of appropriate quantities. Neither the algorithms nor their analyses invoke stationarity, a spectral gap, or mixing conditions, and all guarantees hold from an arbitrary initialization.",
       "arxiv_url": "https://arxiv.org/abs/2607.18559",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2607.18537",
-      "title": "State $k$-designs from Hamiltonian evolution",
-      "published": "2026-07-20",
-      "year": "2026",
-      "authors": "Shengxian Hou; Zong-Yue Hou; Zhi-Cheng Yang",
-      "abstract": "We study the generation of state $k$-designs from time evolution under a fixed Hamiltonian. Specifically, we consider the ensemble $\\mathcal{E}=\\left\\{e^{-iHt}|ψ_0\\rangle | \\ t\\sim \\mathrm{Unif}[0,T],\\, |ψ_0\\rangle\\sim \\mathcal{E}'\\right\\}$, where the initial states are sampled from an ensemble $\\mathcal{E}'$. For Hamiltonians drawn from the Gaussian unitary ensemble, we derive a simple relation between the frame potential of the evolved ensemble $\\mathcal{E}$ and that of the initial ensemble $\\mathcal{E}'$ in the large evolution time limit. This relation shows that $\\mathcal{E}$ forms an exact state $k$-design in the thermodynamic limit as long as $\\mathcal{E}'$ forms a state 1-design. Remarkably, we further show, both analytically and numerically, that time evolution under a simple nonintegrable mixed-field Ising Hamiltonian can generate approximate state $k$-designs with high precision, starting from product states in an appropriately chosen Pauli basis. We also analyze the finite-$T$ correction and find it scales as $O(1/T)$. To reduce the evolution time, we propose an $M$-step quench protocol that suppresses this correction to $O(1/T^M)$, which is also verified numerically. We then extend our analysis to unitary ensembles, deriving an analogous recursion relation for the unitary frame potential. Our results elucidate the mechanisms underlying recent proposals for generating unitary $k$-designs through sequential quantum quenches in a unified manner.",
-      "arxiv_url": "https://arxiv.org/abs/2607.18537",
       "citations": 0
     },
     {
