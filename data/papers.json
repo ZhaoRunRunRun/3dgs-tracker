@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-31 05:40 UTC",
+  "updated_at": "2026-08-01 05:33 UTC",
   "total": 592,
   "papers": [
     {
@@ -10,7 +10,7 @@
       "authors": "Team HY-World; Chenjie Cao; Xuhui Zuo; Zhenwei Wang; Yisu Zhang et al.",
       "abstract": "We introduce HY-World 2.0, a multi-modal world model framework that advances our prior project HY-World 1.0. HY-World 2.0 accommodates diverse input modalities, including text prompts, single-view images, multi-view images, and videos, and produces 3D world representations. With text or single-view image inputs, the model performs world generation, synthesizing high-fidelity, navigable 3D Gaussian Splatting (3DGS) scenes. This is achieved through a four-stage method: a) Panorama Generation with HY-Pano 2.0, b) Trajectory Planning with WorldNav, c) World Expansion with WorldStereo 2.0, and d) World Composition with WorldMirror 2.0. Specifically, we introduce key innovations to enhance panorama fidelity, enable 3D scene understanding and planning, and upgrade WorldStereo, our keyframe-based view generation model with consistent memory. We also upgrade WorldMirror, a feed-forward model for universal 3D prediction, by refining model architecture and learning strategy, enabling world reconstruction from multi-view images or videos. Also, we introduce WorldLens, a high-performance 3DGS rendering platform featuring a flexible engine-agnostic architecture, automatic IBL lighting, efficient collision detection, and training-rendering co-design, enabling interactive exploration of 3D worlds with character support. Extensive experiments demonstrate that HY-World 2.0 achieves state-of-the-art performance on several benchmarks among open-source approaches, delivering results comparable to the closed-source model Marble. We release all model weights, code, and technical details to facilitate reproducibility and support further research on 3D world models.",
       "arxiv_url": "https://arxiv.org/abs/2604.14268",
-      "citations": 18
+      "citations": 19
     },
     {
       "arxiv_id": "2604.11142",
@@ -130,6 +130,16 @@
       "authors": "Peifeng Jiang; Hong Liu; Jin Jin; Wenshuai Wang; Xia Li",
       "abstract": "Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing semantic mapping and scene-graph systems are difficult to deploy directly in this setting because they often assume stable camera trajectories, static environments, or coarse object geometry. We introduce the Multi-modal Interactive Field (MIF), a humanoid-oriented system that integrates confidence-aware semantic 3D Gaussian Splatting, discrepancy-triggered spatial memory updates, and task-driven geometric reconstruction within a closed-loop perception-adaptation pipeline. MIF couples three fields: an uncertainty-aware 3DGS Appearance Field that suppresses gait-induced blur, a Spatial Field that maintains topological memory, and a Geometry Field that supports Interaction Pose Safety (IPS) before manipulation. A discrepancy detection score is introduced to separate locomotion-induced false-positive changes from persistent changes and updates only locally inconsistent regions. On a Unitree-G1 humanoid in a real dynamic office, MIF improves relocation success in non-static environments from 12% to 94% compared with static scene-graph memory, while reducing semantic memory footprint by 91.4% through feature distillation for practical online operation. Project page and code: https://ziya-jiang.github.io/MIF-homepage/",
       "arxiv_url": "https://arxiv.org/abs/2605.21935",
+      "citations": 2
+    },
+    {
+      "arxiv_id": "2605.20566",
+      "title": "Conflict-Aware Active Perception and Control in 3D Gaussian Splatting Fields via Control Barrier Functions",
+      "published": "2026-05-19",
+      "year": "2026",
+      "authors": "Amirhossein Mollaei Khass; Athanasios Cosse; Vivek Pandey; Nader Motee",
+      "abstract": "Active perception in uncertain environments requires robots to navigate safely while acquiring informative observations to reduce map uncertainty. These objectives inherently conflict, as informative viewpoints often lie near uncertain regions with higher collision risk. To address this challenge, we develop a conflict-aware active perception and control framework for robotic systems operating in environments represented by 3D Gaussian Splatting (3DGS). Safety is enforced using a Control Barrier Function (CBF) derived from an Average Value-at-Risk AV@R collision-risk metric that accounts for geometric uncertainty and guarantees forward invariance of a safe set. To improve perception, we propose a risk-aware Expected Information Gain (EIG) formulation for selecting the next-best-view and introduce perception barrier functions that align the camera orientation with the local information-ascent direction. To obtain a tractable formulation for these conflicting safety and perception objectives, we propose a unified safety-critical, perception-aware quadratic program that enforces safety as a hard constraint while relaxing perception constraints through slack variables. Simulation results demonstrate that the proposed method improves both safety and information acquisition compared to existing 3DGS-based approaches.",
+      "arxiv_url": "https://arxiv.org/abs/2605.20566",
       "citations": 2
     },
     {
@@ -363,16 +373,6 @@
       "citations": 1
     },
     {
-      "arxiv_id": "2605.20566",
-      "title": "Conflict-Aware Active Perception and Control in 3D Gaussian Splatting Fields via Control Barrier Functions",
-      "published": "2026-05-19",
-      "year": "2026",
-      "authors": "Amirhossein Mollaei Khass; Athanasios Cosse; Vivek Pandey; Nader Motee",
-      "abstract": "Active perception in uncertain environments requires robots to navigate safely while acquiring informative observations to reduce map uncertainty. These objectives inherently conflict, as informative viewpoints often lie near uncertain regions with higher collision risk. To address this challenge, we develop a conflict-aware active perception and control framework for robotic systems operating in environments represented by 3D Gaussian Splatting (3DGS). Safety is enforced using a Control Barrier Function (CBF) derived from an Average Value-at-Risk AV@R collision-risk metric that accounts for geometric uncertainty and guarantees forward invariance of a safe set. To improve perception, we propose a risk-aware Expected Information Gain (EIG) formulation for selecting the next-best-view and introduce perception barrier functions that align the camera orientation with the local information-ascent direction. To obtain a tractable formulation for these conflicting safety and perception objectives, we propose a unified safety-critical, perception-aware quadratic program that enforces safety as a hard constraint while relaxing perception constraints through slack variables. Simulation results demonstrate that the proposed method improves both safety and information acquisition compared to existing 3DGS-based approaches.",
-      "arxiv_url": "https://arxiv.org/abs/2605.20566",
-      "citations": 1
-    },
-    {
       "arxiv_id": "2605.20150",
       "title": "TideGS: Scalable Training of Over One Billion 3D Gaussian Splatting Primitives via Out-of-Core Optimization",
       "published": "2026-05-19",
@@ -530,6 +530,16 @@
       "authors": "Iris Zheng; Guojun Tang; Alexander Doronin; Paul Teal; Fang-Lue Zhang",
       "abstract": "We present SSD-GS, a physically-based relighting framework built upon 3D Gaussian Splatting (3DGS) that achieves high-quality reconstruction and photorealistic relighting under novel lighting conditions. In physically-based relighting, accurately modeling light-material interactions is essential for faithful appearance reproduction. However, existing 3DGS-based relighting methods adopt coarse shading decompositions, either modeling only diffuse and specular reflections or relying on neural networks to approximate shadows and scattering. This leads to limited fidelity and poor physical interpretability, particularly for anisotropic metals and translucent materials. To address these limitations, SSD-GS decomposes reflectance into four components: diffuse, specular, shadow, and subsurface scattering. We introduce a learnable dipole-based scattering module for subsurface transport, an occlusion-aware shadow formulation that integrates visibility estimates with a refinement network, and an enhanced specular component with an anisotropic Fresnel-based model. Through progressive integration of all components during training, SSD-GS effectively disentangles lighting and material properties, even for unseen illumination conditions, as demonstrated on the challenging OLAT dataset. Experiments demonstrate superior quantitative and perceptual relighting quality compared to prior methods and pave the way for downstream tasks, including controllable light source editing and interactive scene relighting. The source code is available at: https://github.com/irisfreesiri/SSD-GS.",
       "arxiv_url": "https://arxiv.org/abs/2604.13333",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2607.27432",
+      "title": "Dynamical Low-Rank Filters for Data Assimilation",
+      "published": "2026-07-29",
+      "year": "2026",
+      "authors": "Yoshihito Kazashi; Youssef Marzouk; Fabio Nobile; Fabio Zoccolan",
+      "abstract": "We propose dynamical low-rank (DLR) type filters for data-assimilation problems based on stochastic differential equations (SDEs). In detail, first we derive a DLRA filter for minimizing jointly the mean and covariance error, as well as a strategy to efficiently include the relevant orthogonal directions. This last approach allows the main subspace to evolve also according to the observation operator. Those procedures naturally extend to a Kalman-Bucy type filter when dealing with linear drift, and to ensemble methods, too, resulting also suitable for problems described by nonlinear drift and possible non-Gaussian distribution. Moreover, we further propose a preliminary particle-type DLRA filter that shows potentiality in nonlinear settings. Numerical simulations show the efficacy of these procedures in relevant applications, opening up to further studies in these filtering directions.",
+      "arxiv_url": "https://arxiv.org/abs/2607.27432",
       "citations": 1
     },
     {
@@ -3734,7 +3744,7 @@
     },
     {
       "arxiv_id": "2607.27540",
-      "title": "Gaussian non relativistic spontaneusly stochastic hydrodynamica",
+      "title": "Gaussian non relativistic spontaneously stochastic hydrodynamics",
       "published": "2026-07-30",
       "year": "2026",
       "authors": "David Montenegro; Giorgio Torrieri",
@@ -3780,16 +3790,6 @@
       "authors": "Francesco Anna Mele; Giuseppe Catalano; Marco Fanizza; Vittorio Giovannetti; Ludovico Lami",
       "abstract": "The quantum capacity of the bosonic thermal attenuator, which is given by the regularization of its coherent information, is unknown. The seminal work of Holevo and Werner established in 1999 the standard one-use lower bound obtained from input thermal states. We first prove that this long-standing lower bound is the exact supremum over all single-mode Gaussian states and then show that, crucially, a non-Gaussian state can do better. As a consequence, we prove positivity of the quantum capacity in a parameter region where the channel is not antidegradable, yet its coherent information optimized over single-mode Gaussian states vanishes. For example, with one thermal photon in the environment and at transmissivity $η=0.8$, the coherent information is non-positive for every single-mode Gaussian input. We give an explicit rank-two non-Gaussian state, supported on only six Fock levels, whose coherent information is certified to be at least $4.7\\times10^{-4}$ qubits per channel use. This short witness is far from numerically optimal: a numerical optimization over fixed non-Gaussian families reaches at least $8.4\\times 10^{-3}$ qubits per channel use at the same point. More generally, at $ν=1$, using non-Gaussian inputs we certify positivity of the coherent information, and therefore of the quantum capacity, down to $η=0.7841$; by contrast, the channel is antidegradable, and hence has zero quantum capacity, for $η\\leq0.75$. Overall, our work identifies new high-noise regimes in which bosonic quantum communication is possible.",
       "arxiv_url": "https://arxiv.org/abs/2607.27449",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2607.27432",
-      "title": "Dynamical Low-Rank Filters for Data Assimilation",
-      "published": "2026-07-29",
-      "year": "2026",
-      "authors": "Yoshihito Kazashi; Youssef Marzouk; Fabio Nobile; Fabio Zoccolan",
-      "abstract": "We propose dynamical low-rank (DLR) type filters for data-assimilation problems based on stochastic differential equations (SDEs). In detail, first we derive a DLRA filter for minimizing jointly the mean and covariance error, as well as a strategy to efficiently include the relevant orthogonal directions. This last approach allows the main subspace to evolve also according to the observation operator. Those procedures naturally extend to a Kalman-Bucy type filter when dealing with linear drift, and to ensemble methods, too, resulting also suitable for problems described by nonlinear drift and possible non-Gaussian distribution. Moreover, we further propose a preliminary particle-type DLRA filter that shows potentiality in nonlinear settings. Numerical simulations show the efficacy of these procedures in relevant applications, opening up to further studies in these filtering directions.",
-      "arxiv_url": "https://arxiv.org/abs/2607.27432",
       "citations": 0
     },
     {
