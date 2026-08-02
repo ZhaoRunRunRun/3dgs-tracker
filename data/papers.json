@@ -1,17 +1,7 @@
 {
-  "updated_at": "2026-08-01 05:33 UTC",
+  "updated_at": "2026-08-02 06:05 UTC",
   "total": 592,
   "papers": [
-    {
-      "arxiv_id": "2604.14268",
-      "title": "HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds",
-      "published": "2026-04-15",
-      "year": "2026",
-      "authors": "Team HY-World; Chenjie Cao; Xuhui Zuo; Zhenwei Wang; Yisu Zhang et al.",
-      "abstract": "We introduce HY-World 2.0, a multi-modal world model framework that advances our prior project HY-World 1.0. HY-World 2.0 accommodates diverse input modalities, including text prompts, single-view images, multi-view images, and videos, and produces 3D world representations. With text or single-view image inputs, the model performs world generation, synthesizing high-fidelity, navigable 3D Gaussian Splatting (3DGS) scenes. This is achieved through a four-stage method: a) Panorama Generation with HY-Pano 2.0, b) Trajectory Planning with WorldNav, c) World Expansion with WorldStereo 2.0, and d) World Composition with WorldMirror 2.0. Specifically, we introduce key innovations to enhance panorama fidelity, enable 3D scene understanding and planning, and upgrade WorldStereo, our keyframe-based view generation model with consistent memory. We also upgrade WorldMirror, a feed-forward model for universal 3D prediction, by refining model architecture and learning strategy, enabling world reconstruction from multi-view images or videos. Also, we introduce WorldLens, a high-performance 3DGS rendering platform featuring a flexible engine-agnostic architecture, automatic IBL lighting, efficient collision detection, and training-rendering co-design, enabling interactive exploration of 3D worlds with character support. Extensive experiments demonstrate that HY-World 2.0 achieves state-of-the-art performance on several benchmarks among open-source approaches, delivering results comparable to the closed-source model Marble. We release all model weights, code, and technical details to facilitate reproducibility and support further research on 3D world models.",
-      "arxiv_url": "https://arxiv.org/abs/2604.14268",
-      "citations": 19
-    },
     {
       "arxiv_id": "2604.11142",
       "title": "Naka-GS: A Bionics-inspired Dual-Branch Naka Correction and Progressive Point Pruning for Low-Light 3DGS",
@@ -21,26 +11,6 @@
       "abstract": "Low-light conditions severely hinder 3D restoration and reconstruction by degrading image visibility, introducing color distortions, and contaminating geometric priors for downstream optimization. We present NAKA-GS, a bionics-inspired framework for low-light 3D Gaussian Splatting that jointly improves photometric restoration and geometric initialization. Our method starts with a Naka-guided chroma-correction network, which combines physics-prior low-light enhancement, dual-branch input modeling, frequency-decoupled correction, and mask-guided optimization to suppress bright-region chromatic artifacts and edge-structure errors. The enhanced images are then fed into a feed-forward multi-view reconstruction model to produce dense scene priors. To further improve Gaussian initialization, we introduce a lightweight Point Preprocessing Module (PPM) that performs coordinate alignment, voxel pooling, and distance-adaptive progressive pruning to remove noisy and redundant points while preserving representative structures. Without introducing heavy inference overhead, NAKA-GS improves restoration quality, training stability, and optimization efficiency for low-light 3D reconstruction. The proposed method was presented in the NTIRE 3D Restoration and Reconstruction (3DRR) Challenge, and outperformed the baseline methods by a large margin. The code is available at https://github.com/RunyuZhu/Naka-GS",
       "arxiv_url": "https://arxiv.org/abs/2604.11142",
       "citations": 9
-    },
-    {
-      "arxiv_id": "2604.13589",
-      "title": "Dehaze-then-Splat: Generative Dehazing with Physics-Informed 3D Gaussian Splatting for Smoke-Free Novel View Synthesis",
-      "published": "2026-04-15",
-      "year": "2026",
-      "authors": "Boss Chen; Hanqing Wang",
-      "abstract": "We present Dehaze-then-Splat, a two-stage pipeline for multi-view smoke removal and novel view synthesis developed for Track~2 of the NTIRE 2026 3D Restoration and Reconstruction Challenge. In the first stage, we produce pseudo-clean training images via per-frame generative dehazing using Nano Banana Pro, followed by brightness normalization. In the second stage, we train 3D Gaussian Splatting (3DGS) with physics-informed auxiliary losses -- depth supervision via Pearson correlation with pseudo-depth, dark channel prior regularization, and dual-source gradient matching -- that compensate for cross-view inconsistencies inherent in frame-wise generative processing. We identify a fundamental tension in dehaze-then-reconstruct pipelines: per-image restoration quality does not guarantee multi-view consistency, and such inconsistency manifests as blurred renders and structural instability in downstream 3D reconstruction.Our analysis shows that MCMC-based densification with early stopping, combined with depth and haze-suppression priors, effectively mitigates these artifacts. On the Akikaze validation scene, our pipeline achieves 20.98\\,dB PSNR and 0.683 SSIM for novel view synthesis, a +1.50\\,dB improvement over the unregularized baseline.",
-      "arxiv_url": "https://arxiv.org/abs/2604.13589",
-      "citations": 8
-    },
-    {
-      "arxiv_id": "2604.15239",
-      "title": "TokenGS: Decoupling 3D Gaussian Prediction from Pixels with Learnable Tokens",
-      "published": "2026-04-16",
-      "year": "2026",
-      "authors": "Jiawei Ren; Michal Jan Tyszkiewicz; Jiahui Huang; Zan Gojcic",
-      "abstract": "In this work, we revisit several key design choices of modern Transformer-based approaches for feed-forward 3D Gaussian Splatting (3DGS) prediction. We argue that the common practice of regressing Gaussian means as depths along camera rays is suboptimal, and instead propose to directly regress 3D mean coordinates using only a self-supervised rendering loss. This formulation allows us to move from the standard encoder-only design to an encoder-decoder architecture with learnable Gaussian tokens, thereby unbinding the number of predicted primitives from input image resolution and number of views. Our resulting method, TokenGS, demonstrates improved robustness to pose noise and multiview inconsistencies, while naturally supporting efficient test-time optimization in token space without degrading learned priors. TokenGS achieves state-of-the-art feed-forward reconstruction performance on both static and dynamic scenes, producing more regularized geometry and more balanced 3DGS distribution, while seamlessly recovering emergent scene attributes such as static-dynamic decomposition and scene flow.",
-      "arxiv_url": "https://arxiv.org/abs/2604.15239",
-      "citations": 5
     },
     {
       "arxiv_id": "2607.25817",
@@ -163,6 +133,16 @@
       "citations": 2
     },
     {
+      "arxiv_id": "2605.04730",
+      "title": "ULF-Loc: Unbiased Landmark Feature for Robust Visual Localization with 3D Gaussian Splatting",
+      "published": "2026-05-06",
+      "year": "2026",
+      "authors": "Yingdong Gu; Shaocheng Yan; Zhenjun Zhao; Yuan Kou; Jianxin Luo et al.",
+      "abstract": "Visual localization is a core technology for augmented reality and autonomous navigation. Recent methods combine the efficient rendering of 3D Gaussian Splatting (3DGS) with feature-based localization. These methods rely on direct matching between 2D query features and the 3D Gaussian feature field, but this often results in mismatches due to an inherent bias in the learned Gaussian feature. We theoretically analyze the feature learning process in 3DGS, revealing that the widely adopted $α$-blending optimization inherently introduces bias into 3D point features. This bias stems from the entanglement between individual Gaussians and their neighboring Gaussians, making the learned features unsuitable for precise matching tasks. Motivated by these findings, we propose ULF-Loc, an unbiased landmark feature framework that replaces biased feature optimization with geometry-weighted feature fusion. We further introduce keypoint-consensus landmark sampling to select reliable Gaussians and local geometric consistency verification to reject mismatches caused by rendering artifacts. On the Cambridge Landmarks dataset, ULF-Loc reduces the mean median translation error by 17\\% compared to the state-of-the-art, while achieving superior efficiency with only 1/10 the training time and 1/6 the GPU memory of STDLoc.",
+      "arxiv_url": "https://arxiv.org/abs/2605.04730",
+      "citations": 2
+    },
+    {
       "arxiv_id": "2604.26238",
       "title": "EnerGS: Energy-Based Gaussian Splatting with Partial Geometric Priors",
       "published": "2026-04-29",
@@ -203,16 +183,6 @@
       "citations": 2
     },
     {
-      "arxiv_id": "2607.25311",
-      "title": "Parametrized beyond-Teukolsky framework in the time domain",
-      "published": "2026-07-28",
-      "year": "2026",
-      "authors": "Ciro De Simone; Sebastian H. Völkel; Kostas D. Kokkotas; Salvatore Capozziello",
-      "abstract": "Modifications to General Relativity can significantly alter the perturbative response of black holes, leaving imprints on quasinormal-mode spectra, waveform amplitudes and phases, and late-time tails. The parametrized beyond-Teukolsky framework was introduced to capture possible deviations from Kerr dynamics, but the ringdown has so far only been explored as an eigenvalue problem. We present the first time-domain implementation of this framework and perform (2+1)-dimensional scattering experiments with Gaussian wave packets. This approach provides the full linear evolution of the perturbation, from the initial prompt response through the ringdown and into the late-time regime. Using frequency-domain eigenvalue results as benchmarks, we find excellent agreement for low azimuthal numbers, while higher azimuthal numbers are affected by mode mixing, which limits the precision of the extracted modes. We further use the time-domain waveforms to estimate quadratic and mixed coefficients within the linearized modified-potential model, providing a diagnostic for the regime of validity of the linear approximation. Beyond mode frequencies, we show that the deformation parameters can strongly affect the ringdown amplitude and phase, with trends that can be understood from the near-horizon structure of the modified potential. We also analyze the late- time behavior, finding that near-horizon deformations leave the tail exponent unchanged but can substantially shift the onset of the power-law decay. These results demonstrate that time-domain evolutions provide a complementary and flexible framework for testing parametrized deviations from General Relativity in black-hole perturbation theory.",
-      "arxiv_url": "https://arxiv.org/abs/2607.25311",
-      "citations": 2
-    },
-    {
       "arxiv_id": "2607.11673",
       "title": "ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space",
       "published": "2026-07-13",
@@ -230,16 +200,6 @@
       "authors": "Gaoxiang Jia; Vikram Appia; Junzhou Huang; Xinlei Wang",
       "abstract": "3D Gaussian splatting (3DGS) is a strong representation for real-time novel-view synthesis, but its standard training pipeline relies on point estimates and hand-tuned heuristics, providing no native uncertainty or principled complexity control. This is most limiting under sparse views or fixed acquisition budgets, where a model must identify weakly supported geometry and select informative views. We introduce a rendering-aware Bayesian 3DGS framework that tracks Gaussian geometry with a Normal-Inverse-Wishart posterior over means and covariances using renderer-derived surrogate summaries. An optional Dirichlet-process extension adds a probabilistic component-usage signal, and the training schedule makes the closed-form versus approximate inference boundary explicit. Re-rendering posterior geometry samples yields native predictive uncertainty for interval calibration and active view selection. In a fixed-budget 16-to-32 active-view task, native NIW acquisition improves PSNR by +0.453 dB and LPIPS by -0.0146 over a scoring-only 3-member standard-ensemble baseline, winning 29/39 scene-seed pairs and 10/13 scene means; it also improves over PPU-style (+0.355 dB) and NIW-proxy (+0.401 dB) acquisition. NIW native intervals reduce 95% coverage error by about 17x relative to a shared proxy (0.046 vs. 0.796) and are about 10x closer to nominal coverage than a 3-member deep ensemble (0.047 vs. 0.454) at roughly one-third the training cost. As a reconstruction compatibility check, paired NIW-vs-standard analysis over 39 scene-seed runs yields +0.030 dB PSNR with 1.6% additional training time. These results position Bayesian 3DGS as a practical probabilistic scene representation for decision-facing tasks such as active view selection.",
       "arxiv_url": "https://arxiv.org/abs/2607.05522",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2607.01803",
-      "title": "PixGS: Pixel-Space Diffusion for Direct 3D Gaussian Splat Generation",
-      "published": "2026-07-02",
-      "year": "2026",
-      "authors": "Cao Duy; Phong Nguyen-Ha",
-      "abstract": "Recent advances in 3D content generation from text or images have achieved impressive results, yet view inconsistency from 2D generators and the scarcity of high-quality 3D data remain significant bottlenecks. Existing solutions typically adapt large-scale pre-trained text-to-image latent diffusion models to generate 3D Gaussian Splats (3DGS). However, these approaches often rely on training complex cascade pipelines that are computationally expensive and scalability-limited. Most critically, the quality of generated 3D assets is inherently constrained by each component capacity and compressed latent space, leading to decoding artifacts and accumulated errors. To address these limitations, we propose PixGS, a single-stage pipeline for direct high-quality 3DGS generation, which leverages recent advances in pixel-space diffusion to bypass lossy latent compression while still benefiting from the vast 2D generative priors. By directly denoising 3D Gaussian attributes at each timestep, our method enables precise, splat-level regularization of both appearance and geometry. Furthermore, we introduce a comprehensive supervision strategy that incorporates surface normals, depth, and high-frequency structural information, which is often overlooked in prior works. Experiments demonstrate that PixGS outperforms current state-of-the-art methods while maintaining a fast inference speed (1s on a single A100 GPU), offering a robust and efficient alternative to multi-stage generation pipelines.",
-      "arxiv_url": "https://arxiv.org/abs/2607.01803",
       "citations": 1
     },
     {
@@ -463,16 +423,6 @@
       "citations": 1
     },
     {
-      "arxiv_id": "2605.04730",
-      "title": "ULF-Loc: Unbiased Landmark Feature for Robust Visual Localization with 3D Gaussian Splatting",
-      "published": "2026-05-06",
-      "year": "2026",
-      "authors": "Yingdong Gu; Shaocheng Yan; Zhenjun Zhao; Yuan Kou; Jianxin Luo et al.",
-      "abstract": "Visual localization is a core technology for augmented reality and autonomous navigation. Recent methods combine the efficient rendering of 3D Gaussian Splatting (3DGS) with feature-based localization. These methods rely on direct matching between 2D query features and the 3D Gaussian feature field, but this often results in mismatches due to an inherent bias in the learned Gaussian feature. We theoretically analyze the feature learning process in 3DGS, revealing that the widely adopted $α$-blending optimization inherently introduces bias into 3D point features. This bias stems from the entanglement between individual Gaussians and their neighboring Gaussians, making the learned features unsuitable for precise matching tasks. Motivated by these findings, we propose ULF-Loc, an unbiased landmark feature framework that replaces biased feature optimization with geometry-weighted feature fusion. We further introduce keypoint-consensus landmark sampling to select reliable Gaussians and local geometric consistency verification to reject mismatches caused by rendering artifacts. On the Cambridge Landmarks dataset, ULF-Loc reduces the mean median translation error by 17\\% compared to the state-of-the-art, while achieving superior efficiency with only 1/10 the training time and 1/6 the GPU memory of STDLoc.",
-      "arxiv_url": "https://arxiv.org/abs/2605.04730",
-      "citations": 1
-    },
-    {
       "arxiv_id": "2605.00177",
       "title": "FieryGS: In-the-Wild Fire Synthesis with Physics-Integrated Gaussian Splatting",
       "published": "2026-04-30",
@@ -513,26 +463,6 @@
       "citations": 1
     },
     {
-      "arxiv_id": "2604.16540",
-      "title": "PoInit-of-View: Poisoning Initialization of Views Transfers Across Multiple 3D Reconstruction Systems",
-      "published": "2026-04-17",
-      "year": "2026",
-      "authors": "Weijie Wang; Songlong Xing; Zhengyu Zhao; Nicu Sebe; Bruno Lepri",
-      "abstract": "Poisoning input views of 3D reconstruction systems has been recently studied. However, we identify that existing studies simply backpropagate adversarial gradients through the 3D reconstruction pipeline as a whole, without uncovering the new vulnerability rooted in specific modules of the 3D reconstruction pipeline. In this paper, we argue that the structure-from-motion (SfM) initialization, as the geometric core of many widely used reconstruction systems, can be targeted to achieve transferable poisoning effects across diverse 3D reconstruction systems. To this end, we propose PoInit-of-View, which optimizes adversarial perturbations to intentionally introduce cross-view gradient inconsistencies at projections of corresponding 3D points. These inconsistencies disrupt keypoint detection and feature matching, thereby corrupting pose estimation and triangulation within SfM, eventually resulting in low-quality rendered views. We also provide a theoretical analysis that connects cross-view inconsistency to correspondence collapse. Experimental results demonstrate the effectiveness of our PoInit-of-View on diverse 3D reconstruction systems and datasets, surpassing the single-view baseline by 25.1% in PSNR and 16.5% in SSIM in black-box transfer settings, such as 3DGS to NeRF.",
-      "arxiv_url": "https://arxiv.org/abs/2604.16540",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2604.13333",
-      "title": "SSD-GS: Scattering and Shadow Decomposition for Relightable 3D Gaussian Splatting",
-      "published": "2026-04-14",
-      "year": "2026",
-      "authors": "Iris Zheng; Guojun Tang; Alexander Doronin; Paul Teal; Fang-Lue Zhang",
-      "abstract": "We present SSD-GS, a physically-based relighting framework built upon 3D Gaussian Splatting (3DGS) that achieves high-quality reconstruction and photorealistic relighting under novel lighting conditions. In physically-based relighting, accurately modeling light-material interactions is essential for faithful appearance reproduction. However, existing 3DGS-based relighting methods adopt coarse shading decompositions, either modeling only diffuse and specular reflections or relying on neural networks to approximate shadows and scattering. This leads to limited fidelity and poor physical interpretability, particularly for anisotropic metals and translucent materials. To address these limitations, SSD-GS decomposes reflectance into four components: diffuse, specular, shadow, and subsurface scattering. We introduce a learnable dipole-based scattering module for subsurface transport, an occlusion-aware shadow formulation that integrates visibility estimates with a refinement network, and an enhanced specular component with an anisotropic Fresnel-based model. Through progressive integration of all components during training, SSD-GS effectively disentangles lighting and material properties, even for unseen illumination conditions, as demonstrated on the challenging OLAT dataset. Experiments demonstrate superior quantitative and perceptual relighting quality compared to prior methods and pave the way for downstream tasks, including controllable light source editing and interactive scene relighting. The source code is available at: https://github.com/irisfreesiri/SSD-GS.",
-      "arxiv_url": "https://arxiv.org/abs/2604.13333",
-      "citations": 1
-    },
-    {
       "arxiv_id": "2607.27432",
       "title": "Dynamical Low-Rank Filters for Data Assimilation",
       "published": "2026-07-29",
@@ -560,16 +490,6 @@
       "authors": "Tresor Y. Koffi; Youssef Mourchid; Mohammed Hindawi; Yohan Dupuis",
       "abstract": "Fall represents a significant risk of accidental death among individuals aged over 65, presenting a global health concern. A fall is defined as any event where a person loses balance and moves to an off-position, which may or may not result in an impact where the person hits the ground. While fall detection systems have achieved good results in general, impact detection within falls remains challenging. This study proposes an efficient methodology for accurately detecting impacts within fall events by incorporating 3D joints skeleton data treated as a graph using Spatio-Temporal Graph Convolutional Networks (STGCN), Gated Recurrent Unit (GRU), and Bidirectional Long Short-Term Memory (BiLSTM) layers. By pinpointing impact moments, our approach enhances precision by distinguishing between false falls and actual impacts, contributing to better healthcare resource allocation. Our methodology, evaluated using the improved 3D skeletons UP-Fall dataset, achieves accuracy exceeding 90\\% across various fall scenarios. We have made this improved dataset publicly available at https://zenodo.org/records/12773013 to facilitate further research.",
       "arxiv_url": "https://arxiv.org/abs/2607.25710",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2607.24229",
-      "title": "First high-contrast results on THD2 testbed after infrastructure upgrade",
-      "published": "2026-07-27",
-      "year": "2026",
-      "authors": "Iva Laginja; Pierre Baudoz; Rémi Soummer; Emiel H. Por; Axel Potier et al.",
-      "abstract": "We present the first scientific results delivered by the upgraded THD2 high-contrast imaging testbed. We report two advances enabled by its improved stability and broadband performance. First, for the Roman Space Telescope, we demonstrate that Gaussian-shaped diversity probes outperform the baseline sinc probes by reducing non-linearities, supporting higher probe amplitudes, and improving electric field estimation efficiency. These results have led to their prioritization as an enhanced early observation for Roman. Second, within ESA's SUPPPPRESS project, we test new polarization-independent Vector Vortex Coronagraphs and design them to high-contrast performance approaching 1e-10 over a 20% bandwidth. We assess their behavior in narrow- and broadband light with active focal-plane wavefront control. Together, these results show how THD2 strengthens Europe's capability in high-contrast imaging, providing a unique platform reaching contrasts of 1e-8 to 1e-9 for developing next-generation coronagraphic technologies.",
-      "arxiv_url": "https://arxiv.org/abs/2607.24229",
       "citations": 1
     },
     {
@@ -1210,6 +1130,16 @@
       "authors": "Ziheng Xu; Qingfeng Li; Xuefeng Liu; Chen Chen; Jianwei Niu",
       "abstract": "Recent advances in 3D Gaussian Splatting (3DGS) have enabled significant progress in dense dynamic Simultaneous Localization And Mapping (SLAM). Prevailing methods typically discard predefined dynamic objects, ignoring that transiently static objects offer valuable geometric constraints for pose estimation. A recent work attempts to leverage this potential by employing per-pixel uncertainty maps to quantify the magnitude of motion. While this approach enables transiently static objects to enhance pose estimation, it erroneously integrates these objects into the static map, resulting in persistent artifacts. Moreover, its reliance on purely geometric information leads to ambiguous object boundaries in the uncertainty maps. To overcome these limitations, we present DL-SLAM, a monocular Gaussian Splatting SLAM system built upon a novel dual-level probabilistic framework. Our method computes dynamic probability maps by combining semantic and geometric information. These pixel-level probabilities are lifted to 3D and aggregated to derive an object-level dynamic probability for each instance. Object-level probability enables the categorical pruning of dynamic Gaussians, resulting in an artifact-free static map. The static map, in turn, provides a geometrically consistent guidance to refine the pixel-wise probabilities, enhancing their reliability. Experimental results demonstrate that DL-SLAM outperforms existing approaches, improving tracking accuracy by up to 13\\% while generating high-fidelity semantic maps.",
       "arxiv_url": "https://arxiv.org/abs/2607.01860",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2607.01803",
+      "title": "PixGS: Pixel-Space Diffusion for Direct 3D Gaussian Splat Generation",
+      "published": "2026-07-02",
+      "year": "2026",
+      "authors": "Cao Duy; Phong Nguyen-Ha",
+      "abstract": "Recent advances in 3D content generation from text or images have achieved impressive results, yet view inconsistency from 2D generators and the scarcity of high-quality 3D data remain significant bottlenecks. Existing solutions typically adapt large-scale pre-trained text-to-image latent diffusion models to generate 3D Gaussian Splats (3DGS). However, these approaches often rely on training complex cascade pipelines that are computationally expensive and scalability-limited. Most critically, the quality of generated 3D assets is inherently constrained by each component capacity and compressed latent space, leading to decoding artifacts and accumulated errors. To address these limitations, we propose PixGS, a single-stage pipeline for direct high-quality 3DGS generation, which leverages recent advances in pixel-space diffusion to bypass lossy latent compression while still benefiting from the vast 2D generative priors. By directly denoising 3D Gaussian attributes at each timestep, our method enables precise, splat-level regularization of both appearance and geometry. Furthermore, we introduce a comprehensive supervision strategy that incorporates surface normals, depth, and high-frequency structural information, which is often overlooked in prior works. Experiments demonstrate that PixGS outperforms current state-of-the-art methods while maintaining a fast inference speed (1s on a single A100 GPU), offering a robust and efficient alternative to multi-stage generation pipelines.",
+      "arxiv_url": "https://arxiv.org/abs/2607.01803",
       "citations": 0
     },
     {
@@ -2963,6 +2893,26 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2604.16540",
+      "title": "PoInit-of-View: Poisoning Initialization of Views Transfers Across Multiple 3D Reconstruction Systems",
+      "published": "2026-04-17",
+      "year": "2026",
+      "authors": "Weijie Wang; Songlong Xing; Zhengyu Zhao; Nicu Sebe; Bruno Lepri",
+      "abstract": "Poisoning input views of 3D reconstruction systems has been recently studied. However, we identify that existing studies simply backpropagate adversarial gradients through the 3D reconstruction pipeline as a whole, without uncovering the new vulnerability rooted in specific modules of the 3D reconstruction pipeline. In this paper, we argue that the structure-from-motion (SfM) initialization, as the geometric core of many widely used reconstruction systems, can be targeted to achieve transferable poisoning effects across diverse 3D reconstruction systems. To this end, we propose PoInit-of-View, which optimizes adversarial perturbations to intentionally introduce cross-view gradient inconsistencies at projections of corresponding 3D points. These inconsistencies disrupt keypoint detection and feature matching, thereby corrupting pose estimation and triangulation within SfM, eventually resulting in low-quality rendered views. We also provide a theoretical analysis that connects cross-view inconsistency to correspondence collapse. Experimental results demonstrate the effectiveness of our PoInit-of-View on diverse 3D reconstruction systems and datasets, surpassing the single-view baseline by 25.1% in PSNR and 16.5% in SSIM in black-box transfer settings, such as 3DGS to NeRF.",
+      "arxiv_url": "https://arxiv.org/abs/2604.16540",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2604.15239",
+      "title": "TokenGS: Decoupling 3D Gaussian Prediction from Pixels with Learnable Tokens",
+      "published": "2026-04-16",
+      "year": "2026",
+      "authors": "Jiawei Ren; Michal Jan Tyszkiewicz; Jiahui Huang; Zan Gojcic",
+      "abstract": "In this work, we revisit several key design choices of modern Transformer-based approaches for feed-forward 3D Gaussian Splatting (3DGS) prediction. We argue that the common practice of regressing Gaussian means as depths along camera rays is suboptimal, and instead propose to directly regress 3D mean coordinates using only a self-supervised rendering loss. This formulation allows us to move from the standard encoder-only design to an encoder-decoder architecture with learnable Gaussian tokens, thereby unbinding the number of predicted primitives from input image resolution and number of views. Our resulting method, TokenGS, demonstrates improved robustness to pose noise and multiview inconsistencies, while naturally supporting efficient test-time optimization in token space without degrading learned priors. TokenGS achieves state-of-the-art feed-forward reconstruction performance on both static and dynamic scenes, producing more regularized geometry and more balanced 3DGS distribution, while seamlessly recovering emergent scene attributes such as static-dynamic decomposition and scene flow.",
+      "arxiv_url": "https://arxiv.org/abs/2604.15239",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2604.14782",
       "title": "One-shot Compositional 3D Head Avatars with Deformable Hair",
       "published": "2026-04-16",
@@ -2983,6 +2933,26 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2604.14268",
+      "title": "HY-World 2.0: A Multi-Modal World Model for Reconstructing, Generating, and Simulating 3D Worlds",
+      "published": "2026-04-15",
+      "year": "2026",
+      "authors": "Team HY-World; Chenjie Cao; Xuhui Zuo; Zhenwei Wang; Yisu Zhang et al.",
+      "abstract": "We introduce HY-World 2.0, a multi-modal world model framework that advances our prior project HY-World 1.0. HY-World 2.0 accommodates diverse input modalities, including text prompts, single-view images, multi-view images, and videos, and produces 3D world representations. With text or single-view image inputs, the model performs world generation, synthesizing high-fidelity, navigable 3D Gaussian Splatting (3DGS) scenes. This is achieved through a four-stage method: a) Panorama Generation with HY-Pano 2.0, b) Trajectory Planning with WorldNav, c) World Expansion with WorldStereo 2.0, and d) World Composition with WorldMirror 2.0. Specifically, we introduce key innovations to enhance panorama fidelity, enable 3D scene understanding and planning, and upgrade WorldStereo, our keyframe-based view generation model with consistent memory. We also upgrade WorldMirror, a feed-forward model for universal 3D prediction, by refining model architecture and learning strategy, enabling world reconstruction from multi-view images or videos. Also, we introduce WorldLens, a high-performance 3DGS rendering platform featuring a flexible engine-agnostic architecture, automatic IBL lighting, efficient collision detection, and training-rendering co-design, enabling interactive exploration of 3D worlds with character support. Extensive experiments demonstrate that HY-World 2.0 achieves state-of-the-art performance on several benchmarks among open-source approaches, delivering results comparable to the closed-source model Marble. We release all model weights, code, and technical details to facilitate reproducibility and support further research on 3D world models.",
+      "arxiv_url": "https://arxiv.org/abs/2604.14268",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2604.13589",
+      "title": "Dehaze-then-Splat: Generative Dehazing with Physics-Informed 3D Gaussian Splatting for Smoke-Free Novel View Synthesis",
+      "published": "2026-04-15",
+      "year": "2026",
+      "authors": "Boss Chen; Hanqing Wang",
+      "abstract": "We present Dehaze-then-Splat, a two-stage pipeline for multi-view smoke removal and novel view synthesis developed for Track~2 of the NTIRE 2026 3D Restoration and Reconstruction Challenge. In the first stage, we produce pseudo-clean training images via per-frame generative dehazing using Nano Banana Pro, followed by brightness normalization. In the second stage, we train 3D Gaussian Splatting (3DGS) with physics-informed auxiliary losses -- depth supervision via Pearson correlation with pseudo-depth, dark channel prior regularization, and dual-source gradient matching -- that compensate for cross-view inconsistencies inherent in frame-wise generative processing. We identify a fundamental tension in dehaze-then-reconstruct pipelines: per-image restoration quality does not guarantee multi-view consistency, and such inconsistency manifests as blurred renders and structural instability in downstream 3D reconstruction.Our analysis shows that MCMC-based densification with early stopping, combined with depth and haze-suppression priors, effectively mitigates these artifacts. On the Akikaze validation scene, our pipeline achieves 20.98\\,dB PSNR and 0.683 SSIM for novel view synthesis, a +1.50\\,dB improvement over the unregularized baseline.",
+      "arxiv_url": "https://arxiv.org/abs/2604.13589",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2604.13340",
       "title": "MSGS: Multispectral 3D Gaussian Splatting",
       "published": "2026-04-14",
@@ -2990,6 +2960,16 @@
       "authors": "Iris Zheng; Guojun Tang; Alexander Doronin; Paul Teal; Fang-Lue Zhang",
       "abstract": "We present a multispectral extension to 3D Gaussian Splatting (3DGS) for wavelength-aware view synthesis. Each Gaussian is augmented with spectral radiance, represented via per-band spherical harmonics, and optimized under a dual-loss supervision scheme combining RGB and multispectral signals. To improve rendering fidelity, we perform spectral-to-RGB conversion at the pixel level, allowing richer spectral cues to be retained during optimization. Our method is evaluated on both public and self-captured real-world datasets, demonstrating consistent improvements over the RGB-only 3DGS baseline in terms of image quality and spectral consistency. Notably, it excels in challenging scenes involving translucent materials and anisotropic reflections. The proposed approach maintains the compactness and real-time efficiency of 3DGS while laying the foundation for future integration with physically based shading models.",
       "arxiv_url": "https://arxiv.org/abs/2604.13340",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2604.13333",
+      "title": "SSD-GS: Scattering and Shadow Decomposition for Relightable 3D Gaussian Splatting",
+      "published": "2026-04-14",
+      "year": "2026",
+      "authors": "Iris Zheng; Guojun Tang; Alexander Doronin; Paul Teal; Fang-Lue Zhang",
+      "abstract": "We present SSD-GS, a physically-based relighting framework built upon 3D Gaussian Splatting (3DGS) that achieves high-quality reconstruction and photorealistic relighting under novel lighting conditions. In physically-based relighting, accurately modeling light-material interactions is essential for faithful appearance reproduction. However, existing 3DGS-based relighting methods adopt coarse shading decompositions, either modeling only diffuse and specular reflections or relying on neural networks to approximate shadows and scattering. This leads to limited fidelity and poor physical interpretability, particularly for anisotropic metals and translucent materials. To address these limitations, SSD-GS decomposes reflectance into four components: diffuse, specular, shadow, and subsurface scattering. We introduce a learnable dipole-based scattering module for subsurface transport, an occlusion-aware shadow formulation that integrates visibility estimates with a refinement network, and an enhanced specular component with an anisotropic Fresnel-based model. Through progressive integration of all components during training, SSD-GS effectively disentangles lighting and material properties, even for unseen illumination conditions, as demonstrated on the challenging OLAT dataset. Experiments demonstrate superior quantitative and perceptual relighting quality compared to prior methods and pave the way for downstream tasks, including controllable light source editing and interactive scene relighting. The source code is available at: https://github.com/irisfreesiri/SSD-GS.",
+      "arxiv_url": "https://arxiv.org/abs/2604.13333",
       "citations": 0
     },
     {
@@ -4773,6 +4753,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2607.25311",
+      "title": "Parametrized beyond-Teukolsky framework in the time domain",
+      "published": "2026-07-28",
+      "year": "2026",
+      "authors": "Ciro De Simone; Sebastian H. Völkel; Kostas D. Kokkotas; Salvatore Capozziello",
+      "abstract": "Modifications to General Relativity can significantly alter the perturbative response of black holes, leaving imprints on quasinormal-mode spectra, waveform amplitudes and phases, and late-time tails. The parametrized beyond-Teukolsky framework was introduced to capture possible deviations from Kerr dynamics, but the ringdown has so far only been explored as an eigenvalue problem. We present the first time-domain implementation of this framework and perform (2+1)-dimensional scattering experiments with Gaussian wave packets. This approach provides the full linear evolution of the perturbation, from the initial prompt response through the ringdown and into the late-time regime. Using frequency-domain eigenvalue results as benchmarks, we find excellent agreement for low azimuthal numbers, while higher azimuthal numbers are affected by mode mixing, which limits the precision of the extracted modes. We further use the time-domain waveforms to estimate quadratic and mixed coefficients within the linearized modified-potential model, providing a diagnostic for the regime of validity of the linear approximation. Beyond mode frequencies, we show that the deformation parameters can strongly affect the ringdown amplitude and phase, with trends that can be understood from the near-horizon structure of the modified potential. We also analyze the late- time behavior, finding that near-horizon deformations leave the tail exponent unchanged but can substantially shift the onset of the power-law decay. These results demonstrate that time-domain evolutions provide a complementary and flexible framework for testing parametrized deviations from General Relativity in black-hole perturbation theory.",
+      "arxiv_url": "https://arxiv.org/abs/2607.25311",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2607.26098",
       "title": "Mean-Tilted Relaxed Quantile Regression: Fixed-Content Interval Functionals and Generalized-Bayes Computation",
       "published": "2026-07-28",
@@ -5350,6 +5340,16 @@
       "authors": "Benjamin Sportich; Kenza Boubakri; Olivier Simonin; Alessandro Renzaglia",
       "abstract": "3D reconstruction of unknown environments is a key application in robotics but is severely limited by the computational and energy capabilities of current aerial platforms. Deploying multiple UAVs and providing efficient and scalable path planning strategies are common approaches, but effective online coordination among UAVs remains a significant challenge. To address this problem, we propose a quality-adaptive decentralized decision-making strategy to build a 3D map with user-defined degrees of fidelity. The approach integrates a quality-oriented criterion based on TSDF confidence into view generation and information gain estimation to produce viewpoints consistent with the desired fidelity target. Additionally, we employ two levels of coordination: a penalty factor in the viewpoint evaluation to encourage local dispersion among the UAVs and a global imbalance correction mechanism. The latter, based on regularized clustering and optimal task assignment, is only triggered when an unbalanced configuration relative to high-information regions is detected. Simulation results demonstrate that the proposed method improves path efficiency compared to state-of-the-art multi-UAV exploration approaches, while also achieving higher-fidelity reconstructions in terms of coverage and accuracy. We make our code publicly available to the community.",
       "arxiv_url": "https://arxiv.org/abs/2607.24233",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2607.24229",
+      "title": "First high-contrast results on THD2 testbed after infrastructure upgrade",
+      "published": "2026-07-27",
+      "year": "2026",
+      "authors": "Iva Laginja; Pierre Baudoz; Rémi Soummer; Emiel H. Por; Axel Potier et al.",
+      "abstract": "We present the first scientific results delivered by the upgraded THD2 high-contrast imaging testbed. We report two advances enabled by its improved stability and broadband performance. First, for the Roman Space Telescope, we demonstrate that Gaussian-shaped diversity probes outperform the baseline sinc probes by reducing non-linearities, supporting higher probe amplitudes, and improving electric field estimation efficiency. These results have led to their prioritization as an enhanced early observation for Roman. Second, within ESA's SUPPPPRESS project, we test new polarization-independent Vector Vortex Coronagraphs and design them to high-contrast performance approaching 1e-10 over a 20% bandwidth. We assess their behavior in narrow- and broadband light with active focal-plane wavefront control. Together, these results show how THD2 strengthens Europe's capability in high-contrast imaging, providing a unique platform reaching contrasts of 1e-8 to 1e-9 for developing next-generation coronagraphic technologies.",
+      "arxiv_url": "https://arxiv.org/abs/2607.24229",
       "citations": 0
     },
     {
