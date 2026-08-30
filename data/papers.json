@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-29 08:56 UTC",
+  "updated_at": "2026-08-30 08:28 UTC",
   "total": 590,
   "papers": [
     {
@@ -23,14 +23,14 @@
       "citations": 6
     },
     {
-      "arxiv_id": "2605.28237",
-      "title": "POINav: Benchmarking and Enhancing Final-Meters Arrival in Real-World Vision-Language Navigation",
-      "published": "2026-05-27",
+      "arxiv_id": "2606.03682",
+      "title": "GN0: Toward a Unified Paradigm for Generation, Evaluation, and Policy Learning in Visual-Language Navigation",
+      "published": "2026-06-02",
       "year": "2026",
-      "authors": "Ruiyan Gong; Meisheng Zhang; Yuxiang Zhao; Mingchao Sun; Yanfen Shen et al.",
-      "abstract": "Real-world navigation is fundamentally driven by Points of Interest (POIs), yet reaching a precise POI remains a critical \"final-meters\" challenge. Existing Vision-Language Navigation (VLN) benchmarks of POI-goal navigation often suffer from coarse granularity or significant sim-to-real gaps due to generated scene. To bridge this gap, we present POINav-Bench, the first benchmark designed for closed-loop evaluation of real-world POI-goal navigation. It comprises 11 commercial areas reconstructed from real-world captures using 3D Gaussian Splatting (3DGS), covering 126,398 $m^{2}$ in total and spanning 163 distinct POIs. With traversability-aware annotations and reference trajectories, POINav-Bench enables high-fidelity evaluation of navigation agents in realistic, POI-rich real-world environments. Building on this, we propose the POINav Brain-Action Framework where a Brain module performs POI-grounded reasoning to guide an Action module in predicting continuous waypoints for real-world execution. We further curate the POINav-Dataset, containing 70K real-world signage-entrance pairs. Experiments show that our framework provides a viable path toward refining real-world POI-goal navigation.",
-      "arxiv_url": "https://arxiv.org/abs/2605.28237",
-      "citations": 4
+      "authors": "Xinhai Li; Xiaotao Zhang; Yuehao Huang; Jiankun Dong; Tianhang Wang et al.",
+      "abstract": "Embodied navigation connects intelligent agents with the physical world and is fundamental for general robotic intelligence. Limited availability and quality of navigation data have constrained Vision-and-Language Navigation (VLN) systems' generalization and long-horizon capabilities. To address this, we curate diverse 3D scenes and develop an automated pipeline for large-scale navigation data, resulting in the GN-Matrix dataset. Building on a 3D Gaussian Splatting (3DGS) engine, we introduce a high-fidelity simulation platform supporting interactive roaming and collision-aware navigation. We further propose GN-Bench, the first BEV-based benchmark incorporating dynamic 3DGS avatars for human-robot interaction evaluation. To leverage the simulator, we develop an RL-driven navigation foundation model, Break and Establish (BAE). After supervised learning, DAgger exposes the model to rollout-induced states, breaking narrow expert-centric distributions and enabling downstream RL exploration. This unified VLN paradigm integrates map-based and map-free tasks, including instruction following, human following, and goal navigation. GN-BAE formalizes high-fidelity 3DGS-rendered Bird's Eye View representations as compact memory, unlocking latent spatial reasoning in VLMs. Extensive evaluations on GN-Bench and VLN-CE show that GN0 outperforms state-of-the-art VLN methods. Overall, GN-Matrix offers a unified framework spanning data, simulation, and learning, advancing embodied navigation in research and industrial applications.",
+      "arxiv_url": "https://arxiv.org/abs/2606.03682",
+      "citations": 5
     },
     {
       "arxiv_id": "2605.17916",
@@ -60,16 +60,6 @@
       "authors": "Yohan Poirier-Ginter; Jean-François Lalonde; George Drettakis",
       "abstract": "3D Gaussian Splatting (3DGS) is a popular representation for radiance field reconstruction, distinguished by the rendering speed of its rasterization-based renderer. While 3D Gaussians can also be ray traced, this approach has so far been slower, with 3D Gaussian Ray Tracing (3DGRT) taking nearly one order of magnitude longer to optimize. To address this, we present GRay, a fast ray tracer for 3D Gaussians designed to close this performance gap and match 3DGS's speed. Our method leverages the algorithmic difference between both approaches: unlike rasterization, ray tracing evaluates only Gaussians that are actually intersected by a ray, leading to potentially logarithmic--rather than linear--scaling in the number of primitives. This property allows ray tracing to better exploit dense scenes composed of numerous tiny Gaussians, a configuration which has largely been overlooked. Notably, we show that dense initialization--which creates many small Gaussians--slows down rasterization, but instead speeds up ray tracing. Designed to leverage this effect, GRay renders nearly 4x faster and optimizes nearly 10x faster than 3DGRT while maintaining similar quality, and has competitive speed with 3DGS albeit at somewhat lower quality. Code is available at https://repo-sam.inria.fr/nerphys/gray.",
       "arxiv_url": "https://arxiv.org/abs/2606.30869",
-      "citations": 2
-    },
-    {
-      "arxiv_id": "2606.27509",
-      "title": "Structured-Li-GS: Structured 3D Gaussians Splatting with LiDAR Incorporation and Spatial Constraints",
-      "published": "2026-06-25",
-      "year": "2026",
-      "authors": "Huaiyuan Weng; Huibin Li; Chul Min Yeum",
-      "abstract": "In this study, we develop a Structured framework for Gaussian Splatting (3DGS) with LiDAR integration (Structured-Li-GS). It is a lightweight Gaussian Splatting pipeline that leverages LiDAR-inertial-visual SLAM. Structured-Li-GS achieves high-quality 3D reconstructions with fewer Gaussians by training on accurate, dense, colorized point clouds. Gaussian primitives are anchored using sub-sampled point clouds, and their ellipsoidal parameters are initialized from local surface geometry. Our training strategy integrates a comprehensive set of loss terms, including photometric, flattening, offset, depth, and normal losses, guided by the dense point cloud, enabling accurate reconstruction without Gaussian densification. This approach produces up-to-scale, high-fidelity results with a moderate model size. For experimental validation, we develop a custom hardware-synchronized LiDAR-camera handheld scanner. Experiments on both benchmark datasets and our real-world in-house dataset demonstrate that Structured-Li-GS surpasses state-of-the-art methods while using fewer Gaussians.",
-      "arxiv_url": "https://arxiv.org/abs/2606.27509",
       "citations": 2
     },
     {
@@ -193,26 +183,6 @@
       "citations": 1
     },
     {
-      "arxiv_id": "2607.01803",
-      "title": "PixGS: Pixel-Space Diffusion for Direct 3D Gaussian Splat Generation",
-      "published": "2026-07-02",
-      "year": "2026",
-      "authors": "Cao Duy; Phong Nguyen-Ha",
-      "abstract": "Recent advances in 3D content generation from text or images have achieved impressive results, yet view inconsistency from 2D generators and the scarcity of high-quality 3D data remain significant bottlenecks. Existing solutions typically adapt large-scale pre-trained text-to-image latent diffusion models to generate 3D Gaussian Splats (3DGS). However, these approaches often rely on training complex cascade pipelines that are computationally expensive and scalability-limited. Most critically, the quality of generated 3D assets is inherently constrained by each component capacity and compressed latent space, leading to decoding artifacts and accumulated errors. To address these limitations, we propose PixGS, a single-stage pipeline for direct high-quality 3DGS generation, which leverages recent advances in pixel-space diffusion to bypass lossy latent compression while still benefiting from the vast 2D generative priors. By directly denoising 3D Gaussian attributes at each timestep, our method enables precise, splat-level regularization of both appearance and geometry. Furthermore, we introduce a comprehensive supervision strategy that incorporates surface normals, depth, and high-frequency structural information, which is often overlooked in prior works. Experiments demonstrate that PixGS outperforms current state-of-the-art methods while maintaining a fast inference speed (1s on a single A100 GPU), offering a robust and efficient alternative to multi-stage generation pipelines.",
-      "arxiv_url": "https://arxiv.org/abs/2607.01803",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2607.00885",
-      "title": "Improving Sparse-View 3DGS Generalization via Flat Minima Optimization",
-      "published": "2026-07-01",
-      "year": "2026",
-      "authors": "Kangmin Seo; Sangeek Hyun; MinKyu Lee; Jae-Pil Heo",
-      "abstract": "Recent advances in neural rendering have established 3D Gaussian Splatting (3DGS) as a highly efficient representation for novel view synthesis, enabling fast training and real-time rendering with strong fidelity. However, when supervision is limited to sparse input views, 3DGS tends to overfit to the observed images and generalize poorly to unseen viewpoints. We address this challenge from the perspective of flat minima (FM) optimization, which seeks solutions that remain stable under small parameter perturbations. Viewing Gaussian parameters as trainable weights, we adapt FM principles to the geometric and dynamic nature of 3DGS with a lightweight training framework. Our method regularizes optimization with controlled Gaussian perturbations that account for each Gaussian's anisotropy and the training progress, preserving fine details while improving robustness to sparse-view overfitting. To further stabilize this flat minima optimization process, we introduce periodic reinitialization, which temporarily returns non-positional parameters to their initial states for a short window. Together, these techniques integrate seamlessly into existing 3DGS pipelines without architectural changes. Experiments on LLFF and Mip-NeRF360 datasets demonstrate improved quantitative metrics and perceptual quality under sparse-view supervision, producing reconstructions that are sharper, more stable, and better generalized to novel viewpoints.",
-      "arxiv_url": "https://arxiv.org/abs/2607.00885",
-      "citations": 1
-    },
-    {
       "arxiv_id": "2606.29738",
       "title": "MyGO-Splat: Multi-Objective Closed-Loop Geometric Feedback for RGB-Only Gaussian SLAM",
       "published": "2026-06-29",
@@ -220,36 +190,6 @@
       "authors": "Fan Zhu; Ziyu Chen; Zhenjun Zhao; Zhisong Xu; Hui Zhu et al.",
       "abstract": "Real-time monocular Simultaneous Localization and Mapping (SLAM) fundamentally suffers from scale ambiguity and a lack of geometric self-correction. While 3D Gaussian Splatting (3DGS) enables high-fidelity rendering, existing RGB-only systems remain open-loop because depth priors are injected into mapping but refined geometry cannot effectively regulate tracking drift. We present MyGO-Splat, a closed-loop Gaussian SLAM framework that analytically rasterizes Gaussian primitives into pixel-wise depth and surface normals, allowing the map to actively supervise camera pose optimization. To bridge monocular priors and scale consistency, our framework introduces scale-aware adaptive alignment that projects foundation-model depth estimates into the globally optimized Gaussian space, forming a self-correcting cycle for scale feedback. Extensive evaluations show that this closed-loop design improves scale stability and appearance-geometry consistency, achieving performance comparable to RGB-D methods while using only monocular input.",
       "arxiv_url": "https://arxiv.org/abs/2606.29738",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2606.29329",
-      "title": "RAGA: Real Time Ray Traced Gaussian Shadow Casting for 3DGS Avatar-Scene Interaction",
-      "published": "2026-06-28",
-      "year": "2026",
-      "authors": "Aymen Mir; Riza Alp Guler; Jian Wang; Peter Wonka; Bing Zhou et al.",
-      "abstract": "We study the problem of physically plausible shadow casting when animating 3D Gaussian Splatting (3DGS) avatars, either individually or in multi-avatar and object-interaction scenarios, within existing 3DGS scenes. In contrast to prior methods that rely on binary hit tests and mesh-based shadow casters, our method performs shadow computation entirely in Gaussian space, without requiring any mesh reconstruction. We introduce RAGA, a Ray-Traced Gaussian Shadow Casting formulation based on exact ray-Gaussian line integrals. For each occluding Gaussian, we integrate the opacity profile along the shadow ray and normalize by the theoretical maximum integral, producing a weight that captures how the ray traverses the occluder rather than merely whether an intersection occurred. To reduce temporal variance from clothing deformations in animated avatars, we further introduce an avatar proxy representation that stabilizes shadow casting while preserving visual fidelity. We implement RAGA using custom CUDA kernels integrated with the NVIDIA OptiX framework; as such, our shadow tracer runs at rates of about 50 FPS. We evaluate on single-avatar, multi-avatar, and avatar-object interaction scenarios across multiple datasets, demonstrating substantially improved shadow realism, temporal stability, and scene coherence. Our project page is available at https://miraymen.github.io/raga/.",
-      "arxiv_url": "https://arxiv.org/abs/2606.29329",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2606.28581",
-      "title": "SatSplat: Geometrically-Accurate Gaussian Splatting for Satellite Imagery",
-      "published": "2026-06-26",
-      "year": "2026",
-      "authors": "Shuang Song; Jiyong Kim; Rongjun Qin",
-      "abstract": "High-resolution satellite imagery demands 3D reconstruction methods that deliver both speed and geometric accuracy. Recent adaptations of 3D Gaussian Splatting (3DGS) to satellite imagery demonstrate strong efficiency, but reconstruction quality often degrades under diverse illumination across multi-date, high-altitude acquisitions (with small intersection angles), limiting applicability to remote sensing and vision tasks. We present SatSplat, the first framework to adapt 2D Gaussian Splatting (2DGS) to satellite photogrammetry, with online camera adjustment. We approximate satellite cameras with an affine model and learn a minimal delta parameterization for in-splat camera refinement from dense observations. The formulation is implemented with a 2DGS scene representation. To handle time-varying shadows and illumination changes, we integrate geometric shadow mapping and per-camera color correction during training. Across the evaluated DFC2019 and IARPA2016 benchmark sites, SatSplat achieves strong geometric accuracy while significantly outperforming prior 3DGS-based baselines. On our processed DFC2019 benchmark, SatSplat reduces mean absolute error by 11.93% and peak video memory by 31% relative to the previous state of the art. Our approach enables large-scale digital surface modeling with practical computational efficiency. The project page is available at https://gdaosu.github.io/satsplat/.",
-      "arxiv_url": "https://arxiv.org/abs/2606.28581",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2606.27071",
-      "title": "PanoImager: Geometry-Guided Novel View Synthesis and Reconstruction from Sparse Panoramic Views",
-      "published": "2026-06-25",
-      "year": "2026",
-      "authors": "Zhisong Xu; Takeshi Oishi",
-      "abstract": "Panoramic sensing offers wide field-of-view coverage, yet 3D reconstruction from sparse panoramas remains challenging under rotation-dominant, weak-parallax motion. In such regimes, SfM/SLAM initialization is often ill-conditioned and unreliable. We present PanoImager, an SfM-free framework that combines feed-forward pose/depth priors, geometry-conditioned diffusion view completion, and depth-guided 3DGS optimization. Given only a few panoramic images, PanoImager decomposes them into local perspective views, synthesizes auxiliary observations to enrich sparse evidence, and stabilizes Gaussian optimization for improved cross-view consistency. Experiments on multiple benchmarks show improved stability under extreme sparsity, suggesting PanoImager as an offline/background component for map refinement when SfM/SLAM fails to initialize.",
-      "arxiv_url": "https://arxiv.org/abs/2606.27071",
       "citations": 1
     },
     {
@@ -303,6 +243,26 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2606.05650",
+      "title": "GS-NFS: Bandwidth-adaptive Streaming of Dynamic Gaussian Splats and Point Clouds",
+      "published": "2026-06-04",
+      "year": "2026",
+      "authors": "Rajrup Ghosh; Haodong Wang; Haoran Hong; Eduardo Pavez; Amartya Chaudhuri et al.",
+      "abstract": "Dynamic 3D Gaussian Splatting (3DGS) holds great promise as a 3D video streaming technology since it can represent complex 3D scenes with high fidelity. In this approach, every frame in a 3D video represents the environment as a collection of Gaussians with position and other attributes such as scale, rotation, opacity, and color. Frames capture fine details, permit views from any arbitrary perspective, but are an order of magnitude, or more, larger than 2D video frames. A line of recent work has explored how to compress dynamic 3DGS frames, but these approaches are often slow, in part because their compression techniques are not amenable to efficient acceleration. GS-NFS accelerates dynamic 3DGS compression and decompression on a GPU, to the point where it can encode and decode at full frame rate. It achieves this by developing novel GPU-based parallelizations of existing algorithms for encoding both positions and attributes of Gaussians. As a result, it is 1-2 orders of magnitude faster than the state-of-the-art in encoding and decoding a frame, while offering competitive compression performance and rendering quality.",
+      "arxiv_url": "https://arxiv.org/abs/2606.05650",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2606.03877",
+      "title": "MLP Splatting: Object-Centric Neural Fields",
+      "published": "2026-06-02",
+      "year": "2026",
+      "authors": "Shinjeong Kim; Yuzhou Cheng; Xin Kong; Paul H. J. Kelly; Andrew J. Davison",
+      "abstract": "3D representations are fundamental to scene rendering, understanding, and interaction. Recent approaches, such as 3D Gaussian Splatting and Neural Radiance Fields, achieve impressive photorealistic novel-view synthesis, but lack the ability to easily decompose scene elements into a few primitives, requiring additional segmentation or grouping for object-level manipulation. We present MLP-Splatting, a method that enables scene decomposition via a few expressive light-field primitives while providing photorealistic novel-view synthesis.   MLP-Splatting models each primitive as an independent compact MLP with localized spatial support that predicts radiance and opacity. In contrast to low-level Gaussian primitives or a single global radiance field, our neural primitives provide greater expressive capacity while remaining spatially localized. Rendering is performed through efficient sparse volumetric compositing over ray-primitive interactions.   Our primitives are supervised using RGB supervision alone, which yields primitives that represent local scene regions often corresponding to objects or object parts, enabling interactive object-level editing without segmentation masks by selecting a handful of primitives. Our method, augmented with optional semantic feature distillation, enables open-vocabulary scene interaction and open-set instant segmentation. Compared to state-of-the-art methods, we achieve substantially lower memory usage (1/15$\\times$) and faster rendering (3$\\times$), as we show in our experiments compared to semantic 3DGS methods. Project Page: https://shinjeongkim.com/mlp-splatting",
+      "arxiv_url": "https://arxiv.org/abs/2606.03877",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2606.03254",
       "title": "OF$^3$GS: On-the-Fly Feed-Forward 3D Gaussian Splatting from Unposed Images",
       "published": "2026-06-02",
@@ -320,26 +280,6 @@
       "authors": "Hojune Kim; Timothy Chen; Jiankai Sun; Lars W. Osterberg; Qianzhong Chen et al.",
       "abstract": "Training vision-language-action (VLA) policies for humanoid loco-manipulation is constrained by the high cost and complexity of collecting human teleoperation demonstrations. VLA policies fine-tuned in simulators have, until now, failed to transfer effectively in humanoid loco-manipulation tasks. We present LEGS (Loco-manipulation via Embodied Gaussian Splatting), a hybrid simulator that composites a mesh foreground (robot, objects, props) over a photorealistic 3D Gaussian Splatting (3DGS) background reconstructed from a handheld scene capture. LEGS uses a procedural motion-primitive generator to synthesize labeled demonstrations at scale without human teleoperation, and a deterministic two-stage color calibration to align the rendered 3DGS image to the robot's deployment camera. On a Unitree G1 humanoid robot, across three pick-and-place tasks of increasing whole-body difficulty and three VLA backbones (psi_0, pi_0.5, GR00T N1.6), a policy trained purely on LEGS data matches or exceeds one trained on human teleoperation demos on every experiment. It also outperforms a mesh-only simulation baseline that ablates the effect of the 3DGS background, showing that photorealistic rendering is a key enabler for synthetic data transfer. Humanoid motion is recorded independently of scene appearance in LEGS, allowing the same auto-generated demonstrations to be re-rendered under new backgrounds and object meshes--covering a new scene at more than 15x lower cost than teleoperation--to augment training data for robustness to scene variations. Under combined object-and-scene appearance shift, the policy trained on re-rendered LEGS-AUG data maintains task success while the baseline trained on teleoperation data fails entirely. Our project page is located at https://legsvla.github.io/.",
       "arxiv_url": "https://arxiv.org/abs/2606.01458",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2605.25563",
-      "title": "CodecSplat: Ultra-Compact Latent Coding for Feed-Forward 3D Gaussian Splatting",
-      "published": "2026-05-25",
-      "year": "2026",
-      "authors": "Pengpeng Yu; Runqing Jiang; Qi Zhang; Dingquan Li; Jing Wang et al.",
-      "abstract": "While feed-forward 3D Gaussian splatting reconstructs renderable Gaussian primitives from sparse context views without per-scene optimization, existing pipelines do not provide a compact scene representation for storage or transmission. A natural solution is to apply existing 3DGS compression methods to the generated Gaussian primitives. However, this approach operates on the final irregular 3D representation and is decoupled from the internal feature-to-Gaussian generation process, which limits compression efficiency. To address this, we introduce CodecSplat, an ultra-compact latent coding framework for feed-forward 3D Gaussian splatting. CodecSplat first encodes an intermediate 2D Gaussian-generation feature into an entropy-coded scene bitstream. At the decoder, the latent feature is reconstructed and used to predict depth and Gaussian parameters, which are then mapped to 3D Gaussian primitives. Note that, by integrating compression into the feed-forward Gaussian generation pipeline, CodecSplat avoids inefficient compression over irregular 3D Gaussian primitives and allows the codec to exploit the structured intermediate feature representation. We instantiate CodecSplat on a feed-forward Gaussian splatting backbone with depth-guided multi-view feature refinement and a hierarchical learned feature codec. On DL3DV and RealEstate10K datasets, CodecSplat achieves 23.56-26.36 dB and 24.76-27.05 dB PSNR with only 20.00-107.77 KiB and 3.37-12.51 KiB per scene, respectively. This is roughly one order of magnitude smaller than compressing feed-forward generated Gaussian primitives, while preserving controllable rate-distortion behavior.",
-      "arxiv_url": "https://arxiv.org/abs/2605.25563",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2605.25373",
-      "title": "Physics-Aware 3D Gaussian Editing for Driving Scene Generation",
-      "published": "2026-05-25",
-      "year": "2026",
-      "authors": "Feng Zhou; Jian Zhang; Yuhang Sun; He Wang; Qiong Wen et al.",
-      "abstract": "3D Gaussian Splatting (3DGS) has shown great potential in autonomous driving simulation and data generation, enabling photorealistic reconstruction and flexible scene manipulation. However, existing 3DGS scene editing methods have limited support for road geometry editing (e.g., inserting speed humps or sunken roads), and generally do not couple such edits with plausible vehicle-road interaction dynamics. Such editing is essential for generating training data under extreme driving scenarios or evaluating system reliability under these road irregularities. Moreover, many optimization-based methods require minutes of per-edit refinement, while existing efficient alternatives mainly focus on appearance-level or object-level manipulation rather than physics-aware road irregularity editing. To address these limitations, we propose RoVES, a Road-and-Vehicle Editing System for physics-aware 3D Gaussian editing in driving scenes. RoVES enables single-image-driven road geometry insertion and couples the edited road profile with a 4-DOF half-car vehicle dynamics model to achieve physics-aware vehicle pose correction in vertical displacement and pitch. RoVES inserts road elements in a one-shot, optimization-free pipeline (1.84s), and the full pipeline (including color transfer and vehicle-dynamics-based pose correction) completes in 6.24s; it edits dynamic vehicles via pose editing and corrects poses frame-by-frame to approximate dynamics-consistent vertical displacement and pitch responses. Experiments on the Waymo dataset show that RoVES provides practical efficiency and competitive visual consistency for physics-aware driving scene generation.",
-      "arxiv_url": "https://arxiv.org/abs/2605.25373",
       "citations": 1
     },
     {
@@ -480,26 +420,6 @@
       "authors": "Matthew Rosenzweig",
       "abstract": "For $N\\ge2$ and $β>0$, consider the canonical 2D Coulomb gas ensemble \\begin{equation}   \\mathrm{d}\\mathbb{P}_{N,β}(Z)   =\\mathsf{Z}_{N,β}^{-1}e^{-β|Z|^2/2}   \\prod_{i<j}|z_i-z_j|^{β/N}\\,\\mathrm{d}Z   \\qquad\\text{on }\\mathbb{C}^N. \\end{equation} The factor $N^{-1}$ in the pair exponent places the ensemble at the diffusive, or high-temperature, scale. We prove that, for every fixed inverse temperature $β>0$, this Gibbs measure satisfies a logarithmic Sobolev inequality (LSI) on the closed Dirichlet-form domain generated by collision-free compactly supported smooth functions, with a positive constant independent of $N$. The LSI constant may be chosen uniformly when $β$ ranges over a compact subset of $(0,\\infty)$. A second main result establishes Poincaré and logarithmic Sobolev inequalities for planar Gaussian measures weighted by finite products of positive powers of distances to points, with constants depending only on the total variance of the underlying Gaussian measure and the total exponent, not on the number or locations of the points. To prove the full labeled Poincaré inequality, we decompose variance into permutation-invariant and label-dependent parts, controlled respectively by a weighted $\\bar\\partial$ estimate and by relative-coordinate conditioning with random transpositions; separately, one-site logarithmic Sobolev inequalities, a conditional entropy inequality, and a repulsive partition estimate give a defective logarithmic Sobolev inequality. Rothaus tightening combines the resulting full labeled Poincaré inequality with the defective logarithmic Sobolev inequality. No uniformity as $β\\to0$ or $β\\to\\infty$ is asserted.",
       "arxiv_url": "https://arxiv.org/abs/2608.24863",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2608.24343",
-      "title": "Digging dark holes on-sky with the Self-Coherent Camera: Preliminary results",
-      "published": "2026-08-25",
-      "year": "2026",
-      "authors": "Elena Tonucci; Sebastiaan Y. Haffert; Jared R. Males; Laird M. Close; Kyle van Gorkom et al.",
-      "abstract": "Current high-contrast imaging instruments are limited by wavefront errors originating from non-common path aberrations (NCPAs) due, for example, to manufacturing errors in the optics and temperature drifts in the system. These create quasi-static speckles in the final science image that are difficult to distinguish from companions. Therefore, focal plane wavefront sensing and control is needed to suppress speckles. The Self-Coherent Camera (SCC) is a wavefront sensor that allows us to estimate the stellar complex speckle field. In the Fast Atmospheric SCC Technique (FAST), the on-axis starlight hits a coronagraphic focal plane phase mask and is diffracted outside the Lyot stop where it is spatially filtered by a pinhole to create a reference beam. The reference beam and the leaked starlight are recombined on the science plane, creating interference fringes that do not affect the companion, because of incoherence. The focal plane mask was manufactured in-house at Leiden University with Nanoscribe, a micro-3D-printer that uses two-photon polymerization to achieve sub-micron precision in height. We present preliminary results of the first on-sky closed-loop SCC demonstration with the Magellan Adaptive Optics eXtreme (MagAO-X) instrument on the 6.5-meter Magellan Clay telescope at Las Campanas Observatory, Chile. We achieve a 1-sigma raw contrast improvement of a factor 10 in the desired dark hole region with FAST closed-loop control. In the future, we will show observations of stars with companions and use the SCC in post-processing as a Coherent Differential Imaging (CDI) technique to enhance the contrast even further.",
-      "arxiv_url": "https://arxiv.org/abs/2608.24343",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2608.24333",
-      "title": "Sub-diffraction-limited coronagraphic imaging with nano-printed PIAACMC phase masks",
-      "published": "2026-08-25",
-      "year": "2026",
-      "authors": "Elena Tonucci; Sebastiaan Y. Haffert; Warren B. Foster; Jared R. Males; Olivier Guyon et al.",
-      "abstract": "Imaging Earth-like exoplanets in the habitable zone of their host star is among the main science objectives of future ground-based and space-based observatories. However, the extreme contrast and small separations needed to image such planets cannot be reached with current technology. The Phase-Induced Amplitude Apodization Complex Mask Coronagraph (PIAACMC) is a promising coronagraph to reach this goal. The PIAACMC uses a set of aspheric lenses to apodize the entrance pupil without throughput losses and a phase-shifting focal plane mask for starlight suppression. These allow us to maintain high throughput and achieve a small inner-working angle (IWA), unlocking the capability to observe exoplanets at the diffraction limit. The masks are manufactured in-house at Leiden University with Nanoscribe, a micro-3D-printer that uses two-photon polymerization to achieve sub-micron precision in height. We present the first scientific results with a focal plane mask for the PIAACMC on the Magellan Adaptive Optics eXtreme (MagAO-X) instrument for the 6.5-meter Magellan Clay telescope at Las Campanas Observatory, Chile. We show laboratory and on-sky contrast curves with a broadband z' filter centered at 908 nm with a 14% bandwidth. We use the PIAACMC to detect binary companions at separations ~0.8-5 lambda/D (~23-144 mas). This demonstrates the PIAACMC's capability to observe at the diffraction limit and below, with a sub-lambda/D IWA. Future work includes exploring new mask designs to improve the contrast in broadband light and performing active focal plane wavefront sensing and control.",
-      "arxiv_url": "https://arxiv.org/abs/2608.24333",
       "citations": 1
     },
     {
@@ -1803,6 +1723,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2607.01803",
+      "title": "PixGS: Pixel-Space Diffusion for Direct 3D Gaussian Splat Generation",
+      "published": "2026-07-02",
+      "year": "2026",
+      "authors": "Cao Duy; Phong Nguyen-Ha",
+      "abstract": "Recent advances in 3D content generation from text or images have achieved impressive results, yet view inconsistency from 2D generators and the scarcity of high-quality 3D data remain significant bottlenecks. Existing solutions typically adapt large-scale pre-trained text-to-image latent diffusion models to generate 3D Gaussian Splats (3DGS). However, these approaches often rely on training complex cascade pipelines that are computationally expensive and scalability-limited. Most critically, the quality of generated 3D assets is inherently constrained by each component capacity and compressed latent space, leading to decoding artifacts and accumulated errors. To address these limitations, we propose PixGS, a single-stage pipeline for direct high-quality 3DGS generation, which leverages recent advances in pixel-space diffusion to bypass lossy latent compression while still benefiting from the vast 2D generative priors. By directly denoising 3D Gaussian attributes at each timestep, our method enables precise, splat-level regularization of both appearance and geometry. Furthermore, we introduce a comprehensive supervision strategy that incorporates surface normals, depth, and high-frequency structural information, which is often overlooked in prior works. Experiments demonstrate that PixGS outperforms current state-of-the-art methods while maintaining a fast inference speed (1s on a single A100 GPU), offering a robust and efficient alternative to multi-stage generation pipelines.",
+      "arxiv_url": "https://arxiv.org/abs/2607.01803",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2607.01708",
       "title": "Consistent Scene Understanding in 3D Gaussian Splatting via Multi-Cue Mask Refinement",
       "published": "2026-07-02",
@@ -1860,6 +1790,16 @@
       "authors": "Tscholl Dario; Nakka Yashwanth Kumar; Gunter Brian",
       "abstract": "Fast quadrotor flight requires safe obstacle avoidance under tight onboard compute limits. While 3D Gaussian Splatting (3DGS) provides a continuous, geometry-aware scene representation for perception-driven navigation, existing 3DGS safety filters use reduced-order models such as single- and double-integrators that ignore actuator limits and assume commanded accelerations are realized instantaneously. Building on an analytic collision cone barrier for 3DGS, we introduce a nonlinear, actuator-aware safety filter enforced through the full quadrotor dynamics. We derive a high-relative-degree collision cone exponential CBF and a backup CBF that preserves QP feasibility under input constraints using a forward-simulated backup policy. Compared with a state-of-the-art 3DGS safety filter, our approach reduces trajectory jerk by 47% and runs 2.25 times faster. We validate the method in simulation and on hardware for real-time navigation in cluttered, perception-derived environments.",
       "arxiv_url": "https://arxiv.org/abs/2607.01200",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2607.00885",
+      "title": "Improving Sparse-View 3DGS Generalization via Flat Minima Optimization",
+      "published": "2026-07-01",
+      "year": "2026",
+      "authors": "Kangmin Seo; Sangeek Hyun; MinKyu Lee; Jae-Pil Heo",
+      "abstract": "Recent advances in neural rendering have established 3D Gaussian Splatting (3DGS) as a highly efficient representation for novel view synthesis, enabling fast training and real-time rendering with strong fidelity. However, when supervision is limited to sparse input views, 3DGS tends to overfit to the observed images and generalize poorly to unseen viewpoints. We address this challenge from the perspective of flat minima (FM) optimization, which seeks solutions that remain stable under small parameter perturbations. Viewing Gaussian parameters as trainable weights, we adapt FM principles to the geometric and dynamic nature of 3DGS with a lightweight training framework. Our method regularizes optimization with controlled Gaussian perturbations that account for each Gaussian's anisotropy and the training progress, preserving fine details while improving robustness to sparse-view overfitting. To further stabilize this flat minima optimization process, we introduce periodic reinitialization, which temporarily returns non-positional parameters to their initial states for a short window. Together, these techniques integrate seamlessly into existing 3DGS pipelines without architectural changes. Experiments on LLFF and Mip-NeRF360 datasets demonstrate improved quantitative metrics and perceptual quality under sparse-view supervision, producing reconstructions that are sharper, more stable, and better generalized to novel viewpoints.",
+      "arxiv_url": "https://arxiv.org/abs/2607.00885",
       "citations": 0
     },
     {
@@ -1983,6 +1923,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2606.29329",
+      "title": "RAGA: Real Time Ray Traced Gaussian Shadow Casting for 3DGS Avatar-Scene Interaction",
+      "published": "2026-06-28",
+      "year": "2026",
+      "authors": "Aymen Mir; Riza Alp Guler; Jian Wang; Peter Wonka; Bing Zhou et al.",
+      "abstract": "We study the problem of physically plausible shadow casting when animating 3D Gaussian Splatting (3DGS) avatars, either individually or in multi-avatar and object-interaction scenarios, within existing 3DGS scenes. In contrast to prior methods that rely on binary hit tests and mesh-based shadow casters, our method performs shadow computation entirely in Gaussian space, without requiring any mesh reconstruction. We introduce RAGA, a Ray-Traced Gaussian Shadow Casting formulation based on exact ray-Gaussian line integrals. For each occluding Gaussian, we integrate the opacity profile along the shadow ray and normalize by the theoretical maximum integral, producing a weight that captures how the ray traverses the occluder rather than merely whether an intersection occurred. To reduce temporal variance from clothing deformations in animated avatars, we further introduce an avatar proxy representation that stabilizes shadow casting while preserving visual fidelity. We implement RAGA using custom CUDA kernels integrated with the NVIDIA OptiX framework; as such, our shadow tracer runs at rates of about 50 FPS. We evaluate on single-avatar, multi-avatar, and avatar-object interaction scenarios across multiple datasets, demonstrating substantially improved shadow realism, temporal stability, and scene coherence. Our project page is available at https://miraymen.github.io/raga/.",
+      "arxiv_url": "https://arxiv.org/abs/2606.29329",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2606.28840",
       "title": "DLGStream: Dynamic Language-embedded Guassian Splatting for Open-vocabulary Enabled Free-viewpoint Video Streaming",
       "published": "2026-06-27",
@@ -2013,6 +1963,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2606.28581",
+      "title": "SatSplat: Geometrically-Accurate Gaussian Splatting for Satellite Imagery",
+      "published": "2026-06-26",
+      "year": "2026",
+      "authors": "Shuang Song; Jiyong Kim; Rongjun Qin",
+      "abstract": "High-resolution satellite imagery demands 3D reconstruction methods that deliver both speed and geometric accuracy. Recent adaptations of 3D Gaussian Splatting (3DGS) to satellite imagery demonstrate strong efficiency, but reconstruction quality often degrades under diverse illumination across multi-date, high-altitude acquisitions (with small intersection angles), limiting applicability to remote sensing and vision tasks. We present SatSplat, the first framework to adapt 2D Gaussian Splatting (2DGS) to satellite photogrammetry, with online camera adjustment. We approximate satellite cameras with an affine model and learn a minimal delta parameterization for in-splat camera refinement from dense observations. The formulation is implemented with a 2DGS scene representation. To handle time-varying shadows and illumination changes, we integrate geometric shadow mapping and per-camera color correction during training. Across the evaluated DFC2019 and IARPA2016 benchmark sites, SatSplat achieves strong geometric accuracy while significantly outperforming prior 3DGS-based baselines. On our processed DFC2019 benchmark, SatSplat reduces mean absolute error by 11.93% and peak video memory by 31% relative to the previous state of the art. Our approach enables large-scale digital surface modeling with practical computational efficiency. The project page is available at https://gdaosu.github.io/satsplat/.",
+      "arxiv_url": "https://arxiv.org/abs/2606.28581",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2606.27584",
       "title": "CoIn: Comprehensive 2D-3D Inpainting with Gaussian Splatting Guidance",
       "published": "2026-06-25",
@@ -2020,6 +1980,26 @@
       "authors": "Hana Kim; Minje Kim; Tae-Kyun Kim",
       "abstract": "3D scene inpainting is essential for reconstructing areas corrupted by occlusions or limited viewpoints. While recent methods leverage Gaussian Splatting (GS) for efficient 3D editing, they often depend on precise multi-view segmentation masks and are inherently constrained to object removal tasks. We propose CoIn, a novel framework that bridges 2D inpainting models and 3DGS through a multi-stage consistency pipeline. Our approach first generates initial inpainted images using a diffusion model, enabling the use of arbitrary-shaped masks and diverse tasks like object insertion. We then introduce Reference Adaptive GS with Feature Attention to reconstruct a coarse 3D scene by adaptively weighing towards a reference view (2D -> 3D). This 3D representation provides geometric guidance to the diffusion process via GS-based Reference Feature Warping, ensuring multi-view consistency (3D -> 2D). Finally, a Texture-Enhancing Discriminator refines the 3D scene to achieve high photometric realism (2D -> 3D). Experiments show that CoIn, effectively leveraging bidirectional information flow, achieves state-of-the-art performance and effectively handles both object removal and object insertion with flexible mask input.",
       "arxiv_url": "https://arxiv.org/abs/2606.27584",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2606.27509",
+      "title": "Structured-Li-GS: Structured 3D Gaussians Splatting with LiDAR Incorporation and Spatial Constraints",
+      "published": "2026-06-25",
+      "year": "2026",
+      "authors": "Huaiyuan Weng; Huibin Li; Chul Min Yeum",
+      "abstract": "In this study, we develop a Structured framework for Gaussian Splatting (3DGS) with LiDAR integration (Structured-Li-GS). It is a lightweight Gaussian Splatting pipeline that leverages LiDAR-inertial-visual SLAM. Structured-Li-GS achieves high-quality 3D reconstructions with fewer Gaussians by training on accurate, dense, colorized point clouds. Gaussian primitives are anchored using sub-sampled point clouds, and their ellipsoidal parameters are initialized from local surface geometry. Our training strategy integrates a comprehensive set of loss terms, including photometric, flattening, offset, depth, and normal losses, guided by the dense point cloud, enabling accurate reconstruction without Gaussian densification. This approach produces up-to-scale, high-fidelity results with a moderate model size. For experimental validation, we develop a custom hardware-synchronized LiDAR-camera handheld scanner. Experiments on both benchmark datasets and our real-world in-house dataset demonstrate that Structured-Li-GS surpasses state-of-the-art methods while using fewer Gaussians.",
+      "arxiv_url": "https://arxiv.org/abs/2606.27509",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2606.27071",
+      "title": "PanoImager: Geometry-Guided Novel View Synthesis and Reconstruction from Sparse Panoramic Views",
+      "published": "2026-06-25",
+      "year": "2026",
+      "authors": "Zhisong Xu; Takeshi Oishi",
+      "abstract": "Panoramic sensing offers wide field-of-view coverage, yet 3D reconstruction from sparse panoramas remains challenging under rotation-dominant, weak-parallax motion. In such regimes, SfM/SLAM initialization is often ill-conditioned and unreliable. We present PanoImager, an SfM-free framework that combines feed-forward pose/depth priors, geometry-conditioned diffusion view completion, and depth-guided 3DGS optimization. Given only a few panoramic images, PanoImager decomposes them into local perspective views, synthesizes auxiliary observations to enrich sparse evidence, and stabilizes Gaussian optimization for improved cross-view consistency. Experiments on multiple benchmarks show improved stability under extreme sparsity, suggesting PanoImager as an offline/background component for map refinement when SfM/SLAM fails to initialize.",
+      "arxiv_url": "https://arxiv.org/abs/2606.27071",
       "citations": 0
     },
     {
@@ -2383,16 +2363,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2606.05650",
-      "title": "GS-NFS: Bandwidth-adaptive Streaming of Dynamic Gaussian Splats and Point Clouds",
-      "published": "2026-06-04",
-      "year": "2026",
-      "authors": "Rajrup Ghosh; Haodong Wang; Haoran Hong; Eduardo Pavez; Amartya Chaudhuri et al.",
-      "abstract": "Dynamic 3D Gaussian Splatting (3DGS) holds great promise as a 3D video streaming technology since it can represent complex 3D scenes with high fidelity. In this approach, every frame in a 3D video represents the environment as a collection of Gaussians with position and other attributes such as scale, rotation, opacity, and color. Frames capture fine details, permit views from any arbitrary perspective, but are an order of magnitude, or more, larger than 2D video frames. A line of recent work has explored how to compress dynamic 3DGS frames, but these approaches are often slow, in part because their compression techniques are not amenable to efficient acceleration. GS-NFS accelerates dynamic 3DGS compression and decompression on a GPU, to the point where it can encode and decode at full frame rate. It achieves this by developing novel GPU-based parallelizations of existing algorithms for encoding both positions and attributes of Gaussians. As a result, it is 1-2 orders of magnitude faster than the state-of-the-art in encoding and decoding a frame, while offering competitive compression performance and rendering quality.",
-      "arxiv_url": "https://arxiv.org/abs/2606.05650",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2606.05124",
       "title": "Geometry Gaussians: Decoupling Appearance and Geometry in Gaussian Splatting",
       "published": "2026-06-03",
@@ -2410,26 +2380,6 @@
       "authors": "Amirhossein Mollaei Khass; Vivek Pandey; Guangyi Liu; Athanasios Cosse; Emrah Bayrak et al.",
       "abstract": "Multi-agent Next-Best-View (NBV) selection for safe path planning in uncertain and unknown environments requires informative, safety-aware, and efficient coordination. Centralized approaches rely on sharing raw sensor data or significant communication overhead, resulting in limited scalability. We propose a distributed, risk-aware multi-agent NBV framework in which each robot maintains a private local 3D Gaussian Splatting map and the team jointly maximizes expected information gain (EIG) restricted to masked zones along planned trajectories. The resulting distributed objective is solved by Consensus ADMM (C-ADMM) over a communication graph, with each robot exchanging only candidate viewpoints, planned trajectory descriptors, and scalar EIG contributions. Collision risk along each trajectory is modeled via Average Value-at-Risk (AV@R) over the local 3DGS map and used both to shape the masking radius and to score planned paths. Experiments in Gibson environments at multiple team sizes show that the distributed formulation approaches the centralized baseline in mapping quality and trajectory safety while reducing communication by orders of magnitude.",
       "arxiv_url": "https://arxiv.org/abs/2606.04158",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2606.03877",
-      "title": "MLP Splatting: Object-Centric Neural Fields",
-      "published": "2026-06-02",
-      "year": "2026",
-      "authors": "Shinjeong Kim; Yuzhou Cheng; Xin Kong; Paul H. J. Kelly; Andrew J. Davison",
-      "abstract": "3D representations are fundamental to scene rendering, understanding, and interaction. Recent approaches, such as 3D Gaussian Splatting and Neural Radiance Fields, achieve impressive photorealistic novel-view synthesis, but lack the ability to easily decompose scene elements into a few primitives, requiring additional segmentation or grouping for object-level manipulation. We present MLP-Splatting, a method that enables scene decomposition via a few expressive light-field primitives while providing photorealistic novel-view synthesis.   MLP-Splatting models each primitive as an independent compact MLP with localized spatial support that predicts radiance and opacity. In contrast to low-level Gaussian primitives or a single global radiance field, our neural primitives provide greater expressive capacity while remaining spatially localized. Rendering is performed through efficient sparse volumetric compositing over ray-primitive interactions.   Our primitives are supervised using RGB supervision alone, which yields primitives that represent local scene regions often corresponding to objects or object parts, enabling interactive object-level editing without segmentation masks by selecting a handful of primitives. Our method, augmented with optional semantic feature distillation, enables open-vocabulary scene interaction and open-set instant segmentation. Compared to state-of-the-art methods, we achieve substantially lower memory usage (1/15$\\times$) and faster rendering (3$\\times$), as we show in our experiments compared to semantic 3DGS methods. Project Page: https://shinjeongkim.com/mlp-splatting",
-      "arxiv_url": "https://arxiv.org/abs/2606.03877",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2606.03682",
-      "title": "GN0: Toward a Unified Paradigm for Generation, Evaluation, and Policy Learning in Visual-Language Navigation",
-      "published": "2026-06-02",
-      "year": "2026",
-      "authors": "Xinhai Li; Xiaotao Zhang; Yuehao Huang; Jiankun Dong; Tianhang Wang et al.",
-      "abstract": "Embodied navigation connects intelligent agents with the physical world and is fundamental for general robotic intelligence. Limited availability and quality of navigation data have constrained Vision-and-Language Navigation (VLN) systems' generalization and long-horizon capabilities. To address this, we curate diverse 3D scenes and develop an automated pipeline for large-scale navigation data, resulting in the GN-Matrix dataset. Building on a 3D Gaussian Splatting (3DGS) engine, we introduce a high-fidelity simulation platform supporting interactive roaming and collision-aware navigation. We further propose GN-Bench, the first BEV-based benchmark incorporating dynamic 3DGS avatars for human-robot interaction evaluation. To leverage the simulator, we develop an RL-driven navigation foundation model, Break and Establish (BAE). After supervised learning, DAgger exposes the model to rollout-induced states, breaking narrow expert-centric distributions and enabling downstream RL exploration. This unified VLN paradigm integrates map-based and map-free tasks, including instruction following, human following, and goal navigation. GN-BAE formalizes high-fidelity 3DGS-rendered Bird's Eye View representations as compact memory, unlocking latent spatial reasoning in VLMs. Extensive evaluations on GN-Bench and VLN-CE show that GN0 outperforms state-of-the-art VLN methods. Overall, GN-Matrix offers a unified framework spanning data, simulation, and learning, advancing embodied navigation in research and industrial applications.",
-      "arxiv_url": "https://arxiv.org/abs/2606.03682",
       "citations": 0
     },
     {
@@ -2643,6 +2593,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2605.28237",
+      "title": "POINav: Benchmarking and Enhancing Final-Meters Arrival in Real-World Vision-Language Navigation",
+      "published": "2026-05-27",
+      "year": "2026",
+      "authors": "Ruiyan Gong; Meisheng Zhang; Yuxiang Zhao; Mingchao Sun; Yanfen Shen et al.",
+      "abstract": "Real-world navigation is fundamentally driven by Points of Interest (POIs), yet reaching a precise POI remains a critical \"final-meters\" challenge. Existing Vision-Language Navigation (VLN) benchmarks of POI-goal navigation often suffer from coarse granularity or significant sim-to-real gaps due to generated scene. To bridge this gap, we present POINav-Bench, the first benchmark designed for closed-loop evaluation of real-world POI-goal navigation. It comprises 11 commercial areas reconstructed from real-world captures using 3D Gaussian Splatting (3DGS), covering 126,398 $m^{2}$ in total and spanning 163 distinct POIs. With traversability-aware annotations and reference trajectories, POINav-Bench enables high-fidelity evaluation of navigation agents in realistic, POI-rich real-world environments. Building on this, we propose the POINav Brain-Action Framework where a Brain module performs POI-grounded reasoning to guide an Action module in predicting continuous waypoints for real-world execution. We further curate the POINav-Dataset, containing 70K real-world signage-entrance pairs. Experiments show that our framework provides a viable path toward refining real-world POI-goal navigation.",
+      "arxiv_url": "https://arxiv.org/abs/2605.28237",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2605.26576",
       "title": "TrackRef3D: Multi-View Consistent Track-then-Label for Open-World Referring Segmentation in 3D Gaussian Splatting",
       "published": "2026-05-26",
@@ -2680,6 +2640,26 @@
       "authors": "Hongzhe Liao; Chuhua Xian; Hongmin Cai; Haiyang Liu; Fa-Ting Hong",
       "abstract": "3D Gaussian Splatting (3DGS) provides an efficient method for high-quality scene reconstruction using anisotropic Gaussians. Recently, 3DGS-based methods have significantly improved the rendering quality of human avatars while enabling real-time performance. However, existing methods suffer from a magnitude mismatch in the number of Gaussians generated by image-based and 3DMM-based approaches. This discrepancy results in reconstructed expressions that lack fine-grained detail. In this paper, we introduce a novel method for reconstructing an animatable head avatar from a single image. We propose a Graph splitting network to progressively generate Gaussians from coarse to fine using an autoregressive architecture. To address the graph inconsistency caused by split Gaussians, we employ a mesh topology extension method to align the GNN's connectivity with the increased Gaussian count. Furthermore, we introduce a novel density control method that includes a gating mechanism that generates soft masks for Gaussians, preventing over-densification after the splitting operation. This allows for dynamic control over Gaussian density across different facial regions. For smooth and rapid training, we employ a delayed filtering strategy to avoid re-computing the graph topology during training. Experimental results demonstrate that our autoregressive structure effectively improves expression representation ability by progressively splitting Gaussians. This process, enabled by the GNN-guided splitting, synthesizes more precise facial details and achieves higher reconstruction quality.",
       "arxiv_url": "https://arxiv.org/abs/2605.25751",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2605.25563",
+      "title": "CodecSplat: Ultra-Compact Latent Coding for Feed-Forward 3D Gaussian Splatting",
+      "published": "2026-05-25",
+      "year": "2026",
+      "authors": "Pengpeng Yu; Runqing Jiang; Qi Zhang; Dingquan Li; Jing Wang et al.",
+      "abstract": "While feed-forward 3D Gaussian splatting reconstructs renderable Gaussian primitives from sparse context views without per-scene optimization, existing pipelines do not provide a compact scene representation for storage or transmission. A natural solution is to apply existing 3DGS compression methods to the generated Gaussian primitives. However, this approach operates on the final irregular 3D representation and is decoupled from the internal feature-to-Gaussian generation process, which limits compression efficiency. To address this, we introduce CodecSplat, an ultra-compact latent coding framework for feed-forward 3D Gaussian splatting. CodecSplat first encodes an intermediate 2D Gaussian-generation feature into an entropy-coded scene bitstream. At the decoder, the latent feature is reconstructed and used to predict depth and Gaussian parameters, which are then mapped to 3D Gaussian primitives. Note that, by integrating compression into the feed-forward Gaussian generation pipeline, CodecSplat avoids inefficient compression over irregular 3D Gaussian primitives and allows the codec to exploit the structured intermediate feature representation. We instantiate CodecSplat on a feed-forward Gaussian splatting backbone with depth-guided multi-view feature refinement and a hierarchical learned feature codec. On DL3DV and RealEstate10K datasets, CodecSplat achieves 23.56-26.36 dB and 24.76-27.05 dB PSNR with only 20.00-107.77 KiB and 3.37-12.51 KiB per scene, respectively. This is roughly one order of magnitude smaller than compressing feed-forward generated Gaussian primitives, while preserving controllable rate-distortion behavior.",
+      "arxiv_url": "https://arxiv.org/abs/2605.25563",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2605.25373",
+      "title": "Physics-Aware 3D Gaussian Editing for Driving Scene Generation",
+      "published": "2026-05-25",
+      "year": "2026",
+      "authors": "Feng Zhou; Jian Zhang; Yuhang Sun; He Wang; Qiong Wen et al.",
+      "abstract": "3D Gaussian Splatting (3DGS) has shown great potential in autonomous driving simulation and data generation, enabling photorealistic reconstruction and flexible scene manipulation. However, existing 3DGS scene editing methods have limited support for road geometry editing (e.g., inserting speed humps or sunken roads), and generally do not couple such edits with plausible vehicle-road interaction dynamics. Such editing is essential for generating training data under extreme driving scenarios or evaluating system reliability under these road irregularities. Moreover, many optimization-based methods require minutes of per-edit refinement, while existing efficient alternatives mainly focus on appearance-level or object-level manipulation rather than physics-aware road irregularity editing. To address these limitations, we propose RoVES, a Road-and-Vehicle Editing System for physics-aware 3D Gaussian editing in driving scenes. RoVES enables single-image-driven road geometry insertion and couples the edited road profile with a 4-DOF half-car vehicle dynamics model to achieve physics-aware vehicle pose correction in vertical displacement and pitch. RoVES inserts road elements in a one-shot, optimization-free pipeline (1.84s), and the full pipeline (including color transfer and vehicle-dynamics-based pose correction) completes in 6.24s; it edits dynamic vehicles via pose editing and corrects poses frame-by-frame to approximate dynamics-consistent vertical displacement and pitch responses. Experiments on the Waymo dataset show that RoVES provides practical efficiency and competitive visual consistency for physics-aware driving scene generation.",
+      "arxiv_url": "https://arxiv.org/abs/2605.25373",
       "citations": 0
     },
     {
@@ -4913,6 +4893,16 @@
       "citations": 0
     },
     {
+      "arxiv_id": "2608.24343",
+      "title": "Digging dark holes on-sky with the Self-Coherent Camera: Preliminary results",
+      "published": "2026-08-25",
+      "year": "2026",
+      "authors": "Elena Tonucci; Sebastiaan Y. Haffert; Jared R. Males; Laird M. Close; Kyle van Gorkom et al.",
+      "abstract": "Current high-contrast imaging instruments are limited by wavefront errors originating from non-common path aberrations (NCPAs) due, for example, to manufacturing errors in the optics and temperature drifts in the system. These create quasi-static speckles in the final science image that are difficult to distinguish from companions. Therefore, focal plane wavefront sensing and control is needed to suppress speckles. The Self-Coherent Camera (SCC) is a wavefront sensor that allows us to estimate the stellar complex speckle field. In the Fast Atmospheric SCC Technique (FAST), the on-axis starlight hits a coronagraphic focal plane phase mask and is diffracted outside the Lyot stop where it is spatially filtered by a pinhole to create a reference beam. The reference beam and the leaked starlight are recombined on the science plane, creating interference fringes that do not affect the companion, because of incoherence. The focal plane mask was manufactured in-house at Leiden University with Nanoscribe, a micro-3D-printer that uses two-photon polymerization to achieve sub-micron precision in height. We present preliminary results of the first on-sky closed-loop SCC demonstration with the Magellan Adaptive Optics eXtreme (MagAO-X) instrument on the 6.5-meter Magellan Clay telescope at Las Campanas Observatory, Chile. We achieve a 1-sigma raw contrast improvement of a factor 10 in the desired dark hole region with FAST closed-loop control. In the future, we will show observations of stars with companions and use the SCC in post-processing as a Coherent Differential Imaging (CDI) technique to enhance the contrast even further.",
+      "arxiv_url": "https://arxiv.org/abs/2608.24343",
+      "citations": 0
+    },
+    {
       "arxiv_id": "2608.24340",
       "title": "Mind the Student: Behavioral and Contextual Cues for Automated Engagement Prediction in Online Learning",
       "published": "2026-08-25",
@@ -4920,6 +4910,16 @@
       "authors": "Alperen Kantarci; Visvanathan Ramesh; Gemma Roig",
       "abstract": "The prediction of student engagement from the online tutoring videos is difficult because engagement is a multidimensional construct comprising distinct behavioral, emotional, and cognitive states. A reliable prediction requires bringing together different types of behavioral signals as well as expressive cues. Through our analysis of the CASED dataset, it is clear that engagement prediction gets even harder due to the high inter-person variability as well as the subjectivity of the engagement annotation. To tackle these challenges, we develop a multimodal framework that integrates the implicit spatiotemporal features extracted from pretrained video, audio, and image encoders along with structured behavioral modalities like head pose, gaze, facial action units, emotion, and wavelet-based audio features. We integrate these modalities via a Perceiver IO latent bottleneck. Moreover, student and instructor personalities are modeled as variational posteriors over learnable embeddings to enable partial pooling across participants. We employ evidential regression and spectral-normalized Gaussian process classification heads for uncertainty-aware prediction to further improve robustness and calibration. Benchmark on the CASED challenge test set shows that all participating methods converge near random-chance performance, revealing the difficulty of the dataset. In this highly ambiguous regime, our framework achieves competitive performance while uniquely offering well-calibrated uncertainty metrics, demonstrating that reliable risk-quantification is an essential prerequisite for deploying engagement models in real-world educational tools.",
       "arxiv_url": "https://arxiv.org/abs/2608.24340",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2608.24333",
+      "title": "Sub-diffraction-limited coronagraphic imaging with nano-printed PIAACMC phase masks",
+      "published": "2026-08-25",
+      "year": "2026",
+      "authors": "Elena Tonucci; Sebastiaan Y. Haffert; Warren B. Foster; Jared R. Males; Olivier Guyon et al.",
+      "abstract": "Imaging Earth-like exoplanets in the habitable zone of their host star is among the main science objectives of future ground-based and space-based observatories. However, the extreme contrast and small separations needed to image such planets cannot be reached with current technology. The Phase-Induced Amplitude Apodization Complex Mask Coronagraph (PIAACMC) is a promising coronagraph to reach this goal. The PIAACMC uses a set of aspheric lenses to apodize the entrance pupil without throughput losses and a phase-shifting focal plane mask for starlight suppression. These allow us to maintain high throughput and achieve a small inner-working angle (IWA), unlocking the capability to observe exoplanets at the diffraction limit. The masks are manufactured in-house at Leiden University with Nanoscribe, a micro-3D-printer that uses two-photon polymerization to achieve sub-micron precision in height. We present the first scientific results with a focal plane mask for the PIAACMC on the Magellan Adaptive Optics eXtreme (MagAO-X) instrument for the 6.5-meter Magellan Clay telescope at Las Campanas Observatory, Chile. We show laboratory and on-sky contrast curves with a broadband z' filter centered at 908 nm with a 14% bandwidth. We use the PIAACMC to detect binary companions at separations ~0.8-5 lambda/D (~23-144 mas). This demonstrates the PIAACMC's capability to observe at the diffraction limit and below, with a sub-lambda/D IWA. Future work includes exploring new mask designs to improve the contrast in broadband light and performing active focal plane wavefront sensing and control.",
+      "arxiv_url": "https://arxiv.org/abs/2608.24333",
       "citations": 0
     },
     {
