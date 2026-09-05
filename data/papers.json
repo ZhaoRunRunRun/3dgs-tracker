@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-04 07:19 UTC",
+  "updated_at": "2026-09-05 06:58 UTC",
   "total": 589,
   "papers": [
     {
@@ -113,6 +113,16 @@
       "citations": 2
     },
     {
+      "arxiv_id": "2606.26092",
+      "title": "TryOnCrafter: Unleashing Camera Trajectories for Realistic Video Virtual Try-on via a Renderable 4D Try-on Proxy",
+      "published": "2026-06-24",
+      "year": "2026",
+      "authors": "Hao Sun; Hao Yan; Mengting Chen; Quanjian Song; Yu Li et al.",
+      "abstract": "While Video Virtual Try-on (VVT) has achieved remarkable progress in synthesizing realistic garment overlays on dynamic subjects, existing paradigms remains fundamentally constrained by a passive dependency on source camera trajectories, failing to accommodate the requisite interactive freedom for omnidirectional viewpoint exploration. To address this limitation, we define a pioneering research frontier: Camera-controllable Video Virtual Try-on (CaM-VVT). Unlike conventional VVT, CaM-VVT not only necessitates viewpoint-agnostic texture hallucination but also strict structural synchronization between non-rigid human dynamics and background contexts under arbitrary, unconstrained camera movements. To tackle these challenges, we present TryOnCrafter, the first unified DiT-based framework specifically architected for the CaM-VVT task. Departing from implicit pixel-space manipulation, we introduce a Renderable 4D Try-on Proxy that explicitly decouples the human subject from the environment. This is achieved by distilling high-fidelity 2D try-on priors into a clothed 3DGS-based avatar, which is subsequently animated via SMPL-X sequences and metric-aligned into a reconstructed background point cloud. This proxy establishes a robust structural foundation with superior texture density and motion integrity. Our Proxy-Anchored Video DiT leverages this robust structural foundation as a primary geometric anchor, ensuring that the synthesized photorealistic videos are strictly constrained by prescribed trajectories and physically plausible deformations. Benefiting from the inherent editability of the 4D proxy, TryOnCrafter facilitates diverse downstream applications, including human relocalization, ``bullet time'' effects, and $360$-degree orbital viewing.",
+      "arxiv_url": "https://arxiv.org/abs/2606.26092",
+      "citations": 2
+    },
+    {
       "arxiv_id": "2606.19874",
       "title": "MMD-SLAM: Structure-Enhanced Multi-Meta Gaussian Distribution-Guided Visual SLAM",
       "published": "2026-06-18",
@@ -133,6 +143,16 @@
       "citations": 2
     },
     {
+      "arxiv_id": "2606.03254",
+      "title": "OF$^3$GS: On-the-Fly Feed-Forward 3D Gaussian Splatting from Unposed Images",
+      "published": "2026-06-02",
+      "year": "2026",
+      "authors": "Ruiyang Chen; Feiran Li; Chu Zhou; Zonglin Li; Zhanyu Ma et al.",
+      "abstract": "Feed-forward 3D Gaussian Splatting (3DGS) enables efficient and high-fidelity novel view synthesis (NVS) from offline image sequences. However, achieving on-the-fly NVS from unposed images remains challenging: the system must reconstruct renderable 3D Gaussians as images arrive, without access to future observations. Although online feed-forward geometry methods have been developed for causal depth and point-cloud recovery, directly adapting them to NVS often leads to severe rendering artifacts because Gaussian-based rendering demands stricter multi-view consistency in primitive scale and pose-geometry alignment. Even minor deviations can accumulate under causal inference and visibly degrade rendering quality. To this end, we propose OF$^3$GS, a feed-forward framework for efficient and high-quality on-the-fly NVS from sparse-view unposed images under causal constraints. We introduce two mechanisms for causal geometric stability: a Decoupled Intrinsic Recovery Head that mitigates cumulative camera-intrinsic bias and scene-scale jitter, and Dynamic Point Refinement Offsets that relax rigid unprojection to compensate for coupled pose-depth drift. Extensive experiments show that OF$^3$GS outperforms online baselines and approaches offline feed-forward 3DGS methods under comparable sparse-input settings. It also remains memory-feasible with denser inputs. Homepage: https://richardchen225.github.io/of3gs/",
+      "arxiv_url": "https://arxiv.org/abs/2606.03254",
+      "citations": 2
+    },
+    {
       "arxiv_id": "2605.23602",
       "title": "GlowGS: Generative Semantic Feature Learning for 3D Gaussian Splatting in Nighttime Glow Scenes",
       "published": "2026-05-22",
@@ -150,6 +170,16 @@
       "authors": "Peifeng Jiang; Hong Liu; Jin Jin; Wenshuai Wang; Xia Li",
       "abstract": "Safe manipulation-oriented navigation for humanoid robots requires scene memory that remains reliable under locomotion-induced perceptual distortion, environmental changes, and interaction-level geometric safety constraints. Existing semantic mapping and scene-graph systems are difficult to deploy directly in this setting because they often assume stable camera trajectories, static environments, or coarse object geometry. We introduce the Multi-modal Interactive Field (MIF), a humanoid-oriented system that integrates confidence-aware semantic 3D Gaussian Splatting, discrepancy-triggered spatial memory updates, and task-driven geometric reconstruction within a closed-loop perception-adaptation pipeline. MIF couples three fields: an uncertainty-aware 3DGS Appearance Field that suppresses gait-induced blur, a Spatial Field that maintains topological memory, and a Geometry Field that supports Interaction Pose Safety (IPS) before manipulation. A discrepancy detection score is introduced to separate locomotion-induced false-positive changes from persistent changes and updates only locally inconsistent regions. On a Unitree-G1 humanoid in a real dynamic office, MIF improves relocation success in non-static environments from 12% to 94% compared with static scene-graph memory, while reducing semantic memory footprint by 91.4% through feature distillation for practical online operation. Project page and code: https://ziya-jiang.github.io/MIF-homepage/",
       "arxiv_url": "https://arxiv.org/abs/2605.21935",
+      "citations": 2
+    },
+    {
+      "arxiv_id": "2609.03253",
+      "title": "Coupling-Aware Aggregation of Multi-Zone HVAC Loads under Uncertainty: A Two-level Framework",
+      "published": "2026-09-03",
+      "year": "2026",
+      "authors": "Jingguan Liu; Han Jiang; Xiaomeng Ai; Shengshi Wang; Xizhen Xue et al.",
+      "abstract": "Aggregating building heating, ventilation, and air-conditioning (HVAC) loads unlocks substantial demand-side flexibility for power systems. Yet multi-zone coupling creates intricate interdependencies and uncertainty propagation, complicating the quantification of aggregate flexibility. To address this issue, this paper proposes a coupling-aware two-level aggregation framework. At the building level, tailored Gaussian elimination and coordinate transformation techniques are employed to recast the high-dimensional thermal dynamics as an equivalent lower-dimensional analytical expression. This expression streamlines the subsequent aggregator-level stage by (i) clarifying the propagation of zone-level uncertainties to the building-level interface, (ii) decoupling intra-building multi-zone coupling from inter-building aggregation, and (iii) providing full-dimensional building-level flexibility sets that enable tractable reformulation. At the aggregator level, existing geometric aggregation approaches are generalized by a newly developed matrix-transformation technique. This technique effectively constructs inner approximations between polytopes of different dimensions, producing closed-form images of high-dimensional multi-zone HVAC flexibility in power subspace. The resulting inner approximation is then recast as a customized separatable linear program that efficiently determines the optimal aggregate parameters. Case studies validate the effectiveness of our framework, highlighting its accuracy, reliability, and scalability.",
+      "arxiv_url": "https://arxiv.org/abs/2609.03253",
       "citations": 2
     },
     {
@@ -263,6 +293,26 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2606.27071",
+      "title": "PanoImager: Geometry-Guided Novel View Synthesis and Reconstruction from Sparse Panoramic Views",
+      "published": "2026-06-25",
+      "year": "2026",
+      "authors": "Zhisong Xu; Takeshi Oishi",
+      "abstract": "Panoramic sensing offers wide field-of-view coverage, yet 3D reconstruction from sparse panoramas remains challenging under rotation-dominant, weak-parallax motion. In such regimes, SfM/SLAM initialization is often ill-conditioned and unreliable. We present PanoImager, an SfM-free framework that combines feed-forward pose/depth priors, geometry-conditioned diffusion view completion, and depth-guided 3DGS optimization. Given only a few panoramic images, PanoImager decomposes them into local perspective views, synthesizes auxiliary observations to enrich sparse evidence, and stabilizes Gaussian optimization for improved cross-view consistency. Experiments on multiple benchmarks show improved stability under extreme sparsity, suggesting PanoImager as an offline/background component for map refinement when SfM/SLAM fails to initialize.",
+      "arxiv_url": "https://arxiv.org/abs/2606.27071",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2606.24876",
+      "title": "FLAT: Feedforward Latent Triangle Splatting for Geometrically Accurate Scene Generation",
+      "published": "2026-06-23",
+      "year": "2026",
+      "authors": "Orest Kupyn; Goutam Bhat; Philipp Henzler; Fabian Manhardt; Christian Rupprecht et al.",
+      "abstract": "Generating explorable 3D scenes from a single image requires strong generative priors and accurate geometric representations suitable for downstream use. Current video diffusion models offer high-quality generation and implicitly encode multi-view geometric structure in latent space. However, existing feedforward latent scene decoders typically output volumetric 3D Gaussians that lack a well-defined surface, limiting their use in simulation or standard graphics pipelines. This motivates decoding surface-aligned primitives that are not only renderable but also closer to explicit geometric assets. We ask whether compressed video diffusion latents can be mapped directly to explicit surface primitives in a single pass. To this end, we introduce FLAT and, for the first time, show that triangle splats can be decoded directly from video diffusion latents. Compared with decoding 3D Gaussians, predicting flat primitives is notoriously more challenging due to high sensitivity to primitive orientations, oftentimes leading to poor gradient flow. FLAT solves with two key ingredients: a ray-centered rotation parameterization for triangle regression and a novel product window function that improves gradient flow during differentiable triangle rendering. On standard benchmarks, FLAT achieves significantly better geometric accuracy while maintaining competitive visual quality compared to state-of-the-art feedforward baselines. We further show that a lightweight test-time refinement step converts the predicted triangle soup into a fully opaque, game-engine-ready representation that supports real-time rendering. By evaluating 3DGS, 2DGS, and triangle splatting variants under an identical training setup, we provide the first systematic analysis of representation tradeoffs in feedforward scene generation. The project page is available at https://flat-splat.github.io",
+      "arxiv_url": "https://arxiv.org/abs/2606.24876",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2606.18588",
       "title": "Splaxel: Efficient Distributed Training of 3D Gaussian Splatting for Large-scale Scene Reconstruction via Pixel-level Communication",
       "published": "2026-06-17",
@@ -320,16 +370,6 @@
       "authors": "Shinjeong Kim; Yuzhou Cheng; Xin Kong; Paul H. J. Kelly; Andrew J. Davison",
       "abstract": "3D representations are fundamental to scene rendering, understanding, and interaction. Recent approaches, such as 3D Gaussian Splatting and Neural Radiance Fields, achieve impressive photorealistic novel-view synthesis, but lack the ability to easily decompose scene elements into a few primitives, requiring additional segmentation or grouping for object-level manipulation. We present MLP-Splatting, a method that enables scene decomposition via a few expressive light-field primitives while providing photorealistic novel-view synthesis.   MLP-Splatting models each primitive as an independent compact MLP with localized spatial support that predicts radiance and opacity. In contrast to low-level Gaussian primitives or a single global radiance field, our neural primitives provide greater expressive capacity while remaining spatially localized. Rendering is performed through efficient sparse volumetric compositing over ray-primitive interactions.   Our primitives are supervised using RGB supervision alone, which yields primitives that represent local scene regions often corresponding to objects or object parts, enabling interactive object-level editing without segmentation masks by selecting a handful of primitives. Our method, augmented with optional semantic feature distillation, enables open-vocabulary scene interaction and open-set instant segmentation. Compared to state-of-the-art methods, we achieve substantially lower memory usage (1/15$\\times$) and faster rendering (3$\\times$), as we show in our experiments compared to semantic 3DGS methods. Project Page: https://shinjeongkim.com/mlp-splatting",
       "arxiv_url": "https://arxiv.org/abs/2606.03877",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2606.03254",
-      "title": "OF$^3$GS: On-the-Fly Feed-Forward 3D Gaussian Splatting from Unposed Images",
-      "published": "2026-06-02",
-      "year": "2026",
-      "authors": "Ruiyang Chen; Feiran Li; Chu Zhou; Zonglin Li; Zhanyu Ma et al.",
-      "abstract": "Feed-forward 3D Gaussian Splatting (3DGS) enables efficient and high-fidelity novel view synthesis (NVS) from offline image sequences. However, achieving on-the-fly NVS from unposed images remains challenging: the system must reconstruct renderable 3D Gaussians as images arrive, without access to future observations. Although online feed-forward geometry methods have been developed for causal depth and point-cloud recovery, directly adapting them to NVS often leads to severe rendering artifacts because Gaussian-based rendering demands stricter multi-view consistency in primitive scale and pose-geometry alignment. Even minor deviations can accumulate under causal inference and visibly degrade rendering quality. To this end, we propose OF$^3$GS, a feed-forward framework for efficient and high-quality on-the-fly NVS from sparse-view unposed images under causal constraints. We introduce two mechanisms for causal geometric stability: a Decoupled Intrinsic Recovery Head that mitigates cumulative camera-intrinsic bias and scene-scale jitter, and Dynamic Point Refinement Offsets that relax rigid unprojection to compensate for coupled pose-depth drift. Extensive experiments show that OF$^3$GS outperforms online baselines and approaches offline feed-forward 3DGS methods under comparable sparse-input settings. It also remains memory-feasible with denser inputs. Homepage: https://richardchen225.github.io/of3gs/",
-      "arxiv_url": "https://arxiv.org/abs/2606.03254",
       "citations": 1
     },
     {
@@ -490,6 +530,16 @@
       "authors": "Ritwesh A. Kumar; Som Tripathi; Peja Matthews; Srikar Reddy; Talukder Zaki Jubery et al.",
       "abstract": "Maize kernel traits such as row number, kernels per row, and kernel size vary largely for genetic reasons and are consistently associated with regions of the genome that influence yield. Manual measurement of these traits, however, cannot keep pace with the volume of maize generated in a breeding program. To address this, we developed and validated a fully automated pipeline for extracting these traits from 3D point clouds of corn ears, built on a recently developed video-to-point-cloud platform. Raw video frames are processed through COLMAP and NeRF, the ear is isolated via density-based separation, and the point cloud is distance-calibrated to physical units. The calibrated ear point cloud was Z-axis aligned via PCA and cylindrically unwrapped to a 2D image. We enhanced contrast and performed zero-fine-tuning instance segmentation using Cellpose-SAM. A triple-juxtaposed unwrap strategy was used to prevent double-counting at the seam. The pipeline achieved kernel count R^2 = 0.921 (MAPE = 10.33%) and kernel row number within +-2 rows for 95.2% of ears (MAE = 0.75 rows) on a 168-ear held-out set from the 268-ear labeled dataset. The resulting multi-trait dataset has known genotype identity for each ear, positioning it for phenotype-to-genotype association analyses.",
       "arxiv_url": "https://arxiv.org/abs/2609.01921",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2609.01581",
+      "title": "Concentration of additive functionals of Stratonovich-type",
+      "published": "2026-09-01",
+      "year": "2026",
+      "authors": "Rick Bebon; Aljaž Godec; Angelika Rohde",
+      "abstract": "Additive functionals $\\overline{J}_t=\\frac{1}{t}\\int_0^tU(X_s)\\circ dX_s$ of Stratonovich-type recently attracted much attention in the context of inference of thermodynamic properties of complex systems from observations $U$ of individual fluctuating paths $(X_s)_{0\\le s\\le t}$, whereby $X_0$ is initiated from some general measure. Concentration results on $\\overline{J}_t$, albeit desirable, are virtually nonexistent. They turn out to be significantly more challenging to prove than for classical Lebesgue-type functionals $\\overlineρ_t=\\frac{1}{t}\\int_0^t V(X_s)ds$ because the tilt deforms the full second-order structure of the Feynman-Kac generator instead of contributing an additive potential. This renders the generator generally non-self-adjoint even under detailed balance. We overcome this by working with a symmetrized Dirichlet form with a new effective potential that now couples the observable to the non-equilibrium character of the dynamics. We prove concentration inequalities for $\\overline{J}_t$ for any bounded, sufficiently smooth vector-valued function $U$ of a general geometrically ergodic diffusion process $X_s$, including explicit sub-gamma and Bernstein-type inequalities, and we obtain explicit upper bounds on ${\\rm Var}(\\overline{J}_t)$. Strikingly, under detailed balance the concentration of $\\overline{J}_t$ is distinctively sub-Gaussian at all times and all deviations, with a variance proxy fixed by the noise alone and independent of the spectral gap, which has no analog for $\\overlineρ_t$.",
+      "arxiv_url": "https://arxiv.org/abs/2609.01581",
       "citations": 1
     },
     {
@@ -2173,16 +2223,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2606.27071",
-      "title": "PanoImager: Geometry-Guided Novel View Synthesis and Reconstruction from Sparse Panoramic Views",
-      "published": "2026-06-25",
-      "year": "2026",
-      "authors": "Zhisong Xu; Takeshi Oishi",
-      "abstract": "Panoramic sensing offers wide field-of-view coverage, yet 3D reconstruction from sparse panoramas remains challenging under rotation-dominant, weak-parallax motion. In such regimes, SfM/SLAM initialization is often ill-conditioned and unreliable. We present PanoImager, an SfM-free framework that combines feed-forward pose/depth priors, geometry-conditioned diffusion view completion, and depth-guided 3DGS optimization. Given only a few panoramic images, PanoImager decomposes them into local perspective views, synthesizes auxiliary observations to enrich sparse evidence, and stabilizes Gaussian optimization for improved cross-view consistency. Experiments on multiple benchmarks show improved stability under extreme sparsity, suggesting PanoImager as an offline/background component for map refinement when SfM/SLAM fails to initialize.",
-      "arxiv_url": "https://arxiv.org/abs/2606.27071",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2606.26985",
       "title": "Vis4GS: A Visual Analytic Tool for 3D Gaussian Splatting Reconstruction",
       "published": "2026-06-25",
@@ -2203,16 +2243,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2606.26092",
-      "title": "TryOnCrafter: Unleashing Camera Trajectories for Realistic Video Virtual Try-on via a Renderable 4D Try-on Proxy",
-      "published": "2026-06-24",
-      "year": "2026",
-      "authors": "Hao Sun; Hao Yan; Mengting Chen; Quanjian Song; Yu Li et al.",
-      "abstract": "While Video Virtual Try-on (VVT) has achieved remarkable progress in synthesizing realistic garment overlays on dynamic subjects, existing paradigms remains fundamentally constrained by a passive dependency on source camera trajectories, failing to accommodate the requisite interactive freedom for omnidirectional viewpoint exploration. To address this limitation, we define a pioneering research frontier: Camera-controllable Video Virtual Try-on (CaM-VVT). Unlike conventional VVT, CaM-VVT not only necessitates viewpoint-agnostic texture hallucination but also strict structural synchronization between non-rigid human dynamics and background contexts under arbitrary, unconstrained camera movements. To tackle these challenges, we present TryOnCrafter, the first unified DiT-based framework specifically architected for the CaM-VVT task. Departing from implicit pixel-space manipulation, we introduce a Renderable 4D Try-on Proxy that explicitly decouples the human subject from the environment. This is achieved by distilling high-fidelity 2D try-on priors into a clothed 3DGS-based avatar, which is subsequently animated via SMPL-X sequences and metric-aligned into a reconstructed background point cloud. This proxy establishes a robust structural foundation with superior texture density and motion integrity. Our Proxy-Anchored Video DiT leverages this robust structural foundation as a primary geometric anchor, ensuring that the synthesized photorealistic videos are strictly constrained by prescribed trajectories and physically plausible deformations. Benefiting from the inherent editability of the 4D proxy, TryOnCrafter facilitates diverse downstream applications, including human relocalization, ``bullet time'' effects, and $360$-degree orbital viewing.",
-      "arxiv_url": "https://arxiv.org/abs/2606.26092",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2606.25427",
       "title": "Gastroendoscopy View Synthesis: A New Real Dataset and Evaluation",
       "published": "2026-06-24",
@@ -2220,16 +2250,6 @@
       "authors": "Masaki Minai; Yusuke Monno; Masatoshi Okutomi; Sho Suzuki",
       "abstract": "Novel view synthesis (NVS) is an active research topic in computer vision, owing to the success of neural radiance field (NeRF) and 3D Gaussian splatting (3DGS) methods. While NVS opens the door to potential applications in gastroendoscopy, such as extending the field of view of endoscopic images and enabling digital twins for 3D archiving and endoscopist manipulation training, the dataset is insufficient to evaluate NVS for gastroendoscopy. In this paper, we present the first real gastroscopy dataset for NVS, namely the GastroNVS dataset, which contains a set of gastroscopic images, camera poses, and a point cloud for real gastroendoscopy inspection. To assess the suitability of the GastroNVS dataset, we evaluate several 3DGS methods and discuss the challenges for future development. The dataset is available on request from our project page.",
       "arxiv_url": "https://arxiv.org/abs/2606.25427",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2606.24876",
-      "title": "FLAT: Feedforward Latent Triangle Splatting for Geometrically Accurate Scene Generation",
-      "published": "2026-06-23",
-      "year": "2026",
-      "authors": "Orest Kupyn; Goutam Bhat; Philipp Henzler; Fabian Manhardt; Christian Rupprecht et al.",
-      "abstract": "Generating explorable 3D scenes from a single image requires strong generative priors and accurate geometric representations suitable for downstream use. Current video diffusion models offer high-quality generation and implicitly encode multi-view geometric structure in latent space. However, existing feedforward latent scene decoders typically output volumetric 3D Gaussians that lack a well-defined surface, limiting their use in simulation or standard graphics pipelines. This motivates decoding surface-aligned primitives that are not only renderable but also closer to explicit geometric assets. We ask whether compressed video diffusion latents can be mapped directly to explicit surface primitives in a single pass. To this end, we introduce FLAT and, for the first time, show that triangle splats can be decoded directly from video diffusion latents. Compared with decoding 3D Gaussians, predicting flat primitives is notoriously more challenging due to high sensitivity to primitive orientations, oftentimes leading to poor gradient flow. FLAT solves with two key ingredients: a ray-centered rotation parameterization for triangle regression and a novel product window function that improves gradient flow during differentiable triangle rendering. On standard benchmarks, FLAT achieves significantly better geometric accuracy while maintaining competitive visual quality compared to state-of-the-art feedforward baselines. We further show that a lightweight test-time refinement step converts the predicted triangle soup into a fully opaque, game-engine-ready representation that supports real-time rendering. By evaluating 3DGS, 2DGS, and triangle splatting variants under an identical training setup, we provide the first systematic analysis of representation tradeoffs in feedforward scene generation. The project page is available at https://flat-splat.github.io",
-      "arxiv_url": "https://arxiv.org/abs/2606.24876",
       "citations": 0
     },
     {
@@ -3873,16 +3893,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2609.03253",
-      "title": "Coupling-Aware Aggregation of Multi-Zone HVAC Loads under Uncertainty: A Two-level Framework",
-      "published": "2026-09-03",
-      "year": "2026",
-      "authors": "Jingguan Liu; Han Jiang; Xiaomeng Ai; Shengshi Wang; Xizhen Xue et al.",
-      "abstract": "Aggregating building heating, ventilation, and air-conditioning (HVAC) loads unlocks substantial demand-side flexibility for power systems. Yet multi-zone coupling creates intricate interdependencies and uncertainty propagation, complicating the quantification of aggregate flexibility. To address this issue, this paper proposes a coupling-aware two-level aggregation framework. At the building level, tailored Gaussian elimination and coordinate transformation techniques are employed to recast the high-dimensional thermal dynamics as an equivalent lower-dimensional analytical expression. This expression streamlines the subsequent aggregator-level stage by (i) clarifying the propagation of zone-level uncertainties to the building-level interface, (ii) decoupling intra-building multi-zone coupling from inter-building aggregation, and (iii) providing full-dimensional building-level flexibility sets that enable tractable reformulation. At the aggregator level, existing geometric aggregation approaches are generalized by a newly developed matrix-transformation technique. This technique effectively constructs inner approximations between polytopes of different dimensions, producing closed-form images of high-dimensional multi-zone HVAC flexibility in power subspace. The resulting inner approximation is then recast as a customized separatable linear program that efficiently determines the optimal aggregate parameters. Case studies validate the effectiveness of our framework, highlighting its accuracy, reliability, and scalability.",
-      "arxiv_url": "https://arxiv.org/abs/2609.03253",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2609.03245",
       "title": "A Joint Power-Privacy Control Framework for Decentralized Learning over Heterogeneous Wireless Multicasting Networks",
       "published": "2026-09-03",
@@ -4257,7 +4267,7 @@
       "title": "Vortex promoters in MHD duct flow",
       "published": "2026-09-02",
       "year": "2026",
-      "authors": "Andreu Queralt; Dmitry Krasnov; Yuri Kolesnikov;  JörgSchumacher",
+      "authors": "Andreu Queralt; Dmitry Krasnov; Yuri Kolesnikov; Jörg Schumacher",
       "abstract": "We use 3D direct numerical simulations to study the effects of vortex promoters in liquid metal duct flow to sustain Q2D states which are formed in the presence of strong magnetic fields, such as those present in cooling blankets of fusion reactors. Both for electrically insulating and conducting walls. In case of insulating walls, disturbances are found to be sustained. For conducting walls, the disturbances may be extinguished immediately and replaced by a Walker- or Hunt-type flow with its own jet-detachment instability. Furthermore, we add heat transfer by imposing constant heat flux at the Shercliff walls. We classify and compare possible configurations with respect to their turbulent transport properties. For conducting ducts, no additional effect is observed. For insulating ducts in horizontal position, we observe a small effect. For vertical ducts, the buoyancy forces have a significant impact due to buoyancy-driven instabilities, which produce intermittent fluctuations. The analysis of the turbulent kinetic energy (TKE) and the Nusselt number show that flows with the largest TKE may not have the best heat transfer performance. This is caused by side jets removing heat faster than mixing the bulk flow. The buoyancy force and wall conductance ratio are found to play a key role in determining the flow structure. Part of our work is a parametric study at fixed Reynolds, Hartmann and Prandtl numbers, which allows us eventually to compose a phase diagram showcasing the different flow regimes.",
       "arxiv_url": "https://arxiv.org/abs/2609.02619",
       "citations": 0
@@ -4820,16 +4830,6 @@
       "authors": "Ziyun Qian; Zizhi Chen; Yizhou Liu; Mingyang Sun; Dingkang Yang et al.",
       "abstract": "Complex 3D spatial text to image generation requires models to convert natural language into stable visual geometry, not merely semantic appearance. Existing prompt-driven or layout-conditioned methods improve controllability, but often lack an optimizable and verifiable spatial intermediary before visual sampling. As a result, object relations, occlusion, visibility, and camera constraints can decay during multi-round generation. This paper presents SpatialGuard, a structured layout-guided framework for complex 3D spatial text-to-image generation. SpatialGuard parses prompts into image synthesis-oriented 3D layouts through a Spatial Layout Architect, realizes them as visual conditions and candidate images through a Visual Realizer, and uses a Visual Alignment Critic to validate consistency among prompt, layout, and image. To keep constraints stable across iterations, SpatialGuard introduces a Layout Harness that organizes rule constraints, tool invocation, shared knowledge, and feedback loops around the editable layout state. This design turns complex spatial generation from implicit prompt following into a verifiable process of planning, realization, validation, and repair. Comprehensive experiments show that SpatialGuard achieves state-of-the-art performance in complex 3D spatial layout generation and improves spatial faithfulness over existing text-to-image and layout control baselines.",
       "arxiv_url": "https://arxiv.org/abs/2609.01582",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2609.01581",
-      "title": "Concentration of additive functionals of Stratonovich-type",
-      "published": "2026-09-01",
-      "year": "2026",
-      "authors": "Rick Bebon; Aljaž Godec; Angelika Rohde",
-      "abstract": "Additive functionals $\\overline{J}_t=\\frac{1}{t}\\int_0^tU(X_s)\\circ dX_s$ of Stratonovich-type recently attracted much attention in the context of inference of thermodynamic properties of complex systems from observations $U$ of individual fluctuating paths $(X_s)_{0\\le s\\le t}$, whereby $X_0$ is initiated from some general measure. Concentration results on $\\overline{J}_t$, albeit desirable, are virtually nonexistent. They turn out to be significantly more challenging to prove than for classical Lebesgue-type functionals $\\overlineρ_t=\\frac{1}{t}\\int_0^t V(X_s)ds$ because the tilt deforms the full second-order structure of the Feynman-Kac generator instead of contributing an additive potential. This renders the generator generally non-self-adjoint even under detailed balance. We overcome this by working with a symmetrized Dirichlet form with a new effective potential that now couples the observable to the non-equilibrium character of the dynamics. We prove concentration inequalities for $\\overline{J}_t$ for any bounded, sufficiently smooth vector-valued function $U$ of a general geometrically ergodic diffusion process $X_s$, including explicit sub-gamma and Bernstein-type inequalities, and we obtain explicit upper bounds on ${\\rm Var}(\\overline{J}_t)$. Strikingly, under detailed balance the concentration of $\\overline{J}_t$ is distinctively sub-Gaussian at all times and all deviations, with a variance proxy fixed by the noise alone and independent of the spectral gap, which has no analog for $\\overlineρ_t$.",
-      "arxiv_url": "https://arxiv.org/abs/2609.01581",
       "citations": 0
     },
     {
