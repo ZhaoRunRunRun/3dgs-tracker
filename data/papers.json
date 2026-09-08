@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07 07:18 UTC",
+  "updated_at": "2026-09-08 06:55 UTC",
   "total": 589,
   "papers": [
     {
@@ -480,6 +480,26 @@
       "authors": "Sylvia Yuan; Dan Wang; Ravi Ramamoorthi; Xinrui Cui",
       "abstract": "We present ArtMesh, a mesh-native method for reconstructing articulated objects explicitly as connected triangle meshes with per-part rigid motion from multi-view images in start and end states. Existing 3D Gaussian Splatting pipelines for articulated reconstruction inherit the unstructured point-based geometry of their splatting base, which provides no surface topology for reasoning about part boundaries or enforcing motion consistency along the object's connectivity. ArtMesh instead builds on a mesh-based differentiable rendering backbone, enabling part-aware dynamics to act directly on the structured topology. To make the topology compatible with articulation, we introduce part-aware restricted Delaunay remeshing, producing connected submeshes whose triangles do not cross semantic part boundaries. The dynamic mesh field then optimizes articulation using bidirectional Vertex-wise Motion Consistency on transported mesh vertices and Pixel-wise Motion Consistency on rendered RGB-D observations. We introduce Articulate-100, a new benchmark of 100 articulated objects spanning 16 PartNet-Mobility categories. On this benchmark, ArtMesh outperforms prior 3DGS-based pipelines in joint parameter estimation and part-level geometric reconstruction, with the largest gains on objects with many movable parts.",
       "arxiv_url": "https://arxiv.org/abs/2605.16582",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2609.05254",
+      "title": "T(r)opical Islands: Visualizing & Understanding Socio-Technical Artifacts",
+      "published": "2026-09-04",
+      "year": "2026",
+      "authors": "Adam Štěpánek; Marco Raglianti; Vít Rusňák; Jan Byška; Barbora Kozlíková et al.",
+      "abstract": "Projects hosted on collaborative software development platforms, such as GitHub, include many non-code artifacts documenting the project's lifecycle, with its challenges, plans, design, and even community. These socio-technical artifacts include, for example, bug reports, feature requests, and forum posts, offering a useful prospect on the project's evolution. However, these artifacts are dispersed over multiple communication channels and written in natural language, making their analysis difficult, as they are fragmented and with considerable noise.   We present a 3D visualization approach mapping topics found across a project's socio-technical artifacts onto vegetation-covered islands, where the individual artifacts are depicted as trees of various types. The topic islands rise out of the ocean as they become discussed, to sink again when they are no longer so. We built a prototype implementing the entire visualization pipeline, from data mining to interactive rendering, leveraging machine learning techniques to cluster the artifacts and extract their topics. We present, through several case studies, the insights that our approach elicits about discussions of development topics throughout a project's history. The user study we conducted (N=34) further strengthens our conclusions about its suitability for understanding socio-technical artifacts and their evolution.",
+      "arxiv_url": "https://arxiv.org/abs/2609.05254",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2609.04047",
+      "title": "The Dice Roll Method: A Standardized Protocol for Repeated-Query Auditing of Large Language Model Brand Recommendations",
+      "published": "2026-09-03",
+      "year": "2026",
+      "authors": "Dmitrij Żatuchin",
+      "abstract": "Background: Researchers increasingly use repeated identical prompts to audit stochastic variation in large language model (LLM) brand recommendations, yet no standardized protocol exists for setting iteration counts, selecting stability metrics, or establishing reliability thresholds. Objective: We formalize the Dice Roll Method as a reusable protocol for repeated-query auditing of LLM brand recommendations, grounded in a generative model of temperature-scaled nucleus sampling. Methods: Total response variance is decomposed into sampling, prompt-phrasing, run-to-run, and model-version components. The stack: a negative-binomial mixed model with iterations as repeated measures; Cliff's delta as the distribution-free effect size; dependence-preserving bootstrap; simulation-based power; a generalizability-theory decomposition; drift diagnostics on pinned snapshots. We reanalyse five brand-recommendation auditing studies: approximately 190,000 observations, 270+ brands, 6 languages, iteration counts 5 to 40. Results: Three tiers of iteration guidance emerge from the D-study: exploratory (n = 5, G = 0.58), confirmatory (n = 10, G = 0.74), and rigorous (n = 15, G = 0.81), tied to effect-size and generalizability targets. The four metric families (count, set, embedding, fairness-adjusted PASOR) are complementary, motivating a compact metric battery over single indicators. A pre-registered external validation on three independent corpora (Motoki et al., 100-round; Rozado, 24 models; llm-stability) reproduces the D-study reliability prediction in 37 of 39 cells with no failures and the n = 5 power value to two decimals; the fixed tiers do not transfer, supporting a pilot-then-solve reading. Conclusion: The protocol gives repeated-query auditing of LLM brand recommendations a statistically principled footing under the conditional, non-Gaussian structure of real autoregressive generation.",
+      "arxiv_url": "https://arxiv.org/abs/2609.04047",
       "citations": 1
     },
     {
@@ -3213,16 +3233,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2609.05254",
-      "title": "T(r)opical Islands: Visualizing & Understanding Socio-Technical Artifacts",
-      "published": "2026-09-04",
-      "year": "2026",
-      "authors": "Adam Štěpánek; Marco Raglianti; Vít Rusňák; Jan Byška; Barbora Kozlíková et al.",
-      "abstract": "Projects hosted on collaborative software development platforms, such as GitHub, include many non-code artifacts documenting the project's lifecycle, with its challenges, plans, design, and even community. These socio-technical artifacts include, for example, bug reports, feature requests, and forum posts, offering a useful prospect on the project's evolution. However, these artifacts are dispersed over multiple communication channels and written in natural language, making their analysis difficult, as they are fragmented and with considerable noise.   We present a 3D visualization approach mapping topics found across a project's socio-technical artifacts onto vegetation-covered islands, where the individual artifacts are depicted as trees of various types. The topic islands rise out of the ocean as they become discussed, to sink again when they are no longer so. We built a prototype implementing the entire visualization pipeline, from data mining to interactive rendering, leveraging machine learning techniques to cluster the artifacts and extract their topics. We present, through several case studies, the insights that our approach elicits about discussions of development topics throughout a project's history. The user study we conducted (N=34) further strengthens our conclusions about its suitability for understanding socio-technical artifacts and their evolution.",
-      "arxiv_url": "https://arxiv.org/abs/2609.05254",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2609.05250",
       "title": "Memory-Optimal Sequential Synthesis of Multimode Gaussian Transformations",
       "published": "2026-09-04",
@@ -4060,16 +4070,6 @@
       "authors": "Maja Gwóźdź",
       "abstract": "We study dimension-free differential estimates for Brenier maps under first-order perturbations of the two marginals. Caffarelli's contraction theorem yields such estimates when the source and target potentials satisfy a pointwise Hessian comparison. We show that the same conclusion remains true under arbitrary globally Lipschitz perturbations of both marginals, without additional assumptions. In particular, this answers the conjecture due to Fathi, Mikulincer, and Shenfeld.   More precisely, let $d\\ge1$, $L\\ge0$, and let $B:\\mathbb{R}^d\\to\\mathbb{R}$ be globally $L$-Lipschitz. We prove that the Brenier map from the standard Gaussian measure $γ_d$ to the probability measure proportional to $\\mathrm{e}^{-B}γ_d$ has a globally Lipschitz representative whose bound depends only on $L$. The Brenier potential also belongs to $C^{1,1}(\\mathbb{R}^d)$ and satisfies dimension-free two-sided Hessian bounds. Let $\\mathfrak{C}(0,L)$ denote the upper-bound constant, then \\[ \\log\\mathfrak{C}(0,L)=4L^2+\\log L+\\mathcal{O}(1) \\qquad(L\\to\\infty), \\] and a one-dimensional example with Brenier map $T_L$ satisfies $\\log\\operatorname{Lip}(T_L)\\ge L^2/2$.   We deduce this Gaussian estimate from an anisotropic two-marginal result. Let $V,W:\\mathbb{R}^d\\to\\mathbb{R}$ be potentials, and let $Q,P$ be positive-definite matrices. Using the distributional curvature bounds $D^2V\\preceq Q$ and $D^2W\\succeq P$, we establish matrix Hessian bounds for Brenier maps between arbitrary globally Lipschitz perturbations of the reference marginals. Most importantly, the constants keep the directional geometry of the essential gradient ranges. For affine perturbations, our estimates recover the sharp noncommuting Caffarelli tensor. We further obtain pointwise displacement bounds for Gaussian perturbations and spectral Hessian estimates for compact Gaussian mixtures.",
       "arxiv_url": "https://arxiv.org/abs/2609.04052",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2609.04047",
-      "title": "The Dice Roll Method: A Standardized Protocol for Repeated-Query Auditing of Large Language Model Brand Recommendations",
-      "published": "2026-09-03",
-      "year": "2026",
-      "authors": "Dmitrij Żatuchin",
-      "abstract": "Background: Researchers increasingly use repeated identical prompts to audit stochastic variation in large language model (LLM) brand recommendations, yet no standardized protocol exists for setting iteration counts, selecting stability metrics, or establishing reliability thresholds. Objective: We formalize the Dice Roll Method as a reusable protocol for repeated-query auditing of LLM brand recommendations, grounded in a generative model of temperature-scaled nucleus sampling. Methods: Total response variance is decomposed into sampling, prompt-phrasing, run-to-run, and model-version components. The stack: a negative-binomial mixed model with iterations as repeated measures; Cliff's delta as the distribution-free effect size; dependence-preserving bootstrap; simulation-based power; a generalizability-theory decomposition; drift diagnostics on pinned snapshots. We reanalyse five brand-recommendation auditing studies: approximately 190,000 observations, 270+ brands, 6 languages, iteration counts 5 to 40. Results: Three tiers of iteration guidance emerge from the D-study: exploratory (n = 5, G = 0.58), confirmatory (n = 10, G = 0.74), and rigorous (n = 15, G = 0.81), tied to effect-size and generalizability targets. The four metric families (count, set, embedding, fairness-adjusted PASOR) are complementary, motivating a compact metric battery over single indicators. A pre-registered external validation on three independent corpora (Motoki et al., 100-round; Rozado, 24 models; llm-stability) reproduces the D-study reliability prediction in 37 of 39 cells with no failures and the n = 5 power value to two decimals; the fixed tiers do not transfer, supporting a pilot-then-solve reading. Conclusion: The protocol gives repeated-query auditing of LLM brand recommendations a statistically principled footing under the conditional, non-Gaussian structure of real autoregressive generation.",
-      "arxiv_url": "https://arxiv.org/abs/2609.04047",
       "citations": 0
     },
     {
