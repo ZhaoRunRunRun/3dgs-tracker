@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-10 08:50 UTC",
+  "updated_at": "2026-10-11 08:24 UTC",
   "total": 594,
   "papers": [
     {
@@ -51,6 +51,26 @@
       "abstract": "While Video Virtual Try-on (VVT) has achieved remarkable progress in synthesizing realistic garment overlays on dynamic subjects, existing paradigms remains fundamentally constrained by a passive dependency on source camera trajectories, failing to accommodate the requisite interactive freedom for omnidirectional viewpoint exploration. To address this limitation, we define a pioneering research frontier: Camera-controllable Video Virtual Try-on (CaM-VVT). Unlike conventional VVT, CaM-VVT not only necessitates viewpoint-agnostic texture hallucination but also strict structural synchronization between non-rigid human dynamics and background contexts under arbitrary, unconstrained camera movements. To tackle these challenges, we present TryOnCrafter, the first unified DiT-based framework specifically architected for the CaM-VVT task. Departing from implicit pixel-space manipulation, we introduce a Renderable 4D Try-on Proxy that explicitly decouples the human subject from the environment. This is achieved by distilling high-fidelity 2D try-on priors into a clothed 3DGS-based avatar, which is subsequently animated via SMPL-X sequences and metric-aligned into a reconstructed background point cloud. This proxy establishes a robust structural foundation with superior texture density and motion integrity. Our Proxy-Anchored Video DiT leverages this robust structural foundation as a primary geometric anchor, ensuring that the synthesized photorealistic videos are strictly constrained by prescribed trajectories and physically plausible deformations. Benefiting from the inherent editability of the 4D proxy, TryOnCrafter facilitates diverse downstream applications, including human relocalization, ``bullet time'' effects, and $360$-degree orbital viewing.",
       "arxiv_url": "https://arxiv.org/abs/2606.26092",
       "citations": 3
+    },
+    {
+      "arxiv_id": "2609.36969",
+      "title": "Prior-Driven Enhancements in 3D Gaussian Splatting: Normals and Depths Regularization",
+      "published": "2026-09-29",
+      "year": "2026",
+      "authors": "Gyeonggwan Lee; Seunghwan Hong; Junghun Suh",
+      "abstract": "3D Gaussian Splatting (3DGS) is a state-of-the-art technique for 3D scene rendering, offering high efficiency and excellent visual quality. However, because 3DGS relies on an initial sparse point set from Structure-from-Motion (SfM) and view-dependent properties, it can suffer from geometric inaccuracies and visual artifacts, particularly in complex scenes. To address these challenges, we propose an improved 3DGS approach that regularizes the optimization process by integrating geometric priors, including surface normals and dense depth information. Surface normal regularization improves geometric consistency by aligning Gaussian covariance with local surface structures, while dense depth priors combined with an initial points from SfM enhance per-pixel depth estimation, increasing accuracy and reducing ambiguities. These enhancements enable robust handling of diverse and complex real-world scenarios, minimizing visual distortions and improving reconstruction quality across various environments. To validate our method, we evaluate it on challenging datasets, including street-view scenes and highly reflective environments, while testing it across multiple SfM pipelines. Our results demonstrate compatibility across diverse environments and highlight the robustness of our approach. Experimental findings further show that our method enhances geometric accuracy and visual quality, establishing a reliable solution for real-time 3D scene rendering in complex environments.",
+      "arxiv_url": "https://arxiv.org/abs/2609.36969",
+      "citations": 2
+    },
+    {
+      "arxiv_id": "2608.17988",
+      "title": "GS-Voxel: Fitting-Free Structured Latents for Large-Scale 3DGS Generation",
+      "published": "2026-08-18",
+      "year": "2026",
+      "authors": "Ming Qian; Zijian Wang; Minchao Sun; Jincheng Xiong; Hang Zhang et al.",
+      "abstract": "Many scalable latent 3D generators operate on structured tensors, whereas pre-optimized 3D Gaussian Splatting (3DGS) reconstructions are unordered, spatially irregular, and vary widely in primitive count. We present GS-Voxel, a fitting-free structured latent framework, and evaluate it for large-scale aerial 3D Gaussian scene generation. GS-Voxel deterministically converts a compatible pre-optimized 3DGS reconstruction into sparse active voxels without additional per-scene optimization, retaining the sub-voxel positions and rendering attributes of the selected primitives. A GS-specific factorized VAE then separately encodes voxel geometry and local Gaussian attributes into sparse 3D latents whose size grows with the number of occupied voxels rather than being limited by a fixed scene-wide primitive count. We train image-conditioned flow models in the GS-Voxel latent space to generate aerial 3DGS scenes. A key application enabled by GS-Voxel is large-area scene generation: overlap-aware tiled inference extends synthesis beyond a single training crop conditioned on satellite-view images. Our results show that GS-Voxel provides structured latents for pre-optimized aerial 3DGS reconstructions, with latent capacity that grows with the number of occupied voxels.",
+      "arxiv_url": "https://arxiv.org/abs/2608.17988",
+      "citations": 2
     },
     {
       "arxiv_id": "2607.22956",
@@ -163,6 +183,16 @@
       "citations": 2
     },
     {
+      "arxiv_id": "2609.36693",
+      "title": "AESplat: Advancing Pose-Free Feed-Forward 3D Gaussian Splatting via Decoupled Appearance Modeling",
+      "published": "2026-09-29",
+      "year": "2026",
+      "authors": "Shiwei Ren; Zhiang Liu; Yongchun Fang; Hongwei Chen",
+      "abstract": "Pose-free feed-forward 3D Gaussian Splatting (3DGS) has demonstrated remarkable potential for generalized novel view synthesis. However, existing methods typically predict Gaussian appearance attributes represented by spherical harmonics (SH) in the same manner, overlooking the fundamental distinction between view-independent and view-dependent appearance, which results in suboptimal rendering quality. In this paper, we present AESplat, a novel and general framework for pose-free feed-forward 3DGS that introduces an effective decoupled appearance modeling strategy based on an analysis of SH, enabling higher-quality rendering. Specifically, AESplat directly derives the zeroth-order SH coefficient, which represents the base view-independent appearance component, from the input images without training. The higher-order SH coefficients are subsequently predicted by a shallow multilayer perceptron equipped with two efficient 3D-aware inductive biases to model view-dependent appearance variations. Extensive experiments across multiple datasets demonstrate that our method significantly outperforms state-of-the-art approaches, achieving a $0.8$ dB improvement in PSNR over the pose-free method NAS3R and a $1.1$ dB improvement over the pose-required method DepthSplat on the RealEstate10K dataset. Project page: https://aesplat.github.io/.",
+      "arxiv_url": "https://arxiv.org/abs/2609.36693",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2609.28930",
       "title": "PlenoCI: Plenoptic CharacterIstics for View Dependence Aware Change Classification",
       "published": "2026-09-24",
@@ -263,6 +293,16 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2608.21849",
+      "title": "GaussVid: Sparse-View Gaussian Splatting with 3D-Aware Video Diffusion Priors",
+      "published": "2026-08-22",
+      "year": "2026",
+      "authors": "Xinhui Liu; Can Wang; Wei Jiang; Wei Wang; Dong Xu",
+      "abstract": "3D Gaussian Splatting (3DGS) has achieved remarkable success in novel view synthesis; however, reconstructions under sparse views often exhibit noticeable artifacts. While recent video diffusion models provide strong spatio-temporal priors for 3DGS restoration, directly fine-tuning them for restoration is suboptimal, as they lack awareness of the underlying multi-camera geometry, resulting in multi-view inconsistencies. In this work, we propose a novel 3D-aware video restoration framework designed to enhance the quality of sparse 3DGS reconstruction. Specifically, we construct a large-scale 3DGS video dataset to enable specialized fine-tuning. To bridge the gap between 2D video generation and 3D multi-view constraints, we introduce a camera-conditioned geometric prior. By using the first and last frames as boundary anchors and encoding the corresponding camera relationships, we explicitly inject spatial structure into the video generation pipeline. This boundary-anchored, camera-aware prior guides the network toward geometrically grounded restoration that remains coherent across viewpoints. Extensive experiments show that, among video-prior restoration methods, our approach attains the best pixel- and structure-level fidelity (PSNR/SSIM) and improves multi-view consistency, while remaining competitive in perceptual quality (LPIPS).",
+      "arxiv_url": "https://arxiv.org/abs/2608.21849",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2608.17447",
       "title": "NGS-Marker: Robust Native Watermarking for 3D Gaussian Splatting",
       "published": "2026-08-18",
@@ -300,6 +340,16 @@
       "authors": "Hyesung Lee; Youngseon Lee; Kyutae Lee; Dongjun Lee; Yongseok Lee",
       "abstract": "Replicating real-world environments into simulation by realistic visual representation like NeRF and 3D Gaussian Splatting (3DGS) has emerged as an effective strategy to reduce the sim-to-real gap in robot learning. However, implementing object articulation during the real-to-sim process is still a challenging task. Existing motion tracking or learning based articulation methods shows low success rates on complex kinematic structures having multiple joints. Furthermore, those methods require scan of dynamic motion of objects, which makes reconstruction process much complicated. In this work, we propose the first end-to-end pipeline that reconstructs simulation-ready assets with accurate articulation from a single static object video input through suggestion based human-in-the-loop process. Our approach exports a hybrid representation combining 3DGS for photorealistic rendering and mesh-based geometry for physical interaction. In the reconstruction process, our pipeline performs convex decomposition followed by user grouping for intuitive part segmentation, subsequently binding 3D Gaussians to the corresponding mesh parts. An Automatic Joint Suggestion Algorithm then calculates candidate joint axes from local boundary geometries and presents them to users for efficient articulated asset reconstruction. We have shown that our method achieves precise articulation results on partnet-mobility-v0 dataset and real objects. Additionally we presented a potential usage of our framework on robot learning, deploying the reconstructed assets in Unreal Engine and NVIDIA Isaac Sim, demonstrating real-time dexterous hand manipulation tasks.",
       "arxiv_url": "https://arxiv.org/abs/2608.04842",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2608.01186",
+      "title": "QuerySplat: Decoupling Geometry and Appearance Representations in 3DGS Prediction",
+      "published": "2026-08-02",
+      "year": "2026",
+      "authors": "Yinglong Li; Donghui Shen; Xiaoyu Zhang; Zhichao Ye; Hongyu Wu et al.",
+      "abstract": "While feed-forward 3D Gaussian Splatting (3DGS) enables efficient 3D reconstruction, achieving high-fidelity rendering remains challenging. Existing pixel-aligned approaches suffer from spatial inflexibility and massive structural redundancy, whereas query-based methods lack 3D priors and entangle geometry with appearance, yielding blurry, pose-dependent results. To overcome these deficiencies, we propose \\textbf{QuerySplat}, a feed-forward 3DGS framework driven by geometric priors and explicit appearance decoupling. Specifically, we design a dual-branch query-based decoder: the geometry branch leverages a pretrained Vision Geometric Model for spatial understanding, which intrinsically endows QuerySplat with pose-free modeling capabilities, while the appearance branch recovers high-frequency details through a dedicated pathway separated from geometric attribute regression. Extensive experiments demonstrate that QuerySplat mitigates the blurry rendering issues of early query-based models and consistently outperforms pixel-aligned approaches in rendering fidelity. On the challenging DL3DV benchmark, it achieves state-of-the-art novel view synthesis performance, with average PSNR gains of 2.30 dB and 1.04 dB over the best pose-free and pose-required baselines, respectively. Project Page: https://inspatio.github.io/querysplat.",
+      "arxiv_url": "https://arxiv.org/abs/2608.01186",
       "citations": 1
     },
     {
@@ -883,16 +933,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2609.36969",
-      "title": "Prior-Driven Enhancements in 3D Gaussian Splatting: Normals and Depths Regularization",
-      "published": "2026-09-29",
-      "year": "2026",
-      "authors": "Gyeonggwan Lee; Seunghwan Hong; Junghun Suh",
-      "abstract": "3D Gaussian Splatting (3DGS) is a state-of-the-art technique for 3D scene rendering, offering high efficiency and excellent visual quality. However, because 3DGS relies on an initial sparse point set from Structure-from-Motion (SfM) and view-dependent properties, it can suffer from geometric inaccuracies and visual artifacts, particularly in complex scenes. To address these challenges, we propose an improved 3DGS approach that regularizes the optimization process by integrating geometric priors, including surface normals and dense depth information. Surface normal regularization improves geometric consistency by aligning Gaussian covariance with local surface structures, while dense depth priors combined with an initial points from SfM enhance per-pixel depth estimation, increasing accuracy and reducing ambiguities. These enhancements enable robust handling of diverse and complex real-world scenarios, minimizing visual distortions and improving reconstruction quality across various environments. To validate our method, we evaluate it on challenging datasets, including street-view scenes and highly reflective environments, while testing it across multiple SfM pipelines. Our results demonstrate compatibility across diverse environments and highlight the robustness of our approach. Experimental findings further show that our method enhances geometric accuracy and visual quality, establishing a reliable solution for real-time 3D scene rendering in complex environments.",
-      "arxiv_url": "https://arxiv.org/abs/2609.36969",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2609.36940",
       "title": "DispFlow-GS: Displacement Flow Supervision with Motion Disentangling for Monocular Deformable 3D Gaussian Splatting",
       "published": "2026-09-29",
@@ -900,16 +940,6 @@
       "authors": "Thai Duy Nguyen; Haitian Zhang; Addison Lin Wang",
       "abstract": "Accurate dynamic scene reconstruction is important for robotic perception, where temporally consistent representations of dynamic environments are essential. Deformable 3D Gaussian Splatting (3DGS) models dynamic scenes through deformation fields, and recent methods incorporate motion supervision by aligning rendered Gaussian flow with optical flow. However, we find that such Gaussian-flow-based supervision provides only limited improvements in motion modeling. We identify a fundamental limitation of this supervision paradigm, namely a domain gap between rendered Gaussian flow and optical flow. To address this limitation, we propose a motion supervision framework built on Displacement Flow, which splats per-Gaussian 3D displacements onto the image plane to provide direct and stable optimization signals. We further disentangle scene motion from camera motion via intermediate-view rendering, enabling more reliable motion priors and targeted constraints on deformation and geometry. We also observe a discrepancy between motion fidelity and image-based evaluation, where improved motion awareness does not necessarily translate into better rendered image quality or higher image-based metric scores. Motivated by this mismatch, we introduce Deformation-Rendering Consistency (DRC), a motion-aware metric that measures the alignment between predicted deformation and rendering improvement. Experiments on dynamic scene benchmarks show substantial improvements in motion localization and motion--rendering consistency, reaching up to 39% and 6%, respectively, while image-based metrics change by only about 0.1%. These results confirm the observed mismatch between motion fidelity and image-based evaluation, demonstrating the significance of DRC for motion-aware evaluation.",
       "arxiv_url": "https://arxiv.org/abs/2609.36940",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2609.36693",
-      "title": "AESplat: Advancing Pose-Free Feed-Forward 3D Gaussian Splatting via Decoupled Appearance Modeling",
-      "published": "2026-09-29",
-      "year": "2026",
-      "authors": "Shiwei Ren; Zhiang Liu; Yongchun Fang; Hongwei Chen",
-      "abstract": "Pose-free feed-forward 3D Gaussian Splatting (3DGS) has demonstrated remarkable potential for generalized novel view synthesis. However, existing methods typically predict Gaussian appearance attributes represented by spherical harmonics (SH) in the same manner, overlooking the fundamental distinction between view-independent and view-dependent appearance, which results in suboptimal rendering quality. In this paper, we present AESplat, a novel and general framework for pose-free feed-forward 3DGS that introduces an effective decoupled appearance modeling strategy based on an analysis of SH, enabling higher-quality rendering. Specifically, AESplat directly derives the zeroth-order SH coefficient, which represents the base view-independent appearance component, from the input images without training. The higher-order SH coefficients are subsequently predicted by a shallow multilayer perceptron equipped with two efficient 3D-aware inductive biases to model view-dependent appearance variations. Extensive experiments across multiple datasets demonstrate that our method significantly outperforms state-of-the-art approaches, achieving a $0.8$ dB improvement in PSNR over the pose-free method NAS3R and a $1.1$ dB improvement over the pose-required method DepthSplat on the RealEstate10K dataset. Project page: https://aesplat.github.io/.",
-      "arxiv_url": "https://arxiv.org/abs/2609.36693",
       "citations": 0
     },
     {
@@ -1733,16 +1763,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2608.21849",
-      "title": "GaussVid: Sparse-View Gaussian Splatting with 3D-Aware Video Diffusion Priors",
-      "published": "2026-08-22",
-      "year": "2026",
-      "authors": "Xinhui Liu; Can Wang; Wei Jiang; Wei Wang; Dong Xu",
-      "abstract": "3D Gaussian Splatting (3DGS) has achieved remarkable success in novel view synthesis; however, reconstructions under sparse views often exhibit noticeable artifacts. While recent video diffusion models provide strong spatio-temporal priors for 3DGS restoration, directly fine-tuning them for restoration is suboptimal, as they lack awareness of the underlying multi-camera geometry, resulting in multi-view inconsistencies. In this work, we propose a novel 3D-aware video restoration framework designed to enhance the quality of sparse 3DGS reconstruction. Specifically, we construct a large-scale 3DGS video dataset to enable specialized fine-tuning. To bridge the gap between 2D video generation and 3D multi-view constraints, we introduce a camera-conditioned geometric prior. By using the first and last frames as boundary anchors and encoding the corresponding camera relationships, we explicitly inject spatial structure into the video generation pipeline. This boundary-anchored, camera-aware prior guides the network toward geometrically grounded restoration that remains coherent across viewpoints. Extensive experiments show that, among video-prior restoration methods, our approach attains the best pixel- and structure-level fidelity (PSNR/SSIM) and improves multi-view consistency, while remaining competitive in perceptual quality (LPIPS).",
-      "arxiv_url": "https://arxiv.org/abs/2608.21849",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2608.21828",
       "title": "Towards Alias-Free 4D Gaussian Representations with Motion-Aware Filtering",
       "published": "2026-08-22",
@@ -1800,16 +1820,6 @@
       "authors": "Shihan Chen; Junjing Zhang; Qingsong Yan; Haibing Liu; Haofan Ren et al.",
       "abstract": "3D Gaussian Splatting enables efficient novel view synthesis, but accurate mesh reconstruction remains difficult in weakly observed and occluded regions, where Gaussian primitives may grow into unstable or geometrically inconsistent structures. We propose CoMVS-GS, a general surface reconstruction framework that combines Multi-View Stereo with Gaussian splatting. CoMVS-GS initializes Gaussian primitives from dense multi-view stereo points with pre-flattened scales and normal-aligned orientations, providing stronger geometric priors than sparse structure-from-motion initialization and reducing ambiguity during early optimization. It further introduces PatchMatch-3DGS Mutual Supervision, where Gaussian-rendered depths and normals initialize PatchMatch refinement, and refined PatchMatch depths supervise Gaussian optimization to improve weakly constrained geometry. For surface extraction, CoMVS-GS replaces truncated signed distance field voxel fusion with a Delaunay graph-cut meshing pipeline, reducing sensitivity to voxel resolution while preserving visibility-consistent surface evidence. Experiments on DTU, GauU-Scene V2, and MatrixCity show that CoMVS-GS remains competitive on object-level reconstruction and improves geometric accuracy and mesh compactness in outdoor scenes while maintaining high rendering quality.",
       "arxiv_url": "https://arxiv.org/abs/2608.18413",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2608.17988",
-      "title": "GS-Voxel: Fitting-Free Structured Latents for Large-Scale 3DGS Generation",
-      "published": "2026-08-18",
-      "year": "2026",
-      "authors": "Ming Qian; Zijian Wang; Minchao Sun; Jincheng Xiong; Hang Zhang et al.",
-      "abstract": "Many scalable latent 3D generators operate on structured tensors, whereas pre-optimized 3D Gaussian Splatting (3DGS) reconstructions are unordered, spatially irregular, and vary widely in primitive count. We present GS-Voxel, a fitting-free structured latent framework, and evaluate it for large-scale aerial 3D Gaussian scene generation. GS-Voxel deterministically converts a compatible pre-optimized 3DGS reconstruction into sparse active voxels without additional per-scene optimization, retaining the sub-voxel positions and rendering attributes of the selected primitives. A GS-specific factorized VAE then separately encodes voxel geometry and local Gaussian attributes into sparse 3D latents whose size grows with the number of occupied voxels rather than being limited by a fixed scene-wide primitive count. We train image-conditioned flow models in the GS-Voxel latent space to generate aerial 3DGS scenes. A key application enabled by GS-Voxel is large-area scene generation: overlap-aware tiled inference extends synthesis beyond a single training crop conditioned on satellite-view images. Our results show that GS-Voxel provides structured latents for pre-optimized aerial 3DGS reconstructions, with latent capacity that grows with the number of occupied voxels.",
-      "arxiv_url": "https://arxiv.org/abs/2608.17988",
       "citations": 0
     },
     {
@@ -2150,16 +2160,6 @@
       "authors": "Baihan Yang; Tiexin Li; Yuheng Liu; Xin Lin; Xinke Li et al.",
       "abstract": "Selecting a complete 3D object from a reconstructed scene with minimal user effort is essential for practical scene editing and embodied interaction. Existing 3DGS-based methods either retrain the Gaussian representation to embed per-object labels, or build dense multi-view SAM observations, both requiring heavy computation and dense viewpoint coverage that is rarely available in practice. We present GaussianSelector, a training-free framework for interactive 3D object selection from sparse views and sparse scribble guidance. Operating directly on native Gaussian primitives, we coarsen dense Gaussians into geometrically coherent superpoints and construct a continuity-weighted graph using appearance and spatial cues. Sparse user scribbles are lifted into 3D via visibility-aware transmittance coverage, and selection is solved as a global graph-cut energy minimization that propagates sparse evidence to a complete 3D object. This design naturally supports multi-round refinement, where users iteratively correct the selection from additional viewpoints to progressively improve the result. Experiments demonstrate that GaussianSelector achieves competitive selection quality against state-of-the-art multi-view SAM-based methods, while requiring significantly fewer interaction views and substantially lower computational overhead. These properties make it well suited for human-in-the-loop 3D scene editing and 3D asset extraction in real-world deployment scenarios.",
       "arxiv_url": "https://arxiv.org/abs/2608.01492",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2608.01186",
-      "title": "QuerySplat: Decoupling Geometry and Appearance Representations in 3DGS Prediction",
-      "published": "2026-08-02",
-      "year": "2026",
-      "authors": "Yinglong Li; Donghui Shen; Xiaoyu Zhang; Zhichao Ye; Hongyu Wu et al.",
-      "abstract": "While feed-forward 3D Gaussian Splatting (3DGS) enables efficient 3D reconstruction, achieving high-fidelity rendering remains challenging. Existing pixel-aligned approaches suffer from spatial inflexibility and massive structural redundancy, whereas query-based methods lack 3D priors and entangle geometry with appearance, yielding blurry, pose-dependent results. To overcome these deficiencies, we propose \\textbf{QuerySplat}, a feed-forward 3DGS framework driven by geometric priors and explicit appearance decoupling. Specifically, we design a dual-branch query-based decoder: the geometry branch leverages a pretrained Vision Geometric Model for spatial understanding, which intrinsically endows QuerySplat with pose-free modeling capabilities, while the appearance branch recovers high-frequency details through a dedicated pathway separated from geometric attribute regression. Extensive experiments demonstrate that QuerySplat mitigates the blurry rendering issues of early query-based models and consistently outperforms pixel-aligned approaches in rendering fidelity. On the challenging DL3DV benchmark, it achieves state-of-the-art novel view synthesis performance, with average PSNR gains of 2.30 dB and 1.04 dB over the best pose-free and pose-required baselines, respectively. Project Page: https://inspatio.github.io/querysplat.",
-      "arxiv_url": "https://arxiv.org/abs/2608.01186",
       "citations": 0
     },
     {
