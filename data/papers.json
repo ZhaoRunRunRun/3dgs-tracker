@@ -1,7 +1,17 @@
 {
-  "updated_at": "2026-11-13 09:41 UTC",
+  "updated_at": "2026-11-14 08:54 UTC",
   "total": 595,
   "papers": [
+    {
+      "arxiv_id": "2611.15375",
+      "title": "A novel model-based equation for size dependent mean recovery coefficients for spheres and other shapes",
+      "published": "2026-11-11",
+      "year": "2026",
+      "authors": "Robin de Nijs",
+      "abstract": "Background: In NM-imaging, theoretical curves for the recovery coefficient (RC) of the signal maximum and mean are known for spheres and cubes, if a 3D Gaussian PSF is assumed. The RC of the maximum is also known for cylinders. For these and other shapes empirical equations with one or two fit-parameters have been utilized. Methods: An equation for the RC for large objects of arbitrary shape is derived and generalized into an empirical equation for smaller objects, which is verified by numerical simulations. The proposed equation is compared to published results on SPECT kidney phantom measurements and to PET measurements on the NEMA IEC PET body phantom with six spheres. Results: The signal loss (1-RC) for large spheres is inversely proportional to the radius, where the slope is proportional to the FWHM of the spatial resolution. For non-spherical shapes the generalized instead of the volume equivalent radius should be utilized. For smaller objects, an equation with one added empirical fit-parameter is presented. It is demonstrated that the EANM-guidelines' two-parameter logistic function results in a poor fit if the theoretical slope and inverse proportionality are forced and it gives a suboptimal fit when both parameters are fitted. Conclusions: A novel model-based equation for the mean RC-curve is derived. It can be used for arbitrary shapes as long as the sphericity is taken into account and it is accurate down to RC=10%. One parameter is directly related to the spatial resolution, while the other is a shape depending fit-parameter.",
+      "arxiv_url": "https://arxiv.org/abs/2611.15375",
+      "citations": 18
+    },
     {
       "arxiv_id": "2608.04701",
       "title": "UniWorld-View: Large-Baseline View Synthesis via Video Diffusion Models",
@@ -71,6 +81,16 @@
       "abstract": "3D Gaussian Splatting (3DGS) has emerged as a leading technique for real-time novel view synthesis, yet existing 3DGS accelerators suffer from poor architectural scalability: increasing the number of PEs leads to marginal performance improvement during rendering. We identify that the root cause is the tightly coupled ``checking-while-blending'' dataflow, which exacerbates PE underutilization caused by spatial redundancy from irregular Gaussian coverage and temporal redundancy from asynchronous pixel-wise termination under parallel execution.   To address this issue, we propose DeGS, a scalable architecture for efficient 3DGS inference. To systematically eliminate the redundancies inherent in rendering, DeGS exploits a decoupled dataflow, restructuring the coupled $α$-checking, transmittance checking, and $α$-blending of the standard rendering process into consecutive workload parsing, reorganization, and blending stages. This allows the fragmented, length-variable, and temporal-dependent workloads to be reorganized into compact, conflict-free, and dense workloads prior to blending, thereby significantly improving PE utilization during parallel blending. Implemented in 28 nm technology, DeGS achieves 2.36$\\times$--7.25$\\times$ throughput, 1.82$\\times$--6.02$\\times$ end-to-end speedup, and 1.59$\\times$--4.42$\\times$ energy efficiency over state-of-the-art 3DGS accelerators (GSCore, GBU, GCC) across diverse scenes and resolutions (720p to 8K). Moreover, scaling from 16 to 1024 PEs, DeGS maintains over 80\\% PE utilization at high resolutions, significantly outperforming existing accelerators.",
       "arxiv_url": "https://arxiv.org/abs/2608.02099",
       "citations": 3
+    },
+    {
+      "arxiv_id": "2610.20341",
+      "title": "InfiniSplat v2: Analyzing and Improving Feed-Forward 3DGS from Any Views",
+      "published": "2026-10-14",
+      "year": "2026",
+      "authors": "Yongzhen Hu; Hao Yu; Jiawei Wang; Xianming Zeng; Jianyun Xu et al.",
+      "abstract": "Feed-forward Gaussian reconstruction builds 3D scenes directly from input images for novel view rendering, but learning Gaussian attributes from predicted geometry for high-quality rendering under large viewpoint changes remains challenging. We analyze limitations in Gaussian attribute learning and introduce InfiniSplat v2, which improves rendering quality through architectural and training changes. Our method decouples geometry and attribute prediction with a frozen geometry branch, aligns predicted Gaussians using ground-truth camera poses during training, and adopts large-angle target view supervision. Across six datasets, the feed-forward outputs of the same trained model achieve state-of-the-art mean LPIPS and DISTS among the evaluated methods in both pose-conditioned and pose-free settings. In the pose-conditioned setting, mean LPIPS and DISTS decrease by 25.8% and 32.9%, respectively, compared with the strongest evaluated baselines. We further find that opacity learned with only image reconstruction supervision suppresses geometrically inconsistent points. Project page: https://zju3dv.github.io/InfiniSplat2/",
+      "arxiv_url": "https://arxiv.org/abs/2610.20341",
+      "citations": 2
     },
     {
       "arxiv_id": "2609.36969",
@@ -153,6 +173,16 @@
       "citations": 2
     },
     {
+      "arxiv_id": "2611.16664",
+      "title": "Information Spectrum Methods for MUltiple-Access Channels--Part III : The Strong Converse in the $K$-User Gaussian Case",
+      "published": "2026-11-12",
+      "year": "2026",
+      "authors": "Te Sun Han; Hideki Yagi",
+      "abstract": "This paper, Part III of a series, treats $K$-user multiple-access channels (MACs). Its starting point is a pair of fundamental lemmas, a random-coding lemma of Feinstein type and a converse lemma of Verdú--Han type, which are the $K$-user extensions of the two lemmas underlying Han's information spectrum approach to the general two-user MAC. From them we derive the capacity region of the general $K$-user MAC with cost constraint and show that it contains the polymatroid capacity region of the $K$-user Gaussian MAC. We then prove, by an elementary information spectrum calculation that adapts a diffuse--exceptional subspace decomposition used in recent second-order converses for the Gaussian MAC, that for every subset $\\cS$ of users and every independent input satisfying the power constraints, the conditional information spectral-sup rate of the $K$-user Gaussian MAC does not exceed $\\frac12\\log(1+P_\\cS/N)$, where $P_\\cS$ is the total power of the users in $\\cS$, with a probability bound that does not depend on the input. Consequently, the strong converse for the $K$-user Gaussian MAC, in the sense that the error probability tends to one for every rate tuple outside the capacity region, follows directly from the converse lemma, without the wringing technique and without hypothesis-testing meta-converses. This strong converse was first established by Fong and Tan, whose per-blocklength bounds yield it, through wringing and quantization. It is the key ingredient in the converse parts of the coding theorems for mixed Gaussian MACs in Part I, where the $\\varepsilon$-strong converse would not suffice.",
+      "arxiv_url": "https://arxiv.org/abs/2611.16664",
+      "citations": 2
+    },
+    {
       "arxiv_id": "2610.34745",
       "title": "SceneAgent: An Agentic Pipeline from 3D and 4D Captures to Simulation Environments",
       "published": "2026-10-26",
@@ -173,6 +203,16 @@
       "citations": 1
     },
     {
+      "arxiv_id": "2610.30013",
+      "title": "ClunoGS: Compact Language 3D Gaussian Splatting via Unified Optimization",
+      "published": "2026-10-21",
+      "year": "2026",
+      "authors": "Jian Xu; Yi Li; Ying Huang; Siyi Wu; Bingzhe Li et al.",
+      "abstract": "Language 3D Gaussian Splatting enables open-vocabulary scene understanding by associating Gaussian primitives with language features. These semantic attributes increase model storage, while most existing 3DGS compression methods are designed mainly to preserve RGB rendering quality. One straightforward approach is to apply sparsification and quantization sequentially. However, pruning based only on rendering quality can remove Gaussians that have small RGB contributions but are important for semantic prediction. Once removed, their semantic information cannot be recovered by later quantization. We propose ClunoGS, a compact framework for Language 3DGS that combines semantics-aware Gaussian sparsification and vector quantization in a unified constrained objective. Semantic supervision is used during sparsification, and the objective jointly considers rendering quality, semantic accuracy, and compactness. We optimize the unified objective with alternating primal, sparsification, quantization, and dual updates. We evaluate ClunoGS on open-vocabulary localization and segmentation using the LERF and ScanNet-10 benchmarks. Under aggressive compression, our unified, semantics-aware formulation substantially alleviates the degradation of semantic representations caused by sequential compression and semantics-agnostic Gaussian sparsification. Ablations further show that jointly coordinating sparsification and quantization better preserves semantic accuracy than applying them independently.",
+      "arxiv_url": "https://arxiv.org/abs/2610.30013",
+      "citations": 1
+    },
+    {
       "arxiv_id": "2610.26920",
       "title": "Codec-Compatible Learned Compression for 3D Gaussian Splatting",
       "published": "2026-10-17",
@@ -183,16 +223,6 @@
       "citations": 1
     },
     {
-      "arxiv_id": "2610.20341",
-      "title": "InfiniSplat v2: Analyzing and Improving Feed-Forward 3DGS from Any Views",
-      "published": "2026-10-14",
-      "year": "2026",
-      "authors": "Yongzhen Hu; Hao Yu; Jiawei Wang; Xianming Zeng; Jianyun Xu et al.",
-      "abstract": "Feed-forward Gaussian reconstruction builds 3D scenes directly from input images for novel view rendering, but learning Gaussian attributes from predicted geometry for high-quality rendering under large viewpoint changes remains challenging. We analyze limitations in Gaussian attribute learning and introduce InfiniSplat v2, which improves rendering quality through architectural and training changes. Our method decouples geometry and attribute prediction with a frozen geometry branch, aligns predicted Gaussians using ground-truth camera poses during training, and adopts large-angle target view supervision. Across six datasets, the feed-forward outputs of the same trained model achieve state-of-the-art mean LPIPS and DISTS among the evaluated methods in both pose-conditioned and pose-free settings. In the pose-conditioned setting, mean LPIPS and DISTS decrease by 25.8% and 32.9%, respectively, compared with the strongest evaluated baselines. We further find that opacity learned with only image reconstruction supervision suppresses geometrically inconsistent points. Project page: https://zju3dv.github.io/InfiniSplat2/",
-      "arxiv_url": "https://arxiv.org/abs/2610.20341",
-      "citations": 1
-    },
-    {
       "arxiv_id": "2610.13781",
       "title": "SimVTA: Simulation-Grounded Video-Trajectory Alignment for Driving World Action Models",
       "published": "2026-10-09",
@@ -200,6 +230,16 @@
       "authors": "Changhui Jing; Haochen Tian; Hongchen Li; Tianyu Li; Caojun Wang et al.",
       "abstract": "Driving world action models (WAMs) learn from paired trajectories and future observations. Post-training with reinforcement learning allows the policy to explore alternative trajectories and improve planning using driving rewards. However, driving logs contain future videos only for the recorded trajectories, leaving these alternatives without corresponding visual supervision. Thus, we introduce SimVTA, a simulation-grounded post-training framework that combines trajectory optimization with video supervision. First, we sample candidate trajectories for each observation and use a real-world simulator (e.g., World Engine) to render future videos for high-reward candidates in real-world scenes reconstructed with 3D Gaussian Splatting (3DGS). This provides trajectory-matched supervision independent of the model's own predictions. Under a limited rendering budget, we prioritize video supervision for higher-error futures among these rendered candidates. Finally, we optimize trajectory planning with Group Relative Policy Optimization (GRPO) and use a flow-matching loss on the matched videos to update shared representations. At inference time, the model predicts trajectories directly, without simulator calls. On NAVSIM v1, applying SimVTA to a WAM initialization improves PDMS from 86.2 to 91.3 (+5.1). It achieves 88.2 EPDMS on NAVSIM v2 and an average HD-Score of 38.8 in closed-loop evaluation on HUGSIM. Ablations show that updating shared representations with video supervision improves planning, while prioritizing higher-error futures among high-reward trajectories further improves performance.",
       "arxiv_url": "https://arxiv.org/abs/2610.13781",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2610.13409",
+      "title": "ManeuverFlow: Maneuver Hypothesis Generation with Future Evidence for Trajectory Evaluation and Refinement in End-to-End Autonomous Driving",
+      "published": "2026-10-09",
+      "year": "2026",
+      "authors": "Yuhao Wei; Yong Chen; Chen Yang; Yingchen Wang; Delin Ouyang et al.",
+      "abstract": "End-to-end planning in complex scenes must model diverse driving intentions and select the most appropriate trajectory using scene context and future risks. However, multi-query regression may collapse to one mode, while anchor-based and generative planners share a scaling bottleneck: small candidate sets limit maneuver coverage or discovery of high-quality trajectories, whereas large sets increase generation and scoring costs. We propose ManeuverFlow to generate trajectories for distinct intentions in one step and evaluate and refine them using current and future evidence. The model selects relevant maneuver modes, draws corresponding noise from the Gaussian mixture prior, and maps it to intention-specific trajectories through a maneuver-routed mixture-of-experts MeanFlow field. Current features and future features predicted by the world model are aggregated along each candidate path into trajectory-specific evidence for PDM-factor prediction. Using the same evidence, the refiner predicts local Frenet residuals for selected candidates; refined and retained candidates are then jointly re-scored for selection. With a lightweight TransFuser-style ResNet-34 backbone, ManeuverFlow achieves 90.6 PDMS and 90.1 EPDMS on NAVSIM v1/v2 navtest, respectively. On WorldEngine's recent 3DGS closed-loop benchmark, it attains the highest listed PDMS$^\\ast$ scores of 75.19 and 74.58 under logged and IDM-controlled traffic, respectively. Code: https://github.com/wyh-autonomy/maneuverflow.",
+      "arxiv_url": "https://arxiv.org/abs/2610.13409",
       "citations": 1
     },
     {
@@ -530,6 +570,66 @@
       "authors": "Maria Peribañez; Javier Civera; Rudolph Triebel; Riccardo Giubilato",
       "abstract": "Visual localization becomes extremely challenging in planetary-like terrains characterized by low texture, perceptual aliasing, harsh illumination, and sparse, weakly overlapping viewpoints induced by forward rover motion and unconstrained driving directions. Under these conditions, state-of-the-art image-to-image and image-to-map matching pipelines suffer significant performance degradation. In this work, we propose a visual relocalization method that departs from classical correspondence-based pipelines by directly estimating camera poses against a differentiable map representation built with 3D Gaussian Splatting (3DGS). Our key contribution is a geometry-aware training strategy that combines photometric and geometric losses, where the geometric supervision is provided for the first time by combining multi-view stereo (MVS) and LiDAR depths. We show that this joint optimization produces a 3DGS model that better fits the underlying scene geometry, leading to improved photometric and geometric consistency and more robust, accurate single-image 6-DoF pose estimation. Extensive experiments on data acquired in planetary-analog environments validate the effectiveness of our approach, showing substantial gains in relocalization accuracy under challenging conditions. Code is available at https://github.com/DLR-RM/multimodal-gsplat-relocalization.",
       "arxiv_url": "https://arxiv.org/abs/2607.22147",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2611.17236",
+      "title": "On the maximum of Poissonian log-correlated fields",
+      "published": "2026-11-12",
+      "year": "2026",
+      "authors": "Nicholas A. Cook; Haotian Gu",
+      "abstract": "We consider stationary log-correlated random fields of the form   \\[   X_n(t):= \\sum_{j\\le n} f(e^{τ_j} t+ v_{j})\\,,\\quad t\\in \\mathbb{R}   \\]   for a centered 1-periodic analytic function $f:\\mathbb{R}\\to\\mathbb{R}$, where $(τ_j)_{j\\ge1}$ are the arrival times of a rate-1 Poisson process on $\\mathbb{R}_+$ and $(v_j)_{j\\ge1}$ are iid uniform random variables in $[0,1)$.   We show that with high probability,   \\[   \\max_{t\\in[-1,1]}X_n(t) = c_1 n + c_2 τ_n- (c_3+o(1))\\log n   \\]   where $c_1,c_2,c_3$ are positive constants depending on $f$.   In particular, the random frequency $τ_n$ produces a central limit fluctuation of order $\\sqrt{n}$, together with a logarithmic correction different from the ubiquitous Bramson correction for models with strong comparisons to Gaussian fields, such as homogeneous branching random walks and log-characteristic polynomials of C$β$E matrices.   Our proof makes a connection with branching random walks in random time-environment, where coarse-scale fluctuations of the arrival times $τ_j$ play the role of a quenched random environment, and fine-scale fluctuations are leveraged to establish a branching decorrelation structure.   We conjecture analogous asymptotics for the characteristic polynomials of random permutation matrices, and expect the same mechanism to arise in other Poissonian fields such as characteristic polynomials of sparse random matrices.",
+      "arxiv_url": "https://arxiv.org/abs/2611.17236",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2611.16855",
+      "title": "Ultracompact and Nonvolatile On-chip Switch Based on DBS and PSO Algorithms",
+      "published": "2026-11-12",
+      "year": "2026",
+      "authors": "Sanaz Zarei",
+      "abstract": "A 1x2 photonic switch based on silicon-on-insulator (SOI)-Sb2Se3 hybrid platform is inverse-designed using direct binary search (DBS) and particle swarm optimization (PSO) algorithms. The nonvolatile on-chip switch is designed to consist of minimum switchable phase-change units and operates based on the en-masse switching of all Sb2Se3 cells from crystalline to amorphous and vice-versa. The device has a small footprint of only 6.3umx31um. At the wavelength of 1550nm, it exhibits an insertion loss of less than 0.96dB, and its crosstalk is measured to be less than -12dB within the three-dimensional (3D) finite-difference time-domain (FDTD) simulations.",
+      "arxiv_url": "https://arxiv.org/abs/2611.16855",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2611.15827",
+      "title": "A Latent Semiparametric Mixture Model for Robust Heterogeneity Learning in High Dimensions",
+      "published": "2026-11-11",
+      "year": "2026",
+      "authors": "Lyuou Zhang; Boxiang Wang; Lulu Wang; Wen Zhou; Hui Zou",
+      "abstract": "Learning heterogeneity from high-dimensional data has become a fundamental task across many data-driven fields. Cluster analysis is a widely used unsupervised tool for this purpose, and many existing methods have been adapted to high-dimensional settings through sparsity constraints. In contrast to algorithmic approaches, model-based clustering offers clean theoretical guaranties and computational simplicity, but can be restrictive in practice due to its reliance on specific parametric distributions. We propose a novel latent semiparametric mixture model for clustering, in which the observed data follow a Gaussian mixture after latent coordinate-wise monotone transformations. Furthermore, assuming a sparse optimal clustering rule in the latent space, we develop a new method, CESME, tailored for high-dimensional clustering. By allowing unspecified transformations, our framework becomes substantially more flexible and robust than traditional model-based approaches. The clustering error of CESME is shown to approach the optimal clustering error at a rate matching that obtained when the true transformations are known. Extensive simulations and real data analysis confirm that CESME outperforms a broad range of existing high-dimensional clustering methods, including those designed for single-cell RNA sequencing data. The online supplementary file contains technical proofs, additional discussions, and more numerical results.",
+      "arxiv_url": "https://arxiv.org/abs/2611.15827",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2611.15518",
+      "title": "Probe Dynamics in Active Baths via Trajectory-Response Relations",
+      "published": "2026-11-11",
+      "year": "2026",
+      "authors": "Chul-Ung Woo; Jiwon Choi; Heiko Rieger",
+      "abstract": "Passive probes in active baths can undergo spontaneous motion driven by nonequilibrium forces that depend on probe velocity and interaction geometry. Using trajectory-response relations that express the bath response to a probe in terms of free-particle displacement statistics, we investigate the dynamics of freely moving probes weakly coupled to ideal active baths. The mean force exerted by the bath defines a velocity-space potential whose minima describe the stable states. By analyzing how the mean force depends on the probe velocity, we identify stable resting and moving states and determine the parameter regime in which they coexist. For elliptical interactions, the resting state becomes unstable first along the narrow axis, resulting in direction selection already at the linear-response level. For fourfold interactions, linear friction remains isotropic, while the nonlinear dependence of the mean force on probe velocity selects axial or diagonal motion and produces directional multistability. We further show that the trajectory-response relations extend to higher orders in the probe strength, where multi-interval free-particle trajectory statistics become relevant. For a Gaussian probe, these higher-order terms shift the speed of the stable moving state.",
+      "arxiv_url": "https://arxiv.org/abs/2611.15518",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2611.14804",
+      "title": "GenPFN: An In-Context Tabular Foundation Model Approach for Augmenting Small Datasets in Engineering",
+      "published": "2026-11-10",
+      "year": "2026",
+      "authors": "Noah J. Bagazinski; Cyril Picard; Faez Ahmed",
+      "abstract": "Costly simulations and experiments limit the data available for engineering design. This paper proposes GenPFN, a training-free candidate generator guided by a pretrained tabular Prior-Data Fitted Network (TabPFN) classifier with fixed weights. The context contains evaluated designs labeled desired (Class 1) or undesired (Class 0). GenPFN interpolates between desired designs and refines candidates using gated classifier gradients and Gaussian noise. Each candidate is evaluated using the problem's constraints and objective functions. Evaluated desired designs and their objective values augment the context for regression training.   Evaluation spans fourteen selected problems, including a two-parameter benchmark and a 44-parameter hull problem. In paired comparisons, GenPFN with TabPFN v1 achieves higher class satisfaction and lower realism distance than the tested adversarial, variational-autoencoder and diffusion generators. The variational-autoencoder generator provides greater coverage and diversity. Relative to the synthetic minority over-sampling technique (SMOTE), GenPFN provides lower coverage distance and greater diversity. Among observed paired regression fits, augmentation reduces estimated AutoGluon validation mean squared error by 62.1% relative to context-only training. A hull-stern case study yields 99.3% propeller-compatible candidates versus 1.4% among randomly sampled context designs. Generation followed by evaluation produces sample sets that augment limited datasets and support training more accurate predictive models.",
+      "arxiv_url": "https://arxiv.org/abs/2611.14804",
+      "citations": 1
+    },
+    {
+      "arxiv_id": "2611.14109",
+      "title": "Spin-glass order in a field requires magnetic-field chaos in XY gauge glasses for $d\\leq 4$",
+      "published": "2026-11-10",
+      "year": "2026",
+      "authors": "Manaka Okuyama; Masayuki Ohzeki; Hidetoshi Nishimori",
+      "abstract": "The XY gauge-glass model is believed to exhibit a spin-glass phase in dimensions $d\\geq 3$. In this paper, we prove that, in dimensions $d\\leq 4$ and at any finite temperature, a magnetic field applied in a fixed direction, with amplitudes that fluctuate from site to site according to the Rayleigh distribution, must either induce magnetic-field chaos in the spin-glass phase or destroy spin-glass order altogether, whenever a spin-glass phase exists at zero field. In particular, if a spin-glass phase persists under such a field, as predicted by the replica-symmetry-breaking (RSB) picture, it must exhibit magnetic-field chaos. This conclusion follows from our proof that, for any fixed nonzero field strength, the disorder average of the squared overlap between equilibrium spin configurations at zero field and those at nonzero field vanishes in the thermodynamic limit. By gauge transformations, the overlap statistics are identical to the magnetization statistics of an XY gauge glass with correlated bond disorder in a Gaussian random field. Our proof combines this exact identity with quantitative estimates on the suppression of ferromagnetic order by random fields in continuous-spin systems, due to Dario, Harel, and Peled [Commun. Math. Phys. 405, 212 (2024)] and building on the work of Imry and Ma [Phys. Rev. Lett. 35, 1399 (1975)] and of Aizenman and Wehr [Phys. Rev. Lett. 62, 2503 (1989); Commun. Math. Phys. 130, 489 (1990)]. We extend these estimates to bond-dependent interactions. Although our result provides a rare rigorous constraint on the nature of spin-glass phases in finite-dimensional systems, it does not determine whether spin-glass order survives in a field, and therefore does not distinguish between the droplet and RSB pictures. The case of a strictly uniform field remains open.",
+      "arxiv_url": "https://arxiv.org/abs/2611.14109",
       "citations": 1
     },
     {
@@ -1033,16 +1133,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2610.30013",
-      "title": "ClunoGS: Compact Language 3D Gaussian Splatting via Unified Optimization",
-      "published": "2026-10-21",
-      "year": "2026",
-      "authors": "Jian Xu; Yi Li; Ying Huang; Siyi Wu; Bingzhe Li et al.",
-      "abstract": "Language 3D Gaussian Splatting enables open-vocabulary scene understanding by associating Gaussian primitives with language features. These semantic attributes increase model storage, while most existing 3DGS compression methods are designed mainly to preserve RGB rendering quality. One straightforward approach is to apply sparsification and quantization sequentially. However, pruning based only on rendering quality can remove Gaussians that have small RGB contributions but are important for semantic prediction. Once removed, their semantic information cannot be recovered by later quantization. We propose ClunoGS, a compact framework for Language 3DGS that combines semantics-aware Gaussian sparsification and vector quantization in a unified constrained objective. Semantic supervision is used during sparsification, and the objective jointly considers rendering quality, semantic accuracy, and compactness. We optimize the unified objective with alternating primal, sparsification, quantization, and dual updates. We evaluate ClunoGS on open-vocabulary localization and segmentation using the LERF and ScanNet-10 benchmarks. Under aggressive compression, our unified, semantics-aware formulation substantially alleviates the degradation of semantic representations caused by sequential compression and semantics-agnostic Gaussian sparsification. Ablations further show that jointly coordinating sparsification and quantization better preserves semantic accuracy than applying them independently.",
-      "arxiv_url": "https://arxiv.org/abs/2610.30013",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2610.29699",
       "title": "AirPlayground: Benchmarking Aerial Navigation across Diverse Reconstructed Environments",
       "published": "2026-10-21",
@@ -1420,16 +1510,6 @@
       "authors": "Tiancheng Zhao; Sixu Li; Yuzhou Chen; Hengyu Ding; Zhiming Pan et al.",
       "abstract": "3D Gaussian Splatting (3DGS) is a powerful representation for real-time neural reconstruction and rendering. While existing 3DGS systems rely on rasterization for efficiency, recent work explores ray tracing to enable secondary lighting, highly distorted cameras, and depth-of-field effects. However, compared with rasterization, ray-traced 3DGS introduces three major challenges: (1) the highly non-uniform spatial distribution of massive numbers of Gaussian primitives creates severe load imbalance; (2) neighboring pixels often generate rays with highly similar traversal paths, leading to substantial redundant traversal overhead; and (3) supporting both Gaussian and triangle primitives yields heterogeneous intersection workloads that are not well matched to existing GPU architectures. We present H2-Ray, a hybrid and hierarchical ray tracing architecture for efficient 3D Gaussian rendering. H2-Ray introduces three techniques. Load-Balanced Spatial BVH (LB-SBVH) partitions the scene into uniform grids and uses density-aware representations to convert an imbalanced global workload into balanced local traversal units. Ray-Cluster Path Reuse (RCPR) lets a proxy ray share traversal state with neighboring rays to amortize redundant traversal. The Unified Intersection Engine (UIE) supports mixed Gaussian and triangle intersections through a mode-multiplexed datapath that shares 40% of its floating-point units across both primitive types. Across 8 scenes, H2-Ray achieves a geometric-mean speedup of 3.77x and a maximum speedup of 9.26x over RaySplats on the NVIDIA RTX A5000, combining a cycle-accurate model of the modified RT Core with measured CUDA timings.",
       "arxiv_url": "https://arxiv.org/abs/2610.13498",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2610.13409",
-      "title": "ManeuverFlow: Maneuver Hypothesis Generation with Future Evidence for Trajectory Evaluation and Refinement in End-to-End Autonomous Driving",
-      "published": "2026-10-09",
-      "year": "2026",
-      "authors": "Yuhao Wei; Yong Chen; Chen Yang; Yingchen Wang; Delin Ouyang et al.",
-      "abstract": "End-to-end planning in complex scenes must model diverse driving intentions and select the most appropriate trajectory using scene context and future risks. However, multi-query regression may collapse to one mode, while anchor-based and generative planners share a scaling bottleneck: small candidate sets limit maneuver coverage or discovery of high-quality trajectories, whereas large sets increase generation and scoring costs. We propose ManeuverFlow to generate trajectories for distinct intentions in one step and evaluate and refine them using current and future evidence. The model selects relevant maneuver modes, draws corresponding noise from the Gaussian mixture prior, and maps it to intention-specific trajectories through a maneuver-routed mixture-of-experts MeanFlow field. Current features and future features predicted by the world model are aggregated along each candidate path into trajectory-specific evidence for PDM-factor prediction. Using the same evidence, the refiner predicts local Frenet residuals for selected candidates; refined and retained candidates are then jointly re-scored for selection. With a lightweight TransFuser-style ResNet-34 backbone, ManeuverFlow achieves 90.6 PDMS and 90.1 EPDMS on NAVSIM v1/v2 navtest, respectively. On WorldEngine's recent 3DGS closed-loop benchmark, it attains the highest listed PDMS$^\\ast$ scores of 75.19 and 74.58 under logged and IDM-controlled traffic, respectively. Code: https://github.com/wyh-autonomy/maneuverflow.",
-      "arxiv_url": "https://arxiv.org/abs/2610.13409",
       "citations": 0
     },
     {
@@ -3093,16 +3173,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2611.17236",
-      "title": "On the maximum of Poissonian log-correlated fields",
-      "published": "2026-11-12",
-      "year": "2026",
-      "authors": "Nicholas A. Cook; Haotian Gu",
-      "abstract": "We consider stationary log-correlated random fields of the form   \\[   X_n(t):= \\sum_{j\\le n} f(e^{τ_j} t+ v_{j})\\,,\\quad t\\in \\mathbb{R}   \\]   for a centered 1-periodic analytic function $f:\\mathbb{R}\\to\\mathbb{R}$, where $(τ_j)_{j\\ge1}$ are the arrival times of a rate-1 Poisson process on $\\mathbb{R}_+$ and $(v_j)_{j\\ge1}$ are iid uniform random variables in $[0,1)$.   We show that with high probability,   \\[   \\max_{t\\in[-1,1]}X_n(t) = c_1 n + c_2 τ_n- (c_3+o(1))\\log n   \\]   where $c_1,c_2,c_3$ are positive constants depending on $f$.   In particular, the random frequency $τ_n$ produces a central limit fluctuation of order $\\sqrt{n}$, together with a logarithmic correction different from the ubiquitous Bramson correction for models with strong comparisons to Gaussian fields, such as homogeneous branching random walks and log-characteristic polynomials of C$β$E matrices.   Our proof makes a connection with branching random walks in random time-environment, where coarse-scale fluctuations of the arrival times $τ_j$ play the role of a quenched random environment, and fine-scale fluctuations are leveraged to establish a branching decorrelation structure.   We conjecture analogous asymptotics for the characteristic polynomials of random permutation matrices, and expect the same mechanism to arise in other Poissonian fields such as characteristic polynomials of sparse random matrices.",
-      "arxiv_url": "https://arxiv.org/abs/2611.17236",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2611.17234",
       "title": "Mean-field Fluctuations for First-Passage Percolation with Symmetric Kernels",
       "published": "2026-11-12",
@@ -3393,16 +3463,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2611.16855",
-      "title": "Ultracompact and Nonvolatile On-chip Switch Based on DBS and PSO Algorithms",
-      "published": "2026-11-12",
-      "year": "2026",
-      "authors": "Sanaz Zarei",
-      "abstract": "A 1x2 photonic switch based on silicon-on-insulator (SOI)-Sb2Se3 hybrid platform is inverse-designed using direct binary search (DBS) and particle swarm optimization (PSO) algorithms. The nonvolatile on-chip switch is designed to consist of minimum switchable phase-change units and operates based on the en-masse switching of all Sb2Se3 cells from crystalline to amorphous and vice-versa. The device has a small footprint of only 6.3umx31um. At the wavelength of 1550nm, it exhibits an insertion loss of less than 0.96dB, and its crosstalk is measured to be less than -12dB within the three-dimensional (3D) finite-difference time-domain (FDTD) simulations.",
-      "arxiv_url": "https://arxiv.org/abs/2611.16855",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2611.16840",
       "title": "Kosmo-GFM: A Production-Ready Geometry Foundation Model",
       "published": "2026-11-12",
@@ -3560,16 +3620,6 @@
       "authors": "Zhi-Cheng He; Jingbo Wang; Dong E. Liu",
       "abstract": "Two-dimensional color codes provide transversal Clifford gates, whereas suitable three-dimensional codes provide a transversal $T$ gate. Representative cross-dimensional schemes either switch the computational encoding or consume a 3D encoded state. Reusing the same protected 3D block would remove repeated auxiliary-state preparation and terminal readout, raising a central question: can the 3D module remain encoded and protected while mediating successive $T$ gates on a separate 2D register? Here we introduce a cross-dimensional persistent-mediator architecture that retains the 2D data register and 3D mediator as distinct encoded modules at each cycle boundary, coupled only through a transient protected subsystem. We construct a membrane-like joint-logical measurement and combine it with a matched cross-dimensional $CZ$, complementary string-like surgery, and feed-forward to close a deterministic logical $T$-gate cycle. The cycle avoids post-selection and destructive mediator readout and restores the 3D block to its initial logical state. Stabilizer analysis establishes the logical action and preserved spatial distance. Phenomenological and circuit-level simulations of a Clifford surrogate show finite-distance scaling close to the matched 3D memory benchmark, while sequential tests show approximately linear logical-error accumulation in the low-error regime. Persistent mediation enables repeated access to higher-dimensional non-Clifford capability while keeping the computational register in its 2D encoding.",
       "arxiv_url": "https://arxiv.org/abs/2611.16691",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2611.16664",
-      "title": "Information Spectrum Methods for MUltiple-Access Channels--Part III : The Strong Converse in the $K$-User Gaussian Case",
-      "published": "2026-11-12",
-      "year": "2026",
-      "authors": "Te Sun Han; Hideki Yagi",
-      "abstract": "This paper, Part III of a series, treats $K$-user multiple-access channels (MACs). Its starting point is a pair of fundamental lemmas, a random-coding lemma of Feinstein type and a converse lemma of Verdú--Han type, which are the $K$-user extensions of the two lemmas underlying Han's information spectrum approach to the general two-user MAC. From them we derive the capacity region of the general $K$-user MAC with cost constraint and show that it contains the polymatroid capacity region of the $K$-user Gaussian MAC. We then prove, by an elementary information spectrum calculation that adapts a diffuse--exceptional subspace decomposition used in recent second-order converses for the Gaussian MAC, that for every subset $\\cS$ of users and every independent input satisfying the power constraints, the conditional information spectral-sup rate of the $K$-user Gaussian MAC does not exceed $\\frac12\\log(1+P_\\cS/N)$, where $P_\\cS$ is the total power of the users in $\\cS$, with a probability bound that does not depend on the input. Consequently, the strong converse for the $K$-user Gaussian MAC, in the sense that the error probability tends to one for every rate tuple outside the capacity region, follows directly from the converse lemma, without the wringing technique and without hypothesis-testing meta-converses. This strong converse was first established by Fong and Tan, whose per-blocklength bounds yield it, through wringing and quantization. It is the key ingredient in the converse parts of the coding theorems for mixed Gaussian MACs in Part I, where the $\\varepsilon$-strong converse would not suffice.",
-      "arxiv_url": "https://arxiv.org/abs/2611.16664",
       "citations": 0
     },
     {
@@ -4203,16 +4253,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2611.15827",
-      "title": "A Latent Semiparametric Mixture Model for Robust Heterogeneity Learning in High Dimensions",
-      "published": "2026-11-11",
-      "year": "2026",
-      "authors": "Lyuou Zhang; Boxiang Wang; Lulu Wang; Wen Zhou; Hui Zou",
-      "abstract": "Learning heterogeneity from high-dimensional data has become a fundamental task across many data-driven fields. Cluster analysis is a widely used unsupervised tool for this purpose, and many existing methods have been adapted to high-dimensional settings through sparsity constraints. In contrast to algorithmic approaches, model-based clustering offers clean theoretical guaranties and computational simplicity, but can be restrictive in practice due to its reliance on specific parametric distributions. We propose a novel latent semiparametric mixture model for clustering, in which the observed data follow a Gaussian mixture after latent coordinate-wise monotone transformations. Furthermore, assuming a sparse optimal clustering rule in the latent space, we develop a new method, CESME, tailored for high-dimensional clustering. By allowing unspecified transformations, our framework becomes substantially more flexible and robust than traditional model-based approaches. The clustering error of CESME is shown to approach the optimal clustering error at a rate matching that obtained when the true transformations are known. Extensive simulations and real data analysis confirm that CESME outperforms a broad range of existing high-dimensional clustering methods, including those designed for single-cell RNA sequencing data. The online supplementary file contains technical proofs, additional discussions, and more numerical results.",
-      "arxiv_url": "https://arxiv.org/abs/2611.15827",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2611.15803",
       "title": "Statistical-to-computational gaps in central limit theorems for high-dimensional tensors",
       "published": "2026-11-11",
@@ -4393,16 +4433,6 @@
       "citations": 0
     },
     {
-      "arxiv_id": "2611.15518",
-      "title": "Probe Dynamics in Active Baths via Trajectory-Response Relations",
-      "published": "2026-11-11",
-      "year": "2026",
-      "authors": "Chul-Ung Woo; Jiwon Choi; Heiko Rieger",
-      "abstract": "Passive probes in active baths can undergo spontaneous motion driven by nonequilibrium forces that depend on probe velocity and interaction geometry. Using trajectory-response relations that express the bath response to a probe in terms of free-particle displacement statistics, we investigate the dynamics of freely moving probes weakly coupled to ideal active baths. The mean force exerted by the bath defines a velocity-space potential whose minima describe the stable states. By analyzing how the mean force depends on the probe velocity, we identify stable resting and moving states and determine the parameter regime in which they coexist. For elliptical interactions, the resting state becomes unstable first along the narrow axis, resulting in direction selection already at the linear-response level. For fourfold interactions, linear friction remains isotropic, while the nonlinear dependence of the mean force on probe velocity selects axial or diagonal motion and produces directional multistability. We further show that the trajectory-response relations extend to higher orders in the probe strength, where multi-interval free-particle trajectory statistics become relevant. For a Gaussian probe, these higher-order terms shift the speed of the stable moving state.",
-      "arxiv_url": "https://arxiv.org/abs/2611.15518",
-      "citations": 0
-    },
-    {
       "arxiv_id": "2611.15510",
       "title": "1-loop partition function of 11d supergravity on $\\mathrm{AdS}_4\\times S^7/\\mathbb{Z}_k$: matching $A(k)$ in ABJM free energy",
       "published": "2026-11-11",
@@ -4490,16 +4520,6 @@
       "authors": "Neesha Yadav; Harish Chandr Chauhan; Pintu Das",
       "abstract": "We report a detailed investigation into the field-dependent critical behavior of the van der Waals ferromagnet $\\mathrm{Fe_3GeTe_2}$ to elucidate how applied magnetic fields ($B$), strong magnetocrystalline anisotropy, and emerging other energy scales modulate its critical behavior. Utilizing the recently developed method, viz., the average of normalized slope (ANS), for analysis of critical behavior, we evaluate the critical exponents ($β$, $γ$, and $δ$) across distinct field windows up to $\\rm{7\\,T}$. For $B$ applied along the crystal's easy axis ($B\\parallel c$), the system exhibits long-range interactions dominated by competing double-exchange and itinerant Ruderman-Kittel-Kasuya-Yosida (RKKY) mechanisms, which is systematically suppressed with increasing $B$ to converge toward the long-range 3D Ising universality class ($β\\sim0.330$, $γ\\sim1.00$). Conversely, under an in-plane hard-axis configuration ($B\\perp c$), the critical behavior study exhibits a sub-unity regime ($γ<1$) across the measured range of $B$. This behavior is attributed to the intense competitive interplay between the external Zeeman energy and strong out-of-plane magnetocrystalline anisotropy. Our findings demonstrate that critical behavior in nontrivial van der Waals magnets is fundamentally modulated by the orientation of $B$ and the strength of magnetocrystalline anisotropy, demonstrating the necessity of $B$-dependent critical behavior investigation over conventional frameworks.",
       "arxiv_url": "https://arxiv.org/abs/2611.15380",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2611.15375",
-      "title": "A novel model-based equation for size dependent mean recovery coefficients for spheres and other shapes",
-      "published": "2026-11-11",
-      "year": "2026",
-      "authors": "Robin de Nijs",
-      "abstract": "Background: In NM-imaging, theoretical curves for the recovery coefficient (RC) of the signal maximum and mean are known for spheres and cubes, if a 3D Gaussian PSF is assumed. The RC of the maximum is also known for cylinders. For these and other shapes empirical equations with one or two fit-parameters have been utilized. Methods: An equation for the RC for large objects of arbitrary shape is derived and generalized into an empirical equation for smaller objects, which is verified by numerical simulations. The proposed equation is compared to published results on SPECT kidney phantom measurements and to PET measurements on the NEMA IEC PET body phantom with six spheres. Results: The signal loss (1-RC) for large spheres is inversely proportional to the radius, where the slope is proportional to the FWHM of the spatial resolution. For non-spherical shapes the generalized instead of the volume equivalent radius should be utilized. For smaller objects, an equation with one added empirical fit-parameter is presented. It is demonstrated that the EANM-guidelines' two-parameter logistic function results in a poor fit if the theoretical slope and inverse proportionality are forced and it gives a suboptimal fit when both parameters are fitted. Conclusions: A novel model-based equation for the mean RC-curve is derived. It can be used for arbitrary shapes as long as the sphericity is taken into account and it is accurate down to RC=10%. One parameter is directly related to the spatial resolution, while the other is a shape depending fit-parameter.",
-      "arxiv_url": "https://arxiv.org/abs/2611.15375",
       "citations": 0
     },
     {
@@ -4790,16 +4810,6 @@
       "authors": "Heinz H. Bauschke; Tran Thanh Tung",
       "abstract": "In 1965, Bregman proved that the sequence of iterates of the method of alternating projections applied to two closed convex sets with nonempty intersection in a Hilbert space converges weakly to a point in the intersection. The question whether this convergence may actually fail to be strong was settled in a seminal paper by Hundal in 2004. He provided a counterexample featuring a halfspace and a closed convex cone generated by a certain curve. While largely elementary, the details of Hundal's construction and analysis are quite involved.   We revisit this seminal example and present a family of such examples that allows for simpler proofs. Our generating curve combines unit vectors with Gaussian inner products and a height determined by a scalar function. The orbits converge weakly --- but not strongly --- to the origin, while their norms have a positive limit for which we give explicit lower bounds. We also prove that the associated Cesàro means behave likewise; in fact, this is generalized to alternating proximal mappings whose composition has a fixed point. Finally, these orbits allow interpretations in the context of projected-gradient, proximal-point, and gradient-descent algorithms.",
       "arxiv_url": "https://arxiv.org/abs/2611.14829",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2611.14804",
-      "title": "GenPFN: An In-Context Tabular Foundation Model Approach for Augmenting Small Datasets in Engineering",
-      "published": "2026-11-10",
-      "year": "2026",
-      "authors": "Noah J. Bagazinski; Cyril Picard; Faez Ahmed",
-      "abstract": "Costly simulations and experiments limit the data available for engineering design. This paper proposes GenPFN, a training-free candidate generator guided by a pretrained tabular Prior-Data Fitted Network (TabPFN) classifier with fixed weights. The context contains evaluated designs labeled desired (Class 1) or undesired (Class 0). GenPFN interpolates between desired designs and refines candidates using gated classifier gradients and Gaussian noise. Each candidate is evaluated using the problem's constraints and objective functions. Evaluated desired designs and their objective values augment the context for regression training.   Evaluation spans fourteen selected problems, including a two-parameter benchmark and a 44-parameter hull problem. In paired comparisons, GenPFN with TabPFN v1 achieves higher class satisfaction and lower realism distance than the tested adversarial, variational-autoencoder and diffusion generators. The variational-autoencoder generator provides greater coverage and diversity. Relative to the synthetic minority over-sampling technique (SMOTE), GenPFN provides lower coverage distance and greater diversity. Among observed paired regression fits, augmentation reduces estimated AutoGluon validation mean squared error by 62.1% relative to context-only training. A hull-stern case study yields 99.3% propeller-compatible candidates versus 1.4% among randomly sampled context designs. Generation followed by evaluation produces sample sets that augment limited datasets and support training more accurate predictive models.",
-      "arxiv_url": "https://arxiv.org/abs/2611.14804",
       "citations": 0
     },
     {
@@ -5210,16 +5220,6 @@
       "authors": "Kaito Shiku; Ryoma Bise; Ahtisham Fazeel Abbasi; Yuichiro Iwashita; Shumpei Takezaki et al.",
       "abstract": "Three-dimensional spatial transcriptomics (3D ST) enables the analysis of gene-expression patterns across tissue depths. However, 3D ST measurements are acquired from discrete 2D tissue sections, which are often sparsely sampled due to high acquisition costs. To address this limitation, we propose a histology-informed multi-task implicit neural representation (HIM-INR) for continuous 3D gene-expression reconstruction from sparse ST observations. HIM-INR jointly reconstructs gene-expression profiles and histological representations using an INR with a shared backbone, leveraging densely sampled histological images as auxiliary spatial supervision. Once trained, HIM-INR predicts gene expression at arbitrary 3D coordinates without requiring histological images. Experiments on two 3D ST datasets demonstrate improved reconstruction over existing methods, particularly as the number of missing ST sections increases.",
       "arxiv_url": "https://arxiv.org/abs/2611.14129",
-      "citations": 0
-    },
-    {
-      "arxiv_id": "2611.14109",
-      "title": "Spin-glass order in a field requires magnetic-field chaos in XY gauge glasses for $d\\leq 4$",
-      "published": "2026-11-10",
-      "year": "2026",
-      "authors": "Manaka Okuyama; Masayuki Ohzeki; Hidetoshi Nishimori",
-      "abstract": "The XY gauge-glass model is believed to exhibit a spin-glass phase in dimensions $d\\geq 3$. In this paper, we prove that, in dimensions $d\\leq 4$ and at any finite temperature, a magnetic field applied in a fixed direction, with amplitudes that fluctuate from site to site according to the Rayleigh distribution, must either induce magnetic-field chaos in the spin-glass phase or destroy spin-glass order altogether, whenever a spin-glass phase exists at zero field. In particular, if a spin-glass phase persists under such a field, as predicted by the replica-symmetry-breaking (RSB) picture, it must exhibit magnetic-field chaos. This conclusion follows from our proof that, for any fixed nonzero field strength, the disorder average of the squared overlap between equilibrium spin configurations at zero field and those at nonzero field vanishes in the thermodynamic limit. By gauge transformations, the overlap statistics are identical to the magnetization statistics of an XY gauge glass with correlated bond disorder in a Gaussian random field. Our proof combines this exact identity with quantitative estimates on the suppression of ferromagnetic order by random fields in continuous-spin systems, due to Dario, Harel, and Peled [Commun. Math. Phys. 405, 212 (2024)] and building on the work of Imry and Ma [Phys. Rev. Lett. 35, 1399 (1975)] and of Aizenman and Wehr [Phys. Rev. Lett. 62, 2503 (1989); Commun. Math. Phys. 130, 489 (1990)]. We extend these estimates to bond-dependent interactions. Although our result provides a rare rigorous constraint on the nature of spin-glass phases in finite-dimensional systems, it does not determine whether spin-glass order survives in a field, and therefore does not distinguish between the droplet and RSB pictures. The case of a strictly uniform field remains open.",
-      "arxiv_url": "https://arxiv.org/abs/2611.14109",
       "citations": 0
     },
     {
