@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-14 08:54 UTC",
+  "updated_at": "2026-11-15 09:09 UTC",
   "total": 595,
   "papers": [
     {
@@ -200,16 +200,6 @@
       "authors": "Quan Tran Hong; Long Nguyen-Chi; Binh T. Nguyen",
       "abstract": "3D Gaussian Splatting (3DGS) has become a standard representation for real-time novel-view synthesis. Yet, its quality-efficiency trade-off still relies heavily on adaptive density control. Existing cloning, splitting, and pruning rules use proxy signals, such as position gradients, opacity, and image-space error. Although effective in practice, these signals do not directly answer the structural question behind density control: where should new Gaussians be allocated to reduce the multi-view reconstruction loss, and which existing primitives can be pruned with minimal penalty. To address this, we propose first-variation birth-death control for 3DGS, a principled approach that replaces heuristic structural decisions with a variational score derived from the reconstruction loss. At each structural update, we freeze the current Gaussian population, attach auxiliary mass coordinates to each primitive, and differentiate the multiview loss with respect to these coordinates. We demonstrate that this score is a coordinate of the first variation of the Splat Regression Model, giving a rigorous local descent surrogate for birth-death moves: high-score Gaussians are selected as birth sites, while low-score, low-opacity Gaussians are selected for removal. Across standard 3DGS benchmarks, integrating this score into 3DGS-MCMC yields state-of-the-art reconstruction quality and outperforms existing methods, delivering the most significant gains under tight Gaussian budgets. Ultimately, our work provides compelling evidence that gradient-based variational metrics offer a principled alternative to proxy heuristics in 3DGS.",
       "arxiv_url": "https://arxiv.org/abs/2610.34344",
-      "citations": 1
-    },
-    {
-      "arxiv_id": "2610.30013",
-      "title": "ClunoGS: Compact Language 3D Gaussian Splatting via Unified Optimization",
-      "published": "2026-10-21",
-      "year": "2026",
-      "authors": "Jian Xu; Yi Li; Ying Huang; Siyi Wu; Bingzhe Li et al.",
-      "abstract": "Language 3D Gaussian Splatting enables open-vocabulary scene understanding by associating Gaussian primitives with language features. These semantic attributes increase model storage, while most existing 3DGS compression methods are designed mainly to preserve RGB rendering quality. One straightforward approach is to apply sparsification and quantization sequentially. However, pruning based only on rendering quality can remove Gaussians that have small RGB contributions but are important for semantic prediction. Once removed, their semantic information cannot be recovered by later quantization. We propose ClunoGS, a compact framework for Language 3DGS that combines semantics-aware Gaussian sparsification and vector quantization in a unified constrained objective. Semantic supervision is used during sparsification, and the objective jointly considers rendering quality, semantic accuracy, and compactness. We optimize the unified objective with alternating primal, sparsification, quantization, and dual updates. We evaluate ClunoGS on open-vocabulary localization and segmentation using the LERF and ScanNet-10 benchmarks. Under aggressive compression, our unified, semantics-aware formulation substantially alleviates the degradation of semantic representations caused by sequential compression and semantics-agnostic Gaussian sparsification. Ablations further show that jointly coordinating sparsification and quantization better preserves semantic accuracy than applying them independently.",
-      "arxiv_url": "https://arxiv.org/abs/2610.30013",
       "citations": 1
     },
     {
@@ -1130,6 +1120,16 @@
       "authors": "Seemandhar Jain; Manmohan Chandraker",
       "abstract": "Scientific discovery requires more than generating hypotheses: ideas must be grounded in prior work, translated into executable methods, experimentally validated, challenged by counterevidence, and communicated through reproducible findings. Despite recent advances in autonomous research agents, closing this entire loop remains challenging in rapidly evolving computer-vision fields with complex training pipelines and expensive evaluations.   We introduce SplatLab, an autonomous scientific discovery system for 3D Gaussian Splatting (3DGS) that integrates literature understanding, hypothesis generation, implementation, experimental refinement, falsification, and manuscript writing into a unified research pipeline. Given a research prompt, a target-paper URL, or no input at all, SplatLab identifies research opportunities, proposes novel methods, trains and ablates candidates across Mip-NeRF 360 and LLFF, and produces manuscripts grounded in verifiable experimental evidence.   Unlike prior systems, SplatLab performs discovery over verified baseline implementations using domain-aligned modification scaffolds. A cascade-weighted Elo tournament evolves candidate methods using measured GPU performance and verbal-gradient feedback, while a standing falsifier incorporates adversarial stress testing directly into selection. An integrity audit binds reported claims to logged experiments, and reviewer-driven feedback can initiate further experimentation rather than merely revising text.   SplatLab discovers methods achieving PSNR improvements of +0.18 to +3.78 dB over matched baselines, including +3.78 dB on astrophotographic nebula rendering, a previously unexplored setting for 3DGS. By closing the loop between scientific reasoning, executable experimentation, and evidence-backed communication, SplatLab compresses months of researcher effort into days of mostly autonomous compute.",
       "arxiv_url": "https://arxiv.org/abs/2610.30468",
+      "citations": 0
+    },
+    {
+      "arxiv_id": "2610.30013",
+      "title": "ClunoGS: Compact Language 3D Gaussian Splatting via Unified Optimization",
+      "published": "2026-10-21",
+      "year": "2026",
+      "authors": "Jian Xu; Yi Li; Ying Huang; Siyi Wu; Bingzhe Li et al.",
+      "abstract": "Language 3D Gaussian Splatting enables open-vocabulary scene understanding by associating Gaussian primitives with language features. These semantic attributes increase model storage, while most existing 3DGS compression methods are designed mainly to preserve RGB rendering quality. One straightforward approach is to apply sparsification and quantization sequentially. However, pruning based only on rendering quality can remove Gaussians that have small RGB contributions but are important for semantic prediction. Once removed, their semantic information cannot be recovered by later quantization. We propose ClunoGS, a compact framework for Language 3DGS that combines semantics-aware Gaussian sparsification and vector quantization in a unified constrained objective. Semantic supervision is used during sparsification, and the objective jointly considers rendering quality, semantic accuracy, and compactness. We optimize the unified objective with alternating primal, sparsification, quantization, and dual updates. We evaluate ClunoGS on open-vocabulary localization and segmentation using the LERF and ScanNet-10 benchmarks. Under aggressive compression, our unified, semantics-aware formulation substantially alleviates the degradation of semantic representations caused by sequential compression and semantics-agnostic Gaussian sparsification. Ablations further show that jointly coordinating sparsification and quantization better preserves semantic accuracy than applying them independently.",
+      "arxiv_url": "https://arxiv.org/abs/2610.30013",
       "citations": 0
     },
     {
